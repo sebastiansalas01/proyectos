@@ -1,5 +1,5 @@
 // Red primero: siempre intenta traer la última versión publicada; usa la copia guardada solo sin conexión.
-const CACHE = 'proyectos-v3';
+const CACHE = 'proyectos-v4';
 self.addEventListener('install', e => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', e => {
