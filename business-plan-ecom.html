@@ -235,31 +235,93 @@ footer{padding:30px 0 50px;font-size:13.5px}
 .lb img{max-width:100%;max-height:90vh;border-radius:12px}
 @media print{nav,.filters,.tabs,.lb{display:none!important}section{padding:28px 0;break-inside:avoid-page}.panel[hidden]{display:block!important}}
 .esc td:first-child{font-weight:500;white-space:nowrap}.esc td{font-size:.86rem}
+
+/* Panel simple */
+.top{padding:36px 0 8px}
+.panel{padding:20px 0 40px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+.colp>h2{font-size:24px}
+.colp>.small{margin:6px 0 14px}
+.plist{display:grid;gap:12px}
+.pc{all:unset;box-sizing:border-box;display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px;cursor:pointer;background:var(--bg);transition:border-color .15s}
+.pc:hover,.pc:focus-visible{border-color:var(--ink);outline:none}
+.pc img,.pimg-ph{width:96px;height:96px;object-fit:cover;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-size:34px}
+.pcb{display:grid;gap:2px;min-width:0}
+.pct{font-size:12px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.06em}
+.pcn{font-family:var(--display);font-weight:700;color:var(--ink);font-size:17px;line-height:1.2}
+.pcs{font-size:14px;color:var(--grey)}
+.pcf{font-size:14px;color:var(--grey);margin-top:4px}
+.pcl{font-size:13px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;margin-top:2px}
+details.mini{margin-top:18px;border-top:1px solid var(--line);padding-top:12px}
+details.mini summary,details.more>summary{cursor:pointer;color:var(--ink);font-weight:600;list-style:none}
+details.mini summary::before,details.more>summary::before{content:"+ ";color:var(--grey)}
+details[open].mini summary::before,details[open].more>summary::before{content:"– "}
+details.mini ul{padding-left:18px;margin:10px 0 0;display:grid;gap:6px}
+details.mini p{margin-top:8px}
+.next{margin-top:18px;background:var(--soft);border-radius:12px;padding:14px 16px;font-size:15px}
+.moreh{padding-top:32px;padding-bottom:8px}
+details.more{max-width:1040px;margin:0 auto;border-top:1px solid var(--line)}
+details.more>summary{padding:16px 20px;font-size:17px;font-family:var(--display)}
+details.more>section{border-bottom:0;padding-top:12px}
+dialog#pd{border:0;border-radius:16px;padding:0;max-width:720px;width:calc(100% - 24px);max-height:88vh;overflow:auto;color:var(--grey)}
+dialog#pd::backdrop{background:rgba(0,0,0,.45)}
+.pdh{position:sticky;top:0;background:var(--bg);display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:18px 20px 12px;border-bottom:1px solid var(--line)}
+.pdh h2{font-size:22px}
+.pdx{border:1px solid var(--line);background:var(--bg);border-radius:999px;width:36px;height:36px;font-size:16px;cursor:pointer;color:var(--ink);flex:none}
+#pdB{padding:16px 20px 24px;display:grid;gap:14px}
+#pdB h3{font-size:16px;margin-bottom:6px}
+#pdB table{width:100%;border-collapse:collapse;font-size:14px}
+#pdB td,#pdB th{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+#pdB td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+#pdB tr.tot td{color:var(--ink);font-weight:600}
+#pdB ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpi{background:var(--soft);border-radius:10px;padding:10px}
+.kpi b{display:block;font-family:var(--display);font-size:20px}
+.kpi span{font-size:12.5px}
 </style>
 </head>
 <body>
 
-<nav aria-label="Secciones">
-  <div class="wrap">
-    <a href="index.html" style="color:var(--ink);font-weight:600">← Proyectos</a>
-    <a href="#resumen">Resumen</a>
-    <a href="#vision">Visión Nico</a>
-    <a href="#producto">Producto</a>
-    <a href="#mercado">Mercado</a>
-    <a href="#test3">Los 3 del test</a>
-    <a href="#proveedores">Arbitraje vs producción</a>
-    <a href="#corea">Corea</a>
-    <a href="#productos">Todos los productos</a>
-    <a href="#numeros">Números</a>
-    <a href="#test">Prueba de humo</a>
-    <a href="#anuncios">Anuncios</a>
-    <a href="#landing">Landing de ejemplo</a>
-    <a href="#debate">Claude vs ChatGPT</a>
-    <a href="#pasos">Pasos</a>
-  </div>
-</nav>
+<nav aria-label="Secciones"><div class="wrap"><a href="index.html" style="color:var(--ink);font-weight:600">← Proyectos</a><a href="#panel">Panel</a><a href="#mas">Más información</a></div></nav>
 
-<header class="hero" id="resumen">
+<header class="top" id="panel">
+  <div class="wrap">
+    <div class="kicker">Business Plan · Colombia · actualizado 14 nov</div>
+    <h1>¿Qué vendemos primero?</h1>
+    <p class="lead">Todos se prueban igual: <b>anuncio + landing + lista de espera</b>. Nadie compra ni fabrica nada hasta que un producto gane. Toca un producto para ver proveedores, costes y materiales.</p>
+  </div>
+</header>
+<section class="panel">
+  <div class="wrap">
+    <div class="cols">
+      <div class="colp">
+        <h2>Arbitraje</h2>
+        <p class="small">Ya lo fabrica otro. Lo vendemos con <b>dropshipping</b> (sin stock) o comprando al por mayor.</p>
+        <div class="plist"><button type="button" class="pc" data-id="A"><img src="kit.jpg" alt="Kit de paseo manos libres" loading="lazy"><span class="pcb"><span class="pct">Prioridad</span><span class="pcn">Kit de paseo manos libres</span><span class="pcs">Correa 3 en 1 + portabolsas + pouch</span><span class="pcf"><b>169.900</b> COP · margen <b>18,1%</b></span><span class="pcl">Ver proveedores y costes →</span></span></button><button type="button" class="pc" data-id="B"><img src="arnes.jpg" alt="Arnés táctico antitirones, tonos tierra" loading="lazy"><span class="pcb"><span class="pct">Condicionado</span><span class="pcn">Arnés táctico antitirones, tonos tierra</span><span class="pcs">Arnés + correa a juego</span><span class="pcf"><b>149.900</b> COP · margen <b>13,6%</b></span><span class="pcl">Ver proveedores y costes →</span></span></button></div>
+      </div>
+      <div class="colp">
+        <h2>Fabricación</h2>
+        <p class="small">Lo testeamos sin fabricar. Si gana, se produce con <b>marca propia</b> (hay que pagar un lote).</p>
+        <div class="plist"><button type="button" class="pc" data-id="C"><img src="collar.jpg" alt="Set collar + correa impermeable" loading="lazy"><span class="pcb"><span class="pct">Mejor margen</span><span class="pcn">Set collar + correa impermeable</span><span class="pcs">PVC tipo biothane, colores a juego</span><span class="pcf"><b>129.900</b> COP · margen <b>28,2%</b></span><span class="pcl">Ver proveedores y costes →</span></span></button><button type="button" class="pc" data-id="D"><img src="chaleco.jpg" alt="Chaleco con cremallera lateral (idea de Nico)" loading="lazy"><span class="pcb"><span class="pct">Validar coste</span><span class="pcn">Chaleco con cremallera lateral (idea de Nico)</span><span class="pcs">Se pone sin pasar las patas</span><span class="pcf"><b>159.900</b> COP · margen <b>14,3%</b></span><span class="pcl">Ver proveedores y costes →</span></span></button><button type="button" class="pc" data-id="E"><div class="pimg-ph" aria-hidden="true">🧗</div><span class="pcb"><span class="pct">Nuevo</span><span class="pcn">Correa de cuerda de escalada</span><span class="pcs">Idea del grupo (Nico y Julieth, 14 nov)</span><span class="pcf"><b>149.900</b> COP · margen <b>19,4%</b></span><span class="pcl">Ver proveedores y costes →</span></span></button></div>
+      </div>
+    </div>
+    <details class="mini"><summary>¿Qué significa “margen”?</summary><p class="small">Margen neto = lo que queda por pedido entregado después de IVA, proveedor, flete, comisiones, devoluciones y publicidad, dividido entre el precio sin IVA. Supuestos: 75% de pedidos entregados y el coste de anuncios acordado. Los costes de proveedor son <b>estimaciones</b> hasta tener precios de Dropi y cotizaciones de fábrica.</p></details>
+    <details class="mini"><summary>Lo último que se compartió en el grupo (14 nov)</summary><ul class="small"><li><b>Julieth:</b> correas, arneses y porta-AirTag de tela borrego en tonos café y crema (Feroz Pet Fashion); collares de cuerda con placas y dijes de flor; ideas de Pinterest para diseñar tu propia correa de cuerda.</li><li><b>Nico:</b> comederos de diseño (cerámica salpicada, bases de colores, acero esculpido) y correas de cuerda gruesa en negro, gris, rosa, crema y café.</li><li><b>Lectura:</b> los dos apuntan a <b>texturas y cuerda</b> → añadida la correa de cuerda de escalada. Comederos y borrego quedan como ideas para después.</li></ul></details>
+    <div class="next"><b>Siguiente paso:</b> Sebastián abre la cuenta de Dropi para tener precios reales de proveedor; en paralelo pedimos cotización de muestra a Compapet y OKEYPETS.</div>
+  </div>
+</section>
+
+<dialog id="pd" aria-labelledby="pdT">
+  <div class="pdh"><div><div class="kicker" id="pdK"></div><h2 id="pdT"></h2></div><button type="button" class="pdx" id="pdX" aria-label="Cerrar">✕</button></div>
+  <div id="pdB"></div>
+</dialog>
+
+<div class="wrap moreh" id="mas"><h2>Más información</h2><p class="small">Todo el análisis, cerrado. Ábrelo solo si lo necesitas.</p></div>
+
+
+<details class="more" id="resumen"><summary>Resumen del plan</summary><section class="hero">
   <div class="wrap hero-grid">
     <div>
       <div class="kicker">Business Plan · Colombia · 14 nov 2026</div>
@@ -283,9 +345,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
       <div class="step"><b>Solo entonces, vender</b><p class="small">Dropshipping con el proveedor del ganador; marca propia en fase 2.</p></div>
     </div>
   </div>
-</header>
+</section></details>
 
-<section id="vision">
+<details class="more" id="vision"><summary>Visión de Nico</summary><section>
   <div class="wrap">
     <div class="kicker">Visión de marca · Nico, 14 nov</div>
     <h2>Ferretería con lujo: materiales de escalada, trato directo y personalización</h2>
@@ -309,9 +371,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
       <div class="card"><span class="chip no">Se queda para después</span><ul class="small" style="margin:10px 0 0;padding-left:18px"><li><b>“Todos los clientes” no es un cliente.</b> Para el test se eligen 1–2 perfiles; el ejecutivo y el joven urbano son los que mejor encajan con 169.900 COP.</li><li><b>De Costco a Dior a la vez</b> confunde: primero un precio y una marca; la línea especial cuando haya ventas.</li><li>Personalización total: dispara el inventario y el tallaje antes de validar.</li></ul></div>
     </div>
   </div>
-</section>
+</section></details>
 
-<section id="producto">
+<details class="more" id="producto"><summary>El producto héroe</summary><section>
   <div class="wrap">
     <div class="kicker">Producto héroe</div>
     <h2>Correa 3 en 1 con estética de marca, no de tienda de mascotas</h2>
@@ -323,9 +385,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
     </div>
     <p class="note">Imágenes <b>generadas con IA por ChatGPT</b> como concepto. Para los anuncios reales hay que usar fotos del producto que se vaya a entregar. Toca una imagen para ampliarla.</p>
   </div>
-</section>
+</section></details>
 
-<section id="mercado">
+<details class="more" id="mercado"><summary>Mercado en Colombia</summary><section>
   <div class="wrap">
     <div class="kicker">Mercado</div>
     <h2>Colombia ya es un país de mascotas, y sobre todo de perros</h2>
@@ -342,9 +404,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
       <div class="card soft"><b>~890 anuncios activos</b><p class="small">Para “correa perro” en Meta Colombia: hay demanda y competencia.</p></div>
     </div>
   </div>
-</section>
+</section></details>
 
-<section id="test3">
+<details class="more" id="test3"><summary>Los productos del test (detalle)</summary><section>
   <div class="wrap">
     <div class="kicker">Decisión · 14 nov</div>
     <h2>Los 3 productos que entran en la prueba</h2>
@@ -383,9 +445,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
     </div>
     <div class="card soft" style="margin-top:16px"><b>Fase 2 (producto propio):</b> el <b>chaleco con cremallera lateral</b> de Nico. Solo si el test demuestra que la categoría vende, porque hay que desarrollarlo. <b>Por qué no los demás todavía:</b> cama, tapete, cepillo y coche venden pero no construyen la marca; portabolsas y bebedero entran como <b>complementos</b> dentro de los kits.</div>
   </div>
-</section>
+</section></details>
 
-<section id="proveedores">
+<details class="more" id="proveedores"><summary>Costes completos: arbitraje vs producción</summary><section>
   <div class="wrap">
     <div class="kicker">Proveedores y costes · 14 nov</div>
     <h2>Dos negocios distintos: arbitraje y producción</h2>
@@ -469,9 +531,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
       </ol></div>
     <div class="card soft" style="margin-top:14px"><b>Siguiente paso:</b> Sebastián abre la cuenta de <b>Dropi</b> y se piden precios de proveedor de A, B y C; en paralelo, cotización de muestra a Compapet y OKEYPETS para el set PVC propio.</div>
   </div>
-</section>
+</section></details>
 
-<section id="corea">
+<details class="more" id="corea"><summary>Corea (referencia)</summary><section>
   <div class="wrap">
     <div class="kicker">Referencia internacional · Corea del Sur</div>
     <h2>Corea: el mercado que ya vende accesorios de paseo como moda</h2>
@@ -522,9 +584,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
       <p class="small" style="margin-top:10px"><b>Acuerdo final:</b> A · Kit modular manos libres 169.900 COP · B · <s>Chaleco con cremallera lateral</s> → <b>Arnés táctico tierra 129.900 COP</b> (cambio del 14 nov: fase 1 solo con proveedor existente) · C · Set collar + correa impermeable 129.900 COP · Extensión: kit nocturno tras el ganador. <b>Medimos</b> contribución por pedido entregado, CPA, conversión y devoluciones, no solo ROAS.</p>
       <p class="small" style="margin-top:6px"><b>Corrección de ChatGPT:</b> en Corea sí hay chalecos con cremallera (Petiful y modelos en Gmarket), aunque no está confirmado que sea lateral. El chaleco pasa a la fase 2, como producto propio.</p></div>
   </div>
-</section>
+</section></details>
 
-<section id="productos">
+<details class="more" id="productos"><summary>Los 10+ productos investigados</summary><section>
   <div class="wrap">
     <div class="kicker">Investigación</div>
     <h2>Todos los productos investigados</h2>
@@ -539,9 +601,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
     <div class="products" id="prodList"></div>
     <div class="card soft" style="margin-top:16px"><b>Descartados:</b> suplementos, sprays y gotas para mascotas. Hay muchos anuncios, pero piden <b>registro sanitario</b> y los reclamos médicos son un riesgo legal y de bloqueo en Meta.</div>
   </div>
-</section>
+</section></details>
 
-<section id="numeros">
+<details class="more" id="numeros"><summary>Calculadora de márgenes</summary><section>
   <div class="wrap">
     <div class="kicker">Calculadora</div>
     <h2>¿Cuánto queda por kit y cuántos hacen falta?</h2>
@@ -569,9 +631,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
       </div>
     </div>
   </div>
-</section>
+</section></details>
 
-<section id="test">
+<details class="more" id="test"><summary>Cómo es la prueba de humo</summary><section>
   <div class="wrap">
     <div class="kicker">Plan de validación</div>
     <h2>Prueba de humo: medir la demanda sin fabricar nada</h2>
@@ -589,9 +651,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
     </div>
     <div class="card soft" style="margin-top:14px"><b>Lo que esta prueba no mide:</b> rechazos en contraentrega, calidad real del producto ni recompra. Eso solo se ve con ventas reales.</div>
   </div>
-</section>
+</section></details>
 
-<section id="anuncios">
+<details class="more" id="anuncios"><summary>Anuncios de ejemplo</summary><section>
   <div class="wrap">
     <div class="kicker">Creatividades</div>
     <h2>Tres ángulos de anuncio, un mismo producto</h2>
@@ -639,9 +701,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
       </div>
     </div>
   </div>
-</section>
+</section></details>
 
-<section id="landing">
+<details class="more" id="landing"><summary>Landings de ejemplo</summary><section>
   <div class="wrap">
     <div class="kicker">Landing</div>
     <h2>Así se verían las 3 landings del test (ejemplo funcional)</h2>
@@ -703,9 +765,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
       <li><b>FAQ:</b> pago, plazos, perros grandes, lavado.</li>
     </ol>
   </div>
-</section>
+</section></details>
 
-<section id="debate">
+<details class="more" id="debate"><summary>Claude vs ChatGPT</summary><section>
   <div class="wrap">
     <div class="kicker">Autocrítica</div>
     <h2>Claude y ChatGPT se corrigieron mutuamente</h2>
@@ -746,9 +808,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
     </table></div>
     <p class="note">Que un anuncio siga vivo es una señal, no una prueba de rentabilidad.</p>
   </div>
-</section>
+</section></details>
 
-<section id="pasos">
+<details class="more" id="pasos"><summary>Pasos</summary><section>
   <div class="wrap">
     <div class="kicker">Siguientes pasos</div>
     <h2>Qué hacemos ahora</h2>
@@ -761,9 +823,9 @@ footer{padding:30px 0 50px;font-size:13.5px}
       <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt">Con el ganador: <b>cotizar fabricación</b> y decidir <b>quién factura en Colombia</b>.</span></button></li>
     </ul>
   </div>
-</section>
+</section></details>
 
-<section id="fuentes" style="border-bottom:0">
+<details class="more" id="fuentes"><summary>Fuentes</summary><section style="border-bottom:0">
   <div class="wrap">
     <div class="kicker">Fuentes</div>
     <ul class="sources">
@@ -783,7 +845,7 @@ footer{padding:30px 0 50px;font-size:13.5px}
       <li>Imágenes: generadas con IA por ChatGPT, solo como concepto</li>
     </ul>
   </div>
-</section>
+</section></details>
 
 <footer><div class="wrap">Preparado por Claude con ChatGPT para el grupo Business plan · Las cifras marcadas como estimación no son cotizaciones.</div></footer>
 
@@ -904,6 +966,46 @@ const lb=document.getElementById('lb'),lbi=document.getElementById('lbimg');
 document.querySelectorAll('.gallery figure').forEach(f=>f.addEventListener('click',()=>{const im=f.querySelector('img');lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('on');}));
 lb.addEventListener('click',()=>lb.classList.remove('on'));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on');});
+</script>
+
+<script>
+const PD=[{"id": "A", "col": "arb", "img": "kit.jpg", "name": "Kit de paseo manos libres", "sub": "Correa 3 en 1 + portabolsas + pouch", "how": "Dropshipping", "e": {"P": 169900, "iva": 27127, "net": 142773, "C": 50000, "gross": 92773, "gp": 65, "F": 15000, "comm": 11893, "ec": 3000, "dev": 10333, "ads": 26667, "cpa": 20000, "prof": 25880, "mp": 18.1, "be": 136300.0, "m15": 163000.0}, "tag": "Prioridad", "what": "Una correa que se cruza al pecho o a la cintura, con portabolsas y bolsito. Es el producto con más margen del arbitraje.", "sup": [["Dropi (AFM Pets, Fedele…)", "Dropshipping: sin stock, pagas al proveedor cuando entra el pedido", "Precio de proveedor por confirmar en Dropi", "2–5 días"], ["AFM Pets (fabricante colombiano)", "Al público 55.000 (correa de cintura) en Falabella", "Pedir precio mayorista", "1–5 días"], ["Fedele", "Al público 89.000 (correa 3 en 1 PVC)", "Pedir precio mayorista", "1–5 días"], ["Peps / Amarem", "Kit de paseo al público 79.900 en Falabella", "Pedir precio mayorista", "1–2 días"]], "later": "Si gana, pasa a <b>marca propia</b>: correa PVC + pouch fabricados en China (~34.000 puesto en Colombia, margen neto ~29%).", "risk": "Producto conocido: hay que ganar con presentación, colores y kit."}, {"id": "B", "col": "arb", "img": "arnes.jpg", "name": "Arnés táctico antitirones, tonos tierra", "sub": "Arnés + correa a juego", "how": "Dropshipping", "e": {"P": 149900, "iva": 23934, "net": 125966, "C": 54000, "gross": 71966, "gp": 57, "F": 15000, "comm": 10493, "ec": 3000, "dev": 10333, "ads": 16000, "cpa": 12000, "prof": 17140, "mp": 13.6, "be": 127600.0, "m15": 152600.0}, "tag": "Condicionado", "what": "El accesorio con más anuncios activos en Colombia. Lo llevamos a colores arena y oliva.", "sup": [["Dropi", "Dropshipping, sin stock", "Por confirmar", "2–5 días"], ["Importadora Maka", "Al público 78.900 en Falabella; anuncia desde el 31 ago", "Pedir precio mayorista", "1–5 días"], ["Wooxipet / Retrover “Arena”", "Mercado Libre", "Pedir precio mayorista", "1–5 días"]], "later": "Margen ajustado (13,6%): necesita costar ≤ 54.000 con correa o venderse a ≥ 152.600.", "risk": "Tallas S–XL (más cambios y devoluciones) y mucha competencia."}, {"id": "C", "col": "fab", "img": "collar.jpg", "name": "Set collar + correa impermeable", "sub": "PVC tipo biothane, colores a juego", "how": "Fabricación en China (OEM)", "e": {"P": 129900, "iva": 20740, "net": 109160, "C": 21000, "gross": 88160, "gp": 81, "F": 15000, "comm": 9093, "ec": 3000, "dev": 10333, "ads": 20000, "cpa": 15000, "prof": 30733, "mp": 28.2, "be": 90000.0, "m15": 107600.0}, "tag": "Mejor margen", "what": "No se moja, no huele y se limpia con agua. Casi sin tallas. En Colombia no encontramos stock de PVC para dropshipping.", "sup": [["Compapet (China)", "Fábrica OEM, set PVC 1,92–2,18 USD, lote mínimo 100", "~21.000 puesto en Colombia", "4–6 semanas tras la muestra"], ["OKEYPETS (Guangzhou)", "Fábrica de collares y correas PVC con logo propio", "Pedir cotización", "4–6 semanas"], ["Fedele (Colombia)", "Lo vende al público a 114.000: sirve para el test, no para fabricar", "—", "1–5 días"]], "mat": ["Cinta de nylon recubierta de PVC/TPU (tipo biothane), 2–2,5 cm de ancho", "Hebilla de acero inoxidable o aluminio con cierre de seguridad", "Mosquetón giratorio y argolla D metálicos", "Remaches o costura sellada", "Tallas S / M / L (medir en cm, no en letras)", "Colores a juego collar + correa; logo grabado en la hebilla"], "later": "Capital del primer lote: ~2,4 M COP con 20% de reserva.", "risk": "Pagar el lote antes de vender; calidad de herrajes; colores que no rotan."}, {"id": "D", "col": "fab", "img": "chaleco.jpg", "name": "Chaleco con cremallera lateral (idea de Nico)", "sub": "Se pone sin pasar las patas", "how": "Fabricación (China o taller en Colombia)", "e": {"P": 159900, "iva": 25530, "net": 134370, "C": 49000, "gross": 85370, "gp": 64, "F": 15000, "comm": 11193, "ec": 3000, "dev": 10333, "ads": 26667, "cpa": 20000, "prof": 19177, "mp": 14.3, "be": 135000.0, "m15": 161400.0}, "tag": "Validar coste", "what": "Diseño propio de Nico. No existe proveedor: hay que desarrollarlo. En Corea hay chalecos con cremallera (Petiful).", "sup": [["Tianlu Pet (Dongguan, China)", "Ropa y arneses; publica lotes desde ~30 piezas", "~8 USD estimado, sin cotizar", "4–8 semanas"], ["Taller de confección en Colombia", "Por buscar (Bogotá / Medellín)", "Sin cotizar", "Por definir"]], "mat": ["Tela exterior: nylon o poliéster ripstop repelente al agua", "Forro: malla transpirable (o polar para frío)", "Cremallera lateral resistente (tipo YKK n.º 5) con tirador grande", "Argolla D para enganchar la correa", "Ribete o cinta reflectiva", "Ajustes con velcro o hebillas; tallas XS–XL"], "later": "Margen neto estimado 14,3%: hay que cotizar antes de comprometerse. Capital ~6,4 M COP (lote 100).", "risk": "Patronaje y tallas; producto nuevo sin referencia de precio."}, {"id": "E", "col": "fab", "img": "", "name": "Correa de cuerda de escalada", "sub": "Idea del grupo (Nico y Julieth, 14 nov)", "how": "Fabricación (China o ensamblado en Colombia)", "e": {"P": 149900, "iva": 23934, "net": 125966, "C": 36000, "gross": 89966, "gp": 71, "F": 15000, "comm": 10493, "ec": 3000, "dev": 10333, "ads": 26667, "cpa": 20000, "prof": 24473, "mp": 19.4, "be": 118100.0, "m15": 141200.0}, "tag": "Nuevo", "what": "Cuerda redonda gruesa con mosquetón, en colores tierra y pastel. Encaja con la visión de Nico: <b>materiales de escalada</b>.", "sup": [["Fábricas de correas de cuerda (China)", "Correas de cuerda al por mayor: 3–6,60 USD", "~36.000 puesto en Colombia (estimado)", "4–6 semanas"], ["Ensamblado en Colombia", "Cuerda + mosquetones comprados en tiendas de escalada / ferretería", "Por cotizar", "1–2 semanas"]], "mat": ["Cuerda de 10–12 mm (tipo dinámica o paracord trenzado)", "Mosquetón de aluminio con seguro (de escalada)", "Terminal: costura con funda termorretráctil o pieza metálica", "Asa acolchada opcional; largo 1,2–1,5 m"], "later": "Aún sin anuncios verificados en Colombia: entra al test solo si lo aprobamos en el grupo.", "risk": "Fácil de copiar; hay que diferenciar con colores y herrajes."}];
+const fmt2=n=>Math.round(n).toLocaleString('es-CO');
+const dlg=document.getElementById('pd');
+function openP(id){
+  const x=PD.find(p=>p.id===id),e=x.e;
+  document.getElementById('pdK').textContent=(x.col==='arb'?'Arbitraje':'Fabricación')+' · '+x.how;
+  document.getElementById('pdT').textContent=x.name;
+  const sup=x.sup.map(s=>`<tr><td><b>${s[0]}</b><br><span class="small">${s[1]}</span></td><td>${s[2]}</td><td>${s[3]}</td></tr>`).join('');
+  const mat=x.mat?`<section><h3>Materiales</h3><ul>${x.mat.map(m=>`<li>${m}</li>`).join('')}</ul></section>`:'';
+  document.getElementById('pdB').innerHTML=`
+   <p>${x.what}</p>
+   <div class="kpis"><div class="kpi"><b>${fmt2(e.P)}</b><span>precio de venta</span></div><div class="kpi"><b>${String(e.mp).replace('.',',')}%</b><span>margen neto</span></div><div class="kpi"><b>${fmt2(e.m15)}</b><span>precio mínimo para 15%</span></div></div>
+   <section><h3>Posibles proveedores</h3><table><thead><tr><th>Proveedor</th><th>Coste</th><th>Entrega</th></tr></thead><tbody>${sup}</tbody></table></section>
+   ${mat}
+   <details class="mini" open><summary>Costes por pedido entregado</summary><table>
+     <tr><td>Precio de venta (IVA incl.)</td><td class="n">${fmt2(e.P)}</td></tr>
+     <tr><td>− IVA 19%</td><td class="n">−${fmt2(e.iva)}</td></tr>
+     <tr><td>− Coste del proveedor (estimado)</td><td class="n">−${fmt2(e.C)}</td></tr>
+     <tr class="tot"><td>= Margen bruto</td><td class="n">${fmt2(e.gross)} (${e.gp}%)</td></tr>
+     <tr><td>− Flete nacional</td><td class="n">−${fmt2(e.F)}</td></tr>
+     <tr><td>− Comisiones Dropi + recaudo (7%)</td><td class="n">−${fmt2(e.comm)}</td></tr>
+     <tr><td>− Empaque + confirmación</td><td class="n">−${fmt2(e.ec)}</td></tr>
+     <tr><td>− Devoluciones (25% de pedidos)</td><td class="n">−${fmt2(e.dev)}</td></tr>
+     <tr><td>− Anuncios (${fmt2(e.cpa)} por pedido ÷ 75%)</td><td class="n">−${fmt2(e.ads)}</td></tr>
+     <tr class="tot"><td>= Beneficio neto</td><td class="n">${fmt2(e.prof)}</td></tr>
+     <tr><td>Precio mínimo para no perder</td><td class="n">${fmt2(e.be)}</td></tr>
+     <tr class="tot"><td>Precio mínimo para 15% de margen</td><td class="n">${fmt2(e.m15)}</td></tr>
+   </table></details>
+   <p class="small"><b>Después:</b> ${x.later}</p>
+   <p class="small"><b>Riesgo:</b> ${x.risk}</p>`;
+  dlg.showModal();
+}
+document.querySelectorAll('.pc').forEach(b=>b.addEventListener('click',()=>openP(b.dataset.id)));
+document.getElementById('pdX').addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',ev=>{if(ev.target===dlg)dlg.close();});
+function openHash(){const h=location.hash.slice(1);const el=h&&document.getElementById(h);if(el&&el.tagName==='DETAILS'){el.open=true;}}
+window.addEventListener('hashchange',openHash);openHash();
 </script>
 <script src="voice.js"></script>
 <script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}</script>
