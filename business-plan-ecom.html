@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Plan Ecom Colombia</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#111111">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Proyectos">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: una columna de lectura con navegación fija; tarjetas solo donde se compara */
+  --bg:#ffffff;
+  --ink:#111111;
+  --grey:#6b6b6b;
+  --soft:#f4f4f2;
+  --line:#e4e4e0;
+  --good:#2f7d4f;
+  --bad:#b4442f;
+  --display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--grey);font-family:var(--body);font-size:16px;line-height:1.55}
+b,strong{color:var(--ink);font-weight:600}
+h1,h2,h3{font-family:var(--display);color:var(--ink);text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;line-height:1.15}
+h3{font-size:18px;font-weight:700}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--grey);font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid transparent}
+nav a:hover,nav a:focus-visible{color:var(--ink);border-color:var(--line);outline:none}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+.lead{font-size:19px;max-width:65ch;margin-top:14px}
+.stack{display:grid;gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--bg)}
+.card.soft{background:var(--soft);border-color:transparent}
+.num{font-family:var(--display);font-size:34px;font-weight:800;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+.small{font-size:14px}
+.chip{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--soft);color:var(--ink)}
+.chip.ok{background:#e6f2ea;color:var(--good)}
+.chip.no{background:#f6e6e2;color:var(--bad)}
+.chip.mid{background:#efefec;color:var(--grey)}
+/* Hero */
+.hero{padding:44px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}}
+.hero img{width:100%;border-radius:14px;display:block}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px}
+.tile{border-top:2px solid var(--ink);padding-top:10px}
+.tile p{font-size:14px;margin-top:6px}
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;counter-reset:s;margin-top:26px}
+.step{position:relative;padding:18px;border-radius:12px;background:var(--soft)}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:28px;color:var(--ink);display:block;margin-bottom:6px}
+/* Gallery */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-top:26px}
+@media (max-width:820px){.gallery{grid-template-columns:1fr 1fr}.gallery figure:first-child{grid-column:1/-1}}
+figure{margin:0}
+figure img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;aspect-ratio:auto}
+.gallery figure{position:relative;cursor:zoom-in}
+.gallery figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.92);color:var(--ink);font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px}
+.note{font-size:13.5px;margin-top:12px}
+/* Bars */
+.bars{display:grid;gap:12px;margin-top:22px}
+.bar{display:grid;grid-template-columns:190px 1fr 70px;gap:12px;align-items:center}
+@media (max-width:560px){.bar{grid-template-columns:110px 1fr 56px}}
+.bar .track{height:14px;background:var(--soft);border-radius:7px;overflow:hidden}
+.bar .fill{height:100%;background:var(--ink);border-radius:7px}
+.bar .fill.grey{background:#b9b9b3}
+.bar span:last-child{color:var(--ink);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+/* Products */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.filters button{font:inherit;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--grey);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.filters button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:18px}
+.prod{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start}
+.prod.hero-p{border:2px solid var(--ink)}
+.prod .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.prod .n{font-family:var(--display);font-weight:800;color:var(--ink);font-size:15px}
+.prod h3{font-size:16.5px}
+.prod .price{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.prod .who{font-size:13.5px}
+.stars{letter-spacing:2px;color:var(--ink)}
+.stars .off{color:#d0d0cb}
+/* Calculator */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+@media (max-width:820px){.calc{grid-template-columns:1fr}}
+.field{display:grid;gap:6px}
+.field label{display:flex;justify-content:space-between;font-size:14.5px;color:var(--ink);font-weight:500}
+.field label output{font-variant-numeric:tabular-nums;font-weight:600}
+input[type=range]{width:100%;accent-color:var(--ink)}
+.result{display:grid;gap:12px}
+.rrow{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:8px 0;font-variant-numeric:tabular-nums}
+.rrow b{font-weight:600}
+.rrow.minus span:last-child{color:var(--bad)}
+.verdict{border-radius:12px;padding:16px;font-size:15px}
+.verdict.good{background:#e6f2ea;color:#1f5535}
+.verdict.bad{background:#f6e6e2;color:#7a2d1f}
+.verdict.mid{background:var(--soft);color:var(--ink)}
+/* Funnel */
+.funnel{display:grid;gap:10px;margin-top:24px}
+.fstep{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:14px 18px;border-radius:10px;background:var(--soft);color:var(--ink)}
+.fstep:nth-child(1){width:100%}.fstep:nth-child(2){width:88%}.fstep:nth-child(3){width:74%}.fstep:nth-child(4){width:60%;background:var(--ink);color:#fff}
+.fstep:nth-child(4) .small{color:#d8d8d8}
+.fstep:nth-child(4) b{color:#fff}
+@media (max-width:560px){.fstep{width:100%!important}}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+@media (max-width:620px){.vs{grid-template-columns:1fr}}
+/* Ads */
+.adwrap{display:grid;grid-template-columns:340px 1fr;gap:28px;margin-top:24px;align-items:start}
+@media (max-width:820px){.adwrap{grid-template-columns:1fr}}
+.phone{border:1px solid var(--line);border-radius:28px;padding:14px;max-width:340px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.phone .ph-head{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.phone .av{width:30px;height:30px;border-radius:50%;background:var(--soft)}
+.phone .img{position:relative;border-radius:10px;overflow:hidden}
+.phone .img img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;object-position:62% center}
+.phone .over{position:absolute;left:14px;right:14px;top:14px;color:#fff;font-family:var(--display);font-weight:800;font-size:24px;line-height:1.1;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.phone .cta{margin-top:12px;display:block;text-align:center;background:var(--ink);color:#fff;border-radius:10px;padding:11px;font-weight:600}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--grey);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tabs button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.panel{margin-top:16px}
+.panel ul{margin:10px 0 0;padding-left:18px}
+.panel li{margin:6px 0}
+/* Landing list */
+ol.landing{counter-reset:l;list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+ol.landing li{counter-increment:l;padding:14px 16px;border:1px solid var(--line);border-radius:10px}
+ol.landing li::before{content:counter(l,decimal-leading-zero);font-family:var(--display);font-weight:800;color:var(--ink);margin-right:8px}
+/* Debate */
+.debate{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+@media (max-width:700px){.debate{grid-template-columns:1fr}}
+.debate ul{margin:10px 0 0;padding-left:18px}
+.debate li{margin:7px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:14px}
+th{color:var(--ink);text-align:left;font-weight:600;border-bottom:1px solid var(--ink);padding:8px 6px}
+td{border-bottom:1px solid var(--line);padding:8px 6px;font-variant-numeric:tabular-nums}
+.tbl{overflow-x:auto}
+/* Checklist */
+.check{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:8px}
+.check button{all:unset;cursor:pointer;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;width:100%;box-sizing:border-box;color:var(--ink)}
+.check button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.check .box{flex:0 0 20px;height:20px;border:2px solid var(--ink);border-radius:5px;margin-top:2px;display:grid;place-items:center;font-size:13px;color:#fff}
+.check button[aria-pressed="true"] .box{background:var(--ink)}
+.check button[aria-pressed="true"] .txt{color:var(--grey);text-decoration:line-through}
+.sources{font-size:14px;columns:2;column-gap:28px;margin-top:18px;padding-left:18px}
+@media (max-width:620px){.sources{columns:1}}
+.sources li{margin:5px 0;break-inside:avoid}
+a{color:var(--ink)}
+footer{padding:30px 0 50px;font-size:13.5px}
+/* Landing example */
+.lp{margin-top:24px;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.07)}
+.lp-bar{background:var(--ink);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:8px 12px}
+.lp-head{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line)}
+.lp-logo{font-family:var(--display);font-weight:800;color:var(--ink);letter-spacing:.12em}
+.lp-main{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;padding:24px 20px}
+@media (max-width:820px){.lp-main{grid-template-columns:1fr}}
+.lp-media img#lpMain{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.lp-thumbs{display:flex;gap:8px;margin-top:8px}
+.lpt{all:unset;cursor:pointer;width:72px;height:72px;border-radius:8px;overflow:hidden;border:2px solid transparent}
+.lpt img{width:100%;height:100%;object-fit:cover;display:block}
+.lpt[aria-pressed="true"],.lpt:focus-visible{border-color:var(--ink)}
+.lp-info{display:grid;gap:14px;align-content:start}
+.lp-title{font-size:28px;font-weight:800}
+.lp-price{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.lp-price .big{font-family:var(--display);font-weight:800;font-size:30px;color:var(--ink)}
+.lp-opt{display:grid;gap:8px}
+.swatches,.sizes{display:flex;gap:8px;flex-wrap:wrap}
+.sw{width:34px;height:34px;border-radius:50%;border:2px solid #fff;outline:1px solid var(--line);cursor:pointer}
+.sw[aria-pressed="true"]{outline:2px solid var(--ink)}
+.sz{font:inherit;font-size:14px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--grey);cursor:pointer}
+.sz[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);font-weight:600}
+.lp-form{display:grid;gap:8px;padding:14px;border-radius:12px;background:var(--soft)}
+.lp-row{display:flex;gap:8px;flex-wrap:wrap}
+.lp-row input{flex:1 1 160px;font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+.lp-row button{font:inherit;font-weight:600;padding:11px 16px;border-radius:8px;border:0;background:var(--ink);color:#fff;cursor:pointer}
+.lp-row input:focus-visible,.lp-row button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.lp-ben{margin:0;padding-left:18px;display:grid;gap:4px}
+.lp-faq{border-top:1px solid var(--line);padding:8px 20px 16px}
+.lp-faq details{border-bottom:1px solid var(--line);padding:10px 0}
+.lp-faq summary{cursor:pointer;color:var(--ink);font-weight:600}
+.lp-faq p{margin-top:6px}
+/* Test 3 */
+.t3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
+.t3c{border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.t3c img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:var(--soft)}
+.t3b{padding:16px;display:grid;gap:8px;align-content:start}
+.t3top{display:flex;gap:6px;flex-wrap:wrap}
+.t3p{font-family:var(--display);font-weight:800;font-size:24px;color:var(--ink)}
+.lp-switch{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.lp-switch button{font:inherit;font-size:14px;font-weight:500;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--grey);cursor:pointer}
+.lp-switch button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.presets{display:flex;gap:8px;flex-wrap:wrap}
+.presets button{font:inherit;font-size:13.5px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--grey);cursor:pointer}
+.presets button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+/* Voice FAB */
+.vfab{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;border:0;background:var(--ink);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.vfab:focus-visible{outline:3px solid #999;outline-offset:3px}
+.vfab.rec{background:var(--bad)}
+.vpanel{position:fixed;right:20px;bottom:92px;z-index:60;width:min(360px,calc(100vw - 40px));max-height:calc(100vh - 120px);overflow:auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.18);padding:16px;display:grid;gap:10px}
+.vpanel[hidden]{display:none}
+.vhead{display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+.vx{border:0;background:none;font-size:22px;cursor:pointer;color:var(--grey)}
+.vrec{display:flex;gap:10px;align-items:center}
+.vmic{font:inherit;font-weight:600;padding:9px 14px;border-radius:999px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.vmic[aria-pressed="true"]{background:var(--bad);border-color:var(--bad);color:#fff}
+#vLive{display:grid;gap:8px}
+.vpanel textarea,.vpanel select{font:inherit;font-size:14.5px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;color:var(--ink);background:#fff;width:100%}
+.vsave{font:inherit;font-weight:600;padding:10px 14px;border-radius:10px;border:0;background:var(--ink);color:#fff;cursor:pointer;text-align:center;text-decoration:none;display:block}
+.vsave.alt{background:#fff;color:var(--ink);border:1px solid var(--ink)}
+.vsave[hidden],.vrec[hidden]{display:none}
+.vlist[hidden]{display:none}
+.vlist ul{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:8px}
+.vlist li{border-top:1px solid var(--line);padding-top:8px;color:var(--ink);font-size:14px}
+.vlist li .meta{display:block;color:var(--grey);font-size:12px;margin-bottom:2px}
+@media print{.vfab,.vpanel{display:none!important}}
+/* Lightbox */
+.lb{position:fixed;inset:0;background:rgba(255,255,255,.97);display:none;place-items:center;z-index:50;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:100%;max-height:90vh;border-radius:12px}
+@media print{nav,.filters,.tabs,.lb{display:none!important}section{padding:28px 0;break-inside:avoid-page}.panel[hidden]{display:block!important}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Secciones">
+  <div class="wrap">
+    <a href="index.html" style="color:var(--ink);font-weight:600">← Proyectos</a>
+    <a href="#resumen">Resumen</a>
+    <a href="#vision">Visión Nico</a>
+    <a href="#producto">Producto</a>
+    <a href="#mercado">Mercado</a>
+    <a href="#test3">Los 3 del test</a>
+    <a href="#corea">Corea</a>
+    <a href="#productos">Todos los productos</a>
+    <a href="#numeros">Números</a>
+    <a href="#test">Prueba de humo</a>
+    <a href="#anuncios">Anuncios</a>
+    <a href="#landing">Landing de ejemplo</a>
+    <a href="#debate">Claude vs ChatGPT</a>
+    <a href="#pasos">Pasos</a>
+  </div>
+</nav>
+
+<header class="hero" id="resumen">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">Business Plan · Colombia · 14 nov 2026</div>
+      <h1>Accesorios de paseo para perro, validados con anuncios antes de fabricar</h1>
+      <p class="lead">Empezamos en <b>Bogotá y Medellín</b> con <b>tres productos en prueba</b>: el kit manos libres, el chaleco con cremallera lateral y el set collar + correa impermeable. Medimos la demanda con <b>anuncios y una landing por producto con lista de espera</b>, sin inventario.</p>
+    </div>
+    <img src="hero.jpg" alt="Mujer en un parque de Bogotá paseando a su perro con la correa cruzada al pecho, café en una mano y celular en la otra">
+  </div>
+  <div class="wrap">
+    <div class="tiles">
+      <div class="tile"><div class="num">67%</div><p>de los hogares colombianos tiene <b>mascota</b></p></div>
+      <div class="tile"><div class="num">6,1 bill.</div><p>COP de <b>gasto en mascotas</b> previsto para 2026</p></div>
+      <div class="tile"><div class="num">169.900</div><p>COP, precio del <b>kit</b> (oferta principal)</p></div>
+      <div class="tile"><div class="num">30–50</div><p><b>pedidos entregados</b>: primer objetivo tras el test</p></div>
+    </div>
+    <div class="steps">
+      <div class="step"><b>3 productos en prueba</b><p class="small">Kit manos libres, chaleco con cremallera lateral y set impermeable.</p></div>
+      <div class="step"><b>Ofertas con ticket alto</b><p class="small">Kits y sets, no piezas sueltas: una pieza sola no deja margen.</p></div>
+      <div class="step"><b>Prueba de humo</b><p class="small">Mismo presupuesto, una landing por producto con lista de espera.</p></div>
+      <div class="step"><b>Decide el coste por registro</b><p class="small">Comparado con el margen del kit.</p></div>
+      <div class="step"><b>Solo entonces, fabricar</b><p class="small">Maquila local o China para el ganador.</p></div>
+    </div>
+  </div>
+</header>
+
+<section id="vision">
+  <div class="wrap">
+    <div class="kicker">Visión de marca · Nico, 14 nov</div>
+    <h2>Ferretería con lujo: materiales de escalada, trato directo y personalización</h2>
+    <p class="lead">Lo que Nico ha definido en el grupo, en seis ideas. Debajo, lo que <b>sí</b> entra en el test y lo que se queda para después.</p>
+    <div class="grid3" style="margin-top:24px">
+      <div class="card"><span class="chip">Espacio y look</span><h3 style="margin-top:10px">Ferretería + lujo</h3><p class="small" style="margin-top:6px">Producto <b>expuesto de forma directa</b>, como en una ferretería, con la <b>calidad de materiales</b> del lujo.</p></div>
+      <div class="card"><span class="chip">Producto</span><h3 style="margin-top:10px">Mucha personalización</h3><p class="small" style="margin-top:6px">Combinación de <b>tamaños, calidades y piezas</b>. El cliente arma lo suyo.</p></div>
+      <div class="card"><span class="chip">Materiales</span><h3 style="margin-top:10px">Escalada, náutica, construcción</h3><p class="small" style="margin-top:6px">Cuerdas y arneses de <b>escalada</b>, herrajes <b>náuticos</b>, la dureza de marcas de <b>construcción</b> y <b>prints sofisticados</b>.</p></div>
+      <div class="card"><span class="chip">Campañas</span><h3 style="margin-top:10px">“Quiero verme así con mi perro”</h3><p class="small" style="margin-top:6px">Ciudades del mundo y <b>planes de calidad de vida</b>: un helado en Central Park, pescar en un lago.</p></div>
+      <div class="card"><span class="chip">Clientes</span><h3 style="margin-top:10px">Perfiles variados</h3><p class="small" style="margin-top:6px">El joven que patina con su perro atlético, el niño que lanza la pelota, el <b>ejecutivo que quiere un perro a su nivel</b>.</p></div>
+      <div class="card"><span class="chip">Modelo de venta</span><h3 style="margin-top:10px">De Costco a Dior</h3><p class="small" style="margin-top:6px">Desde el <b>autoservicio</b> hasta una línea <b>especial</b> comunicada como una casa de moda.</p></div>
+    </div>
+    <div class="card" style="margin-top:16px;border:2px solid var(--ink)">
+      <span class="chip ok">Idea de producto propia</span>
+      <h3 style="margin-top:10px">Chaleco con gran cremallera lateral</h3>
+      <p class="small" style="margin-top:6px">Todos los chalecos se abrochan por debajo del perro. Uno que se abre con <b>una cremallera lateral grande</b> rompe esa regla, se ve distinto en un anuncio y <b>no lo he visto</b> en los anuncios revisados en Colombia. En Corea existen chalecos con cremallera (Petiful), sin confirmar que sea lateral. Es el candidato perfecto para la prueba de humo: si la landing capta registros sin existir el producto, hay una señal de diferenciación real.</p>
+    </div>
+    <h3 style="margin-top:30px">El reto del coach</h3>
+    <div class="vs">
+      <div class="card"><span class="chip ok">Entra en el test</span><ul class="small" style="margin:10px 0 0;padding-left:18px"><li><b>Materiales de escalada y náutica</b> como diferencial del kit.</li><li>La <b>campaña de ciudad</b>: Bogotá y Medellín primero; las ciudades del mundo, después.</li><li>El <b>chaleco con cremallera lateral</b> como segundo producto del test.</li><li>Personalización <b>limitada</b>: 3 colores × 2 tamaños.</li></ul></div>
+      <div class="card"><span class="chip no">Se queda para después</span><ul class="small" style="margin:10px 0 0;padding-left:18px"><li><b>“Todos los clientes” no es un cliente.</b> Para el test se eligen 1–2 perfiles; el ejecutivo y el joven urbano son los que mejor encajan con 169.900 COP.</li><li><b>De Costco a Dior a la vez</b> confunde: primero un precio y una marca; la línea especial cuando haya ventas.</li><li>Personalización total: dispara el inventario y el tallaje antes de validar.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="producto">
+  <div class="wrap">
+    <div class="kicker">Producto héroe</div>
+    <h2>Correa 3 en 1 con estética de marca, no de tienda de mascotas</h2>
+    <p class="lead">Diseño <b>utilitario y minimalista</b>, paleta <b>arena, terracota y oliva</b>, herrajes <b>metálicos mate</b>. Es el concepto de Nico llevado a un producto que se puede anunciar.</p>
+    <div class="gallery">
+      <figure data-full="hero"><img src="hero.jpg" alt="Paseo en el parque con la correa cruzada"><figcaption>En uso · cruzada</figcaption></figure>
+      <figure data-full="kit"><img src="kit.jpg" alt="Kit de correa, collar y portabolsas a juego sobre lino"><figcaption>El kit</figcaption></figure>
+      <figure data-full="detalle"><img src="detalle.jpg" alt="Primer plano del mosquetón con seguro y la costura"><figcaption>Detalle · mosquetón</figcaption></figure>
+    </div>
+    <p class="note">Imágenes <b>generadas con IA por ChatGPT</b> como concepto. Para los anuncios reales hay que usar fotos del producto que se vaya a entregar. Toca una imagen para ampliarla.</p>
+  </div>
+</section>
+
+<section id="mercado">
+  <div class="wrap">
+    <div class="kicker">Mercado</div>
+    <h2>Colombia ya es un país de mascotas, y sobre todo de perros</h2>
+    <div class="bars" role="img" aria-label="Datos del mercado de mascotas en Colombia">
+      <div class="bar"><span>Hogares con mascota 2020</span><div class="track"><div class="fill grey" style="width:48%"></div></div><span>48%</span></div>
+      <div class="bar"><span>Hogares con mascota 2025</span><div class="track"><div class="fill" style="width:67%"></div></div><span>67%</span></div>
+      <div class="bar"><span>Hogares con mascota que tienen perro</span><div class="track"><div class="fill" style="width:71%"></div></div><span>71%</span></div>
+      <div class="bar"><span>Hogares con mascota en Antioquia</span><div class="track"><div class="fill" style="width:83%"></div></div><span>83%</span></div>
+      <div class="bar"><span>Hogares multipet (perro + gato)</span><div class="track"><div class="fill grey" style="width:50%"></div></div><span>&gt;50%</span></div>
+    </div>
+    <div class="grid3" style="margin-top:26px">
+      <div class="card soft"><b>Bogotá concentra el gasto</b><p class="small">El comprador típico tiene entre 32 y 45 años.</p></div>
+      <div class="card soft"><b>100.000–300.000 COP/mes</b><p class="small">Gasto habitual por hogar; la mayor parte va a comida.</p></div>
+      <div class="card soft"><b>~890 anuncios activos</b><p class="small">Para “correa perro” en Meta Colombia: hay demanda y competencia.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="test3">
+  <div class="wrap">
+    <div class="kicker">Decisión · 14 nov</div>
+    <h2>Los 3 productos que entran en la prueba</h2>
+    <p class="lead">Uno con <b>demanda probada</b>, uno <b>diferente a todo lo que hay</b> y uno <b>barato y sin tallas</b>. Así el test compara tres apuestas distintas y no tres versiones de lo mismo.</p>
+    <div class="t3">
+      <article class="t3c">
+        <img src="kit.jpg" alt="Kit de correa manos libres, collar y portabolsas">
+        <div class="t3b">
+          <div class="t3top"><span class="chip">Apuesta segura</span><span class="chip mid">Encaje ★★★</span></div>
+          <h3>1 · Kit de paseo manos libres</h3>
+          <div class="t3p">169.900 <span class="small">COP · correa sola 109.900</span></div>
+          <p class="small"><b>Por qué:</b> el paseo es donde se juntan los anuncios de la competencia y la marca de Nico. Connor Pets vendía una manos libres a 89.000 y está agotada.</p>
+          <p class="small"><b>Riesgo:</b> producto conocido; hay que ganar con diseño y materiales de escalada.</p>
+        </div>
+      </article>
+      <article class="t3c">
+        <img src="chaleco.jpg" alt="Chaleco para perro con cremallera lateral">
+        <div class="t3b">
+          <div class="t3top"><span class="chip ok">Diferencial</span><span class="chip mid">Encaje ★★★</span></div>
+          <h3>2 · Chaleco con cremallera lateral</h3>
+          <div class="t3p">159.900 <span class="small">COP · precio de prueba (estimado)</span></div>
+          <p class="small"><b>Por qué:</b> idea propia de Nico. Los chalecos tácticos son lo que más se repite en anuncios (Alfa, Dumapets), pero todos se abrochan por debajo.</p>
+          <p class="small"><b>Riesgo:</b> tallas y patrón nuevo; no existe proveedor de catálogo. Si gana, hay que desarrollarlo.</p>
+        </div>
+      </article>
+      <article class="t3c">
+        <img src="collar.jpg" alt="Collar y correa impermeables a juego">
+        <div class="t3b">
+          <div class="t3top"><span class="chip">Entrada barata</span><span class="chip mid">Encaje ★★★</span></div>
+          <h3>3 · Set collar + correa impermeable</h3>
+          <div class="t3p">129.900 <span class="small">COP · precio de prueba (estimado)</span></div>
+          <p class="small"><b>Por qué:</b> anuncios verificados (Vekopets), coste bajo y casi sin tallas. Material tipo biothane: no se pela, se limpia con agua.</p>
+          <p class="small"><b>Riesgo:</b> Vekopets lleva solo ~22 días anunciando; la señal aún es débil.</p>
+        </div>
+      </article>
+    </div>
+    <div class="card soft" style="margin-top:16px"><b>Por qué no los demás todavía:</b> el arnés antitirones se solapa con el chaleco (se testea uno); cama, tapete, cepillo y coche venden pero no construyen la marca; portabolsas y bebedero entran como <b>complementos</b> dentro de los kits.</div>
+  </div>
+</section>
+
+<section id="corea">
+  <div class="wrap">
+    <div class="kicker">Referencia internacional · Corea del Sur</div>
+    <h2>Corea: el mercado que ya vende accesorios de paseo como moda</h2>
+    <p class="lead">Investigación de ChatGPT, revisada por Claude. Corea no es nuestro mercado: es el <b>laboratorio</b> donde ver qué hace que alguien pague más por una correa.</p>
+    <div class="tiles">
+      <div class="tile"><div class="num">5,91 M</div><p>hogares con mascota, el <b>26,7%</b> (KB, fin de 2024)</p></div>
+      <div class="tile"><div class="num">15,46 M</div><p>personas con mascota, casi el <b>30%</b> de la población</p></div>
+      <div class="tile"><div class="num">87,2%</div><p>considera a su mascota <b>parte de la familia</b></p></div>
+      <div class="tile"><div class="num">₩194.000</div><p>gasto mensual medio por hogar con mascota (KB)</p></div>
+    </div>
+    <h3 style="margin-top:30px">La correa manos libres ya existe en todos los precios</h3>
+    <div class="bars" role="img" aria-label="Precios de correas manos libres en Corea">
+      <div class="bar"><span>OUNCE</span><div class="track"><div class="fill grey" style="width:13%"></div></div><span>₩14.900</span></div>
+      <div class="bar"><span>Standard Pet</span><div class="track"><div class="fill grey" style="width:23%"></div></div><span>₩26.500</span></div>
+      <div class="bar"><span>Likalika</span><div class="track"><div class="fill grey" style="width:34%"></div></div><span>₩39.000</span></div>
+      <div class="bar"><span>GOPE</span><div class="track"><div class="fill grey" style="width:37%"></div></div><span>₩42.000</span></div>
+      <div class="bar"><span>Boondog</span><div class="track"><div class="fill" style="width:42%"></div></div><span>₩48.000</span></div>
+      <div class="bar"><span>GARM (prémium)</span><div class="track"><div class="fill" style="width:100%"></div></div><span>₩115.000</span></div>
+    </div>
+    <p class="note">Lo que justifica pagar 8 veces más no es el mecanismo, que todos tienen: son <b>materiales verificables</b> (GARM usa cuero italiano, malla acolchada y herrajes satinados) y un <b>sistema de piezas que combinan</b> (Boondog).</p>
+    <h3 style="margin-top:30px">Marcas que estudiar y qué copiar de cada una</h3>
+    <div class="grid3" style="margin-top:14px">
+      <div class="card"><b>Boondog</b><p class="small">Ecosistema de paseo: correas impermeables, arneses, bolsos, portabolsas y ropa en combinaciones de color. Vende set correa + collar (~₩85.500 en Coupang). <b>Modelo para nuestro kit.</b></p></div>
+      <div class="card"><b>GARM Companionwear</b><p class="small">Prémium por ingeniería: cada detalle de material se puede comprobar. <b>Modelo para la línea especial</b> “tipo Dior” de Nico.</p></div>
+      <div class="card"><b>BITE ME</b><p class="small">Correas impermeables, colores expresivos, luz LED y correas con mensaje. <b>Valida el set impermeable</b> y el paseo nocturno.</p></div>
+      <div class="card"><b>HOWLPOT</b><p class="small">Marca lifestyle que comunica experiencias, no fichas técnicas. <b>Modelo para las campañas</b> de “quiero verme así con mi perro”.</p></div>
+    </div>
+    <h3 style="margin-top:30px">Ideas coreanas que traemos a Colombia</h3>
+    <div class="debate">
+      <div class="card"><span class="chip ok">Entra ya</span><ul class="small" style="margin:10px 0 0;padding-left:18px">
+        <li><b>Sistema modular:</b> correa 3 en 1 + portabolsas + mini pouch como contenido del kit.</li>
+        <li><b>Set impermeable:</b> lo venden BITE ME y Boondog.</li></ul></div>
+      <div class="card"><span class="chip mid">Más adelante</span><ul class="small" style="margin:10px 0 0;padding-left:18px">
+        <li><b>Kit nocturno</b> (reflectante + luz LED): justo después del ganador. En Bogotá anochece hacia las 6 de la tarde todo el año.</li>
+        <li><b>Bolso de paseo que sirve fuera del paseo</b> (Boondog): producto de expansión.</li>
+        <li><b>Organizador de entrada</b> para correa, llaves y bolsas (tendencia en Ohouse).</li>
+        <li><b>Cochecitos:</b> en Gmarket ya venden más unidades que los de bebé (dato de ChatGPT), pero son voluminosos y caros de devolver.</li></ul></div>
+    </div>
+    <div class="card soft" style="margin-top:14px"><b>Fabricantes coreanos citados por ChatGPT</b> (sin cotizaciones aún): KANdesign/KANDOG, ETHERA, Erunda/ROCPET, LEADDOG. No damos por hecho que fabricar en Corea sea más rentable que en Colombia o China.</div>
+    <div class="card" style="margin-top:14px;border:2px solid var(--ink)" id="acuerdo"><span class="chip">Acuerdo Claude + ChatGPT</span><h3 style="margin-top:8px">Lo que más valor aporta de Corea</h3>
+      <ol class="small" style="margin:8px 0 0;padding-left:18px;display:grid;gap:6px">
+        <li><b>Vender un sistema, no una pieza.</b> Las piezas que ChatGPT eligió (correa 3 en 1, portabolsas, pouch) son el <b>contenido del Kit A</b>, no tres pruebas que compitan entre sí.</li>
+        <li><b>El precio lo sostienen materiales que se pueden comprobar</b> (GARM), no solo la estética.</li>
+        <li><b>El set impermeable (C) está validado</b> por BITE ME y Boondog.</li>
+        <li><b>Kit nocturno</b> (reflectante + LED): se lanza <b>después</b> de conocer el producto ganador, sin abrir una cuarta prueba.</li>
+        <li><b>Cada producto se prueba con dos anuncios</b>, uno de función y otro de estilo de vida, con el mismo precio y la misma oferta. Así sabremos si en Colombia se paga más por diseño o por comodidad.</li>
+      </ol>
+      <p class="small" style="margin-top:10px"><b>Acuerdo final:</b> A · Kit modular manos libres 169.900 COP · B · Chaleco con cremallera lateral 159.900 COP · C · Set collar + correa impermeable 129.900 COP · Extensión: kit nocturno tras el ganador. <b>Medimos</b> contribución por pedido entregado, CPA, conversión y devoluciones, no solo ROAS.</p>
+      <p class="small" style="margin-top:6px"><b>Corrección de ChatGPT:</b> en Corea sí hay chalecos con cremallera (Petiful y modelos en Gmarket), aunque no está confirmado que sea lateral. El chaleco B sigue siendo una apuesta diferencial en Colombia, pero hay que validar prototipo, tallas y resistencia de la cremallera.</p></div>
+  </div>
+</section>
+
+<section id="productos">
+  <div class="wrap">
+    <div class="kicker">Investigación</div>
+    <h2>Todos los productos investigados</h2>
+    <p class="lead"><b>Verificado</b> = anuncios activos vistos en la Biblioteca de anuncios de Meta (Colombia) el 14 nov. Las estrellas miden el <b>encaje con la marca de Nico</b>. Los costes son <b>estimaciones</b>.</p>
+    <div class="filters" role="group" aria-label="Filtrar productos">
+      <button type="button" data-f="all" aria-pressed="true">Todos</button>
+      <button type="button" data-f="test" aria-pressed="false">En el test</button>
+      <button type="button" data-f="paseo" aria-pressed="false">Paseo (encajan con la marca)</button>
+      <button type="button" data-f="ver" aria-pressed="false">Con anuncios verificados</button>
+      <button type="button" data-f="caja" aria-pressed="false">Caja rápida (no hacen marca)</button>
+    </div>
+    <div class="products" id="prodList"></div>
+    <div class="card soft" style="margin-top:16px"><b>Descartados:</b> suplementos, sprays y gotas para mascotas. Hay muchos anuncios, pero piden <b>registro sanitario</b> y los reclamos médicos son un riesgo legal y de bloqueo en Meta.</div>
+  </div>
+</section>
+
+<section id="numeros">
+  <div class="wrap">
+    <div class="kicker">Calculadora</div>
+    <h2>¿Cuánto queda por kit y cuántos hacen falta?</h2>
+    <p class="lead">Mueve los valores. Vienen con nuestras <b>estimaciones</b> para el kit. El IVA del 19% ya va descontado del precio.</p>
+    <div class="calc">
+      <div class="stack">
+        <div class="field"><label for="p">Precio al cliente (IVA incl.) <output id="po"></output></label><input type="range" id="p" min="79900" max="249900" step="10000" value="169900"></div>
+        <div class="field"><label for="c">Coste del producto puesto en Colombia <output id="co"></output></label><input type="range" id="c" min="20000" max="100000" step="1000" value="59000"></div>
+        <div class="field"><label for="e">Envío + comisión de recaudo <output id="eo"></output></label><input type="range" id="e" min="8000" max="25000" step="1000" value="15000"></div>
+        <div class="field"><label for="d">Pedidos rechazados en contraentrega <output id="do"></output></label><input type="range" id="d" min="0" max="40" step="1" value="20"></div>
+        <div class="field"><label for="a">Publicidad por pedido entregado (CPA) <output id="ao"></output></label><input type="range" id="a" min="5000" max="70000" step="1000" value="25000"></div>
+        <div class="field"><label for="g">Objetivo de beneficio neto al mes <output id="go"></output></label><input type="range" id="g" min="1000" max="20000" step="500" value="10000"></div>
+        <p class="small">Supuestos: cada rechazo cuesta ~50.000 COP (flete de ida y vuelta y manipulación); 1 € ≈ 4.500 COP (<b>tipo de cambio a verificar</b>).</p>
+      </div>
+      <div class="result" aria-live="polite">
+        <div class="rrow"><span>Precio sin IVA</span><b id="r1"></b></div>
+        <div class="rrow minus"><span>Producto</span><span id="r2"></span></div>
+        <div class="rrow minus"><span>Envío + recaudo</span><span id="r3"></span></div>
+        <div class="rrow minus"><span>Provisión por rechazos</span><span id="r4"></span></div>
+        <div class="rrow"><span>Margen antes de publicidad</span><b id="r5"></b></div>
+        <div class="rrow minus"><span>Publicidad (CPA)</span><span id="r6"></span></div>
+        <div class="rrow"><span><b>Te queda por kit</b></span><b id="r7"></b></div>
+        <div class="rrow"><span>Kits entregados al día para el objetivo</span><b id="r8"></b></div>
+        <div class="verdict" id="verdict"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="test">
+  <div class="wrap">
+    <div class="kicker">Plan de validación</div>
+    <h2>Prueba de humo: medir la demanda sin fabricar nada</h2>
+    <p class="lead">Una <b>landing independiente por producto</b>. El botón no cobra: abre la <b>lista de espera</b>. Mismo presupuesto y misma audiencia para todos, <b>7 días</b>, Bogotá + Medellín.</p>
+    <div class="funnel">
+      <div class="fstep"><span><b>1 · Anuncio en Meta</b></span><span class="small">CTR &gt; 1,5%</span></div>
+      <div class="fstep"><span><b>2 · Visita a la landing</b></span><span class="small">Coste por clic</span></div>
+      <div class="fstep"><span><b>3 · Clic en “Lo quiero”</b></span><span class="small">&gt; 5–8% de visitas</span></div>
+      <div class="fstep"><span><b>4 · Deja su WhatsApp</b></span><span class="small">&gt; 2–3% de visitas · decide el coste por registro</span></div>
+    </div>
+    <p class="note">Umbrales orientativos para empezar; se ajustan con los primeros datos.</p>
+    <div class="vs">
+      <div class="card"><span class="chip ok">Recomendado</span><h3 style="margin-top:10px">Lista de espera</h3><p class="small" style="margin-top:6px">Captura <b>WhatsApp o email</b>: señal más fuerte que un clic y una base de clientes para el lanzamiento. Es honesto. Texto: <b>“Primer lote en preparación. Únete a la lista y te avisamos primero.”</b></p></div>
+      <div class="card"><span class="chip no">Evitar</span><h3 style="margin-top:10px">“Agotado”</h3><p class="small" style="margin-top:6px">Solo mide el clic, corta al cliente y <b>no es verdad</b> si el producto aún no existe: puede generar quejas o reportes en Meta.</p></div>
+    </div>
+    <div class="card soft" style="margin-top:14px"><b>Lo que esta prueba no mide:</b> rechazos en contraentrega, calidad real del producto ni recompra. Eso solo se ve con ventas reales.</div>
+  </div>
+</section>
+
+<section id="anuncios">
+  <div class="wrap">
+    <div class="kicker">Creatividades</div>
+    <h2>Tres ángulos de anuncio, un mismo producto</h2>
+    <div class="adwrap">
+      <div class="phone" aria-label="Ejemplo de anuncio en Instagram">
+        <div class="ph-head"><div class="av"></div><div><b class="small">tu.marca</b><div class="small" style="font-size:12px">Publicidad</div></div></div>
+        <div class="img"><img src="anuncio.jpg" alt="Anuncio de ejemplo: hombre en Medellín paseando a su perro con la correa a la cintura" style="object-position:center"></div>
+        <p class="small" style="margin-top:10px;color:var(--ink)">Correa 3 en 1: pecho, cintura o mano.</p>
+        <p class="small">Envío gratis · Pagas al recibir</p>
+        <span class="cta">Lo quiero</span>
+      </div>
+      <div>
+        <div class="tabs" role="tablist" aria-label="Ángulos de anuncio">
+          <button type="button" role="tab" id="t-a" aria-controls="p-a" aria-selected="true">A · Problema</button>
+          <button type="button" role="tab" id="t-b" aria-controls="p-b" aria-selected="false">B · Estilo de vida</button>
+          <button type="button" role="tab" id="t-c" aria-controls="p-c" aria-selected="false">C · Clientes reales</button>
+        </div>
+        <div class="panel" role="tabpanel" id="p-a" aria-labelledby="t-a">
+          <h3>Respuesta directa, como la competencia</h3>
+          <ul>
+            <li><b>0–3 s:</b> café en una mano, celular en la otra y el perro tirando. “¿Cuántas veces se te ha caído el tinto por un tirón?”</li>
+            <li><b>3–15 s:</b> se cruza la correa al pecho en 2 segundos; las manos quedan libres.</li>
+            <li><b>15–25 s:</b> las 3 formas de uso en cortes rápidos.</li>
+            <li><b>25–30 s:</b> “Kit completo 169.900. Envío gratis. Pagas al recibir.”</li>
+          </ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p-b" aria-labelledby="t-b" hidden>
+          <h3>La marca de Nico</h3>
+          <ul>
+            <li><b>Formato:</b> vlog en primera persona, luz natural, sin actores de catálogo.</li>
+            <li><b>Guion:</b> “Mi ritual de domingo”: panadería, parque, la correa como parte del outfit.</li>
+            <li><b>Texto:</b> “Hecha para el paseo de verdad. Para ti y para él.”</li>
+            <li><b>Ventaja:</b> KLIMB graba este ángulo mejor que la competencia, que usa vídeos genéricos de proveedor.</li>
+          </ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p-c" aria-labelledby="t-c" hidden>
+          <h3>Prueba social</h3>
+          <ul>
+            <li>5 dueños reales de Bogotá o Medellín, 10 segundos cada uno: “Lo que más me gusta es…”.</li>
+            <li>Grabado con celular. <b>Solo testimonios reales</b>, nunca reseñas inventadas.</li>
+            <li>Se graba cuando haya primeros clientes, no en la prueba de humo.</li>
+          </ul>
+        </div>
+        <div class="card soft" style="margin-top:18px"><b>Reglas del test:</b> 3 ángulos × 2 creativos = 6 anuncios · 100.000–150.000 COP/día (<b>estimación</b>) · se decide por <b>coste por registro</b>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="landing">
+  <div class="wrap">
+    <div class="kicker">Landing</div>
+    <h2>Así se verían las 3 landings del test (ejemplo funcional)</h2>
+    <p class="lead">Cambia de producto, <b>elige color y tamaño</b> y prueba el botón de <b>lista de espera</b>. Aquí no se guarda ningún dato; en la landing real, el formulario va conectado a WhatsApp o al CRM.</p>
+    <div class="lp-switch" role="group" aria-label="Producto de la landing">
+      <button type="button" data-p="kit" aria-pressed="true">1 · Kit manos libres</button>
+      <button type="button" data-p="chaleco" aria-pressed="false">2 · Chaleco cremallera lateral</button>
+      <button type="button" data-p="collar" aria-pressed="false">3 · Set impermeable</button>
+    </div>
+    <div class="lp">
+      <div class="lp-bar">Envío GRATIS a toda Colombia · Primer lote muy pronto</div>
+      <div class="lp-head"><span class="lp-logo">TU MARCA</span><span class="small">Paseo · Kit · Contacto</span></div>
+      <div class="lp-main">
+        <div class="lp-media">
+          <img id="lpMain" src="hero.jpg" alt="Correa manos libres en uso en un parque">
+          <div class="lp-thumbs" id="lpThumbs"></div>
+        </div>
+        <div class="lp-info">
+          <span class="chip">Primer lote en preparación</span>
+          <h3 class="lp-title" id="lpTitle">Kit de paseo manos libres</h3>
+          <p id="lpDesc">Correa 3 en 1 con <b>cuerda y mosquetón de escalada</b>, collar y portabolsas a juego. <b>Pecho, cintura o mano.</b></p>
+          <div class="lp-price"><span class="big" id="lpPrice">$169.900</span><span class="small" id="lpAlt">o la correa sola a $109.900</span></div>
+          <div class="lp-opt"><span class="small"><b>Color:</b> <span id="lpColor">Arena</span></span>
+            <div class="swatches" role="group" aria-label="Color">
+              <button type="button" class="sw" style="background:#d9cbb0" data-c="Arena" aria-pressed="true" aria-label="Arena"></button>
+              <button type="button" class="sw" style="background:#b8643f" data-c="Terracota" aria-pressed="false" aria-label="Terracota"></button>
+              <button type="button" class="sw" style="background:#6f6f45" data-c="Oliva" aria-pressed="false" aria-label="Oliva"></button>
+            </div>
+          </div>
+          <div class="lp-opt"><span class="small"><b>Tamaño del perro</b></span>
+            <div class="sizes" role="group" aria-label="Tamaño del perro" id="lpSizes"></div>
+          </div>
+          <form id="lpForm" class="lp-form" novalidate>
+            <label for="lpPhone" class="small"><b>Tu WhatsApp</b> para avisarte primero</label>
+            <div class="lp-row"><input id="lpPhone" type="tel" inputmode="tel" placeholder="300 123 4567" autocomplete="off"><button type="submit">Únete a la lista</button></div>
+            <p class="small" id="lpMsg" aria-live="polite">Sin pago. Te escribimos cuando salga el primer lote, con precio de lanzamiento.</p>
+          </form>
+          <ul class="lp-ben small" id="lpBen"><li><b>Manos libres</b> para el café y el celular</li><li><b>3 formas de uso</b> en segundos</li><li><b>Impermeable</b> y fácil de limpiar</li></ul>
+        </div>
+      </div>
+      <div class="lp-faq">
+        <details><summary>¿Cómo se paga?</summary><p class="small">Contraentrega, Nequi o Addi cuando salga a la venta. Unirte a la lista no tiene coste.</p></details>
+        <details><summary>¿Cuándo llega?</summary><p class="small">Te avisamos por WhatsApp en cuanto el primer lote esté listo. Envíos de 2 a 4 días hábiles.</p></details>
+        <details><summary>¿Sirve para perros grandes?</summary><p class="small">Sí, la versión mediano-grande lleva mosquetón reforzado.</p></details>
+      </div>
+    </div>
+    <p class="note">Las afirmaciones de materiales y resistencia solo se publican cuando estén comprobadas en el producto real.</p>
+    <h3 style="margin-top:30px">Estructura de cada landing</h3>
+    <ol class="landing">
+      <li><b>Barra superior:</b> Envío GRATIS a toda Colombia.</li>
+      <li><b>Hero:</b> vídeo de 6 s en el parque + “Pasea con las manos libres”.</li>
+      <li><b>Precio:</b> 109.900 la correa, <b>169.900 el kit</b> (el más elegido).</li>
+      <li><b>Selector:</b> 3 colores cálidos y tamaño de perro (pequeño / mediano-grande).</li>
+      <li><b>Botón:</b> “Únete a la lista de espera” → pide WhatsApp.</li>
+      <li><b>3 beneficios:</b> manos libres · 3 formas de uso · impermeable.</li>
+      <li><b>GIF</b> de las 3 formas de uso.</li>
+      <li><b>Bloque de marca:</b> foto de un paseo real y el vínculo cotidiano.</li>
+      <li><b>Especificaciones:</b> solo lo que se haya probado de verdad.</li>
+      <li><b>FAQ:</b> pago, plazos, perros grandes, lavado.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="debate">
+  <div class="wrap">
+    <div class="kicker">Autocrítica</div>
+    <h2>Claude y ChatGPT se corrigieron mutuamente</h2>
+    <div class="debate">
+      <div class="card"><h3>ChatGPT corrigió a Claude</h3>
+        <ul>
+          <li>Marca de diseño y venta rápida <b>no son incompatibles</b>.</li>
+          <li>Los gatos salen del lanzamiento, <b>no de la marca</b>.</li>
+          <li>Medir el margen por <b>pedido entregado</b>.</li>
+          <li>Una correa ajustable antes que un arnés: <b>menos tallas</b>.</li>
+          <li>La primera cuenta <b>no descontaba el IVA</b>: corregida.</li>
+        </ul>
+      </div>
+      <div class="card"><h3>Claude corrigió a ChatGPT</h3>
+        <ul>
+          <li>Su lista <b>no tenía anuncios verificados</b>; casi todo era una sola marca.</li>
+          <li>Los precios eran rangos demasiado amplios: cerramos <b>109.900 y 169.900</b>.</li>
+          <li>Licencias de fútbol: <b>no para lanzar</b>, sí como palanca futura (Connor Pets ya vende con Atlético Nacional).</li>
+        </ul>
+      </div>
+    </div>
+    <h3 style="margin-top:28px">¿Llevan más de 30 días anunciándose?</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Anunciante</th><th>Anuncio activo más antiguo</th><th>Señal</th></tr></thead>
+      <tbody>
+        <tr><td>Dumapets</td><td>26 ago 2026 (~80 días)</td><td><span class="chip ok">Fuerte</span></td></tr>
+        <tr><td>Mimos y Patas</td><td>31 ago 2026</td><td><span class="chip ok">Fuerte</span></td></tr>
+        <tr><td>Importadora Maka</td><td>31 ago 2026</td><td><span class="chip ok">Fuerte</span></td></tr>
+        <tr><td>Connor Pets</td><td>14 oct 2026 · ~13 anuncios activos</td><td><span class="chip ok">Media-fuerte</span></td></tr>
+        <tr><td>Alfa Mascotas</td><td>15 oct 2026</td><td><span class="chip mid">Media</span></td></tr>
+        <tr><td>Glam Room</td><td>15 oct 2026</td><td><span class="chip mid">Media</span></td></tr>
+        <tr><td>Vekopets</td><td>23 oct 2026</td><td><span class="chip no">Débil aún</span></td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Que un anuncio siga vivo es una señal, no una prueba de rentabilidad.</p>
+  </div>
+</section>
+
+<section id="pasos">
+  <div class="wrap">
+    <div class="kicker">Siguientes pasos</div>
+    <h2>Qué hacemos ahora</h2>
+    <ul class="check" id="checks">
+      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Fotos de varios ángulos</b> de los productos de paseo.</span></button></li>
+      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Crear los anuncios</b> de cada producto (ángulos A y B).</span></button></li>
+      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Una landing por producto</b> con lista de espera y evento de conversión.</span></button></li>
+      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Lanzar el test</b>: 7 días, mismo presupuesto por producto.</span></button></li>
+      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Elegir el ganador</b> por coste por registro.</span></button></li>
+      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt">Con el ganador: <b>cotizar fabricación</b> y decidir <b>quién factura en Colombia</b>.</span></button></li>
+    </ul>
+  </div>
+</section>
+
+<section id="fuentes" style="border-bottom:0">
+  <div class="wrap">
+    <div class="kicker">Fuentes</div>
+    <ul class="sources">
+      <li>Biblioteca de anuncios de Meta, Colombia, anuncios activos (14 nov 2026)</li>
+      <li><a href="https://www.valoraanalitik.com/mascotas-expopet-corferias-2026/">Valora Analitik: hogares con mascota y Euromonitor</a></li>
+      <li><a href="https://www.elcolombiano.com/negocios/dos-de-cada-tres-hogares-colombianos-tienen-mascota-cuanto-gastan-y-ahorran-HO29411402">El Colombiano: gasto en mascotas 2026</a></li>
+      <li><a href="https://vivienda.com.co/?p=1891">Vivienda.com.co: perros 71%, Antioquia 83%</a></li>
+      <li><a href="https://www.publimetro.co/publipets/2026/03/27/perros-y-gatos-bajo-el-mismo-techo-la-mitad-de-los-hogares-colombianos-con-mascotas-son-multipet/">Publimetro: hogares multipet</a></li>
+      <li><a href="https://connorpets.com">Connor Pets: catálogo y precios</a></li>
+      <li><a href="https://www.falabella.com.co/falabella-co/category/CATG34806/Correas-para-perros">Falabella Colombia: correas para perros</a></li>
+      <li><a href="https://www.alibaba.com/discover/dog-leashes-multiple.html">Alibaba: correas manos libres al por mayor</a></li>
+      <li><a href="https://www.larepublica.co/consumo/que-parte-de-las-compras-online-va-de-vuelta-a-la-tienda-4423630">La República: devoluciones e-commerce 2026</a></li>
+      <li><a href="https://normograma.dian.gov.co/dian/compilacion/docs/oficio_dian_1470_2026.htm">DIAN: Concepto 1470 de 2026</a></li>
+      <li>Investigación de ChatGPT (chat “Business Plan Ecom”), sin verificar por Claude</li>
+      <li><a href="https://kbthink.com/investment/deepdive/research/250629-1.html">KB Financial: 2025 Korea Pet Report</a></li>
+      <li>Investigación de Corea de ChatGPT (precios OUNCE–GARM, marcas, fabricantes)</li>
+      <li>Imágenes: generadas con IA por ChatGPT, solo como concepto</li>
+    </ul>
+  </div>
+</section>
+
+<footer><div class="wrap">Preparado por Claude con ChatGPT para el grupo Business plan · Las cifras marcadas como estimación no son cotizaciones.</div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-label="Imagen ampliada"><img id="lbimg" alt=""></div>
+
+<button type="button" id="vFab" class="vfab" aria-expanded="false" aria-controls="vPanel" aria-label="Dejar un comentario de voz">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-2.08A7 7 0 0 0 19 12h-2Z"/></svg>
+</button>
+<div id="vPanel" class="vpanel" role="dialog" aria-label="Comentarios de voz" hidden>
+  <div class="vhead"><b>Comentarios del equipo</b><button type="button" id="vClose" class="vx" aria-label="Cerrar">×</button></div>
+  <div id="vLive">
+    <p class="small" id="vHint">Toca el cuadro de texto y pulsa el <b>micrófono del teclado</b> para dictar. Después, <b>envíalo al grupo por WhatsApp</b>.</p>
+    <div class="vrec"><button type="button" id="vMic" class="vmic" aria-pressed="false">● Grabar</button><span class="small" id="vState"></span></div>
+    <label for="vText" class="small"><b>Tu comentario</b></label>
+    <textarea id="vText" rows="4" placeholder="Habla o escribe aquí…"></textarea>
+    <label for="vSec" class="small"><b>Sobre</b></label>
+    <select id="vSec"><option>General</option><option>Kit manos libres</option><option>Chaleco cremallera lateral</option><option>Set impermeable</option><option>Anuncios</option><option>Landing</option><option>Números</option></select>
+    <a class="vsave" id="vWa" href="https://wa.me/" target="_blank" rel="noopener">Enviar al grupo por WhatsApp</a>
+        <p class="small" id="vMsg" aria-live="polite"></p>
+  </div>
+</div>
+
+<script>
+const P=[
+ {n:1,name:"Correa manos libres modular (kit)",price:"55.000–180.000",cost:"18.000–35.000",ads:"Parcial: Connor Pets (89.000, agotada), AFM en Falabella",v:"mid",fit:3,tags:["paseo","test"],hero:true},
+ {n:11,name:"Chaleco con cremallera lateral (idea de Nico)",price:"159.900 (prueba)",cost:"40.000–60.000 (est.)",ads:"Nuevo: no visto en anuncios. Los chalecos tácticos sí (Alfa, Dumapets)",v:"mid",fit:3,tags:["paseo","test"],hero:true},
+ {n:2,name:"Chaleco / arnés táctico personalizado",price:"109.900–189.900",cost:"25.000–50.000",ads:"Alfa Mascotas, Dumapets",v:"ok",fit:2,tags:["ver"]},
+ {n:3,name:"Arnés antitirones / en H",price:"79.000–180.000",cost:"25.000–50.000",ads:"Connor Pets",v:"ok",fit:3,tags:["paseo","ver"]},
+ {n:4,name:"Collar + correa impermeable (set)",price:"59.000–105.000 c/u · set 129.900",cost:"12.000–30.000",ads:"Vekopets",v:"ok",fit:3,tags:["paseo","ver","test"],hero:true},
+ {n:5,name:"Kit portabolsas + bolso de premios",price:"26.000–95.000",cost:"4.000–35.000",ads:"Sin anuncio visto (WUFTREK, según ChatGPT)",v:"no",fit:3,tags:["paseo"]},
+ {n:6,name:"Cama ortopédica antiestrés",price:"80.000–200.000 (est.)",cost:"30.000–70.000",ads:"Dumapets",v:"ok",fit:2,tags:["ver","caja"]},
+ {n:7,name:"Tapete sanitario",price:"60.000–120.000 (est.)",cost:"15.000–40.000",ads:"Mimos y Patas, Trends Pets",v:"ok",fit:1,tags:["ver","caja"]},
+ {n:8,name:"Cepillo quita pelo",price:"40.000–80.000 (est.)",cost:"8.000–20.000",ads:"Glam Room",v:"ok",fit:1,tags:["ver","caja"]},
+ {n:9,name:"Coche plegable para perro mayor",price:"250.000+ (est.)",cost:"100.000+",ads:"Importadora Maka",v:"ok",fit:1,tags:["ver","caja"]},
+ {n:10,name:"Bebedero / comedero plegable",price:"54.000–68.000",cost:"9.000–22.000",ads:"Sin anuncio visto (WUFTREK, según ChatGPT)",v:"no",fit:2,tags:["paseo"]}
+];
+const chip={ok:'<span class="chip ok">Anuncios verificados</span>',mid:'<span class="chip mid">Evidencia parcial</span>',no:'<span class="chip no">Sin anuncio visto</span>'};
+function stars(f){let s='';for(let i=1;i<=3;i++)s+=i<=f?'★':'<span class="off">★</span>';return s;}
+function render(f){
+  const list=document.getElementById('prodList');
+  list.innerHTML=P.filter(p=>f==='all'||p.tags.includes(f)).map(p=>`
+   <article class="prod${p.hero?' hero-p':''}">
+     <div class="top"><span class="n">${String(p.n).padStart(2,'0')}</span>${chip[p.v]}</div>
+     <h3>${p.name}${p.tags.includes('test')?' · en el test':''}</h3>
+     <div class="price">${p.price} COP</div>
+     <div class="small">Coste estimado: ${p.cost}</div>
+     <div class="who">${p.ads}</div>
+     <div class="small">Encaje marca <span class="stars" aria-label="${p.fit} de 3">${stars(p.fit)}</span></div>
+   </article>`).join('');
+}
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true');render(b.dataset.f);
+}));
+render('all');
+
+const fmt=n=>Math.round(n).toLocaleString('es-CO');
+const ids=['p','c','e','d','a','g'];
+function calc(){
+  const v={};ids.forEach(i=>v[i]=Number(document.getElementById(i).value));
+  document.getElementById('po').textContent=fmt(v.p);
+  document.getElementById('co').textContent=fmt(v.c);
+  document.getElementById('eo').textContent=fmt(v.e);
+  document.getElementById('do').textContent=v.d+'%';
+  document.getElementById('ao').textContent=fmt(v.a);
+  document.getElementById('go').textContent=fmt(v.g)+' €';
+  const sin=v.p/1.19, prov=v.d/100*50000, marg=sin-v.c-v.e-prov, net=marg-v.a;
+  document.getElementById('r1').textContent=fmt(sin);
+  document.getElementById('r2').textContent='−'+fmt(v.c);
+  document.getElementById('r3').textContent='−'+fmt(v.e);
+  document.getElementById('r4').textContent='−'+fmt(prov);
+  document.getElementById('r5').textContent=fmt(marg);
+  document.getElementById('r6').textContent='−'+fmt(v.a);
+  document.getElementById('r7').textContent=fmt(net)+' COP';
+  const goal=v.g*4500, el=document.getElementById('verdict');
+  if(net<=0){document.getElementById('r8').textContent='—';el.className='verdict bad';el.innerHTML='<b>Pierdes dinero en cada kit.</b> Sube el precio, baja el coste o el CPA.';return;}
+  const day=goal/net/30;
+  document.getElementById('r8').textContent=fmt(Math.ceil(day));
+  if(day<=25){el.className='verdict good';el.innerHTML='<b>Objetivo alcanzable</b> con un volumen moderado: unos '+fmt(Math.ceil(day))+' kits al día.';}
+  else if(day<=60){el.className='verdict mid';el.innerHTML='<b>Posible, pero exigente:</b> '+fmt(Math.ceil(day))+' kits al día. Objetivo de 6–12 meses.';}
+  else{el.className='verdict bad';el.innerHTML='<b>Muy difícil:</b> '+fmt(Math.ceil(day))+' kits al día. El margen por kit es demasiado bajo.';}
+}
+ids.forEach(i=>document.getElementById(i).addEventListener('input',calc));calc();
+
+const tabs=[...document.querySelectorAll('[role=tab]')];
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>{x.setAttribute('aria-selected','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true;});
+  t.setAttribute('aria-selected','true');document.getElementById(t.getAttribute('aria-controls')).hidden=false;
+}));
+
+document.querySelectorAll('#checks button').forEach(b=>b.addEventListener('click',()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true')));
+
+const IM={};['hero','kit','detalle'].forEach(k=>IM[k]=document.querySelector('[data-full='+k+'] img').src);
+IM.chaleco=document.querySelector('img[alt="Chaleco para perro con cremallera lateral"]').src;
+IM.collar=document.querySelector('img[alt="Collar y correa impermeables a juego"]').src;
+const LP={
+ kit:{t:'Kit de paseo manos libres',d:'Correa 3 en 1 con <b>cuerda y mosquetón de escalada</b>, collar y portabolsas a juego. <b>Pecho, cintura o mano.</b>',p:'$169.900',a:'o la correa sola a $109.900',img:['hero','kit','detalle'],s:['Pequeño (hasta 10 kg)','Mediano-grande'],b:['<b>Manos libres</b> para el café y el celular','<b>3 formas de uso</b> en segundos','<b>Impermeable</b> y fácil de limpiar']},
+ chaleco:{t:'Chaleco de cremallera lateral',d:'Se pone y se quita <b>por el costado, con una cremallera grande</b>: sin pelear con hebillas bajo la barriga. Tejido técnico de <b>mochila de escalada</b>.',p:'$159.900',a:'precio de lanzamiento',img:['chaleco','detalle'],s:['S','M','L','XL'],b:['<b>Se pone en segundos</b>, de lado','<b>Asa superior</b> para controlar tirones','<b>Anilla de acero mate</b> para la correa']},
+ collar:{t:'Set collar + correa impermeable',d:'Material recubierto tipo <b>biothane</b>, con aspecto de cuero vegano: <b>no se pela, no huele y se limpia con agua</b> después del barro.',p:'$129.900',a:'collar y correa a juego',img:['collar','kit'],s:['Pequeño','Mediano','Grande'],b:['<b>Impermeable</b> de verdad','<b>Se limpia</b> con un paño','<b>Herrajes</b> que no se oxidan']}
+};
+function pickBtn(sel,b){document.querySelectorAll(sel).forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');}
+function setLP(k){const d=LP[k];
+  document.getElementById('lpTitle').textContent=d.t;document.getElementById('lpDesc').innerHTML=d.d;
+  document.getElementById('lpPrice').textContent=d.p;document.getElementById('lpAlt').textContent=d.a;
+  document.getElementById('lpBen').innerHTML=d.b.map(x=>'<li>'+x+'</li>').join('');
+  document.getElementById('lpMain').src=IM[d.img[0]];
+  const th=document.getElementById('lpThumbs');th.innerHTML=d.img.map((s,i)=>`<button type="button" class="lpt" aria-pressed="${i===0}" aria-label="Ver imagen ${i+1}" data-src="${s}"><img src="${IM[s]}" alt=""></button>`).join('');
+  th.querySelectorAll('.lpt').forEach(b=>b.addEventListener('click',()=>{document.getElementById('lpMain').src=IM[b.dataset.src];pickBtn('#lpThumbs .lpt',b);}));
+  const sz=document.getElementById('lpSizes');sz.innerHTML=d.s.map((s,i)=>`<button type="button" class="sz" aria-pressed="${i===0}">${s}</button>`).join('');
+  sz.querySelectorAll('.sz').forEach(b=>b.addEventListener('click',()=>pickBtn('#lpSizes .sz',b)));
+  document.getElementById('lpMsg').textContent='Sin pago. Te escribimos cuando salga el primer lote, con precio de lanzamiento.';
+}
+document.querySelectorAll('.lp-switch button').forEach(b=>b.addEventListener('click',()=>{pickBtn('.lp-switch button',b);setLP(b.dataset.p);}));
+setLP('kit');
+document.querySelectorAll('.sw').forEach(b=>b.addEventListener('click',()=>{pickBtn('.sw',b);document.getElementById('lpColor').textContent=b.dataset.c;}));
+document.getElementById('lpForm').addEventListener('submit',e=>{e.preventDefault();const v=document.getElementById('lpPhone').value.replace(/\D/g,'');const m=document.getElementById('lpMsg');if(v.length<10){m.innerHTML='<b>Escribe un número de 10 dígitos.</b>';return;}m.innerHTML='<b>¡Listo! Estás en la lista.</b> (Ejemplo: en esta página no se guarda nada.)';});
+const lb=document.getElementById('lb'),lbi=document.getElementById('lbimg');
+document.querySelectorAll('.gallery figure').forEach(f=>f.addEventListener('click',()=>{const im=f.querySelector('img');lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('on');}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on');});
+</script>
+<script src="voice.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}</script>
+</body>
+</html>

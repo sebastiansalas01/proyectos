@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyectos</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#111111">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Proyectos">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: una lista de proyectos en tarjetas; cada tarjeta abre su plan */
+  --bg:#ffffff;--ink:#111111;--grey:#6b6b6b;--soft:#f4f4f2;--line:#e4e4e0;--good:#2f7d4f;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;--body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--grey);font-family:var(--body);line-height:1.5}
+b{color:var(--ink);font-weight:600}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:36px 0 18px;border-bottom:1px solid var(--line)}
+h1{font-family:var(--display);color:var(--ink);font-size:clamp(30px,6vw,44px);font-weight:800;margin:0;text-wrap:balance}
+h2{font-family:var(--display);color:var(--ink);font-size:20px;margin:0}
+.lead{margin-top:8px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;padding:24px 0}
+.card{display:grid;grid-template-rows:auto 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;background:#fff}
+.card:hover,.card:focus-visible{border-color:var(--ink);outline:none}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.card .b{padding:16px;display:grid;gap:8px;align-content:start}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--soft);color:var(--ink)}
+.chip.ok{background:#e6f2ea;color:var(--good)}
+.prog{height:8px;background:var(--soft);border-radius:4px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--ink)}
+.small{font-size:14px}
+.empty{border:1px dashed var(--line);border-radius:14px;display:grid;place-items:center;text-align:center;padding:24px;min-height:200px}
+.install{margin:8px 0 30px;padding:16px;border-radius:12px;background:var(--soft);font-size:14.5px}
+footer{padding:10px 0 40px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Proyectos</h1>
+    <p class="lead">Los proyectos del equipo en un solo sitio. <b>Siempre es la última versión</b>: cada cambio aparece aquí sin volver a descargar nada.</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="grid">
+    <a class="card" href="business-plan-ecom.html">
+      <img src="hero.jpg" alt="Paseo con la correa manos libres en un parque de Bogotá">
+      <div class="b">
+        <div class="chips"><span class="chip ok">En marcha</span><span class="chip">Colombia</span><span class="chip">Mascotas</span></div>
+        <h2>Business Plan Ecom</h2>
+        <p class="small">Accesorios de paseo para perro. <b>3 productos en prueba de humo</b>: kit manos libres, chaleco con cremallera lateral y set impermeable. Incluye Corea como referencia.</p>
+        <div class="small">Fase: <b>validación con anuncios</b></div>
+        <div class="prog" aria-label="Progreso 35%"><i style="width:35%"></i></div>
+      </div>
+    </a>
+    <div class="empty small"><div><b>Próximo proyecto</b><br>Pídeselo a Claude y aparecerá aquí.</div></div>
+  </div>
+  <div class="install"><b>Instalar como app.</b> iPhone (Safari): botón Compartir → “Añadir a pantalla de inicio”. Android (Chrome): menú ⋮ → “Instalar app”.</div>
+</main>
+<footer><div class="wrap">Actualizado el 14 nov 2026 · Mantenido por Claude con el equipo.</div></footer>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}</script>
+</body>
+</html>
