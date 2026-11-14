@@ -234,6 +234,7 @@ footer{padding:30px 0 50px;font-size:13.5px}
 .lb.on{display:grid}
 .lb img{max-width:100%;max-height:90vh;border-radius:12px}
 @media print{nav,.filters,.tabs,.lb{display:none!important}section{padding:28px 0;break-inside:avoid-page}.panel[hidden]{display:block!important}}
+.esc td:first-child{font-weight:500;white-space:nowrap}.esc td{font-size:.86rem}
 </style>
 </head>
 <body>
@@ -246,7 +247,7 @@ footer{padding:30px 0 50px;font-size:13.5px}
     <a href="#producto">Producto</a>
     <a href="#mercado">Mercado</a>
     <a href="#test3">Los 3 del test</a>
-    <a href="#proveedores">Proveedores</a>
+    <a href="#proveedores">Arbitraje vs producción</a>
     <a href="#corea">Corea</a>
     <a href="#productos">Todos los productos</a>
     <a href="#numeros">Números</a>
@@ -364,7 +365,7 @@ footer{padding:30px 0 50px;font-size:13.5px}
         <div class="t3b">
           <div class="t3top"><span class="chip ok">Demanda probada</span><span class="chip mid">Encaje ★★</span></div>
           <h3>2 · Arnés táctico antitirones, tonos tierra</h3>
-          <div class="t3p">129.900 <span class="small">COP · arnés + correa a juego (estimado)</span></div>
+          <div class="t3p">149.900 <span class="small">COP · arnés + correa a juego (subió desde 129.900 para tener margen)</span></div>
           <p class="small"><b>Por qué:</b> es lo que más se repite en anuncios activos (Alfa Mascotas, Dumapets, Connor Pets). Lo llevamos a la marca con colores <b>arena y oliva</b> en vez de camuflaje militar.</p>
           <p class="small"><b>Proveedor:</b> stock en Colombia (Importadora Maka, Wooxipet, Retrover “Arena”). <b>Riesgo:</b> tallas S–XL y margen más ajustado.</p>
         </div>
@@ -376,7 +377,7 @@ footer{padding:30px 0 50px;font-size:13.5px}
           <h3>3 · Set collar + correa impermeable</h3>
           <div class="t3p">129.900 <span class="small">COP · precio de prueba (estimado)</span></div>
           <p class="small"><b>Por qué:</b> anuncios verificados (Vekopets), coste bajo y casi sin tallas. Material tipo biothane: no se pela, se limpia con agua.</p>
-          <p class="small"><b>Proveedor:</b> <b>sin stock local confirmado</b>; en China hay sets PVC impermeables (Compapet, mayoristas en Chilat). Si gana, el primer pedido tarda 2–4 semanas. <b>Riesgo:</b> Vekopets lleva solo ~22 días anunciando.</p>
+          <p class="small"><b>Proveedor:</b> arbitraje si encontramos stock local de PVC (Fedele lo vende a 114.000); si no, pasa a <b>producción propia</b> (Compapet, OKEYPETS: ~21.000 puesto en Colombia). <b>Riesgo:</b> Vekopets lleva solo ~22 días anunciando.</p>
         </div>
       </article>
     </div>
@@ -386,24 +387,87 @@ footer{padding:30px 0 50px;font-size:13.5px}
 
 <section id="proveedores">
   <div class="wrap">
-    <div class="kicker">Fase 1 · Dropshipping</div>
-    <h2>Proveedores de los 3 productos</h2>
-    <p class="lead">Durante el test <b>no se compra nada</b>: la lista de espera mide la demanda. El proveedor solo entra si un producto gana. Regla nueva: puede estar en cualquier país, pero el pedido tiene que llegar al cliente en <b>7–10 días hábiles como máximo</b>.</p>
-    <div class="tiles">
-      <div class="tile"><div class="num">2–5</div><p>días hábiles: stock en Colombia (Dropi, vendedores de Falabella). <b>Cumple</b></p></div>
-      <div class="tile"><div class="num">~7–10</div><p>días: bodega en EE. UU. (2–7) + courier Miami → Colombia (4–5). <b>Cumple justo</b>, con IVA y más coste</p></div>
-      <div class="tile"><div class="num">16,9</div><p>días hábiles de media de Zendrop (China) a Colombia. <b>No cumple</b></p></div>
-      <div class="tile"><div class="num">15–60</div><p>días: AliExpress estándar a Colombia. <b>Descartado</b></p></div>
+    <div class="kicker">Proveedores y costes · 14 nov</div>
+    <h2>Dos negocios distintos: arbitraje y producción</h2>
+    <p class="lead"><b>Arbitraje</b> es revender lo que otro ya fabrica: sin inventario, poco margen, salida inmediata. <b>Producción</b> es fabricar con marca propia: hay que pagar un lote por adelantado, pero el margen se duplica. <b>Primero arbitraje para validar; producimos solo lo que gane.</b></p>
+    <div class="debate">
+      <div class="card"><span class="chip ok">Fase 1 · Arbitraje</span><ul class="small" style="margin:10px 0 0;padding-left:18px">
+        <li>Proveedor con <b>stock en Colombia</b> (Dropi, vendedores de Falabella).</li>
+        <li><b>0 COP de inventario</b>; se paga al proveedor cuando entra el pedido.</li>
+        <li>Entrega <b>2–5 días hábiles</b>; contraentrega.</li>
+        <li>Riesgo: margen fino y producto que cualquiera puede copiar.</li></ul></div>
+      <div class="card"><span class="chip mid">Fase 2 · Producción</span><ul class="small" style="margin:10px 0 0;padding-left:18px">
+        <li><b>Marca propia</b> fabricada en China (OEM) o en Colombia.</li>
+        <li>Lote mínimo de ~100 unidades: <b>2,4–6,4 M COP</b> por producto con colchón del 20%.</li>
+        <li>Unas <b>4–6 semanas</b> desde la muestra aprobada (estimado).</li>
+        <li>Riesgo: inventario parado, defectos, tallas y colores que no rotan.</li></ul></div>
     </div>
-    <div class="tbl" style="margin-top:14px"><table>
-      <thead><tr><th>Producto</th><th>Opción que cumple 7–10 días</th><th>Plan B internacional</th><th>Estado</th></tr></thead>
+
+    <h3 style="margin-top:30px">Lo que cuesta cada pedido (iguales para las dos categorías)</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Concepto</th><th>Valor</th><th>Fuente</th></tr></thead>
       <tbody>
-        <tr><td><b>A · Kit manos libres</b></td><td>AFM Pets (fabricante colombiano; correa manos libres 55.000 en Falabella) y kits Peps de Amarem (79.900). <b>1–5 días</b></td><td>Compapet (China, 1,92–2,18 USD, mínimo 100): solo con carga aérea a bodega local, nunca envío directo</td><td><span class="chip ok">Cumple</span></td></tr>
-        <tr><td><b>B · Arnés táctico tierra</b></td><td>Importadora Maka (78.900 en Falabella), Wooxipet y Retrover “Arena” en Mercado Libre. <b>1–5 días</b></td><td>Proveedor con bodega en EE. UU. + courier desde Miami</td><td><span class="chip ok">Cumple</span></td></tr>
-        <tr><td><b>C · Set impermeable</b></td><td>Por validar: sets collar + correa en Falabella y Mercado Libre con envío al día siguiente, pero <b>sin confirmar que sean de PVC impermeable</b></td><td>Bodega en EE. UU. + courier (~7–10 días). China directo no llega a tiempo</td><td><span class="chip mid">Validar</span></td></tr>
+        <tr><td>IVA</td><td>19% (ingreso neto = precio / 1,19)</td><td>DIAN</td></tr>
+        <tr><td>Flete nacional</td><td>15.000 por pedido (Envía cotizó Bogotá–Medellín 13.899 de flete el 29 oct)</td><td>Envía, vía ChatGPT</td></tr>
+        <tr><td>Comisiones de Dropi y recaudo</td><td>7% del precio (5% fulfillment + 2% recaudo)</td><td>Términos de Dropi, vía ChatGPT</td></tr>
+        <tr><td>Empaque + confirmación del pedido</td><td>2.000 + 1.000</td><td>Estimado; confirmación 800–1.200 según operadores</td></tr>
+        <tr><td>Pedidos entregados</td><td><b>75%</b> (rango real 65–85%)</td><td>Operadores de contraentrega 2026</td></tr>
+        <tr><td>Cada pedido devuelto</td><td>30.000 (flete de ida y vuelta)</td><td>Operadores de contraentrega 2026</td></tr>
+        <tr><td>Shopify Basic</td><td>25 USD/mes (19 con pago anual). El 2% por pasarela externa <b>no se cobra en contraentrega</b></td><td>Shopify</td></tr>
+        <tr><td>Pago anticipado (si se ofrece)</td><td>Wompi 2,65% + 700 + IVA, más el 2% de Shopify</td><td>Bancolombia / Wompi</td></tr>
+        <tr><td>Dólar / euro</td><td>TRM 3.297 (11 nov) · euro ~3.650</td><td>Superfinanciera, Portafolio</td></tr>
       </tbody>
     </table></div>
-    <div class="card soft" style="margin-top:14px"><b>Siguiente paso:</b> abrir una cuenta en <b>Dropi</b> (gratis; la crea Sebastián) y buscar los tres productos con stock local. Si C no aparece, preguntar en Dropi o HOKO por un proveedor de PVC; si no hay, se cambia C antes de lanzar. Dato práctico: el test no promete fecha de entrega, así que este filtro solo decide <b>qué ganador podemos vender</b>.</div>
+    <p class="note"><b>CPA máximo</b> = lo que podemos pagar en anuncios por pedido generado y quedar en cero. <b>CPA objetivo</b> = lo que acordamos como meta del test.</p>
+
+    <h3 style="margin-top:30px">Arbitraje · productos que ya fabrica otro</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Producto</th><th>Proveedor (precio al público)</th><th>Coste estimado</th><th>Precio</th><th>CPA máximo</th><th>CPA objetivo</th><th>Beneficio por pedido entregado</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td><b>A · Kit manos libres</b></td><td>AFM Pets, correa cintura 55.000 · Fedele, correa 3 en 1 PVC 89.000 · kit Peps (Amarem) 79.900</td><td>50.000 (pesimista 65.000)</td><td>169.900</td><td>39.400 (28.200)</td><td>≤ 20.000</td><td><b>25.900</b></td><td><span class="chip ok">Prioridad</span></td></tr>
+        <tr><td><b>B · Arnés táctico + correa</b></td><td>Importadora Maka 78.900 · Wooxipet · Retrover “Arena”</td><td>45.000 + correa ≤ 9.000</td><td><b>149.900</b> (antes 129.900)</td><td>24.900 (20.400)</td><td>≤ 12.000</td><td>17.100</td><td><span class="chip mid">Condicionado</span></td></tr>
+        <tr><td><b>C · Set collar + correa impermeable</b></td><td>Fedele, collar PVC + correa 114.000 · otros sin confirmar que sean PVC</td><td>35.000 (pesimista 45.000)</td><td>129.900</td><td>27.600 (20.100)</td><td>≤ 15.000</td><td>16.700</td><td><span class="chip mid">Falta proveedor</span></td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">A 129.900 y sin correa, el arnés deja <b>−6.600 por pedido entregado</b> con un CPA de 25.000: por eso sube a 149.900 con la correa incluida. Los costes son <b>hipótesis</b>: Dropi no publica precios de proveedor; los deducimos del precio al público. Con un 65% de entregas, el CPA máximo baja a 30.000 (A), 17.400 (B) y 19.700 (C).</p>
+
+    <h3 style="margin-top:30px">Producción · marca propia</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Producto</th><th>Fábrica de referencia</th><th>Precio en fábrica</th><th>Coste puesto en Colombia</th><th>Lote mínimo y capital (+20%)</th><th>Precio</th><th>CPA máximo</th><th>Beneficio por pedido entregado</th></tr></thead>
+      <tbody>
+        <tr><td><b>P1 · Set PVC impermeable propio</b></td><td>Compapet, OKEYPETS (Guangzhou)</td><td>1,92–2,18 USD</td><td>~21.000</td><td>100 · ~2,4 M</td><td>129.900</td><td>38.100</td><td>30.700 (CPA 15.000)</td></tr>
+        <tr><td><b>P2 · Kit manos libres propio</b></td><td>Fábricas de correas PVC en Alibaba (3,60–3,80 USD) + pouch</td><td>~5,30 USD</td><td>~34.000</td><td>100 · ~4,6 M</td><td>169.900</td><td>51.400</td><td>41.900 (CPA 20.000)</td></tr>
+        <tr><td><b>P3 · Chaleco con cremallera lateral (Nico)</b></td><td>Tianlu Pet (Dongguan) publica lotes desde ~30 piezas</td><td>~8 USD (estimado, sin cotizar)</td><td>~49.000</td><td>30–100 · ~6,4 M</td><td>159.900</td><td>34.400</td><td>19.200 (CPA 20.000)</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note"><b>Cómo sale el coste puesto:</b> precio en fábrica + flete aéreo (~8 USD/kg) + arancel del 10% (partida 4201, a confirmar con la DIAN) + 500.000 COP de agente y aduana por envío, repartidos entre el lote, + 4.000 de preparación del pedido. El IVA de importación (19%) se adelanta en caja pero se puede descontar si somos responsables de IVA; no lo contamos dos veces. <b>Falta:</b> seguro, peso volumétrico, flete mínimo, bodega, etiquetado, inspección de calidad, muestras y variación del dólar.</p>
+
+
+    <h3 style="margin-top:30px">Escandallo: todos los costes, márgenes y precio mínimo</h3>
+    <p class="small">Cifras por <b>pedido entregado</b>, con 75% de entregas y el CPA objetivo acordado. El precio mínimo se calcula manteniendo fijos coste, flete, devoluciones y publicidad.</p>
+    <div class="tbl"><table class="esc">
+      <thead><tr><th>Por pedido entregado (COP)</th><th>Arbitraje · A · Kit manos libres</th><th>Arbitraje · B · Arnés + correa</th><th>Arbitraje · C · Set PVC</th><th>Producción · P1 · Set PVC propio</th><th>Producción · P2 · Kit propio</th><th>Producción · P3 · Chaleco Nico</th></tr></thead>
+      <tbody><tr><td>Proveedor</td><td>AFM Pets / Fedele / Peps (Colombia)</td><td>Importadora Maka / Wooxipet / Retrover (Colombia)</td><td>Fedele u otro con stock de PVC (por confirmar)</td><td>Compapet / OKEYPETS (China, lote 100)</td><td>Fábrica de correas PVC en Alibaba + pouch (China, lote 100)</td><td>Tianlu Pet u otra (China, lote 30–100)</td></tr><tr><td><b>Precio de venta</b> (IVA incl.)</td><td><b>169.900</b></td><td><b>149.900</b></td><td><b>129.900</b></td><td><b>129.900</b></td><td><b>169.900</b></td><td><b>159.900</b></td></tr><tr><td>− IVA 19%</td><td>−27.127</td><td>−23.934</td><td>−20.740</td><td>−20.740</td><td>−27.127</td><td>−25.530</td></tr><tr><td>= Ingreso neto</td><td>142.773</td><td>125.966</td><td>109.160</td><td>109.160</td><td>142.773</td><td>134.370</td></tr><tr><td>− <b>Coste proveedor</b></td><td><b>−50.000</b></td><td><b>−54.000</b></td><td><b>−35.000</b></td><td><b>−21.000</b></td><td><b>−34.000</b></td><td><b>−49.000</b></td></tr><tr><td>= <b>Margen bruto</b></td><td><b>92.773</b> (65,0%)</td><td><b>71.966</b> (57,1%)</td><td><b>74.160</b> (67,9%)</td><td><b>88.160</b> (80,8%)</td><td><b>108.773</b> (76,2%)</td><td><b>85.370</b> (63,5%)</td></tr><tr><td>− Flete nacional</td><td>−15.000</td><td>−15.000</td><td>−15.000</td><td>−15.000</td><td>−15.000</td><td>−15.000</td></tr><tr><td>− Comisiones Dropi + recaudo (7%)</td><td>−11.893</td><td>−10.493</td><td>−9.093</td><td>−9.093</td><td>−11.893</td><td>−11.193</td></tr><tr><td>− Empaque + confirmación</td><td>−3.000</td><td>−3.000</td><td>−3.000</td><td>−3.000</td><td>−3.000</td><td>−3.000</td></tr><tr><td>− Devoluciones prorrateadas (25% de pedidos)</td><td>−10.333</td><td>−10.333</td><td>−10.333</td><td>−10.333</td><td>−10.333</td><td>−10.333</td></tr><tr><td>− Publicidad (CPA objetivo ÷ 75%)</td><td>−26.667 <span class='small'>(20.000/pedido)</span></td><td>−16.000 <span class='small'>(12.000/pedido)</span></td><td>−20.000 <span class='small'>(15.000/pedido)</span></td><td>−20.000 <span class='small'>(15.000/pedido)</span></td><td>−26.667 <span class='small'>(20.000/pedido)</span></td><td>−26.667 <span class='small'>(20.000/pedido)</span></td></tr><tr><td>= <b>Beneficio neto</b></td><td><b>25.880</b></td><td><b>17.140</b></td><td><b>16.733</b></td><td><b>30.733</b></td><td><b>41.880</b></td><td><b>19.177</b></td></tr><tr><td><b>Margen neto</b> sobre ingreso neto</td><td><b>18,1%</b></td><td><b>13,6%</b></td><td><b>15,3%</b></td><td><b>28,2%</b></td><td><b>29,3%</b></td><td><b>14,3%</b></td></tr><tr><td>Precio mínimo para no perder (margen 0)</td><td>136.300</td><td>127.600</td><td>108.200</td><td>90.000</td><td>115.500</td><td>135.000</td></tr><tr><td><b>Precio mínimo para un 15% de margen neto</b></td><td><b>163.000</b> <span class='small'>→ 20.543 por pedido</span></td><td><b>152.600</b> <span class='small'>→ 19.238 por pedido</span></td><td><b>129.300</b> <span class='small'>→ 16.304 por pedido</span></td><td><b>107.600</b> <span class='small'>→ 13.565 por pedido</span></td><td><b>138.100</b> <span class='small'>→ 17.412 por pedido</span></td><td><b>161.400</b> <span class='small'>→ 20.347 por pedido</span></td></tr></tbody>
+    </table></div>
+    <p class="note"><b>Cómo leerlo:</b> A y los productos propios aguantan; <b>B a 149.900 queda en 13,6%</b>, por debajo del 15%: necesita ≥ 152.600 o un proveedor más barato. C a 129.900 está justo en el mínimo. En producción (P1–P3) el 7% de Dropi podría bajar a ~3% si despachamos nosotros, pero aquí se mantiene para no inflar el margen. Ninguna cifra de coste de proveedor está cotizada todavía: son estimaciones a partir de precios al público y de fábrica.</p>
+
+    <h3 style="margin-top:30px">Plazo de entrega: máximo 7–10 días hábiles</h3>
+    <div class="tiles">
+      <div class="tile"><div class="num">2–5</div><p>días hábiles: stock en Colombia. <b>Cumple</b> (arbitraje y producción ya importada)</p></div>
+      <div class="tile"><div class="num">~7–10</div><p>días: bodega en EE. UU. + courier desde Miami. <b>Cumple justo</b>, más caro</p></div>
+      <div class="tile"><div class="num">16,9</div><p>días hábiles de media de Zendrop (China) a Colombia. <b>No cumple</b></p></div>
+      <div class="tile"><div class="num">15–60</div><p>días: AliExpress estándar. <b>Descartado</b></p></div>
+    </div>
+    <p class="note">En producción el plazo no depende de China: importamos el lote a Colombia y desde ahí entregamos en 2–5 días.</p>
+
+    <div class="card" style="margin-top:18px;border:2px solid var(--ink)"><span class="chip">Acuerdo Claude + ChatGPT · 14 nov</span><h3 style="margin-top:8px">Qué hacemos con estos números</h3>
+      <ol class="small" style="margin:8px 0 0;padding-left:18px;display:grid;gap:6px">
+        <li><b>Fase 1 = arbitraje.</b> A es la prioridad. B solo a 149.900 con correa (si la correa cuesta ≤ 9.000). C solo si aparece un proveedor de PVC rentable.</li>
+        <li><b>Fase 2 = producción solo del ganador</b>, con muestra aprobada y rentabilidad comprobada. Lote de 100 como objetivo, no como obligación, y 15–20% de capital de reserva.</li>
+        <li><b>Ningún margen es definitivo</b> hasta tener precios de Dropi y cotizaciones de fábrica puestas en Colombia (DDP/CIF).</li>
+        <li><b>Alerta:</b> un análisis de 4 tiendas en Colombia vio CPA de 66.000–144.000; no es de mascotas ni de un ticket parecido, pero <b>nuestro 25.000 es optimista</b>. La waitlist mide el coste por registro, no ventas.</li>
+      </ol></div>
+    <div class="card soft" style="margin-top:14px"><b>Siguiente paso:</b> Sebastián abre la cuenta de <b>Dropi</b> y se piden precios de proveedor de A, B y C; en paralelo, cotización de muestra a Compapet y OKEYPETS para el set PVC propio.</div>
   </div>
 </section>
 
@@ -485,17 +549,17 @@ footer{padding:30px 0 50px;font-size:13.5px}
     <div class="calc">
       <div class="stack">
         <div class="field"><label for="p">Precio al cliente (IVA incl.) <output id="po"></output></label><input type="range" id="p" min="79900" max="249900" step="10000" value="169900"></div>
-        <div class="field"><label for="c">Coste del producto puesto en Colombia <output id="co"></output></label><input type="range" id="c" min="20000" max="100000" step="1000" value="59000"></div>
-        <div class="field"><label for="e">Envío + comisión de recaudo <output id="eo"></output></label><input type="range" id="e" min="8000" max="25000" step="1000" value="15000"></div>
+        <div class="field"><label for="c">Coste del producto puesto en Colombia <output id="co"></output></label><input type="range" id="c" min="15000" max="100000" step="1000" value="50000"></div>
+        <div class="field"><label for="e">Flete nacional <output id="eo"></output></label><input type="range" id="e" min="8000" max="25000" step="1000" value="15000"></div>
         <div class="field"><label for="d">Pedidos rechazados en contraentrega <output id="do"></output></label><input type="range" id="d" min="0" max="40" step="1" value="20"></div>
         <div class="field"><label for="a">Publicidad por pedido entregado (CPA) <output id="ao"></output></label><input type="range" id="a" min="5000" max="70000" step="1000" value="25000"></div>
         <div class="field"><label for="g">Objetivo de beneficio neto al mes <output id="go"></output></label><input type="range" id="g" min="1000" max="20000" step="500" value="10000"></div>
-        <p class="small">Supuestos: cada rechazo cuesta ~50.000 COP (flete de ida y vuelta y manipulación); 1 € ≈ 4.500 COP (<b>tipo de cambio a verificar</b>).</p>
+        <p class="small">Supuestos: comisiones de Dropi y recaudo 7% del precio; empaque + confirmación 3.000; cada pedido rechazado cuesta 31.000 (flete de ida y vuelta + confirmación); 1 € ≈ 3.650 COP (nov 2026). El CPA es por <b>pedido entregado</b>.</p>
       </div>
       <div class="result" aria-live="polite">
         <div class="rrow"><span>Precio sin IVA</span><b id="r1"></b></div>
         <div class="rrow minus"><span>Producto</span><span id="r2"></span></div>
-        <div class="rrow minus"><span>Envío + recaudo</span><span id="r3"></span></div>
+        <div class="rrow minus"><span>Flete, comisiones, empaque</span><span id="r3"></span></div>
         <div class="rrow minus"><span>Provisión por rechazos</span><span id="r4"></span></div>
         <div class="rrow"><span>Margen antes de publicidad</span><b id="r5"></b></div>
         <div class="rrow minus"><span>Publicidad (CPA)</span><span id="r6"></span></div>
@@ -653,6 +717,8 @@ footer{padding:30px 0 50px;font-size:13.5px}
           <li>Medir el margen por <b>pedido entregado</b>.</li>
           <li>Una correa ajustable antes que un arnés: <b>menos tallas</b>.</li>
           <li>La primera cuenta <b>no descontaba el IVA</b>: corregida.</li>
+          <li>Costes por pedido: Dropi cobra <b>7%</b> (no 3%+3%), y faltaban empaque y confirmación.</li>
+          <li>El IVA de importación es descontable: <b>no contarlo dos veces</b>.</li>
         </ul>
       </div>
       <div class="card"><h3>Claude corrigió a ChatGPT</h3>
@@ -660,6 +726,8 @@ footer{padding:30px 0 50px;font-size:13.5px}
           <li>Su lista <b>no tenía anuncios verificados</b>; casi todo era una sola marca.</li>
           <li>Los precios eran rangos demasiado amplios: cerramos <b>109.900 y 169.900</b>.</li>
           <li>Licencias de fútbol: <b>no para lanzar</b>, sí como palanca futura (Connor Pets ya vende con Atlético Nacional).</li>
+          <li>El CPA de 66.000–144.000 que citó no es de mascotas: <b>alerta, no base</b>.</li>
+          <li>El arnés a 129.900 pierde dinero: <b>sube a 149.900 con correa</b>.</li>
         </ul>
       </div>
     </div>
@@ -740,17 +808,17 @@ footer{padding:30px 0 50px;font-size:13.5px}
 
 <script>
 const P=[
- {n:1,name:"Correa manos libres modular (kit)",price:"55.000–180.000",cost:"18.000–35.000",ads:"Parcial: Connor Pets (89.000, agotada), AFM en Falabella",v:"mid",fit:3,tags:["paseo","test"],hero:true},
- {n:11,name:"Chaleco con cremallera lateral (idea de Nico · fase 2)",price:"159.900 (est.)",cost:"Desarrollo propio",ads:"Sin proveedor: hay que fabricarlo. En Corea existen chalecos con cremallera (Petiful)",v:"mid",fit:3,tags:["paseo"]},
- {n:2,name:"Arnés táctico antitirones (tonos tierra)",price:"78.900–189.900",cost:"25.000–50.000",ads:"Alfa Mascotas, Dumapets · stock: Importadora Maka, Wooxipet",v:"ok",fit:2,tags:["paseo","ver","test"],hero:true},
- {n:3,name:"Arnés antitirones / en H",price:"79.000–180.000",cost:"25.000–50.000",ads:"Connor Pets",v:"ok",fit:3,tags:["paseo","ver"]},
- {n:4,name:"Collar + correa impermeable (set)",price:"59.000–105.000 c/u · set 129.900",cost:"12.000–30.000",ads:"Vekopets",v:"ok",fit:3,tags:["paseo","ver","test"],hero:true},
- {n:5,name:"Kit portabolsas + bolso de premios",price:"26.000–95.000",cost:"4.000–35.000",ads:"Sin anuncio visto (WUFTREK, según ChatGPT)",v:"no",fit:3,tags:["paseo"]},
- {n:6,name:"Cama ortopédica antiestrés",price:"80.000–200.000 (est.)",cost:"30.000–70.000",ads:"Dumapets",v:"ok",fit:2,tags:["ver","caja"]},
- {n:7,name:"Tapete sanitario",price:"60.000–120.000 (est.)",cost:"15.000–40.000",ads:"Mimos y Patas, Trends Pets",v:"ok",fit:1,tags:["ver","caja"]},
- {n:8,name:"Cepillo quita pelo",price:"40.000–80.000 (est.)",cost:"8.000–20.000",ads:"Glam Room",v:"ok",fit:1,tags:["ver","caja"]},
- {n:9,name:"Coche plegable para perro mayor",price:"250.000+ (est.)",cost:"100.000+",ads:"Importadora Maka",v:"ok",fit:1,tags:["ver","caja"]},
- {n:10,name:"Bebedero / comedero plegable",price:"54.000–68.000",cost:"9.000–22.000",ads:"Sin anuncio visto (WUFTREK, según ChatGPT)",v:"no",fit:2,tags:["paseo"]}
+ {n:1,cat:"Arbitraje → producción si gana",name:"Correa manos libres modular (kit)",price:"55.000–180.000",cost:"18.000–35.000",ads:"Parcial: Connor Pets (89.000, agotada), AFM en Falabella",v:"mid",fit:3,tags:["paseo","test"],hero:true},
+ {n:11,cat:"Producción",name:"Chaleco con cremallera lateral (idea de Nico · fase 2)",price:"159.900 (est.)",cost:"Desarrollo propio",ads:"Sin proveedor: hay que fabricarlo. En Corea existen chalecos con cremallera (Petiful)",v:"mid",fit:3,tags:["paseo"]},
+ {n:2,cat:"Arbitraje",name:"Arnés táctico antitirones (tonos tierra)",price:"149.900 con correa (test)",cost:"25.000–50.000",ads:"Alfa Mascotas, Dumapets · stock: Importadora Maka, Wooxipet",v:"ok",fit:2,tags:["paseo","ver","test"],hero:true},
+ {n:3,cat:"Arbitraje",name:"Arnés antitirones / en H",price:"79.000–180.000",cost:"25.000–50.000",ads:"Connor Pets",v:"ok",fit:3,tags:["paseo","ver"]},
+ {n:4,cat:"Arbitraje o producción",name:"Collar + correa impermeable (set)",price:"59.000–105.000 c/u · set 129.900",cost:"12.000–30.000",ads:"Vekopets",v:"ok",fit:3,tags:["paseo","ver","test"],hero:true},
+ {n:5,cat:"Arbitraje (complemento)",name:"Kit portabolsas + bolso de premios",price:"26.000–95.000",cost:"4.000–35.000",ads:"Sin anuncio visto (WUFTREK, según ChatGPT)",v:"no",fit:3,tags:["paseo"]},
+ {n:6,cat:"Arbitraje",name:"Cama ortopédica antiestrés",price:"80.000–200.000 (est.)",cost:"30.000–70.000",ads:"Dumapets",v:"ok",fit:2,tags:["ver","caja"]},
+ {n:7,cat:"Arbitraje",name:"Tapete sanitario",price:"60.000–120.000 (est.)",cost:"15.000–40.000",ads:"Mimos y Patas, Trends Pets",v:"ok",fit:1,tags:["ver","caja"]},
+ {n:8,cat:"Arbitraje",name:"Cepillo quita pelo",price:"40.000–80.000 (est.)",cost:"8.000–20.000",ads:"Glam Room",v:"ok",fit:1,tags:["ver","caja"]},
+ {n:9,cat:"Arbitraje",name:"Coche plegable para perro mayor",price:"250.000+ (est.)",cost:"100.000+",ads:"Importadora Maka",v:"ok",fit:1,tags:["ver","caja"]},
+ {n:10,cat:"Arbitraje (complemento)",name:"Bebedero / comedero plegable",price:"54.000–68.000",cost:"9.000–22.000",ads:"Sin anuncio visto (WUFTREK, según ChatGPT)",v:"no",fit:2,tags:["paseo"]}
 ];
 const chip={ok:'<span class="chip ok">Anuncios verificados</span>',mid:'<span class="chip mid">Evidencia parcial</span>',no:'<span class="chip no">Sin anuncio visto</span>'};
 function stars(f){let s='';for(let i=1;i<=3;i++)s+=i<=f?'★':'<span class="off">★</span>';return s;}
@@ -761,7 +829,7 @@ function render(f){
      <div class="top"><span class="n">${String(p.n).padStart(2,'0')}</span>${chip[p.v]}</div>
      <h3>${p.name}${p.tags.includes('test')?' · en el test':''}</h3>
      <div class="price">${p.price} COP</div>
-     <div class="small">Coste estimado: ${p.cost}</div>
+     <div class="small"><b>${p.cat}</b> · coste estimado: ${p.cost}</div>
      <div class="who">${p.ads}</div>
      <div class="small">Encaje marca <span class="stars" aria-label="${p.fit} de 3">${stars(p.fit)}</span></div>
    </article>`).join('');
@@ -782,15 +850,15 @@ function calc(){
   document.getElementById('do').textContent=v.d+'%';
   document.getElementById('ao').textContent=fmt(v.a);
   document.getElementById('go').textContent=fmt(v.g)+' €';
-  const sin=v.p/1.19, prov=v.d/100*50000, marg=sin-v.c-v.e-prov, net=marg-v.a;
+  const sin=v.p/1.19, fees=v.e+0.07*v.p+3000, prov=v.d/(100-v.d)*31000, marg=sin-v.c-fees-prov, net=marg-v.a;
   document.getElementById('r1').textContent=fmt(sin);
   document.getElementById('r2').textContent='−'+fmt(v.c);
-  document.getElementById('r3').textContent='−'+fmt(v.e);
+  document.getElementById('r3').textContent='−'+fmt(fees);
   document.getElementById('r4').textContent='−'+fmt(prov);
   document.getElementById('r5').textContent=fmt(marg);
   document.getElementById('r6').textContent='−'+fmt(v.a);
   document.getElementById('r7').textContent=fmt(net)+' COP';
-  const goal=v.g*4500, el=document.getElementById('verdict');
+  const goal=v.g*3650, el=document.getElementById('verdict');
   if(net<=0){document.getElementById('r8').textContent='—';el.className='verdict bad';el.innerHTML='<b>Pierdes dinero en cada kit.</b> Sube el precio, baja el coste o el CPA.';return;}
   const day=goal/net/30;
   document.getElementById('r8').textContent=fmt(Math.ceil(day));
