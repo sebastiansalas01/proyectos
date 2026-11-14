@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Business Plan Ecom Colombia</title>
+<title>Business Plan · ALVOREN</title>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#111111">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -12,927 +12,435 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  /* Layout: una columna de lectura con navegación fija; tarjetas solo donde se compara */
-  --bg:#ffffff;
-  --ink:#111111;
-  --grey:#6b6b6b;
-  --soft:#f4f4f2;
-  --line:#e4e4e0;
-  --good:#2f7d4f;
-  --bad:#b4442f;
-  --display:"Archivo", "Helvetica Neue", Arial, sans-serif;
-  --body:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-  color-scheme: light;
-}
+:root{--bg:#fff;--ink:#111;--grey:#6b6b6b;--soft:#f4f4f2;--line:#e4e4e0;--good:#2f7d4f;--bad:#b4442f;
+--display:"Archivo","Helvetica Neue",Arial,sans-serif;--body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;color-scheme:light}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--bg);color:var(--grey);font-family:var(--body);font-size:16px;line-height:1.55}
 b,strong{color:var(--ink);font-weight:600}
-h1,h2,h3{font-family:var(--display);color:var(--ink);text-wrap:balance;margin:0}
-h1{font-size:clamp(30px,5vw,46px);font-weight:800;line-height:1.08;letter-spacing:-.01em}
-h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;line-height:1.15}
-h3{font-size:18px;font-weight:700}
+h1,h2,h3{font-family:var(--display);color:var(--ink);margin:0;text-wrap:balance}
+h1{font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.08}
+h2{font-size:clamp(22px,3.2vw,30px);font-weight:800;line-height:1.15}
+h3{font-size:17px;font-weight:700}
 p{margin:0}
+a{color:var(--ink)}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
 nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
 nav a{white-space:nowrap;text-decoration:none;color:var(--grey);font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid transparent}
 nav a:hover,nav a:focus-visible{color:var(--ink);border-color:var(--line);outline:none}
-section{padding:56px 0;border-bottom:1px solid var(--line)}
-.kicker{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
-.lead{font-size:19px;max-width:65ch;margin-top:14px}
-.stack{display:grid;gap:18px}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--bg)}
-.card.soft{background:var(--soft);border-color:transparent}
-.num{font-family:var(--display);font-size:34px;font-weight:800;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+.kicker{font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+.lead{font-size:18px;max-width:68ch;margin-top:12px}
 .small{font-size:14px}
-.chip{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--soft);color:var(--ink)}
+.top{padding:34px 0 28px}
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:22px}
+.key{border-top:2px solid var(--ink);padding-top:10px;font-size:14.5px}
+.key b{display:block;font-family:var(--display);font-size:17px;margin-bottom:2px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:18px}
+@media (max-width:860px){.cols{grid-template-columns:1fr}}
+.colp>h2{font-size:23px}
+.colp>.small{margin:6px 0 14px}
+.plist{display:grid;gap:10px}
+.pc{all:unset;box-sizing:border-box;display:grid;grid-template-columns:84px 1fr;gap:14px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px;cursor:pointer;background:#fff}
+.pc:hover,.pc:focus-visible{border-color:var(--ink);outline:none}
+.pc img,.pimg-ph{width:84px;height:84px;object-fit:cover;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-size:28px;color:#bbb}
+.pcb{display:grid;gap:2px;min-width:0}
+.pct{font-size:12px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.06em}
+.pcn{font-family:var(--display);font-weight:700;color:var(--ink);font-size:16.5px;line-height:1.2}
+.pcs{font-size:13.5px}
+.pcf{font-size:14px;margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--soft);color:var(--ink)}
 .chip.ok{background:#e6f2ea;color:var(--good)}
 .chip.no{background:#f6e6e2;color:var(--bad)}
 .chip.mid{background:#efefec;color:var(--grey)}
-/* Hero */
-.hero{padding:44px 0 40px}
-.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center}
-@media (max-width:820px){.hero-grid{grid-template-columns:1fr}}
-.hero img{width:100%;border-radius:14px;display:block}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px}
-.tile{border-top:2px solid var(--ink);padding-top:10px}
-.tile p{font-size:14px;margin-top:6px}
-/* Steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;counter-reset:s;margin-top:26px}
-.step{position:relative;padding:18px;border-radius:12px;background:var(--soft)}
-.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:28px;color:var(--ink);display:block;margin-bottom:6px}
-/* Gallery */
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-top:26px}
-@media (max-width:820px){.gallery{grid-template-columns:1fr 1fr}.gallery figure:first-child{grid-column:1/-1}}
-figure{margin:0}
-figure img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;aspect-ratio:auto}
-.gallery figure{position:relative;cursor:zoom-in}
-.gallery figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.92);color:var(--ink);font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px}
-.note{font-size:13.5px;margin-top:12px}
-/* Bars */
-.bars{display:grid;gap:12px;margin-top:22px}
-.bar{display:grid;grid-template-columns:190px 1fr 70px;gap:12px;align-items:center}
-@media (max-width:560px){.bar{grid-template-columns:110px 1fr 56px}}
-.bar .track{height:14px;background:var(--soft);border-radius:7px;overflow:hidden}
-.bar .fill{height:100%;background:var(--ink);border-radius:7px}
-.bar .fill.grey{background:#b9b9b3}
-.bar span:last-child{color:var(--ink);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
-/* Products */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.filters button{font:inherit;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--grey);cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.filters button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:18px}
-.prod{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start}
-.prod.hero-p{border:2px solid var(--ink)}
-.prod .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.prod .n{font-family:var(--display);font-weight:800;color:var(--ink);font-size:15px}
-.prod h3{font-size:16.5px}
-.prod .price{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
-.prod .who{font-size:13.5px}
-.stars{letter-spacing:2px;color:var(--ink)}
-.stars .off{color:#d0d0cb}
-/* Calculator */
-.calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
-@media (max-width:820px){.calc{grid-template-columns:1fr}}
-.field{display:grid;gap:6px}
-.field label{display:flex;justify-content:space-between;font-size:14.5px;color:var(--ink);font-weight:500}
-.field label output{font-variant-numeric:tabular-nums;font-weight:600}
-input[type=range]{width:100%;accent-color:var(--ink)}
-.result{display:grid;gap:12px}
-.rrow{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:8px 0;font-variant-numeric:tabular-nums}
-.rrow b{font-weight:600}
-.rrow.minus span:last-child{color:var(--bad)}
-.verdict{border-radius:12px;padding:16px;font-size:15px}
-.verdict.good{background:#e6f2ea;color:#1f5535}
-.verdict.bad{background:#f6e6e2;color:#7a2d1f}
-.verdict.mid{background:var(--soft);color:var(--ink)}
-/* Funnel */
-.funnel{display:grid;gap:10px;margin-top:24px}
-.fstep{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:14px 18px;border-radius:10px;background:var(--soft);color:var(--ink)}
-.fstep:nth-child(1){width:100%}.fstep:nth-child(2){width:88%}.fstep:nth-child(3){width:74%}.fstep:nth-child(4){width:60%;background:var(--ink);color:#fff}
-.fstep:nth-child(4) .small{color:#d8d8d8}
-.fstep:nth-child(4) b{color:#fff}
-@media (max-width:560px){.fstep{width:100%!important}}
-.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
-@media (max-width:620px){.vs{grid-template-columns:1fr}}
-/* Ads */
-.adwrap{display:grid;grid-template-columns:340px 1fr;gap:28px;margin-top:24px;align-items:start}
-@media (max-width:820px){.adwrap{grid-template-columns:1fr}}
-.phone{border:1px solid var(--line);border-radius:28px;padding:14px;max-width:340px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-.phone .ph-head{display:flex;gap:10px;align-items:center;margin-bottom:10px}
-.phone .av{width:30px;height:30px;border-radius:50%;background:var(--soft)}
-.phone .img{position:relative;border-radius:10px;overflow:hidden}
-.phone .img img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;object-position:62% center}
-.phone .over{position:absolute;left:14px;right:14px;top:14px;color:#fff;font-family:var(--display);font-weight:800;font-size:24px;line-height:1.1;text-shadow:0 2px 12px rgba(0,0,0,.45)}
-.phone .cta{margin-top:12px;display:block;text-align:center;background:var(--ink);color:#fff;border-radius:10px;padding:11px;font-weight:600}
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tabs button{font:inherit;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--grey);cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.tabs button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-.panel{margin-top:16px}
-.panel ul{margin:10px 0 0;padding-left:18px}
-.panel li{margin:6px 0}
-/* Landing list */
-ol.landing{counter-reset:l;list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
-ol.landing li{counter-increment:l;padding:14px 16px;border:1px solid var(--line);border-radius:10px}
-ol.landing li::before{content:counter(l,decimal-leading-zero);font-family:var(--display);font-weight:800;color:var(--ink);margin-right:8px}
-/* Debate */
-.debate{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
-@media (max-width:700px){.debate{grid-template-columns:1fr}}
-.debate ul{margin:10px 0 0;padding-left:18px}
-.debate li{margin:7px 0}
-table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:14px}
+.idea{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid var(--ink);color:var(--ink)}
+.box{margin-top:18px;background:var(--soft);border-radius:12px;padding:14px 16px;font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:12px}
 th{color:var(--ink);text-align:left;font-weight:600;border-bottom:1px solid var(--ink);padding:8px 6px}
-td{border-bottom:1px solid var(--line);padding:8px 6px;font-variant-numeric:tabular-nums}
+td{border-bottom:1px solid var(--line);padding:8px 6px;vertical-align:top;font-variant-numeric:tabular-nums}
+td.n{text-align:right;white-space:nowrap}
 .tbl{overflow-x:auto}
-/* Checklist */
-.check{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:8px}
-.check button{all:unset;cursor:pointer;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;width:100%;box-sizing:border-box;color:var(--ink)}
-.check button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-.check .box{flex:0 0 20px;height:20px;border:2px solid var(--ink);border-radius:5px;margin-top:2px;display:grid;place-items:center;font-size:13px;color:#fff}
-.check button[aria-pressed="true"] .box{background:var(--ink)}
-.check button[aria-pressed="true"] .txt{color:var(--grey);text-decoration:line-through}
-.sources{font-size:14px;columns:2;column-gap:28px;margin-top:18px;padding-left:18px}
-@media (max-width:620px){.sources{columns:1}}
-.sources li{margin:5px 0;break-inside:avoid}
-a{color:var(--ink)}
-footer{padding:30px 0 50px;font-size:13.5px}
-/* Landing example */
-.lp{margin-top:24px;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.07)}
-.lp-bar{background:var(--ink);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:8px 12px}
-.lp-head{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line)}
-.lp-logo{font-family:var(--display);font-weight:800;color:var(--ink);letter-spacing:.12em}
-.lp-main{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;padding:24px 20px}
-@media (max-width:820px){.lp-main{grid-template-columns:1fr}}
-.lp-media img#lpMain{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
-.lp-thumbs{display:flex;gap:8px;margin-top:8px}
-.lpt{all:unset;cursor:pointer;width:72px;height:72px;border-radius:8px;overflow:hidden;border:2px solid transparent}
-.lpt img{width:100%;height:100%;object-fit:cover;display:block}
-.lpt[aria-pressed="true"],.lpt:focus-visible{border-color:var(--ink)}
-.lp-info{display:grid;gap:14px;align-content:start}
-.lp-title{font-size:28px;font-weight:800}
-.lp-price{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
-.lp-price .big{font-family:var(--display);font-weight:800;font-size:30px;color:var(--ink)}
-.lp-opt{display:grid;gap:8px}
-.swatches,.sizes{display:flex;gap:8px;flex-wrap:wrap}
-.sw{width:34px;height:34px;border-radius:50%;border:2px solid #fff;outline:1px solid var(--line);cursor:pointer}
-.sw[aria-pressed="true"]{outline:2px solid var(--ink)}
-.sz{font:inherit;font-size:14px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--grey);cursor:pointer}
-.sz[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);font-weight:600}
-.lp-form{display:grid;gap:8px;padding:14px;border-radius:12px;background:var(--soft)}
-.lp-row{display:flex;gap:8px;flex-wrap:wrap}
-.lp-row input{flex:1 1 160px;font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
-.lp-row button{font:inherit;font-weight:600;padding:11px 16px;border-radius:8px;border:0;background:var(--ink);color:#fff;cursor:pointer}
-.lp-row input:focus-visible,.lp-row button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-.lp-ben{margin:0;padding-left:18px;display:grid;gap:4px}
-.lp-faq{border-top:1px solid var(--line);padding:8px 20px 16px}
-.lp-faq details{border-bottom:1px solid var(--line);padding:10px 0}
-.lp-faq summary{cursor:pointer;color:var(--ink);font-weight:600}
-.lp-faq p{margin-top:6px}
-/* Test 3 */
-.t3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
-.t3c{border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
-.t3c img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:var(--soft)}
-.t3b{padding:16px;display:grid;gap:8px;align-content:start}
-.t3top{display:flex;gap:6px;flex-wrap:wrap}
-.t3p{font-family:var(--display);font-weight:800;font-size:24px;color:var(--ink)}
-.lp-switch{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
-.lp-switch button{font:inherit;font-size:14px;font-weight:500;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--grey);cursor:pointer}
-.lp-switch button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.presets{display:flex;gap:8px;flex-wrap:wrap}
-.presets button{font:inherit;font-size:13.5px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--grey);cursor:pointer}
-.presets button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-/* Voice FAB */
-.vfab{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;border:0;background:var(--ink);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-.vfab:focus-visible{outline:3px solid #999;outline-offset:3px}
-.vfab.rec{background:var(--bad)}
-.vpanel{position:fixed;right:20px;bottom:92px;z-index:60;width:min(360px,calc(100vw - 40px));max-height:calc(100vh - 120px);overflow:auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.18);padding:16px;display:grid;gap:10px}
-.vpanel[hidden]{display:none}
-.vhead{display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
-.vx{border:0;background:none;font-size:22px;cursor:pointer;color:var(--grey)}
-.vrec{display:flex;gap:10px;align-items:center}
-.vmic{font:inherit;font-weight:600;padding:9px 14px;border-radius:999px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
-.vmic[aria-pressed="true"]{background:var(--bad);border-color:var(--bad);color:#fff}
-#vLive{display:grid;gap:8px}
-.vpanel textarea,.vpanel select{font:inherit;font-size:14.5px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;color:var(--ink);background:#fff;width:100%}
-.vsave{font:inherit;font-weight:600;padding:10px 14px;border-radius:10px;border:0;background:var(--ink);color:#fff;cursor:pointer;text-align:center;text-decoration:none;display:block}
-.vsave.alt{background:#fff;color:var(--ink);border:1px solid var(--ink)}
-.vsave[hidden],.vrec[hidden]{display:none}
-.vlist[hidden]{display:none}
-.vlist ul{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:8px}
-.vlist li{border-top:1px solid var(--line);padding-top:8px;color:var(--ink);font-size:14px}
-.vlist li .meta{display:block;color:var(--grey);font-size:12px;margin-bottom:2px}
-@media print{.vfab,.vpanel{display:none!important}}
-/* Lightbox */
-.lb{position:fixed;inset:0;background:rgba(255,255,255,.97);display:none;place-items:center;z-index:50;padding:20px;cursor:zoom-out}
-.lb.on{display:grid}
-.lb img{max-width:100%;max-height:90vh;border-radius:12px}
-@media print{nav,.filters,.tabs,.lb{display:none!important}section{padding:28px 0;break-inside:avoid-page}.panel[hidden]{display:block!important}}
-.esc td:first-child{font-weight:500;white-space:nowrap}.esc td{font-size:.86rem}
-
-/* Panel simple */
-.top{padding:36px 0 8px}
-.panel{padding:20px 0 40px}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-@media (max-width:760px){.cols{grid-template-columns:1fr}}
-.colp>h2{font-size:24px}
-.colp>.small{margin:6px 0 14px}
-.plist{display:grid;gap:12px}
-.pc{all:unset;box-sizing:border-box;display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px;cursor:pointer;background:var(--bg);transition:border-color .15s}
-.pc:hover,.pc:focus-visible{border-color:var(--ink);outline:none}
-.pc img,.pimg-ph{width:96px;height:96px;object-fit:cover;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-size:34px}
-.pcb{display:grid;gap:2px;min-width:0}
-.pct{font-size:12px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.06em}
-.pcn{font-family:var(--display);font-weight:700;color:var(--ink);font-size:17px;line-height:1.2}
-.pcs{font-size:14px;color:var(--grey)}
-.pcf{font-size:14px;color:var(--grey);margin-top:4px}
-.pcl{font-size:13px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;margin-top:2px}
-details.mini{margin-top:18px;border-top:1px solid var(--line);padding-top:12px}
-details.mini summary,details.more>summary{cursor:pointer;color:var(--ink);font-weight:600;list-style:none}
-details.mini summary::before,details.more>summary::before{content:"+ ";color:var(--grey)}
-details[open].mini summary::before,details[open].more>summary::before{content:"– "}
-details.mini ul{padding-left:18px;margin:10px 0 0;display:grid;gap:6px}
-details.mini p{margin-top:8px}
-.next{margin-top:18px;background:var(--soft);border-radius:12px;padding:14px 16px;font-size:15px}
-.moreh{padding-top:32px;padding-bottom:8px}
+.mbg{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-top:16px}
+.mbi{all:unset;cursor:pointer;display:grid;gap:6px;font-size:13.5px;color:var(--ink);font-weight:500}
+.mbi img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;border:1px solid var(--line);display:block}
+.mbi:hover img,.mbi:focus-visible img{border-color:var(--ink)}
+.mbi:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:12px}
+.weeks{display:grid;gap:12px;margin-top:18px;counter-reset:w}
+.week{border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.week h3{display:flex;gap:10px;align-items:baseline}
+.week h3::before{counter-increment:w;content:"Semana " counter(w);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);font-family:var(--body);font-weight:600}
+.week ul{margin:10px 0 0;padding-left:18px;display:grid;gap:5px;font-size:15px}
+.week .out{margin-top:10px;font-size:14px;color:var(--ink)}
 details.more{max-width:1040px;margin:0 auto;border-top:1px solid var(--line)}
-details.more>summary{padding:16px 20px;font-size:17px;font-family:var(--display)}
-details.more>section{border-bottom:0;padding-top:12px}
-dialog#pd{border:0;border-radius:16px;padding:0;max-width:720px;width:calc(100% - 24px);max-height:88vh;overflow:auto;color:var(--grey)}
-dialog#pd::backdrop{background:rgba(0,0,0,.45)}
-.pdh{position:sticky;top:0;background:var(--bg);display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:18px 20px 12px;border-bottom:1px solid var(--line)}
-.pdh h2{font-size:22px}
-.pdx{border:1px solid var(--line);background:var(--bg);border-radius:999px;width:36px;height:36px;font-size:16px;cursor:pointer;color:var(--ink);flex:none}
-#pdB{padding:16px 20px 24px;display:grid;gap:14px}
-#pdB h3{font-size:16px;margin-bottom:6px}
-#pdB section{padding:0;border:0}
-#pdB table{width:100%;border-collapse:collapse;font-size:14px}
-#pdB td,#pdB th{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-#pdB td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-#pdB tr.tot td{color:var(--ink);font-weight:600}
-#pdB ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px}
-.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.kpi{background:var(--soft);border-radius:10px;padding:10px}
-.kpi b{display:block;font-family:var(--display);font-size:20px}
-.kpi span{font-size:12.5px}
-.pc.top3{border-color:#cfcfca}
-.pimg-ph{font-family:var(--display);font-weight:800;color:var(--grey)}
-.pcf .m.neg{color:var(--bad)}
-.lks a{color:var(--ink);font-size:13px;text-underline-offset:3px}
-.plist .pc:not(.top3){grid-template-columns:44px 1fr;padding:8px 10px}
-.plist .pc:not(.top3) img,.plist .pc:not(.top3) .pimg-ph{width:44px;height:44px;font-size:16px;border-radius:8px}
-.mbs{padding:8px 0 40px;border-bottom:0}.mbg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:14px}.mbi{margin:0}.mbi img{width:100%;border-radius:12px;border:1px solid var(--line);cursor:zoom-in;display:block}.mbi figcaption{font-size:14px;color:var(--ink);margin-top:6px;font-weight:600}
+details.more>summary{cursor:pointer;color:var(--ink);font-weight:700;list-style:none;padding:16px 20px;font-size:17px;font-family:var(--display)}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"+ ";color:var(--grey)}
+details[open].more>summary::before{content:"– "}
+details.more>div{padding:0 20px 28px}
+details.more ul{padding-left:18px;display:grid;gap:6px;margin:10px 0 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+@media (max-width:700px){.two{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px}
+/* Calculadora */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+@media (max-width:820px){.calc{grid-template-columns:1fr}}
+.field{display:grid;gap:4px;margin-bottom:12px}
+.field label{display:flex;justify-content:space-between;font-size:14.5px;color:var(--ink);font-weight:500}
+.field output{font-variant-numeric:tabular-nums;font-weight:600}
+input[type=range]{width:100%;accent-color:var(--ink)}
+.rrow{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:7px 0;font-variant-numeric:tabular-nums;font-size:15px}
+.verdict{border-radius:12px;padding:14px;font-size:15px;margin-top:10px}
+.verdict.good{background:#e6f2ea;color:#1f5535}.verdict.bad{background:#f6e6e2;color:#7a2d1f}.verdict.mid{background:var(--soft);color:var(--ink)}
+/* Popup */
+dialog#pd{border:0;border-radius:16px;padding:0;max-width:760px;width:calc(100% - 20px);max-height:90vh;overflow:auto;color:var(--grey)}
+dialog#pd::backdrop{background:rgba(0,0,0,.5)}
+.pdh{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);z-index:2}
+.pdh h2{font-size:20px}
+.pdh .k{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+#pdX{all:unset;cursor:pointer;font-size:26px;line-height:1;color:var(--ink);padding:4px 10px;border-radius:8px}
+#pdX:focus-visible{outline:2px solid var(--ink)}
+#pdB{padding:16px 18px 26px;display:grid;gap:18px}
+.gal img.main{width:100%;aspect-ratio:1;max-height:56vh;object-fit:contain;background:#fff;border-radius:12px;border:1px solid var(--line);display:block}
+.thumbs{display:flex;gap:8px;margin-top:8px}
+.thumbs button{all:unset;cursor:pointer;width:64px;height:64px;border-radius:8px;overflow:hidden;border:2px solid transparent}
+.thumbs button[aria-pressed=true],.thumbs button:focus-visible{border-color:var(--ink)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.noimg{background:var(--soft);border-radius:12px;padding:30px;text-align:center;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.kpi{background:var(--soft);border-radius:10px;padding:10px 12px}
+.kpi span{display:block;font-size:12.5px}
+.kpi b{font-family:var(--display);font-size:20px}
+#pdB h3{margin-bottom:6px}
+#pdB table{margin-top:4px}
+#pdB tr.tot td{color:var(--ink);font-weight:600;border-top:1px solid var(--ink)}
+footer{padding:28px 0 60px;font-size:13.5px}
+.brand{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+.bcard{border:1px solid var(--line);border-radius:14px;padding:18px}
+.bcard.win{border:2px solid var(--ink)}
+.bname{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:.14em;color:var(--ink);text-transform:uppercase}
+.bline{font-style:italic;margin-top:4px}
+.score{display:flex;justify-content:space-between;font-size:14px;border-bottom:1px solid var(--line);padding:5px 0}
+.lux{background:#f7f6f2;border-radius:16px;padding:28px 22px;text-align:center;margin-top:18px}
+.lux .bname{font-size:44px}
+ul.dots{margin:6px 0 0;padding-left:18px;display:grid;gap:5px}
+.pain li::marker{color:var(--bad)}
+.des li::marker{color:var(--good)}
+.sup{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;gap:3px}
+.sup a{font-weight:600}
+.sup .t{font-size:12.5px;text-transform:uppercase;letter-spacing:.05em}
+.sups{display:grid;gap:8px}
+.ok-v{color:var(--good);font-size:12.5px;font-weight:600}
 </style>
 </head>
 <body>
+<nav aria-label="Secciones"><div class="wrap">
+  <a href="index.html">← Proyectos</a>
+  <a href="#resumen">Resumen</a>
+  <a href="#marca">Marca</a>
+  <a href="#panel">Productos</a>
+  <a href="#moodboard">Mood board</a>
+  <a href="#regla">Margen</a>
+  <a href="#pasos">Paso a paso</a>
+  <a href="#mas">Plan completo</a>
+</div></nav>
 
-<nav aria-label="Secciones"><div class="wrap"><a href="index.html" style="color:var(--ink);font-weight:600">← Proyectos</a><a href="#panel">Panel</a><a href="#moodboard">Mood board</a><a href="#mas">Más información</a></div></nav>
-
-<header class="top" id="panel">
-  <div class="wrap">
-    <div class="kicker">Business Plan · Colombia · actualizado 14 nov</div>
-    <h1>¿Qué vendemos primero?</h1>
-    <p class="lead">Solo productos con <b>18% o más de margen neto</b>, ordenados del más probable ganador al menos. Todos se prueban igual: <b>anuncio + landing + lista de espera</b>; nadie compra ni fabrica hasta que uno gane. Toca un producto para ver proveedores (con links), costes y materiales.</p>
+<header class="top" id="resumen"><div class="wrap">
+  <div class="kicker">Business plan · Claude + ChatGPT · 15 nov 2026</div>
+  <h1>ALVOREN: accesorios para perros y gatos, con estética de lujo silencioso</h1>
+  <p class="lead">Somos tres: <b>Sebastián, Nico y Julieth</b>. Empezamos <b>sin stock</b> con 3 productos de dropshipping para generar caja y aprender. Después fabricamos <b>3 diseños propios</b> que no existen. El objetivo es un ecosistema de marca para <b>perros y gatos</b>, no una tienda de un gadget viral.</p>
+  <div class="keys">
+    <div class="key"><b>3 de dropshipping</b>Kit manos libres (Idea de Nico), fuente de acero para gatos y kit grooming de niebla.</div>
+    <div class="key"><b>3 de fabricación</b>PVC Color-Swap, Rope-Lock 3 en 1 (Idea de Julieth) y NightLoop.</div>
+    <div class="key"><b>Regla de dinero</b>Mínimo <b>12 %</b> de margen neto para probar y <b>20 %</b> para escalar.</div>
+    <div class="key"><b>Primer paso</b>Cuenta de Dropi, 3 muestras y test de anuncios con un máximo de 450–600 mil COP por producto.</div>
   </div>
-</header>
-<section class="panel">
-  <div class="wrap">
-    <div class="cols">
-      <div class="colp">
-        <h2>Arbitraje · 6 productos</h2>
-        <p class="small">Ya lo fabrica otro. Lo vendemos con <b>dropshipping</b> (sin stock) o comprando al por mayor.</p>
-        <div class="plist"><button type="button" class="pc top3" data-id="a1"><img src="mb-kit.jpg" alt="Kit de paseo manos libres" loading="lazy"><span class="pcb"><span class="pct">#1</span><span class="pcn">Kit de paseo manos libres</span><span class="pcs">Correa 3 en 1 + portabolsas + pouch</span><span class="pcf"><b>169.900</b> COP · margen <b>28,6%</b></span></span></button><button type="button" class="pc top3" data-id="a2"><img src="mb-arnes.jpg" alt="Arnés táctico tierra + correa" loading="lazy"><span class="pcb"><span class="pct">#2</span><span class="pcn">Arnés táctico tierra + correa</span><span class="pcs">Colores arena y oliva</span><span class="pcf"><b>154.900</b> COP · margen <b>20,0%</b></span></span></button><button type="button" class="pc top3" data-id="a3"><span class="pimg-ph" aria-hidden="true">3</span><span class="pcb"><span class="pct">#3</span><span class="pcn">Kit pechera + correa de cintura</span><span class="pcs">Versión económica del manos libres</span><span class="pcf"><b>139.900</b> COP · margen <b>24,2%</b></span></span></button><button type="button" class="pc" data-id="a8"><span class="pimg-ph" aria-hidden="true">4</span><span class="pcb"><span class="pct">#4</span><span class="pcn">Correa running manos libres + bolso</span><span class="pcs">Cinturón, correa elástica y bolsillo</span><span class="pcf"><b>139.900</b> COP · margen <b>27,6%</b></span></span></button><button type="button" class="pc" data-id="a6"><span class="pimg-ph" aria-hidden="true">5</span><span class="pcb"><span class="pct">#5</span><span class="pcn">Kit nocturno reflectante + luz LED</span><span class="pcs">Collar o correa con luz + reflectivo</span><span class="pcf"><b>139.900</b> COP · margen <b>23,3%</b></span></span></button><button type="button" class="pc" data-id="a9"><span class="pimg-ph" aria-hidden="true">6</span><span class="pcb"><span class="pct">#6</span><span class="pcn">Coche plegable para perro</span><span class="pcs">Para perros mayores o pequeños</span><span class="pcf"><b>399.900</b> COP · margen <b>23,3%</b></span></span></button></div>
-      </div>
-      <div class="colp">
-        <h2>Fabricación · 8 productos</h2>
-        <p class="small">Lo testeamos sin fabricar. Si gana, se produce con <b>marca propia</b> (hay que pagar un lote).</p>
-        <div class="plist"><button type="button" class="pc top3" data-id="f1"><img src="mb-kit.jpg" alt="Kit manos libres marca propia" loading="lazy"><span class="pcb"><span class="pct">#1</span><span class="pcn">Kit manos libres marca propia</span><span class="pcs">Correa PVC cruzada + pouch + portabolsas</span><span class="pcf"><b>169.900</b> COP · margen <b>29,3%</b></span></span></button><button type="button" class="pc top3" data-id="f2"><img src="mb-pvc.jpg" alt="Set collar + correa impermeable" loading="lazy"><span class="pcb"><span class="pct">#2</span><span class="pcn">Set collar + correa impermeable</span><span class="pcs">PVC tipo biothane, colores a juego</span><span class="pcf"><b>129.900</b> COP · margen <b>28,2%</b></span></span></button><button type="button" class="pc top3" data-id="f3"><img src="mb-cuerda.jpg" alt="Correa de cuerda de escalada" loading="lazy"><span class="pcb"><span class="pct">#3</span><span class="pcn">Correa de cuerda de escalada</span><span class="pcs">Para llevar cruzada; idea de Nico y Julieth</span><span class="pcf"><b>149.900</b> COP · margen <b>23,9%</b></span></span></button><button type="button" class="pc" data-id="f4"><img src="mb-arnes.jpg" alt="Arnés táctico acolchado propio" loading="lazy"><span class="pcb"><span class="pct">#4</span><span class="pcn">Arnés táctico acolchado propio</span><span class="pcs">Arena / oliva, con correa a juego</span><span class="pcf"><b>149.900</b> COP · margen <b>19,5%</b></span></span></button><button type="button" class="pc" data-id="f5"><img src="mb-sherpa.jpg" alt="Set borrego (sherpa)" loading="lazy"><span class="pcb"><span class="pct">#5</span><span class="pcn">Set borrego (sherpa)</span><span class="pcs">Arnés + correa + porta-AirTag, idea de Julieth</span><span class="pcf"><b>139.900</b> COP · margen <b>21,6%</b></span></span></button><button type="button" class="pc" data-id="f6"><span class="pimg-ph" aria-hidden="true">6</span><span class="pcb"><span class="pct">#6</span><span class="pcn">Kit nocturno LED propio</span><span class="pcs">Collar + correa con luz recargable</span><span class="pcf"><b>139.900</b> COP · margen <b>27,2%</b></span></span></button><button type="button" class="pc" data-id="f7"><span class="pimg-ph" aria-hidden="true">7</span><span class="pcb"><span class="pct">#7</span><span class="pcn">Set collar + correa de pana</span><span class="pcs">Variante estética de bajo riesgo</span><span class="pcf"><b>129.900</b> COP · margen <b>22,5%</b></span></span></button><button type="button" class="pc" data-id="f8"><span class="pimg-ph" aria-hidden="true">8</span><span class="pcb"><span class="pct">#8</span><span class="pcn">Collar de cuerda + placa + porta-AirTag</span><span class="pcs">Personalizado, para regalo</span><span class="pcf"><b>114.900</b> COP · margen <b>18,4%</b></span></span></button></div>
-      </div>
+</div></header>
+
+<section id="marca"><div class="wrap">
+  <h2>La marca</h2>
+  <p class="lead">Un solo nombre propio, elegante, que suene a casa de diseño y no a tienda de mascotas. Claude y ChatGPT propusieron 10 nombres cada uno, se criticaron entre sí y dejaron 3 finalistas. Después un panel de tráfico frío (gente que no conoce la marca) votó.</p>
+  <div class="lux"><div class="kicker">Nombre recomendado</div><div class="bname">ALVOREN</div><p class="bline">Diseñado para permanecer.</p></div>
+  <div class="brand"><div class="bcard win"><div class="bname" style="font-size:24px">ALVOREN</div><p class="bline">«Diseñado para permanecer.»</p><p class="small" style="margin-top:8px">Sonido de casa de diseño, sobrio y unisex. Funciona igual en una placa metálica, una caja o una etiqueta de lino. No encontramos ninguna marca comercial con ese nombre.</p><p class="small" style="margin-top:6px"><b>Dominio:</b> alvoren.co y alboren.co disponibles · alvoren.com ocupado</p></div><div class="bcard"><div class="bname" style="font-size:24px">VANREL</div><p class="bline">«Forma. Función. Permanencia.»</p><p class="small" style="margin-top:8px">Corto, fácil de decir y el más recordado bien escrito. Pero suena frío y técnico: en el panel muchos pensaron en tecnología o autos.</p><p class="small" style="margin-top:6px"><b>Dominio:</b> vanrel.co disponible · vanrel.com ocupado</p></div><div class="bcard"><div class="bname" style="font-size:24px">ISELLE</div><p class="bline">«La belleza de lo cotidiano.»</p><p class="small" style="margin-top:8px">El más delicado y el que más lujo transmite, pero ya existe una marca de belleza Iselle y casi la mitad duda al pronunciarlo.</p><p class="small" style="margin-top:6px"><b>Dominio:</b> iselle.com ocupado</p></div></div>
+  <h3 style="margin-top:22px">Panel de tráfico frío (simulación)</h3>
+<p class="small" style="margin-top:4px">Un agente de IA simuló a 30 personas de Bogotá, Medellín, Cali, Barranquilla y Bucaramanga (22–50 años, dueños de perro o gato) que nunca habían visto la marca. Cada una vio los 3 nombres 3 segundos, sin logo, y 5 minutos después tuvo que recordarlos. <b>Es una simulación, no personas reales</b>: la semana 2 se repite con 20–30 personas reales (test de 5 segundos).</p>
+<div class="tbl"><table><thead><tr><th>Métrica</th><th>ALVOREN</th><th>VANREL</th><th>ISELLE</th></tr></thead><tbody>
+<tr><td>Recuerdan el nombre bien escrito</td><td class="n">30 %</td><td class="n"><b>40 %</b></td><td class="n">20 %</td></tr>
+<tr><td>Recuerdan el nombre (aunque mal escrito)</td><td class="n">50 %</td><td class="n">57 %</td><td class="n"><b>60 %</b></td></tr>
+<tr><td>Dudan al pronunciarlo</td><td class="n">17 %</td><td class="n"><b>10 %</b></td><td class="n">47 %</td></tr>
+<tr><td>Sensación de lujo (1–10)</td><td class="n">6,8</td><td class="n">5,4</td><td class="n"><b>7,3</b></td></tr>
+<tr><td>Confianza para pagar 170.000 (1–10)</td><td class="n"><b>6,1</b></td><td class="n">5,6</td><td class="n">6,0</td></tr>
+<tr><td>Lo asocian a cosmética</td><td class="n">20 %</td><td class="n">7 %</td><td class="n">50 %</td></tr>
+<tr><td>Lo asocian a tecnología, finanzas o autos</td><td class="n">—</td><td class="n">54 %</td><td class="n">—</td></tr>
+<tr><td><b>Lo prefieren</b></td><td class="n"><b>40 %</b></td><td class="n">23 %</td><td class="n">37 %</td></tr>
+</tbody></table></div>
+<ul class="dots" style="margin-top:12px">
+<li>"Alvoren es el más sobrio. Suena a madera, a lino, a algo que no grita." — Camila, 34, Bogotá</li>
+<li>"Vanrel parece una app de inversiones o una marca de llantas." — Andrés, 41, Bogotá</li>
+<li>"Iselle es lujo, pero lujo de perfumería, no silencioso." — Daniela, 31, Cali</li>
+<li>"Lo escribí 'Alboren' con b." — Sergio, 38, Bucaramanga</li>
+</ul>
+<div class="box"><b>Dictamen:</b> gana <b>ALVOREN</b>. Es el que más gente prefiere, el que más confianza da para pagar y el que mejor transmite lujo silencioso sin sonar a cosmética. Riesgos: la confusión b/v (por eso también reservamos alboren.co) y que nadie lo asocia a mascotas, así que el anuncio debe mostrar el producto desde el primer segundo. <b>Reservar ya:</b> alvoren.co y alboren.co (disponibles hoy, US$ 24 cada uno; alvoren.com está ocupado). Antes de invertir en logo: búsqueda en la SIC, clases 18, 21 y 35.</div>
+<details class="more" style="margin-top:14px;border:1px solid var(--line);border-radius:12px"><summary>Cómo llegamos aquí: 20 nombres y la crítica cruzada</summary><div>
+<ul>
+<li><b>Ronda 1 (descartada por Sebastián):</b> nombres con significado (Oliva, Sendero, Canterra) e inventados (Nolua, Tavua, Caluma). Sebastián pidió un solo nombre propio, elegante, de lujo silencioso.</li>
+<li><b>Claude propuso:</b> Auren, Solene, Odile, Liora, Varenne, Maelle, Iselle, Alden, Maren, Veluma.</li>
+<li><b>ChatGPT los tumbó con datos:</b> Auren ya es ropa en Colombia; Solene, Maelle, Liora, Iselle y Veluma ya existen en belleza o cosmética; Varenne y Odile, en moda y lifestyle; Alden es una marca de zapatos de 1884; Maren, ropa minimalista.</li>
+<li><b>ChatGPT propuso:</b> Alvoren, Vanrel, Orelan, Vanelor, Selren, Melvor, Neraven, Navelor, Lavren, Velren.</li>
+<li><b>Claude los criticó:</b> Lavren (perfume) y Velren (ropa) ya existen; Navelor empieza por "navel" (ombligo) en inglés; Orelan ya se usa en software y su .com está ocupado; Melvor y Selren suenan industriales.</li>
+<li><b>Finalistas cruzados:</b> Alvoren y Vanrel (ChatGPT) e Iselle (Claude, condicionado por la marca de belleza).</li>
+</ul></div></details>
+</div></section>
+
+<section id="panel"><div class="wrap">
+  <h2>Los 6 productos</h2>
+  <p class="lead">Toca un producto: primero ves sus fotos y luego todo lo demás (por qué, dolores y deseos del cliente, proveedores comprobados, mercado y números).</p>
+  <div class="cols">
+    <div class="colp"><h2>Fase 1 · Dropshipping</h2><p class="small">Sin comprar inventario. Costes estimados hasta abrir Dropi.</p><div class="plist"><button class="pc" data-id="d1" aria-haspopup="dialog"><img src="mb-kit-1.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#1 · Perro</span><span class="pcn">Kit de paseo manos libres</span><span class="pcs">Correa crossbody + pouch + portabolsas, en tonos tierra</span><span class="pcf"><b>$169.900</b> · neto <b>25,1 %</b> · bruto 72,0 %</span><span class="chips"><span class="chip ok">Cumple la regla para escalar</span><span class="idea">Idea de Nico</span></span></span></button><button class="pc" data-id="d2" aria-haspopup="dialog"><img src="mb-fuente-1.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#2 · Gato</span><span class="pcn">Fuente de acero para gatos + 4 filtros</span><span class="pcs">Acero inoxidable 304, bomba fácil de sacar y limpiar, filtros de recambio</span><span class="pcf"><b>$179.900</b> · neto <b>23,1 %</b> · bruto 69,6 %</span><span class="chips"><span class="chip ok">Cumple la regla para escalar</span></span></span></button><button class="pc" data-id="d3" aria-haspopup="dialog"><img src="mb-vapor-1.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#3 · Gato y perro</span><span class="pcn">Kit grooming de niebla</span><span class="pcs">Cepillo de niebla fría recargable + guante + peine, en estuche</span><span class="pcf"><b>$129.900</b> · neto <b>20,8 %</b> · bruto 77,1 %</span><span class="chips"><span class="chip ok">Cumple la regla para escalar</span></span></span></button></div></div>
+    <div class="colp"><h2>Fase 2 · Fabricación única</h2><p class="small">Solo cuando la fase 1 dé caja y comprobemos que el diseño no existe.</p><div class="plist"><button class="pc" data-id="f1" aria-haspopup="dialog"><img src="mb-pvc-1.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#1 · Perro</span><span class="pcn">PVC Color-Swap</span><span class="pcs">Collar y correa impermeables con piezas de color y herrajes intercambiables</span><span class="pcf"><b>$169.900</b> · neto <b>27,5 %</b> · bruto 79,0 %</span><span class="chips"><span class="chip ok">Cumple la regla para escalar</span></span></span></button><button class="pc" data-id="f2" aria-haspopup="dialog"><img src="mb-cuerda-1.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#2 · Perro</span><span class="pcn">Rope-Lock 3 en 1</span><span class="pcs">Cuerda técnica crossbody con mosquetón de seguridad reemplazable y pouch aparte</span><span class="pcf"><b>$189.900</b> · neto <b>22,9 %</b> · bruto 69,9 %</span><span class="chips"><span class="chip ok">Cumple la regla para escalar</span><span class="idea">Idea de Julieth</span></span></span></button><button class="pc" data-id="f3" aria-haspopup="dialog"><img src="mb-nightloop-1.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#3 · Perro</span><span class="pcn">NightLoop</span><span class="pcs">Correa con funda reflectante y luz LED desmontables</span><span class="pcf"><b>$169.900</b> · neto <b>24,7 %</b> · bruto 76,2 %</span><span class="chips"><span class="chip ok">Cumple la regla para escalar</span></span></span></button></div></div>
+  </div>
+  <details class="more" style="margin-top:18px;border:1px solid var(--line);border-radius:12px" id="descartes"><summary>Por qué estos 6 y no los demás</summary><div>
+    <ul>
+      <li><b>Kit manos libres:</b> mejor margen de dropshipping, casi sin competencia anunciando y el que mejor encaja con moda.</li>
+      <li><b>Fuente de acero:</b> la demanda más probada de gato y recompra de filtros.</li>
+      <li><b>Kit grooming:</b> dolor diario, se demuestra en vídeo y un anunciante lleva más de un año vendiéndolo.</li>
+      <li><b>PVC Color-Swap, Rope-Lock y NightLoop:</b> la diferencia está en cómo funcionan, no solo en el color.</li>
+      <li><b>Descartados:</b> arnés táctico genérico (muy competido), placa QR suelta (barata y sin barrera), rascador (voluminoso: el flete rompe el margen), cama, comederos cerámicos (frágiles), arnés Sherpa (depende del frío y de muchas tallas) y el chaleco de Nico, que sigue en I+D hasta validar tallaje y sujeción.</li>
+      <li><b>Temu:</b> descartado como proveedor. Sus condiciones en Colombia prohíben el uso comercial, no tiene contraentrega ni marca blanca y entrega en 8–14 días hábiles. Solo sirve para mirar tendencias.</li>
+    </ul>
+  </div></details>
+</div></section>
+
+<section id="moodboard"><div class="wrap">
+  <h2>Mood board</h2>
+  <p class="small" style="margin-top:6px">4 ángulos por producto sobre blanco (frontal, lateral, conjunto y detalle). Son renders de concepto hechos con ChatGPT, no fotos del proveedor. Toca uno para abrirlo.</p>
+  <div class="mbg"><button class="mbi" data-id="d1" aria-label="Ver Kit de paseo manos libres"><img src="mb-kit-1.jpg" alt="Kit de paseo manos libres" loading="lazy"><span>Kit de paseo manos libres</span></button><button class="mbi" data-id="d2" aria-label="Ver Fuente de acero para gatos + 4 filtros"><img src="mb-fuente-1.jpg" alt="Fuente de acero para gatos + 4 filtros" loading="lazy"><span>Fuente de acero para gatos + 4 filtros</span></button><button class="mbi" data-id="d3" aria-label="Ver Kit grooming de niebla"><img src="mb-vapor-1.jpg" alt="Kit grooming de niebla" loading="lazy"><span>Kit grooming de niebla</span></button><button class="mbi" data-id="f1" aria-label="Ver PVC Color-Swap"><img src="mb-pvc-1.jpg" alt="PVC Color-Swap" loading="lazy"><span>PVC Color-Swap</span></button><button class="mbi" data-id="f2" aria-label="Ver Rope-Lock 3 en 1"><img src="mb-cuerda-1.jpg" alt="Rope-Lock 3 en 1" loading="lazy"><span>Rope-Lock 3 en 1</span></button><button class="mbi" data-id="f3" aria-label="Ver NightLoop"><img src="mb-nightloop-1.jpg" alt="NightLoop" loading="lazy"><span>NightLoop</span></button></div>
+</div></section>
+
+<section id="regla"><div class="wrap">
+  <h2>Regla de margen</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Condición</th><th>Para probar</th><th>Para escalar</th></tr></thead>
+    <tbody>
+      <tr><td>Margen neto con el CPA previsto</td><td><b>≥ 12 %</b></td><td><b>≥ 20 %</b></td></tr>
+      <tr><td>Margen neto si la publicidad sale un 40 % más cara</td><td>≥ 0 %</td><td>≥ 10 %</td></tr>
+      <tr><td>CPA máximo que aguanta ÷ CPA previsto</td><td>≥ 1,5 veces</td><td>≥ 1,7 veces</td></tr>
+      <tr><td>Precio ÷ coste del producto</td><td>orientativo ≥ 2,5</td><td>con datos reales</td></tr>
+    </tbody></table></div>
+  <div class="two">
+    <div class="card"><h3>Margen bruto</h3><p class="small" style="margin-top:6px">(Precio sin IVA − coste del producto) ÷ precio sin IVA.</p></div>
+    <div class="card"><h3>Margen neto (el que manda)</h3><p class="small" style="margin-top:6px">Lo que queda después de producto, flete, comisiones, empaque, pedidos rechazados y publicidad, ÷ precio sin IVA.</p></div>
+  </div>
+  <div class="box"><b>El dato clave:</b> con contraentrega cada pedido entregado carga unos <b>$65.000 fijos</b> (flete, empaque, rechazos y publicidad). Por eso no vendemos piezas de $40.000: vendemos <b>kits de $130.000 a $190.000</b> con un valor que se vea.</div>
+</div></section>
+
+<section id="pasos"><div class="wrap">
+  <h2>Paso a paso · próximas 4 semanas</h2>
+  <p class="small" style="margin-top:6px">16 de noviembre al 13 de diciembre de 2026.</p>
+  <div class="weeks">
+    <div class="week"><h3>16–22 nov · Proveedores y muestras</h3><ul>
+      <li><b>Sebastián:</b> crea la cuenta de Dropi, fija el presupuesto máximo y reserva el dominio y el Instagram de la marca.</li>
+      <li><b>Nico:</b> elige colores, materiales y la estética de los 3 kits.</li>
+      <li><b>Julieth:</b> busca en Dropi los 3 productos con stock en Colombia, compara acabados y pide muestras (Dropi o AliExpress).</li>
+      <li><b>Claude:</b> mete los costes reales en la app y recalcula; prepara las preguntas para las fábricas de Alibaba.</li>
+    </ul><p class="out">Entrega: coste real de los 3 productos y muestras pedidas.</p></div>
+    <div class="week"><h3>23–29 nov · Marca, oferta y anuncios</h3><ul>
+      <li><b>Sebastián:</b> aprueba precios y la regla de corte.</li>
+      <li><b>Nico:</b> logo, empaque y fotos con las muestras.</li>
+      <li><b>Julieth:</b> revisa la calidad de las muestras y la experiencia del cliente.</li>
+      <li><b>Claude:</b> tienda, 3 landings y 2 anuncios por producto (funcional y lifestyle) con los dolores y deseos de abajo.</li>
+    </ul><p class="out">Entrega: 3 ofertas listas para lanzar.</p></div>
+    <div class="week"><h3>30 nov–6 dic · Test de demanda</h3><ul>
+      <li><b>Sebastián:</b> lanza los anuncios (450.000–600.000 COP por producto como máximo).</li>
+      <li><b>Nico y Julieth:</b> leen comentarios y objeciones.</li>
+      <li><b>Claude:</b> mide CTR, coste por compra, conversión y entregas.</li>
+    </ul><p class="out">Se corta un producto si a mitad de presupuesto el CPA supera 1,5 veces el previsto.</p></div>
+    <div class="week"><h3>7–13 dic · Decisión</h3><ul>
+      <li><b>Sebastián:</b> decide seguir, corregir o descartar.</li>
+      <li><b>Nico:</b> elige qué producto define la marca.</li>
+      <li><b>Julieth:</b> pide cotización y muestra de la fábrica para el primer diseño propio.</li>
+      <li><b>Claude:</b> informe de pedidos, entregas reales y margen real.</li>
+    </ul><p class="out">Entrega: un ganador provisional o la decisión de no escalar.</p></div>
+  </div>
+</div></section>
+
+<div id="mas" style="padding-top:20px"></div>
+<details class="more" id="operacion"><summary>Modelo de operación: de dropshipping a marca propia</summary><div>
+  <div class="tbl"><table><thead><tr><th>Etapa</th><th>Cómo</th><th>Cuándo</th></tr></thead><tbody>
+    <tr><td><b>1. Test</b></td><td>Mismo producto genérico desde un importador de Dropi (stock en Colombia, contraentrega, 2–5 días). Nuestra marca va en la tienda, los anuncios y la tarjeta del pedido.</td><td>Semanas 1–4</td></tr>
+    <tr><td><b>2. Lote propio</b></td><td>Si un producto pasa la regla, pedimos 100–300 unidades a la fábrica de Alibaba con nuestro empaque, por mar, y lo despacha un operador logístico de Dropi. Ahí ya es <b>ALVOREN</b> de verdad.</td><td>Con 2–3 meses de ventas</td></tr>
+    <tr><td><b>3. Fabricación</b></td><td>Prototipo, prueba de resistencia y revisión de diseños registrados de PVC Color-Swap, Rope-Lock o NightLoop.</td><td>Con caja de la etapa 2</td></tr>
+  </tbody></table></div>
+  <p class="small" style="margin-top:8px">¿Por qué no enviar desde China pedido a pedido? AliExpress tarda 8–17 días, CJ hay que cotizarlo y no hay contraentrega; la fuente (830 g) pagaría US$ 17,5 de envío. Rompe la regla de 7–10 días hábiles.</p>
+</div></details>
+
+<details class="more" id="anuncios"><summary>Mercado: anuncios activos en Colombia</summary><div>
+  <p>Medido por Claude el 15 nov 2026 en la Biblioteca de anuncios de Meta (Colombia, anuncios activos). Muchos anuncios prueban <b>actividad</b>, no ventas rentables.</p>
+  <div class="tbl"><table><thead><tr><th>Búsqueda</th><th>Anuncios</th><th>Anunciantes</th><th>Más antiguo</th><th>Lectura</th></tr></thead><tbody><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=rascador%20gato&search_type=keyword_unordered" target="_blank" rel="noopener">rascador gato</a></td><td class="n">~160</td><td class="n">13</td><td>abr 2026</td><td>Mucha demanda y competencia; voluminoso</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=gps%20mascotas&search_type=keyword_unordered" target="_blank" rel="noopener">gps mascotas</a></td><td class="n">~94</td><td class="n">20</td><td>mar 2026</td><td>Casi todo GPS genérico</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=fuente%20de%20agua%20para%20gatos&search_type=keyword_unordered" target="_blank" rel="noopener">fuente de agua para gatos</a></td><td class="n">~91</td><td class="n">14</td><td>may 2026</td><td>Demanda probada → elegido</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=arnes%20perro&search_type=keyword_unordered" target="_blank" rel="noopener">arnes perro</a></td><td class="n">~83</td><td class="n">16</td><td>ene 2026</td><td>Muy competido → descartado</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=cepillo%20vapor%20mascotas&search_type=keyword_unordered" target="_blank" rel="noopener">cepillo vapor mascotas</a></td><td class="n">~42</td><td class="n">7</td><td>jun 2025</td><td>Más de 1 año anunciando → elegido</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=cortau%C3%B1as%20mascotas&search_type=keyword_unordered" target="_blank" rel="noopener">cortauñas mascotas</a></td><td class="n">~26</td><td class="n">6</td><td>jul 2026</td><td>Medio</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=quita%20pelo%20mascotas&search_type=keyword_unordered" target="_blank" rel="noopener">quita pelo mascotas</a></td><td class="n">~26</td><td class="n">6</td><td>ago 2026</td><td>Medio</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=collar%20personalizado%20perro&search_type=keyword_unordered" target="_blank" rel="noopener">collar personalizado perro</a></td><td class="n">~21</td><td class="n">5</td><td>ago 2026</td><td>Pocos anunciantes</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=placa%20identificacion%20mascota&search_type=keyword_unordered" target="_blank" rel="noopener">placa identificacion mascota</a></td><td class="n">~20</td><td class="n">11</td><td>may 2026</td><td>Fragmentado y barato</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=alfombra%20olfativa%20perro&search_type=keyword_unordered" target="_blank" rel="noopener">alfombra olfativa perro</a></td><td class="n">~19</td><td class="n">1</td><td>—</td><td>Un solo anunciante</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=juguete%20interactivo%20gato&search_type=keyword_unordered" target="_blank" rel="noopener">juguete interactivo gato</a></td><td class="n">~9</td><td class="n">5</td><td>ago 2026</td><td>Poca competencia</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=correa%20manos%20libres%20perro&search_type=keyword_unordered" target="_blank" rel="noopener">correa manos libres perro</a></td><td class="n">~4</td><td class="n">2</td><td>jun 2026</td><td>Casi nadie lo anuncia → elegido</td></tr></tbody></table></div>
+</div></details>
+
+<details class="more" id="marketing"><summary>Marketing: ángulos, prueba A/B y presupuesto</summary><div>
+  <div class="two">
+    <div class="card"><h3>Ángulo funcional</h3><p class="small" style="margin-top:6px">Problema → demostración → resultado. Para tráfico frío.</p></div>
+    <div class="card"><h3>Ángulo lifestyle</h3><p class="small" style="margin-top:6px">Vínculo, estética, momentos cotidianos. Alternativo del mismo producto.</p></div>
+  </div>
+  <ul>
+    <li>Mismo producto, precio y público; solo cambia el ángulo. Gana el de menor coste por compra entregada.</li>
+    <li>Presupuesto máximo: 450.000–600.000 COP por producto en la semana 3.</li>
+    <li>Tono de marca: pocas palabras, fotos limpias, colores tierra, sin gritos ni "¡OFERTA!".</li>
+    <li>No prometemos lo que no está probado: ni "evita tirones" ni beneficios médicos.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="numeros"><summary>Calculadora de margen</summary><div>
+  <div class="calc">
+    <div>
+      <div class="field"><label for="cp">Precio al cliente (IVA incluido) <output id="cpo"></output></label><input type="range" id="cp" min="59900" max="259900" step="5000" value="169900"></div>
+      <div class="field"><label for="cc">Coste del producto <output id="cco"></output></label><input type="range" id="cc" min="5000" max="120000" step="1000" value="40000"></div>
+      <div class="field"><label for="cf">Flete nacional <output id="cfo"></output></label><input type="range" id="cf" min="0" max="30000" step="1000" value="15000"></div>
+      <div class="field"><label for="cd">Pedidos que no se entregan <output id="cdo"></output></label><input type="range" id="cd" min="0" max="40" step="1" value="25"></div>
+      <div class="field"><label for="ca">Publicidad por pedido generado (CPA) <output id="cao"></output></label><input type="range" id="ca" min="5000" max="60000" step="1000" value="20000"></div>
+      <p class="small">Fijos: comisiones 7 % · empaque y confirmación 3.000 · cada pedido no entregado cuesta 31.000.</p>
     </div>
-    <details class="mini"><summary>Descartados por margen (menos del 18%)</summary><ul class="small"><li><b>Arbitraje:</b> tapete sanitario (11,7%), comederos de diseño (13,6%), cama ortopédica (−1,6%), cepillo a vapor (−6,7%).</li><li><b>Fabricación:</b> chaleco de Nico (14,3%; entra si la fábrica lo deja en ≤ 44.000 puesto en Colombia), comederos de cerámica (1,4%).</li><li>Ajuste de precio: arnés táctico de 149.900 a <b>154.900</b> y collar de cuerda de 109.900 a <b>114.900</b> para llegar al 18%.</li></ul></details><details class="mini"><summary>¿Qué significa “margen”?</summary><p class="small">Margen neto = lo que queda por pedido entregado después de IVA, proveedor, flete, comisiones, devoluciones y publicidad, dividido entre el precio sin IVA. Supuestos: 75% de pedidos entregados y el coste de anuncios acordado. Coste de arbitraje estimado = <b>45% del precio al público</b> visto (margen típico de distribuidor); fabricación = precio de fábrica + flete aéreo + arancel 10% + aduana. <b>Regla: solo entra lo que deja 18% o más de margen neto.</b> Todo son estimaciones hasta tener precios de Dropi y cotizaciones.</p></details>
-    <details class="mini"><summary>Lo último que se compartió en el grupo (14 nov)</summary><ul class="small"><li><b>Julieth:</b> correas, arneses y porta-AirTag de tela borrego en tonos café y crema (Feroz Pet Fashion); collares de cuerda con placas y dijes de flor; ideas de Pinterest para diseñar tu propia correa de cuerda.</li><li><b>Nico:</b> comederos de diseño (cerámica salpicada, bases de colores, acero esculpido) y correas de cuerda gruesa en negro, gris, rosa, crema y café.</li><li><b>Lectura:</b> los dos apuntan a <b>texturas y cuerda</b> → añadida la correa de cuerda de escalada. Comederos y borrego quedan como ideas para después.</li></ul></details>
-    <div class="next"><b>Siguiente paso:</b> Sebastián abre la cuenta de Dropi para tener precios reales de proveedor; en paralelo pedimos cotización de muestra a Compapet y OKEYPETS.</div>
+    <div aria-live="polite">
+      <div class="rrow"><span>Precio sin IVA</span><b id="k1"></b></div>
+      <div class="rrow"><span>− Producto</span><span id="k2"></span></div>
+      <div class="rrow"><span>− Flete, comisiones y empaque</span><span id="k3"></span></div>
+      <div class="rrow"><span>− Pedidos no entregados</span><span id="k4"></span></div>
+      <div class="rrow"><span>− Publicidad por pedido entregado</span><span id="k5"></span></div>
+      <div class="rrow"><span><b>Queda por pedido entregado</b></span><b id="k6"></b></div>
+      <div class="rrow"><span>Margen bruto · neto</span><b id="k7"></b></div>
+      <div class="rrow"><span>Precio mínimo para no perder</span><b id="k8"></b></div>
+      <div class="verdict" id="kv"></div>
+    </div>
   </div>
-</section>
+</div></details>
 
-<section class="mbs" id="moodboard"><div class="wrap"><h2>Mood board de producto</h2><p class="small">4 ángulos por producto, fondo blanco. Generado con IA por ChatGPT como concepto: no son fotos del proveedor. Toca para ampliar.</p><div class="mbg"><figure class="mbi"><img src="mb-kit.jpg" alt="Kit manos libres 3 en 1, cuatro ángulos sobre fondo blanco" loading="lazy" data-lb><figcaption>Kit manos libres 3 en 1</figcaption></figure><figure class="mbi"><img src="mb-arnes.jpg" alt="Arnés táctico arena + correa, cuatro ángulos sobre fondo blanco" loading="lazy" data-lb><figcaption>Arnés táctico arena + correa</figcaption></figure><figure class="mbi"><img src="mb-pvc.jpg" alt="Set PVC impermeable oliva, cuatro ángulos sobre fondo blanco" loading="lazy" data-lb><figcaption>Set PVC impermeable oliva</figcaption></figure><figure class="mbi"><img src="mb-cuerda.jpg" alt="Correa de cuerda de escalada, cuatro ángulos sobre fondo blanco" loading="lazy" data-lb><figcaption>Correa de cuerda de escalada</figcaption></figure><figure class="mbi"><img src="mb-sherpa.jpg" alt="Set borrego + porta-AirTag, cuatro ángulos sobre fondo blanco" loading="lazy" data-lb><figcaption>Set borrego + porta-AirTag</figcaption></figure></div></div></section>
+<details class="more" id="finanzas"><summary>Finanzas: cuánto hay que poner y cuánto deja</summary><div>
+  <h3>Inversión para el test (fase 1)</h3>
+  <div class="tbl"><table><thead><tr><th>Concepto</th><th>COP</th></tr></thead><tbody>
+    <tr><td>Publicidad de prueba (3 productos × 600.000 máximo)</td><td class="n">1.800.000</td></tr>
+    <tr><td>Muestras de los 3 productos</td><td class="n">~200.000</td></tr>
+    <tr><td>Tienda Shopify Basic (1 mes, ~US$ 39)</td><td class="n">~130.000</td></tr>
+    <tr><td>Dominios alvoren.co + alboren.co (US$ 48)</td><td class="n">~160.000</td></tr>
+    <tr><td>Cuenta de Dropi</td><td class="n">0</td></tr>
+    <tr class="tot"><td><b>Total máximo</b></td><td class="n"><b>~2.300.000</b></td></tr>
+  </tbody></table></div>
+  <h3 style="margin-top:16px">Lo que deja cada pedido entregado (con costes estimados)</h3>
+  <div class="tbl"><table><thead><tr><th>Producto</th><th>Precio</th><th>Queda por pedido</th><th>Pedidos al mes para 5 M COP de beneficio</th></tr></thead><tbody><tr><td>Kit de paseo manos libres</td><td class="n">$169.900</td><td class="n">$35.880</td><td class="n">140</td></tr><tr><td>Fuente de acero para gatos + 4 filtros</td><td class="n">$179.900</td><td class="n">$34.917</td><td class="n">144</td></tr><tr><td>Kit grooming de niebla</td><td class="n">$129.900</td><td class="n">$22.733</td><td class="n">220</td></tr></tbody></table></div>
+  <h3 style="margin-top:16px">Siguientes inversiones (solo si el test sale bien)</h3>
+  <ul>
+    <li><b>Lote propio con marca (etapa 2):</b> 100 kits manos libres ≈ 3,2 M COP por mar; 100 fuentes ≈ 5,4 M COP por mar.</li>
+    <li><b>Fabricación (etapa 3):</b> muestras de US$ 5–50 y pedido mínimo de 300–500 unidades por diseño nuevo ≈ 9–24 M COP. Se paga con la caja de la etapa 2.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="riesgos"><summary>Riesgos y cómo los cubrimos</summary><div>
+  <ul>
+    <li><b>Costes estimados:</b> ningún margen está confirmado hasta tener precio de Dropi o cotización de fábrica.</li>
+    <li><b>Rechazos en contraentrega:</b> calculamos 25 %. Confirmar cada pedido por WhatsApp antes de despachar.</li>
+    <li><b>Calidad del cepillo y la fuente:</b> muchas reseñas negativas por mala calidad. Muestra aprobada antes de anunciar.</li>
+    <li><b>Voltaje:</b> en Colombia se usa 110 V. Fuente USB o 110 V, nunca 220 V.</li>
+    <li><b>Copias de diseño:</b> revisar diseños registrados antes de fabricar y registrar la marca en la SIC.</li>
+    <li><b>Dependencia de un producto viral:</b> la marca es el activo; los productos rotan.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="debate"><summary>Claude vs ChatGPT: en qué no estábamos de acuerdo</summary><div>
+  <ul>
+    <li><b>Margen:</b> ChatGPT quería 18 % para todo. Quedó 12 % para probar y 20 % para escalar, con prueba de estrés de publicidad.</li>
+    <li><b>Fabricación:</b> Claude proponía el arnés Sherpa; ChatGPT eligió NightLoop porque no depende del frío ni de muchas tallas. Aceptado.</li>
+    <li><b>Precio de mercado (Claude):</b> el cepillo suelto cuesta desde 10.000 y lo listan 2.925 tiendas en CJ. Solo se vende como kit.</li>
+    <li><b>Fuente (Claude):</b> traerla en avión cuesta ~76.000 puesta en Colombia; por mar ~54.000. Debe venir por mar o de stock local.</li>
+    <li><b>Panel de tráfico frío:</b> ChatGPT prefería no simularlo. Lo hicimos como simulación marcada y dejamos lista la prueba con personas reales.</li>
+    <li><b>Marca:</b> ChatGPT proponía nombres inventados; Claude, palabras con significado. Sebastián pidió un nombre propio elegante, de lujo silencioso, y cambiamos los dos.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="grupo"><summary>Ideas del equipo</summary><div>
+  <ul>
+    <li><b>Idea de Nico:</b> kit de paseo manos libres y chaleco con cremallera lateral (en I+D). Perfil de Pinterest con la estética de la marca.</li>
+    <li><b>Idea de Julieth:</b> pines de correas de cuerda cruzada y de diseño propio, que inspiraron <b>Rope-Lock 3 en 1</b>; perfil de Instagram de accesorios hechos a mano como referencia.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="fuentes"><summary>Fuentes</summary><div>
+  <ul class="small"><li><a href="https://www.facebook.com/ads/library/" target="_blank" rel="noopener">Biblioteca de anuncios de Meta (Colombia)</a></li><li><a href="https://dropi.co/" target="_blank" rel="noopener">Dropi Colombia</a></li><li><a href="https://cjdropshipping.com/" target="_blank" rel="noopener">CJdropshipping</a></li><li><a href="https://www.alibaba.com/" target="_blank" rel="noopener">Alibaba</a></li><li><a href="https://www.aliexpress.com/" target="_blank" rel="noopener">AliExpress</a></li><li><a href="https://amp.cnn.com/cnn/cnn-underscored/reviews/best-hands-free-dog-leash" target="_blank" rel="noopener">Reseñas de correas manos libres (CNN Underscored)</a></li><li><a href="https://products.ktla.com/pets/leashes/best-hands-free-leashes" target="_blank" rel="noopener">Reseñas y contras de correas manos libres (BestReviews)</a></li><li><a href="https://www.maxbone.com/products/go-with-ease-hands-free-leash" target="_blank" rel="noopener">Opiniones de clientes Maxbone GO! hands free</a></li><li><a href="https://www.comstock-interactivedata.com/best-pet-water-fountains-for-cats/" target="_blank" rel="noopener">Quejas de fuentes para gatos: ruido con poca agua</a></li><li><a href="https://www.narcosis-the-game.com/?p=17221" target="_blank" rel="noopener">Quejas de fuentes: limpieza de la bomba (Reddit citado)</a></li><li><a href="https://catsluvus.com/cat-water-fountains-for-cats-with-sensitive-stomachs/stainless-steel-cat-water-fountain-review" target="_blank" rel="noopener">Vida útil de bombas y filtros propietarios</a></li><li><a href="https://www.desertcart.co.za/products/655425661-cat-steam-brush-cat-brushes-for-indoor-cats-4-in" target="_blank" rel="noopener">Reseñas de cepillos de niebla: &quot;no funciona&quot;, &quot;niebla, no vapor&quot;</a></li><li><a href="https://www.desertcart.lk/products/627563575-cat-steam-brush-for-shedding-4-in-1-steamy-cat" target="_blank" rel="noopener">Reseñas de cepillos de niebla: ruido que asusta</a></li><li><a href="https://www.zooplus.ie/feedback/shop/dogs/dog_grooming_care/kooa/2155306?stars=5" target="_blank" rel="noopener">Reseñas positivas: &quot;por fin se deja cepillar&quot; (zooplus)</a></li><li><a href="https://www.exito.com/cepillo-a-vapor-3-en-1-para-perros-y-gatos-desenreda-y-da-brillo-105022936-mp/p" target="_blank" rel="noopener">Éxito: precio del cepillo de vapor</a></li><li><a href="https://www.mercadolibre.com.co/pagina/calabazapetboutiqueshop" target="_blank" rel="noopener">Mercado Libre: fuentes para gatos</a></li><li><a href="https://www.dolar-colombia.com/2026-11-11" target="_blank" rel="noopener">TRM ~3.297 COP/USD (11 nov 2026)</a></li><li><a href="https://kurs.com.ua/en/novost/1488023-kurs-valjut-nbu-na-12-listopada" target="_blank" rel="noopener">Tipo de cambio UAH/USD (BNU, nov 2026)</a></li><li>Investigación de reseñas en Reddit y análisis de Temu: ChatGPT (fuentes en su conversación del 15 nov 2026).</li></ul>
+</div></details>
+
+<footer><div class="wrap">Business plan del equipo · Sebastián, Nico y Julieth · 15 nov 2026. Márgenes = simulaciones con costes estimados. Links de proveedores abiertos y comprobados por Claude el 15 nov 2026.</div></footer>
 
 <dialog id="pd" aria-labelledby="pdT">
-  <div class="pdh"><div><div class="kicker" id="pdK"></div><h2 id="pdT"></h2></div><button type="button" class="pdx" id="pdX" aria-label="Cerrar">✕</button></div>
+  <div class="pdh"><div><div class="k" id="pdK"></div><h2 id="pdT"></h2></div><button id="pdX" aria-label="Cerrar">×</button></div>
   <div id="pdB"></div>
 </dialog>
-
-<div class="wrap moreh" id="mas"><h2>Más información</h2><p class="small">Todo el análisis, cerrado. Ábrelo solo si lo necesitas.</p></div>
-
-
-<details class="more" id="resumen"><summary>Resumen del plan</summary><section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="kicker">Business Plan · Colombia · 14 nov 2026</div>
-      <h1>Accesorios de paseo para perro, validados con anuncios antes de fabricar</h1>
-      <p class="lead">Empezamos en <b>Bogotá y Medellín</b> con <b>tres productos en prueba</b>: el kit manos libres, el arnés táctico en tonos tierra y el set collar + correa impermeable. <b>Solo productos que ya tienen proveedor</b>: medimos la demanda con <b>anuncios y una landing por producto con lista de espera</b>, sin fabricar ni comprar inventario.</p>
-    </div>
-    <img src="hero.jpg" alt="Mujer en un parque de Bogotá paseando a su perro con la correa cruzada al pecho, café en una mano y celular en la otra">
-  </div>
-  <div class="wrap">
-    <div class="tiles">
-      <div class="tile"><div class="num">67%</div><p>de los hogares colombianos tiene <b>mascota</b></p></div>
-      <div class="tile"><div class="num">6,1 bill.</div><p>COP de <b>gasto en mascotas</b> previsto para 2026</p></div>
-      <div class="tile"><div class="num">169.900</div><p>COP, precio del <b>kit</b> (oferta principal)</p></div>
-      <div class="tile"><div class="num">30–50</div><p><b>pedidos entregados</b>: primer objetivo tras el test</p></div>
-    </div>
-    <div class="steps">
-      <div class="step"><b>3 productos en prueba</b><p class="small">Kit manos libres, arnés táctico tierra y set impermeable. Todos con proveedor.</p></div>
-      <div class="step"><b>Ofertas con ticket alto</b><p class="small">Kits y sets, no piezas sueltas: una pieza sola no deja margen.</p></div>
-      <div class="step"><b>Prueba de humo</b><p class="small">Mismo presupuesto, una landing por producto con lista de espera.</p></div>
-      <div class="step"><b>Decide el coste por registro</b><p class="small">Comparado con el margen del kit.</p></div>
-      <div class="step"><b>Solo entonces, vender</b><p class="small">Dropshipping con el proveedor del ganador; marca propia en fase 2.</p></div>
-    </div>
-  </div>
-</section></details>
-
-<details class="more" id="vision"><summary>Visión de Nico</summary><section>
-  <div class="wrap">
-    <div class="kicker">Visión de marca · Nico, 14 nov</div>
-    <h2>Ferretería con lujo: materiales de escalada, trato directo y personalización</h2>
-    <p class="lead">Lo que Nico ha definido en el grupo, en seis ideas. Debajo, lo que <b>sí</b> entra en el test y lo que se queda para después.</p>
-    <div class="grid3" style="margin-top:24px">
-      <div class="card"><span class="chip">Espacio y look</span><h3 style="margin-top:10px">Ferretería + lujo</h3><p class="small" style="margin-top:6px">Producto <b>expuesto de forma directa</b>, como en una ferretería, con la <b>calidad de materiales</b> del lujo.</p></div>
-      <div class="card"><span class="chip">Producto</span><h3 style="margin-top:10px">Mucha personalización</h3><p class="small" style="margin-top:6px">Combinación de <b>tamaños, calidades y piezas</b>. El cliente arma lo suyo.</p></div>
-      <div class="card"><span class="chip">Materiales</span><h3 style="margin-top:10px">Escalada, náutica, construcción</h3><p class="small" style="margin-top:6px">Cuerdas y arneses de <b>escalada</b>, herrajes <b>náuticos</b>, la dureza de marcas de <b>construcción</b> y <b>prints sofisticados</b>.</p></div>
-      <div class="card"><span class="chip">Campañas</span><h3 style="margin-top:10px">“Quiero verme así con mi perro”</h3><p class="small" style="margin-top:6px">Ciudades del mundo y <b>planes de calidad de vida</b>: un helado en Central Park, pescar en un lago.</p></div>
-      <div class="card"><span class="chip">Clientes</span><h3 style="margin-top:10px">Perfiles variados</h3><p class="small" style="margin-top:6px">El joven que patina con su perro atlético, el niño que lanza la pelota, el <b>ejecutivo que quiere un perro a su nivel</b>.</p></div>
-      <div class="card"><span class="chip">Modelo de venta</span><h3 style="margin-top:10px">De Costco a Dior</h3><p class="small" style="margin-top:6px">Desde el <b>autoservicio</b> hasta una línea <b>especial</b> comunicada como una casa de moda.</p></div>
-    </div>
-    <div class="card" style="margin-top:16px;border:2px solid var(--ink)">
-      <span class="chip ok">Idea de producto propia</span>
-      <h3 style="margin-top:10px">Chaleco con gran cremallera lateral</h3>
-      <p class="small" style="margin-top:6px">Todos los chalecos se abrochan por debajo del perro. Uno que se abre con <b>una cremallera lateral grande</b> rompe esa regla, se ve distinto en un anuncio y <b>no lo he visto</b> en los anuncios revisados en Colombia. En Corea existen chalecos con cremallera (Petiful), sin confirmar que sea lateral. <b>Pasa a la fase 2:</b> como no tiene proveedor, se desarrolla solo si el test demuestra que la categoría de arneses vende.</p>
-    </div>
-    <h3 style="margin-top:30px">El reto del coach</h3>
-    <div class="vs">
-      <div class="card"><span class="chip ok">Entra en el test</span><ul class="small" style="margin:10px 0 0;padding-left:18px"><li><b>Materiales de escalada y náutica</b> como diferencial del kit.</li><li>La <b>campaña de ciudad</b>: Bogotá y Medellín primero; las ciudades del mundo, después.</li><li>Solo productos <b>con proveedor existente</b>; el chaleco con cremallera lateral, en la fase 2.</li><li>Personalización <b>limitada</b>: 3 colores × 2 tamaños.</li></ul></div>
-      <div class="card"><span class="chip no">Se queda para después</span><ul class="small" style="margin:10px 0 0;padding-left:18px"><li><b>“Todos los clientes” no es un cliente.</b> Para el test se eligen 1–2 perfiles; el ejecutivo y el joven urbano son los que mejor encajan con 169.900 COP.</li><li><b>De Costco a Dior a la vez</b> confunde: primero un precio y una marca; la línea especial cuando haya ventas.</li><li>Personalización total: dispara el inventario y el tallaje antes de validar.</li></ul></div>
-    </div>
-  </div>
-</section></details>
-
-<details class="more" id="producto"><summary>El producto héroe</summary><section>
-  <div class="wrap">
-    <div class="kicker">Producto héroe</div>
-    <h2>Correa 3 en 1 con estética de marca, no de tienda de mascotas</h2>
-    <p class="lead">Diseño <b>utilitario y minimalista</b>, paleta <b>arena, terracota y oliva</b>, herrajes <b>metálicos mate</b>. Es el concepto de Nico llevado a un producto que se puede anunciar.</p>
-    <div class="gallery">
-      <figure data-full="hero"><img src="hero.jpg" alt="Paseo en el parque con la correa cruzada"><figcaption>En uso · cruzada</figcaption></figure>
-      <figure data-full="kit"><img src="kit.jpg" alt="Kit de correa, collar y portabolsas a juego sobre lino"><figcaption>El kit</figcaption></figure>
-      <figure data-full="detalle"><img src="detalle.jpg" alt="Primer plano del mosquetón con seguro y la costura"><figcaption>Detalle · mosquetón</figcaption></figure>
-    </div>
-    <p class="note">Imágenes <b>generadas con IA por ChatGPT</b> como concepto. Para los anuncios reales hay que usar fotos del producto que se vaya a entregar. Toca una imagen para ampliarla.</p>
-  </div>
-</section></details>
-
-<details class="more" id="mercado"><summary>Mercado en Colombia</summary><section>
-  <div class="wrap">
-    <div class="kicker">Mercado</div>
-    <h2>Colombia ya es un país de mascotas, y sobre todo de perros</h2>
-    <div class="bars" role="img" aria-label="Datos del mercado de mascotas en Colombia">
-      <div class="bar"><span>Hogares con mascota 2020</span><div class="track"><div class="fill grey" style="width:48%"></div></div><span>48%</span></div>
-      <div class="bar"><span>Hogares con mascota 2025</span><div class="track"><div class="fill" style="width:67%"></div></div><span>67%</span></div>
-      <div class="bar"><span>Hogares con mascota que tienen perro</span><div class="track"><div class="fill" style="width:71%"></div></div><span>71%</span></div>
-      <div class="bar"><span>Hogares con mascota en Antioquia</span><div class="track"><div class="fill" style="width:83%"></div></div><span>83%</span></div>
-      <div class="bar"><span>Hogares multipet (perro + gato)</span><div class="track"><div class="fill grey" style="width:50%"></div></div><span>&gt;50%</span></div>
-    </div>
-    <div class="grid3" style="margin-top:26px">
-      <div class="card soft"><b>Bogotá concentra el gasto</b><p class="small">El comprador típico tiene entre 32 y 45 años.</p></div>
-      <div class="card soft"><b>100.000–300.000 COP/mes</b><p class="small">Gasto habitual por hogar; la mayor parte va a comida.</p></div>
-      <div class="card soft"><b>~890 anuncios activos</b><p class="small">Para “correa perro” en Meta Colombia: hay demanda y competencia.</p></div>
-    </div>
-  </div>
-</section></details>
-
-<details class="more" id="test3"><summary>Los productos del test (detalle)</summary><section>
-  <div class="wrap">
-    <div class="kicker">Decisión · 14 nov</div>
-    <h2>Los 3 productos que entran en la prueba</h2>
-    <p class="lead">Regla de la fase 1: <b>nada que haya que fabricar</b>. Los tres ya existen con proveedor y se pueden vender en dropshipping si ganan. Uno es <b>el sistema de paseo</b>, otro <b>el más anunciado en Colombia</b> y otro <b>barato y sin tallas</b>.</p>
-    <div class="t3">
-      <article class="t3c">
-        <img src="kit.jpg" alt="Kit de correa manos libres, collar y portabolsas">
-        <div class="t3b">
-          <div class="t3top"><span class="chip">Apuesta segura</span><span class="chip mid">Encaje ★★★</span></div>
-          <h3>1 · Kit de paseo manos libres</h3>
-          <div class="t3p">169.900 <span class="small">COP · correa sola 109.900</span></div>
-          <p class="small"><b>Por qué:</b> el paseo es donde se juntan los anuncios de la competencia y la marca de Nico. Connor Pets vendía una manos libres a 89.000 y está agotada.</p>
-          <p class="small"><b>Proveedor:</b> AFM Pets (fabricante colombiano, correa manos libres) + kits locales tipo correa + portabolsas; en China, Compapet (set PVC manos libres + collar). <b>Riesgo:</b> producto conocido; hay que ganar con presentación y kit.</p>
-        </div>
-      </article>
-      <article class="t3c">
-        <img src="arnes.jpg" alt="Perro con arnés táctico antitirones color arena">
-        <div class="t3b">
-          <div class="t3top"><span class="chip ok">Demanda probada</span><span class="chip mid">Encaje ★★</span></div>
-          <h3>2 · Arnés táctico antitirones, tonos tierra</h3>
-          <div class="t3p">149.900 <span class="small">COP · arnés + correa a juego (subió desde 129.900 para tener margen)</span></div>
-          <p class="small"><b>Por qué:</b> es lo que más se repite en anuncios activos (Alfa Mascotas, Dumapets, Connor Pets). Lo llevamos a la marca con colores <b>arena y oliva</b> en vez de camuflaje militar.</p>
-          <p class="small"><b>Proveedor:</b> stock en Colombia (Importadora Maka, Wooxipet, Retrover “Arena”). <b>Riesgo:</b> tallas S–XL y margen más ajustado.</p>
-        </div>
-      </article>
-      <article class="t3c">
-        <img src="collar.jpg" alt="Collar y correa impermeables a juego">
-        <div class="t3b">
-          <div class="t3top"><span class="chip">Entrada barata</span><span class="chip mid">Encaje ★★★</span></div>
-          <h3>3 · Set collar + correa impermeable</h3>
-          <div class="t3p">129.900 <span class="small">COP · precio de prueba (estimado)</span></div>
-          <p class="small"><b>Por qué:</b> anuncios verificados (Vekopets), coste bajo y casi sin tallas. Material tipo biothane: no se pela, se limpia con agua.</p>
-          <p class="small"><b>Proveedor:</b> arbitraje si encontramos stock local de PVC (Fedele lo vende a 114.000); si no, pasa a <b>producción propia</b> (Compapet, OKEYPETS: ~21.000 puesto en Colombia). <b>Riesgo:</b> Vekopets lleva solo ~22 días anunciando.</p>
-        </div>
-      </article>
-    </div>
-    <div class="card soft" style="margin-top:16px"><b>Fase 2 (producto propio):</b> el <b>chaleco con cremallera lateral</b> de Nico. Solo si el test demuestra que la categoría vende, porque hay que desarrollarlo. <b>Por qué no los demás todavía:</b> cama, tapete, cepillo y coche venden pero no construyen la marca; portabolsas y bebedero entran como <b>complementos</b> dentro de los kits.</div>
-  </div>
-</section></details>
-
-
-
-<details class="more" id="corea"><summary>Corea (referencia)</summary><section>
-  <div class="wrap">
-    <div class="kicker">Referencia internacional · Corea del Sur</div>
-    <h2>Corea: el mercado que ya vende accesorios de paseo como moda</h2>
-    <p class="lead">Investigación de ChatGPT, revisada por Claude. Corea no es nuestro mercado: es el <b>laboratorio</b> donde ver qué hace que alguien pague más por una correa.</p>
-    <div class="tiles">
-      <div class="tile"><div class="num">5,91 M</div><p>hogares con mascota, el <b>26,7%</b> (KB, fin de 2024)</p></div>
-      <div class="tile"><div class="num">15,46 M</div><p>personas con mascota, casi el <b>30%</b> de la población</p></div>
-      <div class="tile"><div class="num">87,2%</div><p>considera a su mascota <b>parte de la familia</b></p></div>
-      <div class="tile"><div class="num">₩194.000</div><p>gasto mensual medio por hogar con mascota (KB)</p></div>
-    </div>
-    <h3 style="margin-top:30px">La correa manos libres ya existe en todos los precios</h3>
-    <div class="bars" role="img" aria-label="Precios de correas manos libres en Corea">
-      <div class="bar"><span>OUNCE</span><div class="track"><div class="fill grey" style="width:13%"></div></div><span>₩14.900</span></div>
-      <div class="bar"><span>Standard Pet</span><div class="track"><div class="fill grey" style="width:23%"></div></div><span>₩26.500</span></div>
-      <div class="bar"><span>Likalika</span><div class="track"><div class="fill grey" style="width:34%"></div></div><span>₩39.000</span></div>
-      <div class="bar"><span>GOPE</span><div class="track"><div class="fill grey" style="width:37%"></div></div><span>₩42.000</span></div>
-      <div class="bar"><span>Boondog</span><div class="track"><div class="fill" style="width:42%"></div></div><span>₩48.000</span></div>
-      <div class="bar"><span>GARM (prémium)</span><div class="track"><div class="fill" style="width:100%"></div></div><span>₩115.000</span></div>
-    </div>
-    <p class="note">Lo que justifica pagar 8 veces más no es el mecanismo, que todos tienen: son <b>materiales verificables</b> (GARM usa cuero italiano, malla acolchada y herrajes satinados) y un <b>sistema de piezas que combinan</b> (Boondog).</p>
-    <h3 style="margin-top:30px">Marcas que estudiar y qué copiar de cada una</h3>
-    <div class="grid3" style="margin-top:14px">
-      <div class="card"><b>Boondog</b><p class="small">Ecosistema de paseo: correas impermeables, arneses, bolsos, portabolsas y ropa en combinaciones de color. Vende set correa + collar (~₩85.500 en Coupang). <b>Modelo para nuestro kit.</b></p></div>
-      <div class="card"><b>GARM Companionwear</b><p class="small">Prémium por ingeniería: cada detalle de material se puede comprobar. <b>Modelo para la línea especial</b> “tipo Dior” de Nico.</p></div>
-      <div class="card"><b>BITE ME</b><p class="small">Correas impermeables, colores expresivos, luz LED y correas con mensaje. <b>Valida el set impermeable</b> y el paseo nocturno.</p></div>
-      <div class="card"><b>HOWLPOT</b><p class="small">Marca lifestyle que comunica experiencias, no fichas técnicas. <b>Modelo para las campañas</b> de “quiero verme así con mi perro”.</p></div>
-    </div>
-    <h3 style="margin-top:30px">Ideas coreanas que traemos a Colombia</h3>
-    <div class="debate">
-      <div class="card"><span class="chip ok">Entra ya</span><ul class="small" style="margin:10px 0 0;padding-left:18px">
-        <li><b>Sistema modular:</b> correa 3 en 1 + portabolsas + mini pouch como contenido del kit.</li>
-        <li><b>Set impermeable:</b> lo venden BITE ME y Boondog.</li></ul></div>
-      <div class="card"><span class="chip mid">Más adelante</span><ul class="small" style="margin:10px 0 0;padding-left:18px">
-        <li><b>Kit nocturno</b> (reflectante + luz LED): justo después del ganador. En Bogotá anochece hacia las 6 de la tarde todo el año.</li>
-        <li><b>Bolso de paseo que sirve fuera del paseo</b> (Boondog): producto de expansión.</li>
-        <li><b>Organizador de entrada</b> para correa, llaves y bolsas (tendencia en Ohouse).</li>
-        <li><b>Cochecitos:</b> en Gmarket ya venden más unidades que los de bebé (dato de ChatGPT), pero son voluminosos y caros de devolver.</li></ul></div>
-    </div>
-    <div class="card soft" style="margin-top:14px"><b>Fabricantes coreanos citados por ChatGPT</b> (sin cotizaciones aún): KANdesign/KANDOG, ETHERA, Erunda/ROCPET, LEADDOG. No damos por hecho que fabricar en Corea sea más rentable que en Colombia o China.</div>
-    <div class="card" style="margin-top:14px;border:2px solid var(--ink)" id="acuerdo"><span class="chip">Acuerdo Claude + ChatGPT</span><h3 style="margin-top:8px">Lo que más valor aporta de Corea</h3>
-      <ol class="small" style="margin:8px 0 0;padding-left:18px;display:grid;gap:6px">
-        <li><b>Vender un sistema, no una pieza.</b> Las piezas que ChatGPT eligió (correa 3 en 1, portabolsas, pouch) son el <b>contenido del Kit A</b>, no tres pruebas que compitan entre sí.</li>
-        <li><b>El precio lo sostienen materiales que se pueden comprobar</b> (GARM), no solo la estética.</li>
-        <li><b>El set impermeable (C) está validado</b> por BITE ME y Boondog.</li>
-        <li><b>Kit nocturno</b> (reflectante + LED): se lanza <b>después</b> de conocer el producto ganador, sin abrir una cuarta prueba.</li>
-        <li><b>Cada producto se prueba con dos anuncios</b>, uno de función y otro de estilo de vida, con el mismo precio y la misma oferta. Así sabremos si en Colombia se paga más por diseño o por comodidad.</li>
-      </ol>
-      <p class="small" style="margin-top:10px"><b>Acuerdo final:</b> A · Kit modular manos libres 169.900 COP · B · <s>Chaleco con cremallera lateral</s> → <b>Arnés táctico tierra 129.900 COP</b> (cambio del 14 nov: fase 1 solo con proveedor existente) · C · Set collar + correa impermeable 129.900 COP · Extensión: kit nocturno tras el ganador. <b>Medimos</b> contribución por pedido entregado, CPA, conversión y devoluciones, no solo ROAS.</p>
-      <p class="small" style="margin-top:6px"><b>Corrección de ChatGPT:</b> en Corea sí hay chalecos con cremallera (Petiful y modelos en Gmarket), aunque no está confirmado que sea lateral. El chaleco pasa a la fase 2, como producto propio.</p></div>
-  </div>
-</section></details>
-
-<details class="more" id="productos"><summary>Los 10+ productos investigados</summary><section>
-  <div class="wrap">
-    <div class="kicker">Investigación</div>
-    <h2>Todos los productos investigados</h2>
-    <p class="lead"><b>Verificado</b> = anuncios activos vistos en la Biblioteca de anuncios de Meta (Colombia) el 14 nov. Las estrellas miden el <b>encaje con la marca de Nico</b>. Los costes son <b>estimaciones</b>.</p>
-    <div class="filters" role="group" aria-label="Filtrar productos">
-      <button type="button" data-f="all" aria-pressed="true">Todos</button>
-      <button type="button" data-f="test" aria-pressed="false">En el test</button>
-      <button type="button" data-f="paseo" aria-pressed="false">Paseo (encajan con la marca)</button>
-      <button type="button" data-f="ver" aria-pressed="false">Con anuncios verificados</button>
-      <button type="button" data-f="caja" aria-pressed="false">Caja rápida (no hacen marca)</button>
-    </div>
-    <div class="products" id="prodList"></div>
-    <div class="card soft" style="margin-top:16px"><b>Descartados:</b> suplementos, sprays y gotas para mascotas. Hay muchos anuncios, pero piden <b>registro sanitario</b> y los reclamos médicos son un riesgo legal y de bloqueo en Meta.</div>
-  </div>
-</section></details>
-
-<details class="more" id="numeros"><summary>Calculadora de márgenes</summary><section>
-  <div class="wrap">
-    <div class="kicker">Calculadora</div>
-    <h2>¿Cuánto queda por kit y cuántos hacen falta?</h2>
-    <p class="lead">Mueve los valores. Vienen con nuestras <b>estimaciones</b> para el kit. El IVA del 19% ya va descontado del precio.</p>
-    <div class="calc">
-      <div class="stack">
-        <div class="field"><label for="p">Precio al cliente (IVA incl.) <output id="po"></output></label><input type="range" id="p" min="79900" max="249900" step="10000" value="169900"></div>
-        <div class="field"><label for="c">Coste del producto puesto en Colombia <output id="co"></output></label><input type="range" id="c" min="15000" max="100000" step="1000" value="50000"></div>
-        <div class="field"><label for="e">Flete nacional <output id="eo"></output></label><input type="range" id="e" min="8000" max="25000" step="1000" value="15000"></div>
-        <div class="field"><label for="d">Pedidos rechazados en contraentrega <output id="do"></output></label><input type="range" id="d" min="0" max="40" step="1" value="20"></div>
-        <div class="field"><label for="a">Publicidad por pedido entregado (CPA) <output id="ao"></output></label><input type="range" id="a" min="5000" max="70000" step="1000" value="25000"></div>
-        <div class="field"><label for="g">Objetivo de beneficio neto al mes <output id="go"></output></label><input type="range" id="g" min="1000" max="20000" step="500" value="10000"></div>
-        <p class="small">Supuestos: comisiones de Dropi y recaudo 7% del precio; empaque + confirmación 3.000; cada pedido rechazado cuesta 31.000 (flete de ida y vuelta + confirmación); 1 € ≈ 3.650 COP (nov 2026). El CPA es por <b>pedido entregado</b>.</p>
-      </div>
-      <div class="result" aria-live="polite">
-        <div class="rrow"><span>Precio sin IVA</span><b id="r1"></b></div>
-        <div class="rrow minus"><span>Producto</span><span id="r2"></span></div>
-        <div class="rrow minus"><span>Flete, comisiones, empaque</span><span id="r3"></span></div>
-        <div class="rrow minus"><span>Provisión por rechazos</span><span id="r4"></span></div>
-        <div class="rrow"><span>Margen antes de publicidad</span><b id="r5"></b></div>
-        <div class="rrow minus"><span>Publicidad (CPA)</span><span id="r6"></span></div>
-        <div class="rrow"><span><b>Te queda por kit</b></span><b id="r7"></b></div>
-        <div class="rrow"><span>Kits entregados al día para el objetivo</span><b id="r8"></b></div>
-        <div class="verdict" id="verdict"></div>
-      </div>
-    </div>
-  </div>
-</section></details>
-
-<details class="more" id="test"><summary>Cómo es la prueba de humo</summary><section>
-  <div class="wrap">
-    <div class="kicker">Plan de validación</div>
-    <h2>Prueba de humo: medir la demanda sin fabricar nada</h2>
-    <p class="lead">Una <b>landing independiente por producto</b>. El botón no cobra: abre la <b>lista de espera</b>. Mismo presupuesto y misma audiencia para todos, <b>7 días</b>, Bogotá + Medellín.</p>
-    <div class="funnel">
-      <div class="fstep"><span><b>1 · Anuncio en Meta</b></span><span class="small">CTR &gt; 1,5%</span></div>
-      <div class="fstep"><span><b>2 · Visita a la landing</b></span><span class="small">Coste por clic</span></div>
-      <div class="fstep"><span><b>3 · Clic en “Lo quiero”</b></span><span class="small">&gt; 5–8% de visitas</span></div>
-      <div class="fstep"><span><b>4 · Deja su WhatsApp</b></span><span class="small">&gt; 2–3% de visitas · decide el coste por registro</span></div>
-    </div>
-    <p class="note">Umbrales orientativos para empezar; se ajustan con los primeros datos.</p>
-    <div class="vs">
-      <div class="card"><span class="chip ok">Recomendado</span><h3 style="margin-top:10px">Lista de espera</h3><p class="small" style="margin-top:6px">Captura <b>WhatsApp o email</b>: señal más fuerte que un clic y una base de clientes para el lanzamiento. Es honesto. Texto: <b>“Primer lote en preparación. Únete a la lista y te avisamos primero.”</b></p></div>
-      <div class="card"><span class="chip no">Evitar</span><h3 style="margin-top:10px">“Agotado”</h3><p class="small" style="margin-top:6px">Solo mide el clic, corta al cliente y <b>no es verdad</b> si el producto aún no existe: puede generar quejas o reportes en Meta.</p></div>
-    </div>
-    <div class="card soft" style="margin-top:14px"><b>Lo que esta prueba no mide:</b> rechazos en contraentrega, calidad real del producto ni recompra. Eso solo se ve con ventas reales.</div>
-  </div>
-</section></details>
-
-<details class="more" id="anuncios"><summary>Anuncios de ejemplo</summary><section>
-  <div class="wrap">
-    <div class="kicker">Creatividades</div>
-    <h2>Tres ángulos de anuncio, un mismo producto</h2>
-    <div class="adwrap">
-      <div class="phone" aria-label="Ejemplo de anuncio en Instagram">
-        <div class="ph-head"><div class="av"></div><div><b class="small">tu.marca</b><div class="small" style="font-size:12px">Publicidad</div></div></div>
-        <div class="img"><img src="anuncio.jpg" alt="Anuncio de ejemplo: hombre en Medellín paseando a su perro con la correa a la cintura" style="object-position:center"></div>
-        <p class="small" style="margin-top:10px;color:var(--ink)">Correa 3 en 1: pecho, cintura o mano.</p>
-        <p class="small">Envío gratis · Pagas al recibir</p>
-        <span class="cta">Lo quiero</span>
-      </div>
-      <div>
-        <div class="tabs" role="tablist" aria-label="Ángulos de anuncio">
-          <button type="button" role="tab" id="t-a" aria-controls="p-a" aria-selected="true">A · Problema</button>
-          <button type="button" role="tab" id="t-b" aria-controls="p-b" aria-selected="false">B · Estilo de vida</button>
-          <button type="button" role="tab" id="t-c" aria-controls="p-c" aria-selected="false">C · Clientes reales</button>
-        </div>
-        <div class="panel" role="tabpanel" id="p-a" aria-labelledby="t-a">
-          <h3>Respuesta directa, como la competencia</h3>
-          <ul>
-            <li><b>0–3 s:</b> café en una mano, celular en la otra y el perro tirando. “¿Cuántas veces se te ha caído el tinto por un tirón?”</li>
-            <li><b>3–15 s:</b> se cruza la correa al pecho en 2 segundos; las manos quedan libres.</li>
-            <li><b>15–25 s:</b> las 3 formas de uso en cortes rápidos.</li>
-            <li><b>25–30 s:</b> “Kit completo 169.900. Envío gratis. Pagas al recibir.”</li>
-          </ul>
-        </div>
-        <div class="panel" role="tabpanel" id="p-b" aria-labelledby="t-b" hidden>
-          <h3>La marca de Nico</h3>
-          <ul>
-            <li><b>Formato:</b> vlog en primera persona, luz natural, sin actores de catálogo.</li>
-            <li><b>Guion:</b> “Mi ritual de domingo”: panadería, parque, la correa como parte del outfit.</li>
-            <li><b>Texto:</b> “Hecha para el paseo de verdad. Para ti y para él.”</li>
-            <li><b>Ventaja:</b> KLIMB graba este ángulo mejor que la competencia, que usa vídeos genéricos de proveedor.</li>
-          </ul>
-        </div>
-        <div class="panel" role="tabpanel" id="p-c" aria-labelledby="t-c" hidden>
-          <h3>Prueba social</h3>
-          <ul>
-            <li>5 dueños reales de Bogotá o Medellín, 10 segundos cada uno: “Lo que más me gusta es…”.</li>
-            <li>Grabado con celular. <b>Solo testimonios reales</b>, nunca reseñas inventadas.</li>
-            <li>Se graba cuando haya primeros clientes, no en la prueba de humo.</li>
-          </ul>
-        </div>
-        <div class="card soft" style="margin-top:18px"><b>Reglas del test:</b> 3 ángulos × 2 creativos = 6 anuncios · 100.000–150.000 COP/día (<b>estimación</b>) · se decide por <b>coste por registro</b>.</div>
-      </div>
-    </div>
-  </div>
-</section></details>
-
-<details class="more" id="landing"><summary>Landings de ejemplo</summary><section>
-  <div class="wrap">
-    <div class="kicker">Landing</div>
-    <h2>Así se verían las 3 landings del test (ejemplo funcional)</h2>
-    <p class="lead">Cambia de producto, <b>elige color y tamaño</b> y prueba el botón de <b>lista de espera</b>. Aquí no se guarda ningún dato; en la landing real, el formulario va conectado a WhatsApp o al CRM.</p>
-    <div class="lp-switch" role="group" aria-label="Producto de la landing">
-      <button type="button" data-p="kit" aria-pressed="true">1 · Kit manos libres</button>
-      <button type="button" data-p="chaleco" aria-pressed="false">2 · Arnés táctico tierra</button>
-      <button type="button" data-p="collar" aria-pressed="false">3 · Set impermeable</button>
-    </div>
-    <div class="lp">
-      <div class="lp-bar">Envío GRATIS a toda Colombia · Primer lote muy pronto</div>
-      <div class="lp-head"><span class="lp-logo">TU MARCA</span><span class="small">Paseo · Kit · Contacto</span></div>
-      <div class="lp-main">
-        <div class="lp-media">
-          <img id="lpMain" src="hero.jpg" alt="Correa manos libres en uso en un parque">
-          <div class="lp-thumbs" id="lpThumbs"></div>
-        </div>
-        <div class="lp-info">
-          <span class="chip">Primer lote en preparación</span>
-          <h3 class="lp-title" id="lpTitle">Kit de paseo manos libres</h3>
-          <p id="lpDesc">Correa 3 en 1 con <b>cuerda y mosquetón de escalada</b>, collar y portabolsas a juego. <b>Pecho, cintura o mano.</b></p>
-          <div class="lp-price"><span class="big" id="lpPrice">$169.900</span><span class="small" id="lpAlt">o la correa sola a $109.900</span></div>
-          <div class="lp-opt"><span class="small"><b>Color:</b> <span id="lpColor">Arena</span></span>
-            <div class="swatches" role="group" aria-label="Color">
-              <button type="button" class="sw" style="background:#d9cbb0" data-c="Arena" aria-pressed="true" aria-label="Arena"></button>
-              <button type="button" class="sw" style="background:#b8643f" data-c="Terracota" aria-pressed="false" aria-label="Terracota"></button>
-              <button type="button" class="sw" style="background:#6f6f45" data-c="Oliva" aria-pressed="false" aria-label="Oliva"></button>
-            </div>
-          </div>
-          <div class="lp-opt"><span class="small"><b>Tamaño del perro</b></span>
-            <div class="sizes" role="group" aria-label="Tamaño del perro" id="lpSizes"></div>
-          </div>
-          <form id="lpForm" class="lp-form" novalidate>
-            <label for="lpPhone" class="small"><b>Tu WhatsApp</b> para avisarte primero</label>
-            <div class="lp-row"><input id="lpPhone" type="tel" inputmode="tel" placeholder="300 123 4567" autocomplete="off"><button type="submit">Únete a la lista</button></div>
-            <p class="small" id="lpMsg" aria-live="polite">Sin pago. Te escribimos cuando salga el primer lote, con precio de lanzamiento.</p>
-          </form>
-          <ul class="lp-ben small" id="lpBen"><li><b>Manos libres</b> para el café y el celular</li><li><b>3 formas de uso</b> en segundos</li><li><b>Impermeable</b> y fácil de limpiar</li></ul>
-        </div>
-      </div>
-      <div class="lp-faq">
-        <details><summary>¿Cómo se paga?</summary><p class="small">Contraentrega, Nequi o Addi cuando salga a la venta. Unirte a la lista no tiene coste.</p></details>
-        <details><summary>¿Cuándo llega?</summary><p class="small">Te avisamos por WhatsApp en cuanto el primer lote esté listo. Envíos de 2 a 4 días hábiles.</p></details>
-        <details><summary>¿Sirve para perros grandes?</summary><p class="small">Sí, la versión mediano-grande lleva mosquetón reforzado.</p></details>
-      </div>
-    </div>
-    <p class="note">Las afirmaciones de materiales y resistencia solo se publican cuando estén comprobadas en el producto real.</p>
-    <h3 style="margin-top:30px">Estructura de cada landing</h3>
-    <ol class="landing">
-      <li><b>Barra superior:</b> Envío GRATIS a toda Colombia.</li>
-      <li><b>Hero:</b> vídeo de 6 s en el parque + “Pasea con las manos libres”.</li>
-      <li><b>Precio:</b> 109.900 la correa, <b>169.900 el kit</b> (el más elegido).</li>
-      <li><b>Selector:</b> 3 colores cálidos y tamaño de perro (pequeño / mediano-grande).</li>
-      <li><b>Botón:</b> “Únete a la lista de espera” → pide WhatsApp.</li>
-      <li><b>3 beneficios:</b> manos libres · 3 formas de uso · impermeable.</li>
-      <li><b>GIF</b> de las 3 formas de uso.</li>
-      <li><b>Bloque de marca:</b> foto de un paseo real y el vínculo cotidiano.</li>
-      <li><b>Especificaciones:</b> solo lo que se haya probado de verdad.</li>
-      <li><b>FAQ:</b> pago, plazos, perros grandes, lavado.</li>
-    </ol>
-  </div>
-</section></details>
-
-<details class="more" id="debate"><summary>Claude vs ChatGPT</summary><section>
-  <div class="wrap">
-    <div class="kicker">Autocrítica</div>
-    <h2>Claude y ChatGPT se corrigieron mutuamente</h2>
-    <div class="debate">
-      <div class="card"><h3>ChatGPT corrigió a Claude</h3>
-        <ul>
-          <li>Marca de diseño y venta rápida <b>no son incompatibles</b>.</li>
-          <li>Los gatos salen del lanzamiento, <b>no de la marca</b>.</li>
-          <li>Medir el margen por <b>pedido entregado</b>.</li>
-          <li>Una correa ajustable antes que un arnés: <b>menos tallas</b>.</li>
-          <li>La primera cuenta <b>no descontaba el IVA</b>: corregida.</li>
-          <li>Costes por pedido: Dropi cobra <b>7%</b> (no 3%+3%), y faltaban empaque y confirmación.</li>
-          <li>El IVA de importación es descontable: <b>no contarlo dos veces</b>.</li>
-        </ul>
-      </div>
-      <div class="card"><h3>Claude corrigió a ChatGPT</h3>
-        <ul>
-          <li>Su lista <b>no tenía anuncios verificados</b>; casi todo era una sola marca.</li>
-          <li>Los precios eran rangos demasiado amplios: cerramos <b>109.900 y 169.900</b>.</li>
-          <li>Licencias de fútbol: <b>no para lanzar</b>, sí como palanca futura (Connor Pets ya vende con Atlético Nacional).</li>
-          <li>El CPA de 66.000–144.000 que citó no es de mascotas: <b>alerta, no base</b>.</li>
-          <li>El arnés a 129.900 pierde dinero: <b>sube a 149.900 con correa</b>.</li>
-        </ul>
-      </div>
-    </div>
-    <h3 style="margin-top:28px">¿Llevan más de 30 días anunciándose?</h3>
-    <div class="tbl"><table>
-      <thead><tr><th>Anunciante</th><th>Anuncio activo más antiguo</th><th>Señal</th></tr></thead>
-      <tbody>
-        <tr><td>Dumapets</td><td>26 ago 2026 (~80 días)</td><td><span class="chip ok">Fuerte</span></td></tr>
-        <tr><td>Mimos y Patas</td><td>31 ago 2026</td><td><span class="chip ok">Fuerte</span></td></tr>
-        <tr><td>Importadora Maka</td><td>31 ago 2026</td><td><span class="chip ok">Fuerte</span></td></tr>
-        <tr><td>Connor Pets</td><td>14 oct 2026 · ~13 anuncios activos</td><td><span class="chip ok">Media-fuerte</span></td></tr>
-        <tr><td>Alfa Mascotas</td><td>15 oct 2026</td><td><span class="chip mid">Media</span></td></tr>
-        <tr><td>Glam Room</td><td>15 oct 2026</td><td><span class="chip mid">Media</span></td></tr>
-        <tr><td>Vekopets</td><td>23 oct 2026</td><td><span class="chip no">Débil aún</span></td></tr>
-      </tbody>
-    </table></div>
-    <p class="note">Que un anuncio siga vivo es una señal, no una prueba de rentabilidad.</p>
-  </div>
-</section></details>
-
-<details class="more" id="pasos"><summary>Pasos</summary><section>
-  <div class="wrap">
-    <div class="kicker">Siguientes pasos</div>
-    <h2>Qué hacemos ahora</h2>
-    <ul class="check" id="checks">
-      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Fotos de varios ángulos</b> de los productos de paseo.</span></button></li>
-      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Crear los anuncios</b> de cada producto (ángulos A y B).</span></button></li>
-      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Una landing por producto</b> con lista de espera y evento de conversión.</span></button></li>
-      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Lanzar el test</b>: 7 días, mismo presupuesto por producto.</span></button></li>
-      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt"><b>Elegir el ganador</b> por coste por registro.</span></button></li>
-      <li><button type="button" aria-pressed="false"><span class="box">✓</span><span class="txt">Con el ganador: <b>cotizar fabricación</b> y decidir <b>quién factura en Colombia</b>.</span></button></li>
-    </ul>
-  </div>
-</section></details>
-
-<details class="more" id="fuentes"><summary>Fuentes</summary><section style="border-bottom:0">
-  <div class="wrap">
-    <div class="kicker">Fuentes</div>
-    <ul class="sources">
-      <li>Biblioteca de anuncios de Meta, Colombia, anuncios activos (14 nov 2026)</li>
-      <li><a href="https://www.valoraanalitik.com/mascotas-expopet-corferias-2026/">Valora Analitik: hogares con mascota y Euromonitor</a></li>
-      <li><a href="https://www.elcolombiano.com/negocios/dos-de-cada-tres-hogares-colombianos-tienen-mascota-cuanto-gastan-y-ahorran-HO29411402">El Colombiano: gasto en mascotas 2026</a></li>
-      <li><a href="https://vivienda.com.co/?p=1891">Vivienda.com.co: perros 71%, Antioquia 83%</a></li>
-      <li><a href="https://www.publimetro.co/publipets/2026/03/27/perros-y-gatos-bajo-el-mismo-techo-la-mitad-de-los-hogares-colombianos-con-mascotas-son-multipet/">Publimetro: hogares multipet</a></li>
-      <li><a href="https://connorpets.com">Connor Pets: catálogo y precios</a></li>
-      <li><a href="https://www.falabella.com.co/falabella-co/category/CATG34806/Correas-para-perros">Falabella Colombia: correas para perros</a></li>
-      <li><a href="https://www.alibaba.com/discover/dog-leashes-multiple.html">Alibaba: correas manos libres al por mayor</a></li>
-      <li><a href="https://www.larepublica.co/consumo/que-parte-de-las-compras-online-va-de-vuelta-a-la-tienda-4423630">La República: devoluciones e-commerce 2026</a></li>
-      <li><a href="https://normograma.dian.gov.co/dian/compilacion/docs/oficio_dian_1470_2026.htm">DIAN: Concepto 1470 de 2026</a></li>
-      <li>Investigación de ChatGPT (chat “Business Plan Ecom”), sin verificar por Claude</li>
-      <li><a href="https://kbthink.com/investment/deepdive/research/250629-1.html">KB Financial: 2025 Korea Pet Report</a></li>
-      <li>Investigación de Corea de ChatGPT (precios OUNCE–GARM, marcas, fabricantes)</li>
-      <li>Imágenes: generadas con IA por ChatGPT, solo como concepto</li>
-    </ul>
-  </div>
-</section></details>
-
-<footer><div class="wrap">Preparado por Claude con ChatGPT para el grupo Business plan · Las cifras marcadas como estimación no son cotizaciones.</div></footer>
-
-<div class="lb" id="lb" role="dialog" aria-label="Imagen ampliada"><img id="lbimg" alt=""></div>
-
-<button type="button" id="vFab" class="vfab" aria-expanded="false" aria-controls="vPanel" aria-label="Dejar un comentario de voz">
-  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-2.08A7 7 0 0 0 19 12h-2Z"/></svg>
-</button>
-<div id="vPanel" class="vpanel" role="dialog" aria-label="Comentarios de voz" hidden>
-  <div class="vhead"><b>Comentarios del equipo</b><button type="button" id="vClose" class="vx" aria-label="Cerrar">×</button></div>
-  <div id="vLive">
-    <p class="small" id="vHint">Toca el cuadro de texto y pulsa el <b>micrófono del teclado</b> para dictar. Después, <b>envíalo al grupo por WhatsApp</b>.</p>
-    <div class="vrec"><button type="button" id="vMic" class="vmic" aria-pressed="false">● Grabar</button><span class="small" id="vState"></span></div>
-    <label for="vText" class="small"><b>Tu comentario</b></label>
-    <textarea id="vText" rows="4" placeholder="Habla o escribe aquí…"></textarea>
-    <label for="vSec" class="small"><b>Sobre</b></label>
-    <select id="vSec"><option>General</option><option>Kit manos libres</option><option>Chaleco cremallera lateral</option><option>Set impermeable</option><option>Anuncios</option><option>Landing</option><option>Números</option></select>
-    <a class="vsave" id="vWa" href="https://wa.me/" target="_blank" rel="noopener">Enviar al grupo por WhatsApp</a>
-        <p class="small" id="vMsg" aria-live="polite"></p>
-  </div>
-</div>
-
 <script>
-const P=[
- {n:1,cat:"Arbitraje → producción si gana",name:"Correa manos libres modular (kit)",price:"55.000–180.000",cost:"18.000–35.000",ads:"Parcial: Connor Pets (89.000, agotada), AFM en Falabella",v:"mid",fit:3,tags:["paseo","test"],hero:true},
- {n:11,cat:"Producción",name:"Chaleco con cremallera lateral (idea de Nico · fase 2)",price:"159.900 (est.)",cost:"Desarrollo propio",ads:"Sin proveedor: hay que fabricarlo. En Corea existen chalecos con cremallera (Petiful)",v:"mid",fit:3,tags:["paseo"]},
- {n:2,cat:"Arbitraje",name:"Arnés táctico antitirones (tonos tierra)",price:"149.900 con correa (test)",cost:"25.000–50.000",ads:"Alfa Mascotas, Dumapets · stock: Importadora Maka, Wooxipet",v:"ok",fit:2,tags:["paseo","ver","test"],hero:true},
- {n:3,cat:"Arbitraje",name:"Arnés antitirones / en H",price:"79.000–180.000",cost:"25.000–50.000",ads:"Connor Pets",v:"ok",fit:3,tags:["paseo","ver"]},
- {n:4,cat:"Arbitraje o producción",name:"Collar + correa impermeable (set)",price:"59.000–105.000 c/u · set 129.900",cost:"12.000–30.000",ads:"Vekopets",v:"ok",fit:3,tags:["paseo","ver","test"],hero:true},
- {n:5,cat:"Arbitraje (complemento)",name:"Kit portabolsas + bolso de premios",price:"26.000–95.000",cost:"4.000–35.000",ads:"Sin anuncio visto (WUFTREK, según ChatGPT)",v:"no",fit:3,tags:["paseo"]},
- {n:6,cat:"Arbitraje",name:"Cama ortopédica antiestrés",price:"80.000–200.000 (est.)",cost:"30.000–70.000",ads:"Dumapets",v:"ok",fit:2,tags:["ver","caja"]},
- {n:7,cat:"Arbitraje",name:"Tapete sanitario",price:"60.000–120.000 (est.)",cost:"15.000–40.000",ads:"Mimos y Patas, Trends Pets",v:"ok",fit:1,tags:["ver","caja"]},
- {n:8,cat:"Arbitraje",name:"Cepillo quita pelo",price:"40.000–80.000 (est.)",cost:"8.000–20.000",ads:"Glam Room",v:"ok",fit:1,tags:["ver","caja"]},
- {n:9,cat:"Arbitraje",name:"Coche plegable para perro mayor",price:"250.000+ (est.)",cost:"100.000+",ads:"Importadora Maka",v:"ok",fit:1,tags:["ver","caja"]},
- {n:10,cat:"Arbitraje (complemento)",name:"Bebedero / comedero plegable",price:"54.000–68.000",cost:"9.000–22.000",ads:"Sin anuncio visto (WUFTREK, según ChatGPT)",v:"no",fit:2,tags:["paseo"]}
-];
-const chip={ok:'<span class="chip ok">Anuncios verificados</span>',mid:'<span class="chip mid">Evidencia parcial</span>',no:'<span class="chip no">Sin anuncio visto</span>'};
-function stars(f){let s='';for(let i=1;i<=3;i++)s+=i<=f?'★':'<span class="off">★</span>';return s;}
-function render(f){
-  const list=document.getElementById('prodList');
-  list.innerHTML=P.filter(p=>f==='all'||p.tags.includes(f)).map(p=>`
-   <article class="prod${p.hero?' hero-p':''}">
-     <div class="top"><span class="n">${String(p.n).padStart(2,'0')}</span>${chip[p.v]}</div>
-     <h3>${p.name}${p.tags.includes('test')?' · en el test':''}</h3>
-     <div class="price">${p.price} COP</div>
-     <div class="small"><b>${p.cat}</b> · coste estimado: ${p.cost}</div>
-     <div class="who">${p.ads}</div>
-     <div class="small">Encaje marca <span class="stars" aria-label="${p.fit} de 3">${stars(p.fit)}</span></div>
-   </article>`).join('');
-}
-document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed','false'));
-  b.setAttribute('aria-pressed','true');render(b.dataset.f);
-}));
-render('all');
-
-const fmt=n=>Math.round(n).toLocaleString('es-CO');
-const ids=['p','c','e','d','a','g'];
-function calc(){
-  const v={};ids.forEach(i=>v[i]=Number(document.getElementById(i).value));
-  document.getElementById('po').textContent=fmt(v.p);
-  document.getElementById('co').textContent=fmt(v.c);
-  document.getElementById('eo').textContent=fmt(v.e);
-  document.getElementById('do').textContent=v.d+'%';
-  document.getElementById('ao').textContent=fmt(v.a);
-  document.getElementById('go').textContent=fmt(v.g)+' €';
-  const sin=v.p/1.19, fees=v.e+0.07*v.p+3000, prov=v.d/(100-v.d)*31000, marg=sin-v.c-fees-prov, net=marg-v.a;
-  document.getElementById('r1').textContent=fmt(sin);
-  document.getElementById('r2').textContent='−'+fmt(v.c);
-  document.getElementById('r3').textContent='−'+fmt(fees);
-  document.getElementById('r4').textContent='−'+fmt(prov);
-  document.getElementById('r5').textContent=fmt(marg);
-  document.getElementById('r6').textContent='−'+fmt(v.a);
-  document.getElementById('r7').textContent=fmt(net)+' COP';
-  const goal=v.g*3650, el=document.getElementById('verdict');
-  if(net<=0){document.getElementById('r8').textContent='—';el.className='verdict bad';el.innerHTML='<b>Pierdes dinero en cada kit.</b> Sube el precio, baja el coste o el CPA.';return;}
-  const day=goal/net/30;
-  document.getElementById('r8').textContent=fmt(Math.ceil(day));
-  if(day<=25){el.className='verdict good';el.innerHTML='<b>Objetivo alcanzable</b> con un volumen moderado: unos '+fmt(Math.ceil(day))+' kits al día.';}
-  else if(day<=60){el.className='verdict mid';el.innerHTML='<b>Posible, pero exigente:</b> '+fmt(Math.ceil(day))+' kits al día. Objetivo de 6–12 meses.';}
-  else{el.className='verdict bad';el.innerHTML='<b>Muy difícil:</b> '+fmt(Math.ceil(day))+' kits al día. El margen por kit es demasiado bajo.';}
-}
-ids.forEach(i=>document.getElementById(i).addEventListener('input',calc));calc();
-
-const tabs=[...document.querySelectorAll('[role=tab]')];
-tabs.forEach(t=>t.addEventListener('click',()=>{
-  tabs.forEach(x=>{x.setAttribute('aria-selected','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true;});
-  t.setAttribute('aria-selected','true');document.getElementById(t.getAttribute('aria-controls')).hidden=false;
-}));
-
-document.querySelectorAll('#checks button').forEach(b=>b.addEventListener('click',()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true')));
-
-const IM={};['hero','kit','detalle'].forEach(k=>IM[k]=document.querySelector('[data-full='+k+'] img').src);
-IM.arnes=document.querySelector('img[alt="Perro con arnés táctico antitirones color arena"]').src;
-IM.collar=document.querySelector('img[alt="Collar y correa impermeables a juego"]').src;
-const LP={
- kit:{t:'Kit de paseo manos libres',d:'Correa 3 en 1 con <b>cuerda y mosquetón de escalada</b>, collar y portabolsas a juego. <b>Pecho, cintura o mano.</b>',p:'$169.900',a:'o la correa sola a $109.900',img:['hero','kit','detalle'],s:['Pequeño (hasta 10 kg)','Mediano-grande'],b:['<b>Manos libres</b> para el café y el celular','<b>3 formas de uso</b> en segundos','<b>Impermeable</b> y fácil de limpiar']},
- chaleco:{t:'Arnés táctico antitirones',d:'Acolchado, con <b>asa superior</b> para controlar tirones y <b>anilla frontal</b>. En colores <b>arena y oliva</b>, para que combine con tu ropa y no parezca militar.',p:'$129.900',a:'arnés + correa a juego',img:['arnes','detalle'],s:['S','M','L','XL'],b:['<b>Menos tirones</b> en cada paseo','<b>Asa</b> para cruzar calles con control','<b>Reflectivo</b> para las noches']},
- collar:{t:'Set collar + correa impermeable',d:'Material recubierto tipo <b>biothane</b>, con aspecto de cuero vegano: <b>no se pela, no huele y se limpia con agua</b> después del barro.',p:'$129.900',a:'collar y correa a juego',img:['collar','kit'],s:['Pequeño','Mediano','Grande'],b:['<b>Impermeable</b> de verdad','<b>Se limpia</b> con un paño','<b>Herrajes</b> que no se oxidan']}
-};
-function pickBtn(sel,b){document.querySelectorAll(sel).forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');}
-function setLP(k){const d=LP[k];
-  document.getElementById('lpTitle').textContent=d.t;document.getElementById('lpDesc').innerHTML=d.d;
-  document.getElementById('lpPrice').textContent=d.p;document.getElementById('lpAlt').textContent=d.a;
-  document.getElementById('lpBen').innerHTML=d.b.map(x=>'<li>'+x+'</li>').join('');
-  document.getElementById('lpMain').src=IM[d.img[0]];
-  const th=document.getElementById('lpThumbs');th.innerHTML=d.img.map((s,i)=>`<button type="button" class="lpt" aria-pressed="${i===0}" aria-label="Ver imagen ${i+1}" data-src="${s}"><img src="${IM[s]}" alt=""></button>`).join('');
-  th.querySelectorAll('.lpt').forEach(b=>b.addEventListener('click',()=>{document.getElementById('lpMain').src=IM[b.dataset.src];pickBtn('#lpThumbs .lpt',b);}));
-  const sz=document.getElementById('lpSizes');sz.innerHTML=d.s.map((s,i)=>`<button type="button" class="sz" aria-pressed="${i===0}">${s}</button>`).join('');
-  sz.querySelectorAll('.sz').forEach(b=>b.addEventListener('click',()=>pickBtn('#lpSizes .sz',b)));
-  document.getElementById('lpMsg').textContent='Sin pago. Te escribimos cuando salga el primer lote, con precio de lanzamiento.';
-}
-document.querySelectorAll('.lp-switch button').forEach(b=>b.addEventListener('click',()=>{pickBtn('.lp-switch button',b);setLP(b.dataset.p);}));
-setLP('kit');
-document.querySelectorAll('.sw').forEach(b=>b.addEventListener('click',()=>{pickBtn('.sw',b);document.getElementById('lpColor').textContent=b.dataset.c;}));
-document.getElementById('lpForm').addEventListener('submit',e=>{e.preventDefault();const v=document.getElementById('lpPhone').value.replace(/\D/g,'');const m=document.getElementById('lpMsg');if(v.length<10){m.innerHTML='<b>Escribe un número de 10 dígitos.</b>';return;}m.innerHTML='<b>¡Listo! Estás en la lista.</b> (Ejemplo: en esta página no se guarda nada.)';});
-const lb=document.getElementById('lb'),lbi=document.getElementById('lbimg');
-document.querySelectorAll('.gallery figure').forEach(f=>f.addEventListener('click',()=>{const im=f.querySelector('img');lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('on');}));
-document.querySelectorAll('img[data-lb]').forEach(im=>im.addEventListener('click',()=>{lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('on');}));
-lb.addEventListener('click',()=>lb.classList.remove('on'));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on');});
-</script>
-
-<script>
-const PD=[{"id": "a1", "name": "Kit de paseo manos libres", "sub": "Correa 3 en 1 + portabolsas + pouch", "img": "mb-kit.jpg", "e": {"P": 169900, "iva": 27127, "net": 142773, "C": 35000, "gross": 107773, "gp": 75, "F": 15000, "comm": 11893, "ec": 3000, "dev": 10333, "ads": 26667, "cpa": 20000, "prof": 40880, "mp": 28.6, "be": 116800.0, "m18": 145400.0}, "why": "El paseo es donde se juntan los anuncios de la competencia y la marca. Ya hay fabricantes colombianos con stock.", "sup": [["AFM Pets (Bogotá)", "Correa manos libres al público 55.000; portabolsas 8.000", "Pedir precio mayorista / Dropi", "1–5 días", "https://www.falabella.com.co/falabella-co/seller/AFM%20PETS%20SAS", "https://www.falabella.com.co/falabella-co/product/128434080/Correa-Manos-Libres-Cinturon-Para-Correr-Con-Mascotas/128434081"], ["AFM Pets · portabolsas", "Al público 8.000", "—", "1–5 días", "https://www.falabella.com.co/falabella-co/seller/AFM%20PETS%20SAS", "https://www.falabella.com.co/falabella-co/product/126171327/Porta-Bolsas-ecoamigable./126171329"], ["AM Mascotas (Bogotá)", "Correa manos libres a 28.142 (dato de ChatGPT)", "Por confirmar", "2–5 días", null, null]], "col": "arb"}, {"id": "a2", "name": "Arnés táctico tierra + correa", "sub": "Colores arena y oliva", "img": "mb-arnes.jpg", "e": {"P": 154900, "iva": 24732, "net": 130168, "C": 49000, "gross": 81168, "gp": 62, "F": 15000, "comm": 10843, "ec": 3000, "dev": 10333, "ads": 16000, "cpa": 12000, "prof": 25992, "mp": 20.0, "be": 121200.0, "m18": 150800.0}, "why": "La categoría con más anuncios activos en Colombia (Alfa Mascotas, Dumapets, Connor Pets).", "sup": [["Importadora Maka", "Arnés táctico 78.900 (53.900 en promoción) en Falabella", "Pedir precio mayorista", "1–5 días", "https://www.falabella.com.co/falabella-co/seller/IMPORTADORA%20MAKA%20SAS", "https://www.falabella.com.co/falabella-co/category/CATG34807/collares-para-perros"], ["Importadora Maka · correa", "Correa 5 en 1 a 29.900", "—", "1–5 días", "https://www.falabella.com.co/falabella-co/seller/IMPORTADORA%20MAKA%20SAS", "https://www.falabella.com.co/falabella-co/product/136698967/Correa-Mascota-5-En-1-Para-Perro/136698968"], ["Wooxipet (Mercado Libre)", "Arnés táctico antitirones reflectivo", "Pedir precio", "1–5 días", null, "https://www.mercadolibre.com.co/shorts/clips/EOTipM/arnes-tactico-pechera-perro-grande-antitirones-reflectivo"], ["Retrover (Mercado Libre)", "Arnés K9 táctico, nylon 1050D", "Pedir precio", "1–5 días", null, "https://www.mercadolibre.com.co/shorts/clips/gad7JD/arnes-k9-chaleco-tactico-militar-rosado-ajustable"]], "col": "arb"}, {"id": "a3", "name": "Kit pechera + correa de cintura", "sub": "Versión económica del manos libres", "img": "", "e": {"P": 139900, "iva": 22337, "net": 117563, "C": 31000, "gross": 86563, "gp": 74, "F": 15000, "comm": 9793, "ec": 3000, "dev": 10333, "ads": 20000, "cpa": 15000, "prof": 28437, "mp": 24.2, "be": 103000.0, "m18": 128100.0}, "why": "Probar el beneficio manos libres con un ticket más bajo (propuesta de ChatGPT).", "sup": [["AFM Pets · arnés antitirones", "Al público 45.000 (talla L)", "Pedir precio mayorista", "1–5 días", "https://www.falabella.com.co/falabella-co/seller/AFM%20PETS%20SAS", "https://www.falabella.com.co/falabella-co/product/126438851/Arnes-Para-Perro-Anti-tirones-Talla-L"], ["AM Mascotas (Bogotá)", "Pechera + correa ≈ 68.344 (dato de ChatGPT)", "Por confirmar", "2–5 días", null, null]], "col": "arb"}, {"id": "a8", "name": "Correa running manos libres + bolso", "sub": "Cinturón, correa elástica y bolsillo", "img": "", "e": {"P": 139900, "iva": 22337, "net": 117563, "C": 27000, "gross": 90563, "gp": 77, "F": 15000, "comm": 9793, "ec": 3000, "dev": 10333, "ads": 20000, "cpa": 15000, "prof": 32437, "mp": 27.6, "be": 97800.0, "m18": 121700.0}, "why": "Para caminar y correr; sin tallas complejas.", "sup": [["Happy Pets Colombia", "Correa manos libres con bolso, desde 60.000 (dato de ChatGPT)", "Por confirmar", "Por confirmar", null, null], ["Jieda Global (Mercado Libre)", "Correa manos libres con cinturón, 2 piezas", "Pedir precio", "Por confirmar", null, "https://www.mercadolibre.com.co/shorts/clips/rUbPlV/correa-manos-libres-perro-con-cinturon-2-piezas-negro"]], "col": "arb"}, {"id": "a6", "name": "Kit nocturno reflectante + luz LED", "sub": "Collar o correa con luz + reflectivo", "img": "", "e": {"P": 139900, "iva": 22337, "net": 117563, "C": 32000, "gross": 85563, "gp": 73, "F": 15000, "comm": 9793, "ec": 3000, "dev": 10333, "ads": 20000, "cpa": 15000, "prof": 27437, "mp": 23.3, "be": 104300.0, "m18": 129800.0}, "why": "En Bogotá anochece hacia las 6 pm todo el año; beneficio fácil de mostrar en vídeo.", "sup": [["La Pet Shop (Colombia)", "Set reflectante (dato de ChatGPT)", "65.000–80.000", "Por confirmar", null, null]], "col": "arb"}, {"id": "a9", "name": "Coche plegable para perro", "sub": "Para perros mayores o pequeños", "img": "", "e": {"P": 399900, "iva": 63850, "net": 336050, "C": 128000, "gross": 208050, "gp": 62, "F": 35000, "comm": 27993, "ec": 3000, "dev": 23667, "ads": 40000, "cpa": 30000, "prof": 78391, "mp": 23.3, "be": 298100.0, "m18": 371000.0}, "why": "Ticket alto y anunciado por Importadora Maka; voluminoso y caro de devolver.", "sup": [["One Pixel / Boldu (Falabella)", "Coches plegables 275.900–299.900", "Pedir precio", "1–5 días", null, "https://www.falabella.com.co/falabella-co/category/CATG34810/Coches-para-perros"]], "col": "arb"}, {"id": "f1", "name": "Kit manos libres marca propia", "sub": "Correa PVC cruzada + pouch + portabolsas", "img": "mb-kit.jpg", "e": {"P": 169900, "iva": 27127, "net": 142773, "C": 34000, "gross": 108773, "gp": 76, "F": 15000, "comm": 11893, "ec": 3000, "dev": 10333, "ads": 26667, "cpa": 20000, "prof": 41880, "mp": 29.3, "be": 115500.0, "m18": 143800.0}, "why": "La mayor demanda funcional comprobada; con fábrica propia el margen pasa del 18% al 29%.", "mat": ["Correa de cinta de nylon recubierta de PVC, 2–2,5 cm, ajustable 1,6–2,2 m (cruzada o a la mano)", "2 mosquetones giratorios de zinc o aluminio + argolla D", "Pouch de neopreno o nylon con cremallera y clip", "Portabolsas de silicona con mosquetón", "Costuras selladas y logo grabado en el herraje"], "sup": [["Guangdong Compapet", "Set PVC manos libres + collar, 1,92–2,18 USD, mínimo 100", "~34.000 puesto en Colombia", "4–6 semanas", "https://www.alibaba.com/discover/dog-leashes-multiple.html", "https://www.alibaba.com/discover/dog-leashes-multiple.html"], ["Fábrica en petproducts.com.cn", "Correa PVC manos libres cruzada (mínimo 1.440)", "Pedir cotización", "4–6 semanas", "https://petproducts.com.cn/dog-collar-leash-harness-supplier/", "https://petproducts.com.cn/?p=32447"], ["Alibaba · set manos libres + pouch", "Correa bungee reflectiva + bolsa de premios", "Pedir cotización", "4–6 semanas", null, "https://www.alibaba.com/product-detail/Hands-free-quick-release-reflective-dog_1601049038162.html"], ["Dongguan Henshine", "Correa manos libres con bolso, 3,80–4,59 USD, mínimo 50 (dato de ChatGPT)", "Pedir cotización", "4–6 semanas", null, null]], "col": "fab"}, {"id": "f2", "name": "Set collar + correa impermeable", "sub": "PVC tipo biothane, colores a juego", "img": "mb-pvc.jpg", "e": {"P": 129900, "iva": 20740, "net": 109160, "C": 21000, "gross": 88160, "gp": 81, "F": 15000, "comm": 9093, "ec": 3000, "dev": 10333, "ads": 20000, "cpa": 15000, "prof": 30733, "mp": 28.2, "be": 90000.0, "m18": 112000.0}, "why": "No se moja ni huele, casi sin tallas y el mejor margen. En Colombia solo se encontró al público (114.000).", "mat": ["Cinta de nylon recubierta de PVC/TPU (tipo biothane), 2–2,5 cm", "Hebilla de acero inoxidable o aluminio con cierre de seguridad", "Mosquetón giratorio y argolla D", "Remaches o costura sellada", "Tallas S / M / L en centímetros", "Logo grabado en la hebilla"], "sup": [["Alibaba · set PVC impermeable", "Collar + correa + pouch PVC con logo propio", "Pedir cotización", "4–6 semanas", null, "https://www.alibaba.com/product-introduction/Custom-Designer-Durable-Pvc-Soft-Waterproof_62321366553.html"], ["OKEYPETS (Guangzhou)", "Set collar + correa PVC con logo propio", "Pedir cotización", "4–6 semanas", "https://www.sourceready.com/supplier/detail/guangzhou-okeypets-products-co-ltd", "https://www.okeypets.com/es/dog-leash.html"], ["Guangdong Compapet", "Sets PVC 1,92–2,18 USD, mínimo 100", "~21.000 puesto", "4–6 semanas", "https://www.alibaba.com/discover/dog-leashes-multiple.html", "https://www.alibaba.com/discover/dog-leashes-multiple.html"]], "col": "fab"}, {"id": "f3", "name": "Correa de cuerda de escalada", "sub": "Para llevar cruzada; idea de Nico y Julieth", "img": "mb-cuerda.jpg", "e": {"P": 149900, "iva": 23934, "net": 125966, "C": 30400, "gross": 95566, "gp": 76, "F": 15000, "comm": 10493, "ec": 3000, "dev": 10333, "ads": 26667, "cpa": 20000, "prof": 30073, "mp": 23.9, "be": 110900.0, "m18": 137900.0}, "why": "El grupo la compartió 3 veces hoy y encaja con los materiales de escalada de Nico. Sin anuncios verificados aún.", "mat": ["Cuerda de 10–12 mm (dinámica o trenzada de poliéster)", "Mosquetón de aluminio 7075 con seguro y giro 360°", "Terminales cosidos con funda termorretráctil o pieza metálica", "Largo 1,6–2 m para llevar cruzada; anilla para acortar", "Colores crema, café, oliva, negro y rosa"], "sup": [["Alibaba · correa de cuerda reflectiva", "0,93–1,34 USD; logo desde 1.000 piezas", "~30.000 puesto (con mosquetón)", "4–6 semanas", null, "https://www.alibaba.com/product-introduction/Large-Mountain-Climbing-Running-Tracking-Reflective_60862139234.html"], ["Shenzhen Shengtuo · mosquetones", "Aluminio 4 kN giratorio, 2,05–2,35 USD, mínimo 100", "—", "2–4 semanas", "https://shengtuorope.en.alibaba.com/company_profile.html", "https://www.alibaba.com/product-detail/Aluminum-Dog-Leash-Carabiners-4KN-Swivel_1600534160312.html"], ["Dongguan Henshine", "Correa cruzada (dato de ChatGPT)", "32.000–52.000", "4–6 semanas", null, null]], "col": "fab"}, {"id": "f4", "name": "Arnés táctico acolchado propio", "sub": "Arena / oliva, con correa a juego", "img": "mb-arnes.jpg", "e": {"P": 149900, "iva": 23934, "net": 125966, "C": 35900, "gross": 90066, "gp": 72, "F": 15000, "comm": 10493, "ec": 3000, "dev": 10333, "ads": 26667, "cpa": 20000, "prof": 24573, "mp": 19.5, "be": 118000.0, "m18": 146800.0}, "why": "La categoría con más anuncios; con marca propia el margen sube frente al arbitraje.", "mat": ["Nylon 1050D o poliéster 600D", "Acolchado de malla transpirable", "Hebillas de liberación rápida de metal", "Asa de control y paneles de velcro para parches", "Dos argollas (pecho y espalda); tallas S–XL"], "sup": [["Cooldog (Alibaba)", "Sets K9 tácticos collar + correa 4,01–4,25 USD", "Pedir cotización", "4–6 semanas", "https://cooldog.m.en.alibaba.com/company_profile.html", null], ["Hangzhou Baiyi Pet", "Collares y arneses tácticos a medida", "Pedir cotización", "4–6 semanas", "https://ez2pet1.en.alibaba.com/en_US/company_profile.html", null], ["Qingdao Weichong", "Arnés OEM (dato de ChatGPT)", "35.000–60.000", "4–6 semanas", null, null]], "col": "fab"}, {"id": "f5", "name": "Set borrego (sherpa)", "sub": "Arnés + correa + porta-AirTag, idea de Julieth", "img": "mb-sherpa.jpg", "e": {"P": 139900, "iva": 22337, "net": 117563, "C": 34000, "gross": 83563, "gp": 71, "F": 15000, "comm": 9793, "ec": 3000, "dev": 10333, "ads": 20000, "cpa": 15000, "prof": 25437, "mp": 21.6, "be": 106900.0, "m18": 133000.0}, "why": "Textura diferencial que el grupo compartió (Feroz Pet Fashion). Demanda en Colombia sin verificar.", "mat": ["Tela borrego/sherpa de poliéster", "Forro interior acolchado", "Herrajes dorados o de zinc", "Funda para AirTag a juego", "Tallas S–L"], "sup": [["OKEYPETS", "Set sherpa arnés + correa + bandana", "Pedir cotización", "4–6 semanas", "https://www.sourceready.com/supplier/detail/guangzhou-okeypets-products-co-ltd", "https://www.sourceready.com/supplier/detail/guangzhou-okeypets-products-co-ltd"], ["Coowone / Shenzhen Maxamy", "Set teddy desde 3,23–4,98 USD (dato de ChatGPT)", "~34.000 puesto", "4–6 semanas", null, null]], "col": "fab"}, {"id": "f6", "name": "Kit nocturno LED propio", "sub": "Collar + correa con luz recargable", "img": "", "e": {"P": 139900, "iva": 22337, "net": 117563, "C": 27500, "gross": 90063, "gp": 77, "F": 15000, "comm": 9793, "ec": 3000, "dev": 10333, "ads": 20000, "cpa": 15000, "prof": 31937, "mp": 27.2, "be": 98400.0, "m18": 122500.0}, "why": "Beneficio de seguridad fácil de mostrar en vídeo.", "mat": ["Cinta PVC o nylon con tira LED interna", "Batería recargable USB-C", "Ribete reflectivo", "Hebilla y mosquetón metálicos"], "sup": [["Fábrica en petproducts.com.cn", "Set collar + correa LED recargable 3 modos (mínimo 1.440)", "Pedir cotización", "4–6 semanas", "https://petproducts.com.cn/dog-collar-leash-harness-supplier/", "https://petproducts.com.cn/?p=32430"], ["SinSky", "Correa LED 2,77–3,66 USD (dato de ChatGPT)", "Pedir cotización", "4–6 semanas", null, null]], "col": "fab"}, {"id": "f7", "name": "Set collar + correa de pana", "sub": "Variante estética de bajo riesgo", "img": "", "e": {"P": 129900, "iva": 20740, "net": 109160, "C": 27200, "gross": 81960, "gp": 75, "F": 15000, "comm": 9093, "ec": 3000, "dev": 10333, "ads": 20000, "cpa": 15000, "prof": 24533, "mp": 22.5, "be": 98100.0, "m18": 122000.0}, "why": "Textura de moda; demanda específica sin comprobar.", "mat": ["Pana (corduroy) sobre cinta de nylon", "Herrajes metálicos dorados o negros", "Bolsita portabolsas a juego"], "sup": [["OKEYPETS", "Set corduroy OEM", "Pedir cotización", "4–6 semanas", "https://www.sourceready.com/supplier/detail/guangzhou-okeypets-products-co-ltd", "https://www.okeypets.com/es/dog-leash.html"]], "col": "fab"}, {"id": "f8", "name": "Collar de cuerda + placa + porta-AirTag", "sub": "Personalizado, para regalo", "img": "", "e": {"P": 114900, "iva": 18345, "net": 96555, "C": 26400, "gross": 70155, "gp": 73, "F": 15000, "comm": 8043, "ec": 3000, "dev": 10333, "ads": 16000, "cpa": 12000, "prof": 17778, "mp": 18.4, "be": 91800.0, "m18": 114300.0}, "why": "Julieth compartió collares de cuerda con placas y dijes. Personalización = regalo.", "mat": ["Cuerda trenzada de 8–10 mm", "Placa de acero grabada con láser", "Funda para AirTag de cuero o silicona", "Mosquetón o hebilla metálica"], "sup": [["Alibaba · fundas AirTag", "Fundas de cuero PU/silicona 0,45–1,50 USD", "Pedir cotización", "2–4 semanas", null, "https://electronics.alibaba.com/product/airtag-apple"], ["Dongguan Zhanhong Weaving", "Cuerdas, correas y cintas a medida", "Pedir cotización", "4–6 semanas", "https://dgzh.en.alibaba.com/", null], ["Grabado de placas en Colombia", "Por buscar", "—", "1–2 días", null, null]], "col": "fab"}];
-const fmt2=n=>Math.round(n).toLocaleString('es-CO');
-const dlg=document.getElementById('pd');
+const PD=[{"id": "d1", "col": "drop", "rank": 1, "slug": "kit", "name": "Kit de paseo manos libres", "idea": "Nico", "pet": "Perro", "sub": "Correa crossbody + pouch + portabolsas, en tonos tierra", "P": 169900, "C": 40000, "cpa": 20000, "why": "Es el que más margen deja (25 %), casi nadie lo anuncia en Colombia (4 anuncios activos) y es el que mejor encaja con el ojo de moda de Nico y Julieth. Es nuestra apuesta de marca.", "pains": ["Ir con correa, bolsas, premios, celular y café con una sola mano.", "Correas \"manos libres\" que arrastran por el piso y se enredan al caminar, así que terminas agarrándolas igual.", "Mosquetones grandes y pesados; cinturones incómodos para personas pequeñas.", "Miedo a perder el equilibrio si el perro tira fuerte."], "desires": ["Libertad en el paseo diario sin perder el control del perro.", "Verse bien paseando: funcional y bonito a la vez (\"functional and cute\").", "Llevar todo encima en un solo accesorio."], "angle": "\"Tus manos para tu vida. Tu paseo, contigo.\" Mostrar café y celular en la mano y el agarre de control.", "design": "Asa corta de control cerca del mosquetón, longitud ajustable para que no arrastre y mosquetón ligero con seguro.", "ads": ["correa manos libres perro", "~4", "2", "jun 2026"], "market": ["Cinturón manos libres AFM: 55.000 en Falabella. Nuestro kit cuesta 3 veces más: se justifica con pouch, portabolsas y diseño.", "https://www.mercadolibre.com.co/shorts/clips/pRidgH/correa-manos-libres-cinturon-correr-caminar-con-perro", "Mercado Libre"], "risk": "Poca competencia puede significar poca demanda. Se valida con un test pequeño antes de invertir.", "sup": [{"n": "Dropi · importadores con stock en Colombia", "u": "https://dropi.co/", "t": "Local · contraentrega · 2–5 días", "d": "El catálogo con precios solo se ve con cuenta (la crea Sebastián). Aquí buscamos el mismo producto con stock en Colombia para el test.", "v": "Abre la web; catálogo con cuenta"}, {"n": "Dongguan Nibao Outdoor Products · Alibaba", "u": "https://www.alibaba.com/product-detail/NIBAO-Dog-Walking-Bag-Set-3_1601799737804.html", "t": "Fábrica · MOQ 100", "d": "Set 3 en 1: riñonera crossbody + correa de cuerda manos libres de 2 m + botella + portabolsas. US$ 2,2–7,7 por unidad. Es casi nuestro kit; sirve para el lote con marca propia.", "v": "Comprobado"}, {"n": "CJdropshipping · correa crossbody manos libres", "u": "https://cjdropshipping.com/product/liberation-of-hands-running-dog-leash-diagonally-across-the-dog-leash-explosion-proof-chain-for-large-and-medium-sized-dogs-p-1414019037599502336.html", "t": "Dropshipping desde China", "d": "SKU CJGY120859602BY · US$ 8,81 · 120 g · 29.189 unidades en fábrica. Envío a EE. UU. 5–11 días; a Colombia hay que cotizarlo con cuenta.", "v": "Comprobado"}, {"n": "Dongguan Unclehusky Pet Products · Alibaba", "u": "https://www.alibaba.com/product-detail/Hands-Free-Crossbody-Dog-Leash-Braided_1601927784363.html", "t": "Fábrica · MOQ 50", "d": "Correa crossbody de cuerda trenzada con detalles en cuero, doble mosquetón, 2,1 m. US$ 1,3–3,3.", "v": "Comprobado"}, {"n": "AliExpress · correa manos libres con bolsa y doble asa", "u": "https://www.aliexpress.com/item/1005011771512753.html", "t": "Muestras", "d": "US$ 12,17. Para pedir una muestra y ver calidad; la entrega tarda 8–17 días, así que no sirve para clientes.", "v": "Comprobado"}], "lot": {"what": "Set Nibao (US$ 2,2–7,7) + empaque de marca", "fob": 5.5, "kg": 0.45, "air": 42033, "sea": 32232}, "e": {"P": 169900, "net": 142773, "C": 40000, "F": 15000, "emp": 3000, "comm": 11893, "dev": 10333, "ads": 26667, "cpa": 20000, "prof": 35880, "gross": 72.0, "mp": 25.1, "mp40": 17.7, "be": 123323, "be_cpa": 46910, "be_x": 2.35, "mult": 4.2}, "v": ["ok", "Cumple la regla para escalar"], "imgs": ["mb-kit-1.jpg", "mb-kit-2.jpg", "mb-kit-3.jpg", "mb-kit-4.jpg"]}, {"id": "d2", "col": "drop", "rank": 2, "slug": "fuente", "name": "Fuente de acero para gatos + 4 filtros", "idea": null, "pet": "Gato", "sub": "Acero inoxidable 304, bomba fácil de sacar y limpiar, filtros de recambio", "P": 179900, "C": 46000, "cpa": 22000, "why": "Es la categoría de gato con más demanda probada (91 anuncios de 14 anunciantes) y los filtros generan recompra cada 1–2 meses. Abre la línea de gato del ecosistema.", "pains": ["Limpiar la bomba es una tortura: muchos tiran la fuente por eso.", "Ruido cuando baja el agua; bombas que se dañan a los 6–18 meses.", "Baba y sarro en las juntas; filtros caros que solo sirven para esa marca.", "Fuentes de plástico asociadas a acné felino."], "desires": ["Que el gato tome más agua y esté sano, sin trabajo extra.", "Una casa tranquila y bonita, sin un aparato ruidoso en la cocina.", "Sentir que cuida bien a su gato sin complicarse cada semana."], "angle": "\"Agua en movimiento. Limpieza sin complicaciones.\" Mostrar cómo se desmonta y se lava en 1 minuto.", "design": "Bomba inalámbrica o desmontable, acero 304, filtros estándar fáciles de conseguir y alimentación USB (en Colombia se usa 110 V: evitar modelos de 220 V).", "ads": ["fuente de agua para gatos", "~91", "14", "may 2026"], "market": ["Fuentes básicas de plástico: 45.000–90.000 en Falabella y Mercado Libre. Solo competimos con una de acero, silenciosa y fácil de limpiar.", "https://www.mercadolibre.com.co/pagina/calabazapetboutiqueshop", "Mercado Libre"], "risk": "Pesa 830 g: enviarla una a una desde China (CJ cobra US$ 17,5 solo a EE. UU.) se come todo el margen. Tiene que salir de stock en Colombia (Dropi) o de un lote propio.", "sup": [{"n": "Dropi · importadores con stock en Colombia", "u": "https://dropi.co/", "t": "Local · contraentrega · 2–5 días", "d": "El catálogo con precios solo se ve con cuenta (la crea Sebastián). Aquí buscamos el mismo producto con stock en Colombia para el test.", "v": "Abre la web; catálogo con cuenta"}, {"n": "Shenzhen Kivo Technology · Alibaba", "u": "https://www.alibaba.com/product-detail/Wholesale-OEM-304SS-Wireless-Charging-Pet_1601968471564.html", "t": "Fábrica · MOQ 10", "d": "Fuente de acero 304 con bomba inalámbrica y batería de litio (resuelve el dolor de limpiar la bomba). US$ 9,9–11,0. Acepta OEM.", "v": "Comprobado"}, {"n": "CJdropshipping · fuente de acero antibacteriana", "u": "https://cjdropshipping.com/product/pet-water-feeder-stainless-steel-antibacterial-water-purification-p-1759397036220231680.html", "t": "Dropshipping desde China", "d": "SKU CJYD197093601AZ · US$ 13,27 · 830 g · 13.399 en fábrica. Ojo: variante de 220 V; pedir la USB.", "v": "Comprobado"}, {"n": "CJdropshipping · fuente de acero con circulación", "u": "https://cjdropshipping.com/product/pet-cat-dog-stainless-steel-automatic-circulation-water-dispenser-intelligent-fountain-pets-accessories-p-1651788214971146240.html", "t": "Dropshipping desde China", "d": "US$ 2,94–32,93 según variante (incluye filtros sueltos).", "v": "Comprobado"}], "lot": {"what": "Fuente Kivo de acero (US$ 9,9–11,0) + 4 filtros", "fob": 10.5, "kg": 1.0, "air": 76155, "sea": 54375}, "e": {"P": 179900, "net": 151176, "C": 46000, "F": 15000, "emp": 3000, "comm": 12593, "dev": 10333, "ads": 29333, "cpa": 22000, "prof": 34917, "gross": 69.6, "mp": 23.1, "mp40": 15.3, "be": 134573, "be_cpa": 48188, "be_x": 2.19, "mult": 3.9}, "v": ["ok", "Cumple la regla para escalar"], "imgs": ["mb-fuente-1.jpg", "mb-fuente-2.jpg", "mb-fuente-3.jpg", "mb-fuente-4.jpg"]}, {"id": "d3", "col": "drop", "rank": 3, "slug": "vapor", "name": "Kit grooming de niebla", "idea": null, "pet": "Gato y perro", "sub": "Cepillo de niebla fría recargable + guante + peine, en estuche", "P": 129900, "C": 25000, "cpa": 18000, "why": "El dolor es enorme (pelo en toda la casa) y la prueba en vídeo es inmediata. Un anunciante lo lleva más de 1 año anunciando en Colombia, señal de que vende. Lo vendemos como kit porque el cepillo suelto es barato.", "pains": ["Pelos en el sofá, la ropa y la cama.", "Gatos que se enojan o huyen cuando los cepillan.", "Cepillos que \"no funcionan como en el vídeo\": no sale niebla, se dañan pronto, se sienten baratos.", "El ruido del aparato asusta a algunos gatos."], "desires": ["Un rato tranquilo con su mascota en lugar de una pelea.", "\"Por fin mi gato se deja cepillar sin enojarse.\"", "Una casa limpia que huele bien."], "angle": "\"Menos pelo volando. Más momentos tranquilos juntos.\" Mostrar el gato relajado y el pelo que sale.", "design": "Llamarlo niebla fría, no vapor caliente (no lo es). Modelo silencioso y de buena batería; probar muestras antes de anunciar.", "ads": ["cepillo vapor mascotas", "~42", "7", "jun 2025"], "market": ["Cepillo suelto: desde 10.000 en Falabella y 35.000–53.000 en Éxito. En CJ lo tienen 2.925 tiendas: competir con el cepillo solo es imposible.", "https://www.exito.com/cepillo-a-vapor-3-en-1-para-perros-y-gatos-desenreda-y-da-brillo-105022936-mp/p", "Éxito"], "risk": "Riesgo alto de comparación de precio y de calidad. Exige muestra aprobada y un kit que se vea claramente superior.", "sup": [{"n": "Dropi · importadores con stock en Colombia", "u": "https://dropi.co/", "t": "Local · contraentrega · 2–5 días", "d": "El catálogo con precios solo se ve con cuenta (la crea Sebastián). Aquí buscamos el mismo producto con stock en Colombia para el test.", "v": "Abre la web; catálogo con cuenta"}, {"n": "Painuolian Technology (Jinan) · Paipet · Alibaba", "u": "https://www.alibaba.com/product-detail/PAIPET-Rechargeable-Cat-Dog-Steam-Grooming_1601957934178.html", "t": "Fábrica · MOQ 40", "d": "Cepillo de niebla 3 en 1 recargable, marca blanca (private label). US$ 5,2–6,0.", "v": "Comprobado"}, {"n": "Xiamen Yangda Industry and Trade · Alibaba", "u": "https://www.alibaba.com/product-detail/OEM-ODM-Pet-Steam-Brush-Electric_1601684171220.html", "t": "Fábrica · MOQ 100", "d": "Cepillo de niebla con mango plegable, OEM/ODM. US$ 1,0–1,5.", "v": "Comprobado"}, {"n": "CJdropshipping · cepillo de niebla 3 en 1", "u": "https://cjdropshipping.com/product/3-in-1-pet-steam-brush-cat-dog-cleaning-steamy-spray-massage-beauty-comb-hair-removal-grooming-supplies-pets-accessories-p-1740622831148339200.html", "t": "Dropshipping desde China", "d": "US$ 1,13–2,00. Lo listan 2.925 tiendas: dato que confirma que solo se vende como kit.", "v": "Comprobado"}], "lot": {"what": "Cepillo Yangda/Paipet + guante + peine + estuche", "fob": 4.0, "kg": 0.35, "air": 33684, "sea": 26061}, "e": {"P": 129900, "net": 109160, "C": 25000, "F": 15000, "emp": 3000, "comm": 9093, "dev": 10333, "ads": 24000, "cpa": 18000, "prof": 22733, "gross": 77.1, "mp": 20.8, "mp40": 12.0, "be": 100389, "be_cpa": 35050, "be_x": 1.95, "mult": 5.2}, "v": ["ok", "Cumple la regla para escalar"], "imgs": ["mb-vapor-1.jpg", "mb-vapor-2.jpg", "mb-vapor-3.jpg", "mb-vapor-4.jpg"]}, {"id": "f1", "col": "fab", "rank": 1, "slug": "pvc", "name": "PVC Color-Swap", "idea": null, "pet": "Perro", "sub": "Collar y correa impermeables con piezas de color y herrajes intercambiables", "P": 169900, "C": 30000, "cpa": 25000, "why": "El mejor margen de todo el plan (27,5 %). Resuelve el olor a humedad de collares de tela tras la lluvia y el cambio de color sin comprar un set nuevo. La parte única es el sistema de intercambio, no el material.", "pains": ["Collares y arneses de tela que quedan oliendo a humedad después de la lluvia y los charcos.", "Problemas de talla al comprar online."], "desires": ["Que su perro luzca impecable sin que cada paseo mojado sea una tarea doméstica."], "angle": "\"Lluvia, barro, nada. Se lava en segundos.\" Cambio de color en cámara.", "design": "Superficie lavable, guía de medidas sencilla y piezas reemplazables.", "ads": null, "market": null, "risk": "Comprobar que el sistema de intercambio no esté patentado. MOQ de diseño nuevo suele ser 300–500 unidades.", "mat": ["Cinta recubierta de PVC (biothane)", "Herrajes de aleación mate", "Piezas de color intercambiables"], "sup": [{"n": "Dongguan Super Steeds Sports · Alibaba", "u": "https://www.alibaba.com/product-detail/Dog-Collar-Set-Waterproof-PVC-Coated_1600738452646.html", "t": "Fábrica · MOQ 100", "d": "Set collar impermeable de nylon recubierto de PVC, 11 colores, logo personalizado, certificado REACH, 171 vendidos. US$ 1,5–2,0 por unidad; muestra US$ 11,0. Producto base; el sistema intercambiable lo diseñamos nosotros.", "v": "Comprobado"}], "e": {"P": 169900, "net": 142773, "C": 30000, "F": 15000, "emp": 3000, "comm": 11893, "dev": 10333, "ads": 33333, "cpa": 25000, "prof": 39213, "gross": 79.0, "mp": 27.5, "mp40": 18.1, "be": 118996, "be_cpa": 54410, "be_x": 2.18, "mult": 5.7}, "v": ["ok", "Cumple la regla para escalar"], "imgs": ["mb-pvc-1.jpg", "mb-pvc-2.jpg", "mb-pvc-3.jpg", "mb-pvc-4.jpg"]}, {"id": "f2", "col": "fab", "rank": 2, "slug": "cuerda", "name": "Rope-Lock 3 en 1", "idea": "Julieth", "pet": "Perro", "sub": "Cuerda técnica crossbody con mosquetón de seguridad reemplazable y pouch aparte", "P": 189900, "C": 48000, "cpa": 25000, "why": "Nace de los pines que mandó Julieth. Combina estética de cuerda de escalada (muy de moda) con seguridad: el pouch no carga el peso del perro y el mosquetón se cambia si se desgasta.", "pains": ["Un dueño cuenta que se le rompió el mosquetón y su perro casi tiene un accidente.", "Correas demasiado largas que hay que adaptar para controlar la distancia."], "desires": ["Confiar en su equipo y adaptar el paseo a cada situación."], "angle": "\"Hecha como equipo de montaña. Pensada para la ciudad.\"", "design": "Mosquetón con bloqueo probado, ajuste rápido y ruta de carga segura.", "ads": null, "market": null, "risk": "Comprobar originalidad frente a marcas de cuerda de escalada. Pruebas de resistencia obligatorias.", "mat": ["Cuerda de escalada de 10 mm", "Mosquetón con seguro", "Pouch de lona"], "sup": [{"n": "Sanming Tryme Handicrafts · Alibaba", "u": "https://www.alibaba.com/product-detail/10mm-Hands-Free-Crossbody-Loop-Climbing_1601246754948.html", "t": "Fábrica · MOQ 50", "d": "Correa crossbody de cuerda de escalada de 10 mm con mosquetón. US$ 7,6–9,9. Es la base; nuestra pieza única es el bloqueo reemplazable y el pouch separado.", "v": "Comprobado"}], "e": {"P": 189900, "net": 159580, "C": 48000, "F": 15000, "emp": 3000, "comm": 13293, "dev": 10333, "ads": 33333, "cpa": 25000, "prof": 36620, "gross": 69.9, "mp": 22.9, "mp40": 14.6, "be": 142362, "be_cpa": 52465, "be_x": 2.1, "mult": 4.0}, "v": ["ok", "Cumple la regla para escalar"], "imgs": ["mb-cuerda-1.jpg", "mb-cuerda-2.jpg", "mb-cuerda-3.jpg", "mb-cuerda-4.jpg"]}, {"id": "f3", "col": "fab", "rank": 3, "slug": "nightloop", "name": "NightLoop", "idea": null, "pet": "Perro", "sub": "Correa con funda reflectante y luz LED desmontables", "P": 169900, "C": 34000, "cpa": 25000, "why": "Seguridad de noche sin otro aparato. Elegido sobre el arnés Sherpa porque no depende del frío ni de muchas tallas.", "pains": ["Perros poco visibles de noche; lo reflectante no basta en la oscuridad.", "Luces LED demasiado fuertes que molestan a otras personas."], "desires": ["Caminar de noche con tranquilidad."], "angle": "\"Que te vean. Sin pensarlo.\"", "design": "Luz desmontable de intensidad ajustable, USB-C, y reflectante pasivo; la unión de seguridad nunca depende de la luz.", "ads": null, "market": null, "risk": "Validar resistencia de la unión y la batería.", "mat": ["Cinta de nylon", "Funda reflectante", "Módulo LED USB-C de silicona"], "sup": [{"n": "Shenzhen Umione Technology · Alibaba", "u": "https://www.alibaba.com/product-detail/UMIONE-2024-USB-C-Rechargeable-Silicone_1601445256098.html", "t": "Fábrica · MOQ 100", "d": "Luz de seguridad LED USB-C de silicona, IPX5. US$ 3,2–3,8. Es el módulo de luz.", "v": "Comprobado"}, {"n": "Dongguan Hongshun Weaving · Alibaba", "u": "https://www.alibaba.com/product-detail/Custom-LED-Dog-Leash-OEM-ODM_1602002944615.html", "t": "Fábrica · MOQ 100", "d": "Correa LED OEM/ODM con fibra óptica y USB-C. US$ 6,0–6,3. Fabricante de la correa.", "v": "Comprobado"}], "e": {"P": 169900, "net": 142773, "C": 34000, "F": 15000, "emp": 3000, "comm": 11893, "dev": 10333, "ads": 33333, "cpa": 25000, "prof": 35213, "gross": 76.2, "mp": 24.7, "mp40": 15.3, "be": 124188, "be_cpa": 51410, "be_x": 2.06, "mult": 5.0}, "v": ["ok", "Cumple la regla para escalar"], "imgs": ["mb-nightloop-1.jpg", "mb-nightloop-2.jpg", "mb-nightloop-3.jpg", "mb-nightloop-4.jpg"]}];
+const $=s=>document.querySelector(s);
+const cop=n=>'$'+Math.round(n).toLocaleString('es-CO');
+const pc=x=>x.toFixed(1).replace('.',',')+' %';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function lk(u,t){return u?`<a href="${u}" target="_blank" rel="noopener">${esc(t)}</a>`:esc(t)}
+function adlib(q){return 'https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q='+encodeURIComponent(q)+'&search_type=keyword_unordered'}
+function margin(P,C,cpa){const net=P/1.19,comm=.07*P,dev=31000/3,fixed=C+15000+3000+dev+cpa/.75;return (net-comm-fixed)/net*100}
 function openP(id){
-  const x=PD.find(p=>p.id===id),e=x.e;
-  document.getElementById('pdK').textContent=(x.col==='arb'?'Arbitraje · ya fabricado, dropshipping o mayorista':'Fabricación · marca propia, se paga un lote');
-  document.getElementById('pdT').textContent=x.name;
-  const lk=(u,t)=>u?`<a href="${u}" target="_blank" rel="noopener">${t}</a>`:'';const sup=x.sup.map(s=>{const L=[lk(s[4],'Proveedor'),lk(s[5],'Producto')].filter(Boolean).join(' · ')||'<span class="small">sin link verificado</span>';return `<tr><td><b>${s[0]}</b><br><span class="small">${s[1]}</span><br><span class="lks">${L}</span></td><td>${s[2]}</td><td>${s[3]}</td></tr>`}).join('');
-  const mat=x.mat?`<section><h3>Materiales</h3><ul>${x.mat.map(m=>`<li>${m}</li>`).join('')}</ul></section>`:'';
-  document.getElementById('pdB').innerHTML=`
-   ${x.img&&x.img.startsWith('mb-')?`<img src="${x.img}" alt="Mood board: ${x.name}" style="width:100%;border-radius:12px;border:1px solid var(--line)">`:''}
-   <p>${x.why}</p>
-   <div class="kpis"><div class="kpi"><b>${fmt2(e.P)}</b><span>precio de venta</span></div><div class="kpi"><b>${String(e.mp).replace('.',',')}%</b><span>margen neto</span></div><div class="kpi"><b>${fmt2(e.m18)}</b><span>precio mínimo para 18%</span></div></div>
-   <section><h3>Posibles proveedores</h3><table><thead><tr><th>Proveedor</th><th>Coste</th><th>Entrega</th></tr></thead><tbody>${sup}</tbody></table></section>
-   ${mat}
-   <details class="mini" open><summary>Costes por pedido entregado</summary><table>
-     <tr><td>Precio de venta (IVA incl.)</td><td class="n">${fmt2(e.P)}</td></tr>
-     <tr><td>− IVA 19%</td><td class="n">−${fmt2(e.iva)}</td></tr>
-     <tr><td>− Coste del proveedor (estimado)</td><td class="n">−${fmt2(e.C)}</td></tr>
-     <tr class="tot"><td>= Margen bruto</td><td class="n">${fmt2(e.gross)} (${e.gp}%)</td></tr>
-     <tr><td>− Flete nacional</td><td class="n">−${fmt2(e.F)}</td></tr>
-     <tr><td>− Comisiones Dropi + recaudo (7%)</td><td class="n">−${fmt2(e.comm)}</td></tr>
-     <tr><td>− Empaque + confirmación</td><td class="n">−${fmt2(e.ec)}</td></tr>
-     <tr><td>− Devoluciones (25% de pedidos)</td><td class="n">−${fmt2(e.dev)}</td></tr>
-     <tr><td>− Anuncios (${fmt2(e.cpa)} por pedido ÷ 75%)</td><td class="n">−${fmt2(e.ads)}</td></tr>
-     <tr class="tot"><td>= Beneficio neto</td><td class="n">${fmt2(e.prof)}</td></tr>
-     <tr><td>Precio mínimo para no perder</td><td class="n">${fmt2(e.be)}</td></tr>
-     <tr class="tot"><td>Precio mínimo para 18% de margen</td><td class="n">${fmt2(e.m18)}</td></tr>
-   </table></details>
-   `;
-  dlg.showModal();
+  const p=PD.find(x=>x.id===id); if(!p) return; const e=p.e;
+  $('#pdK').textContent=(p.col==='drop'?'Fase 1 · Dropshipping':'Fase 2 · Fabricación única')+' · #'+p.rank+' · '+p.pet+(p.idea?' · Idea de '+p.idea:'');
+  $('#pdT').textContent=p.name;
+  let h = p.imgs.length
+    ? `<div class="gal"><img class="main" id="gm" src="${p.imgs[0]}" alt="${esc(p.name)}, vista 1"><div class="thumbs">${p.imgs.map((s,i)=>`<button aria-pressed="${i===0}" data-src="${s}" aria-label="Vista ${i+1}"><img src="${s}" alt=""></button>`).join('')}</div></div>`
+    : '<div class="noimg">Mood board en preparación.</div>';
+  h+=`<div><h3>Por qué lo elegimos</h3><p>${esc(p.why)}</p></div>`;
+  h+=`<div class="two" style="margin-top:0"><div><h3>Dolores y situaciones</h3><ul class="dots pain">${p.pains.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div><div><h3>Deseos profundos</h3><ul class="dots des">${p.desires.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div></div>`;
+  h+=`<div><h3>Ángulo de anuncio</h3><p>${esc(p.angle)}</p><p style="margin-top:6px"><b>Lo que debe tener el producto:</b> ${esc(p.design)}</p></div>`;
+  h+=`<div class="kpis">
+    <div class="kpi"><span>Precio (IVA incl.)</span><b>${cop(p.P)}</b></div>
+    <div class="kpi"><span>Margen neto</span><b>${pc(e.mp)}</b></div>
+    <div class="kpi"><span>Margen bruto</span><b>${pc(e.gross)}</b></div>
+    <div class="kpi"><span>Queda por pedido</span><b>${cop(e.prof)}</b></div>
+    <div class="kpi"><span>Si la publicidad sube 40 %</span><b>${pc(e.mp40)}</b></div>
+    <div class="kpi"><span>Precio mínimo para no perder</span><b>${cop(e.be)}</b></div>
+  </div><p class="small"><span class="chip ${p.v[0]}">${esc(p.v[1])}</span> con costes estimados · CPA previsto ${cop(e.cpa)}, aguanta hasta ${cop(e.be_cpa)} (${String(e.be_x).replace('.',',')} veces).</p>`;
+  if(p.lot){const ms=margin(p.P,p.lot.sea,p.cpa),ma=margin(p.P,p.lot.air,p.cpa);
+    h+=`<div><h3>Si traemos un lote propio con marca (100 unidades)</h3><table>
+      <tr><td>${esc(p.lot.what)} · FOB ~US$ ${String(p.lot.fob).replace('.',',')} · ${String(p.lot.kg).replace('.',',')} kg</td><td class="n"></td></tr>
+      <tr><td>Puesto en Colombia por mar</td><td class="n">${cop(p.lot.sea)} · neto ${pc(ms)}</td></tr>
+      <tr><td>Puesto en Colombia por avión</td><td class="n">${cop(p.lot.air)} · neto ${pc(ma)}</td></tr></table>
+      <p class="small">Incluye flete internacional, arancel 10 %, nacionalización (500.000 por lote) y bodega. El IVA de importación se recupera.</p></div>`;}
+  if(p.market) h+=`<div><h3>Precio en el mercado colombiano</h3><p>${esc(p.market[0])} ${p.market[1]?lk(p.market[1],'Ver en '+p.market[2]):''}</p></div>`;
+  if(p.ads) h+=`<div><h3>Anuncios activos en Colombia</h3><p>"${esc(p.ads[0])}": <b>${p.ads[1]}</b> anuncios de ${p.ads[2]} anunciantes; el más antiguo desde ${esc(p.ads[3])}. ${lk(adlib(p.ads[0]),'Ver los anuncios')}</p></div>`;
+  h+=`<div><h3>Proveedores (links comprobados)</h3><div class="sups">${p.sup.map(s=>`<div class="sup"><span class="t">${esc(s.t)}</span>${lk(s.u,s.n)}<span class="small">${esc(s.d)}</span><span class="ok-v">✓ ${esc(s.v)} el 15 nov 2026</span></div>`).join('')}</div></div>`;
+  if(p.mat) h+=`<div><h3>Materiales</h3><ul class="dots">${p.mat.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`;
+  h+=`<div><h3>Riesgo</h3><p>${esc(p.risk)}</p></div>`;
+  const rows=[['Precio sin IVA',e.net],['Producto',-e.C],['Flete nacional',-e.F],['Comisiones',-e.comm],['Empaque y confirmación',-e.emp],['Pedidos no entregados (provisión)',-e.dev],['Publicidad por pedido entregado',-e.ads]];
+  h+=`<div><h3>Costes por pedido entregado</h3><table>${rows.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]<0?'− '+cop(-r[1]):cop(r[1])}</td></tr>`).join('')}<tr class="tot"><td>Queda</td><td class="n">${cop(e.prof)}</td></tr></table></div>`;
+  $('#pdB').innerHTML=h;
+  const d=$('#pd'); if(!d.open) d.showModal(); d.scrollTop=0;
+  history.replaceState(null,'','#p-'+id);
 }
-document.querySelectorAll('.pc').forEach(b=>b.addEventListener('click',()=>openP(b.dataset.id)));
-document.getElementById('pdX').addEventListener('click',()=>dlg.close());
-dlg.addEventListener('click',ev=>{if(ev.target===dlg)dlg.close();});
-function openHash(){const h=location.hash.slice(1);const el=h&&document.getElementById(h);if(el&&el.tagName==='DETAILS'){el.open=true;}}
+document.addEventListener('click',ev=>{
+  const b=ev.target.closest('[data-id]'); if(b){openP(b.dataset.id);return}
+  const t=ev.target.closest('.thumbs button'); if(t){$('#gm').src=t.dataset.src;t.parentNode.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===t))}
+});
+$('#pdX').addEventListener('click',()=>$('#pd').close());
+$('#pd').addEventListener('click',ev=>{if(ev.target.id==='pd')$('#pd').close()});
+$('#pd').addEventListener('close',()=>history.replaceState(null,'',location.pathname+location.search));
+function openHash(){const h=location.hash.slice(1);if(h.startsWith('p-'))return openP(h.slice(2));const d=document.getElementById(h);if(d&&d.tagName==='DETAILS'){d.open=true;d.scrollIntoView()}}
 window.addEventListener('hashchange',openHash);openHash();
+function calc(){
+  const v=k=>+$('#'+k).value; const P=v('cp'),C=v('cc'),F=v('cf'),d=v('cd')/100,cpa=v('ca');
+  $('#cpo').textContent=cop(P);$('#cco').textContent=cop(C);$('#cfo').textContent=cop(F);$('#cdo').textContent=Math.round(d*100)+' %';$('#cao').textContent=cop(cpa);
+  const net=P/1.19,comm=.07*P,ok=1-d,dev=d/ok*31000,ads=cpa/ok,fees=F+comm+3000,prof=net-C-fees-dev-ads,k=1/1.19-.07,be=(C+F+3000+dev+ads)/k;
+  $('#k1').textContent=cop(net);$('#k2').textContent='− '+cop(C);$('#k3').textContent='− '+cop(fees);$('#k4').textContent='− '+cop(dev);$('#k5').textContent='− '+cop(ads);
+  $('#k6').textContent=cop(prof);$('#k7').textContent=pc((net-C)/net*100)+' · '+pc(prof/net*100);$('#k8').textContent=cop(be);
+  const m=prof/net*100,kv=$('#kv');
+  if(m>=20){kv.className='verdict good';kv.textContent='Cumple para escalar (≥ 20 % neto).'}
+  else if(m>=12){kv.className='verdict mid';kv.textContent='Cumple para probar (≥ 12 % neto), todavía no para escalar.'}
+  else{kv.className='verdict bad';kv.textContent='No cumple: sube el precio con un kit, baja el coste o el CPA.'}
+}
+document.querySelectorAll('.calc input').forEach(i=>i.addEventListener('input',calc));calc();
 </script>
 <script src="voice.js"></script>
 <script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}</script>
