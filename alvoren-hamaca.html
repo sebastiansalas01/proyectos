@@ -3,209 +3,216 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hamaca para carro · ALVOREN</title>
+<title>La Hamaca · ALVOREN</title>
 <meta name="description" content="Hamaca impermeable para el asiento trasero. Pago contraentrega en Colombia.">
-<meta name="theme-color" content="#1D1F1C">
+<meta name="theme-color" content="#ECEBE7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F5F4F1;--ink:#1D1F1C;--moss:#39443A;--steel:#B8BDB9;--fog:#E4E6E2;--muted:#5d625d;--f:'Jost',system-ui,sans-serif}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
-.demo{background:var(--ink);color:var(--fog);font-size:14px;text-align:center;padding:8px 16px}
-.demo a{color:#fff}
-header.bar{display:flex;justify-content:space-between;align-items:center;max-width:1180px;margin:0 auto;padding:18px 24px}
-.wm{font-weight:400;letter-spacing:.42em;font-size:17px;text-decoration:none}
-.bar .buy{font-size:15px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-
-/* Hero */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:24px 0 72px}
-.hero figure{margin:0;border-radius:4px;overflow:hidden;background:var(--fog);aspect-ratio:1/1}
-.hero figure img{width:100%;height:100%;object-fit:cover}
-.strike{list-style:none;margin:0 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:clamp(30px,4.4vw,52px);font-weight:300;line-height:1.1}
-.strike li{position:relative;color:var(--muted)}
-.strike li::after{content:"";position:absolute;left:-2px;right:-2px;top:54%;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;animation:cross .45s ease-out forwards}
-.strike li:nth-child(1)::after{animation-delay:.35s}.strike li:nth-child(2)::after{animation-delay:.7s}.strike li:nth-child(3)::after{animation-delay:1.05s}.strike li:nth-child(4)::after{animation-delay:1.4s}
-@keyframes cross{to{transform:scaleX(1)}}
-h1{font-size:clamp(34px,5vw,60px);font-weight:500;line-height:1.05;margin:0 0 20px;letter-spacing:-.01em}
-.lede{font-size:20px;color:var(--muted);max-width:30em;margin:0 0 28px}
-.price{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
-.price b{font-size:34px;font-weight:500}
-.price span{font-size:15px;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:var(--paper);border:0;border-radius:2px;padding:17px 30px;font:500 17px var(--f);letter-spacing:.02em;cursor:pointer;text-decoration:none}
+:root{--paper:#F5F4F1;--ink:#1D1F1C;--moss:#39443A;--steel:#B8BDB9;--fog:#E4E6E2;--stone:#ECEBE7;--muted:#5f645f;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:300 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit}
+:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+.demo{background:var(--ink);color:var(--fog);font-size:13px;letter-spacing:.02em;text-align:center;padding:7px 16px}.demo a{color:#fff}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+nav.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;max-width:1240px;margin:0 auto;padding:22px 32px;border-bottom:1px solid rgba(29,31,28,.12)}
+nav.top .l,nav.top .r{display:flex;gap:28px;font-size:13.5px;letter-spacing:.06em}
+nav.top .r{justify-content:flex-end;align-items:center}
+nav.top a{text-decoration:none}nav.top .l a:hover,nav.top .r a:hover{text-decoration:underline;text-underline-offset:5px}
+.wm{font-family:var(--serif);font-weight:400;font-size:25px;letter-spacing:.36em;text-decoration:none;padding-left:.36em}
+.bag{display:inline-flex;align-items:center;gap:8px}
+.bag svg{width:17px;height:17px}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--stone),var(--paper))}
+.hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:72px;align-items:center;padding-top:56px;padding-bottom:88px}
+.gal{position:relative}
+.gal .frame{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--fog)}
+.gal .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease}
+.gal .frame img.on{opacity:1}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:20px}
+.dots button{all:unset;cursor:pointer;width:28px;height:14px;display:grid;place-items:center}
+.dots button::before{content:"";width:28px;height:1.5px;background:var(--steel)}
+.dots button[aria-current="true"]::before{background:var(--ink)}
+.dots button:focus-visible{outline:1px solid var(--ink)}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:0 0 22px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);border:1px solid var(--moss);border-radius:999px;padding:4px 14px;margin-bottom:22px}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(56px,7.4vw,108px);line-height:.94;letter-spacing:-.01em;margin:0 0 18px}
+.tagline{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,2.1vw,28px);line-height:1.25;margin:0 0 22px;color:var(--moss)}
+.lede{max-width:30em;margin:0 0 34px;color:var(--muted)}
+.buy-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.price{font-family:var(--serif);font-size:34px;font-weight:400}
+.price small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:16px 34px;font:400 14px var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .3s}
 .btn:hover{background:var(--moss)}
-.assure{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:15.5px;color:var(--muted)}
-.assure li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--moss);margin-right:10px;vertical-align:middle}
-
-/* Problem */
-.problem{border-top:1px solid var(--steel);padding:72px 0;display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
-h2{font-size:clamp(28px,3.4vw,40px);font-weight:500;line-height:1.12;margin:0 0 14px}
-.problem p{margin:0 0 14px;max-width:34em}
-
-/* Layers: the memorable element */
-.layers{background:var(--ink);color:var(--fog);padding:80px 0}
-.layers h2{color:#fff}
-.layers .intro{color:var(--steel);max-width:34em;margin:0 0 40px}
-.stack{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.micro{font-size:13.5px;color:var(--muted);margin:18px 0 0}
+.assure{list-style:none;margin:30px 0 0;padding:22px 0 0;border-top:1px solid rgba(29,31,28,.12);display:grid;gap:8px;font-size:14.5px;color:var(--muted)}
+/* editorial */
+section.ed{padding:120px 0}
+.ed h2,.order h2,.faq h2,.more-p h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.2vw,58px);line-height:1.05;margin:0 0 22px}
+.problem .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.strike{list-style:none;margin:0 0 30px;padding:0;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(26px,3vw,40px);line-height:1.3;color:var(--muted)}
+.strike li{display:inline;margin-right:.6em;text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:var(--ink)}
+.problem p{margin:0 0 18px;max-width:32em}
+/* parts */
+.layers{background:var(--ink);color:var(--fog);padding:120px 0}
+.layers h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.2vw,58px);line-height:1.05;color:#fff;margin:0 0 14px;max-width:14em}
+.layers .intro{color:var(--steel);margin:0 0 56px;font-size:15px}
+.stack{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
 .sec{position:relative;height:340px;perspective:900px}
-.ly{position:absolute;left:8%;right:8%;height:46px;border-radius:3px;transform:rotateX(58deg) rotateZ(-8deg);transition:transform .45s ease,box-shadow .45s ease;cursor:pointer;border:0;padding:0}
-.ly[data-i="0"]{top:40px;background:repeating-linear-gradient(45deg,#2c2f2b 0 14px,#262925 14px 28px)}
-.ly[data-i="1"]{top:110px;background:#e9ebe6}
-.ly[data-i="2"]{top:180px;background:repeating-linear-gradient(45deg,#2c2f2b 0 14px,#262925 14px 28px)}
-.ly[data-i="3"]{top:250px;background:repeating-radial-gradient(circle at 10px 10px,#4a4f49 0 3px,#3a3e39 3px 9px)}
-.ly[aria-pressed="true"]{transform:rotateX(58deg) rotateZ(-8deg) translateY(-14px);box-shadow:0 0 0 2px var(--steel)}
-.legend{list-style:none;margin:0;padding:0;display:grid;gap:4px}
-.legend button{all:unset;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:14px 12px;border-radius:3px;cursor:pointer;width:100%;box-sizing:border-box}
-.legend button:focus-visible{outline:2px solid var(--steel)}
-.legend button[aria-pressed="true"]{background:#2a2d29}
-.legend .n{font-size:14px;color:var(--steel);padding-top:3px}
-.legend b{display:block;font-weight:500;color:#fff}
-.legend span.d{font-size:15.5px;color:var(--steel)}
-
-/* Uses */
-.uses{padding:80px 0}
-.usegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:30px}
-.use img{aspect-ratio:1/1;object-fit:cover;border-radius:3px;background:var(--fog)}
-.use h3{font-weight:500;font-size:20px;margin:14px 0 4px}
-.use p{margin:0;color:var(--muted);font-size:16.5px}
-
-/* Specs */
-.specs{border-top:1px solid var(--steel);padding:72px 0;display:grid;grid-template-columns:1fr 1.3fr;gap:48px}
-dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:0}
-dt,dd{margin:0;padding:13px 0;border-bottom:1px solid var(--fog)}
-dt{color:var(--muted);padding-right:28px}
-.inbox{margin:14px 0 0;padding-left:20px}
-
-/* FAQ */
-.faq{padding:72px 0;border-top:1px solid var(--steel)}
-details{border-bottom:1px solid var(--steel);padding:4px 0}
-summary{cursor:pointer;list-style:none;padding:16px 0;font-size:19px;font-weight:500;display:flex;justify-content:space-between;gap:16px}
+.ly{position:absolute;left:8%;right:8%;height:46px;border-radius:2px;transform:rotateX(58deg) rotateZ(-8deg);transition:transform .5s ease,box-shadow .5s ease;cursor:pointer;border:0;padding:0;background:var(--c)}
+.ly[aria-pressed="true"]{transform:rotateX(58deg) rotateZ(-8deg) translateY(-16px);box-shadow:0 0 0 1px var(--steel)}
+.legend{list-style:none;margin:0;padding:0;display:grid}
+.legend button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:14px 1fr;gap:18px;padding:18px 4px;border-top:1px solid rgba(184,189,185,.22);cursor:pointer}
+.legend li:last-child button{border-bottom:1px solid rgba(184,189,185,.22)}
+.legend .sw{width:10px;height:10px;border-radius:50%;border:1px solid var(--steel);margin-top:9px}
+.legend button[aria-pressed="true"] .sw{background:var(--fog)}
+.legend b{display:block;font-family:var(--serif);font-weight:400;font-size:23px;color:#fff;line-height:1.2}
+.legend .d{font-size:15px;color:var(--steel)}
+.legend button:focus-visible{outline:1px solid var(--steel)}
+.pnote{margin:26px 0 0;font-size:13px;color:var(--steel)}
+/* uses */
+.usegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+.use img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--fog)}
+.use .ph{aspect-ratio:4/5;background:var(--stone);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:26px;color:var(--muted);padding:24px;text-align:center}
+.use .big{aspect-ratio:4/5;background:var(--stone);display:grid;place-items:center;font-family:var(--serif);font-weight:300;font-size:120px;color:var(--moss)}
+.use h3{font-family:var(--serif);font-weight:400;font-size:26px;margin:20px 0 6px}
+.use p{margin:0;color:var(--muted);font-size:15.5px}
+/* specs */
+.specs .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;border-top:1px solid rgba(29,31,28,.12);padding-top:96px}
+.specs{padding:0 0 120px}
+.specs .note{color:var(--muted);margin:0 0 14px;font-size:14.5px}
+.inbox{margin:0;padding:0;list-style:none;font-family:var(--serif);font-size:24px;line-height:1.5}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr}
+dt,dd{margin:0;padding:15px 0;border-bottom:1px solid rgba(29,31,28,.12)}
+dt{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-right:36px;padding-top:19px}
+/* trust */
+.trust{background:var(--fog)}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:56px;padding-bottom:56px}
+.trust b{display:block;font-family:var(--serif);font-weight:400;font-size:22px}
+.trust span{font-size:14.5px;color:var(--muted)}
+/* faq */
+.faq{padding:120px 0}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+details{border-bottom:1px solid rgba(29,31,28,.15)}
+details:first-child{border-top:1px solid rgba(29,31,28,.15)}
+summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:23px;display:flex;justify-content:space-between;gap:16px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-weight:300;font-size:24px;line-height:1}
+summary::after{content:"+";font-family:var(--sans);font-weight:200;font-size:24px;line-height:1}
 details[open] summary::after{content:"−"}
-details p{margin:0 0 18px;color:var(--muted);max-width:40em}
-
-/* Order */
-.order{background:var(--fog);padding:80px 0}
-.ordergrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
-form{background:var(--paper);padding:30px;border-radius:4px;display:grid;gap:16px}
-label{display:grid;gap:6px;font-size:15px;color:var(--muted)}
-input,select{font:400 17px var(--f);color:var(--ink);padding:13px 14px;border:1px solid var(--steel);border-radius:2px;background:#fff}
-input:focus,select:focus{outline:2px solid var(--moss);outline-offset:0;border-color:var(--moss)}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.total{display:flex;justify-content:space-between;border-top:1px solid var(--steel);padding-top:14px;font-size:17px}
-.msg{display:none;background:var(--moss);color:#fff;padding:16px;border-radius:3px;font-size:16px}
-.msg.on{display:block}
-.err{color:#8a2b1e;font-size:14px;min-height:1em}
-footer{padding:40px 24px;text-align:center;font-size:14px;color:var(--muted)}
+details p{margin:0 0 22px;color:var(--muted);max-width:38em}
+/* order */
+.order{background:var(--stone);padding:120px 0}
+.ordergrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.order p{color:var(--muted);max-width:28em}
+form{display:grid;gap:26px}
+label{display:grid;gap:4px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+input,select{font:300 18px var(--sans);letter-spacing:0;text-transform:none;color:var(--ink);padding:10px 0;border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent}
+input:focus,select:focus{outline:none;border-bottom-width:2px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(29,31,28,.15);padding-top:18px}
+.total b{font-family:var(--serif);font-weight:400;font-size:30px}
+.msg{display:none;background:var(--moss);color:#fff;padding:16px 18px;font-size:15px}.msg.on{display:block}
+.err{color:#8a2b1e;font-size:14px;min-height:1em;margin:0}
+/* others + footer */
+.more-p{padding:110px 0}
+.more-p ul{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.more-p a{display:block;text-decoration:none}
+.more-p img{aspect-ratio:4/5;object-fit:cover;width:100%;background:var(--fog);transition:opacity .3s}
+.more-p a:hover img{opacity:.85}
+.more-p small{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.more-p span{font-family:var(--serif);font-size:21px}
+footer{background:var(--ink);color:var(--steel);text-align:center;padding:90px 24px 70px}
+footer .wm{color:#fff;font-size:clamp(36px,6vw,70px);display:block;margin-bottom:12px}
+footer p{font-family:var(--serif);font-style:italic;font-size:20px;margin:0}
 .sticky{display:none}
-
-@media (max-width:860px){
-  .hero,.problem,.stack,.specs,.ordergrid{grid-template-columns:1fr;gap:28px}
-  .hero{padding-top:4px}
-  .usegrid{grid-template-columns:1fr}
-  .sec{height:300px}
-  .row{grid-template-columns:1fr}
-  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--steel);padding:10px 16px;justify-content:space-between;align-items:center;z-index:5}
-  .sticky .btn{padding:13px 22px}
-  footer{padding-bottom:96px}
+@media (max-width:900px){
+  .wrap,nav.top{padding-left:20px;padding-right:20px}
+  nav.top{grid-template-columns:auto 1fr}nav.top .l{display:none}nav.top .r{gap:16px}.wm{font-size:20px}
+  .hero .wrap,.problem .wrap,.stack,.specs .wrap,.faq .wrap,.ordergrid,.trust .wrap{grid-template-columns:1fr;gap:36px}
+  .hero .wrap{padding-top:20px;padding-bottom:64px}
+  section.ed,.layers,.faq,.order,.more-p{padding:80px 0}.specs .wrap{padding-top:64px}.specs{padding-bottom:80px}
+  .usegrid{grid-template-columns:1fr;gap:40px}
+  .more-p ul{grid-template-columns:repeat(2,1fr)}
+  .sec{height:300px}.row{grid-template-columns:1fr}
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid rgba(29,31,28,.15);padding:10px 16px;justify-content:space-between;align-items:center;z-index:5}
+  .sticky b{font-family:var(--serif);font-weight:400;font-size:24px}.sticky .btn{padding:13px 22px}
+  footer{padding-bottom:110px}
 }
-@media (prefers-reduced-motion:reduce){
-  .strike li::after{animation:none;transform:scaleX(1)}
-  .ly{transition:none}
-  html{scroll-behavior:auto}
-}
-
-.ly{background:var(--c)!important}
-.tag{display:inline-block;font-size:14px;color:var(--moss);border:1px solid var(--moss);border-radius:999px;padding:3px 12px;margin-bottom:18px}
-.txtcard{border:1px solid var(--steel);border-radius:3px;padding:24px}
-.txtcard .big{font-size:40px;font-weight:300;line-height:1}
-.more-p{border-top:1px solid var(--steel);padding:56px 0 24px}
-.more-p ul{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.more-p a{display:block;text-decoration:none;border:1px solid var(--steel);border-radius:3px;padding:16px}
-.more-p a:hover{border-color:var(--ink)}
-.more-p small{display:block;color:var(--muted);font-size:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <div class="demo">Landing de ejemplo del business plan. El formulario no envía nada. <a href="business-plan-ecom.html#p-d1">Volver al plan</a></div>
-<header class="bar">
+<nav class="top" aria-label="Principal">
+  <div class="l"><a href="#producto">Producto</a><a href="#materiales">Materiales</a><a href="#preguntas">Preguntas</a></div>
   <a class="wm" href="#top" aria-label="ALVOREN, inicio">ALVOREN</a>
-  <a class="buy" href="#pedido">Pedir con pago contraentrega</a>
-</header>
+  <div class="r"><a href="#otros">Colección</a><a class="bag" href="#pedido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Pedir</a></div>
+</nav>
 <main id="top">
-<section class="wrap hero">
-  <figure><img src="alv-hamaca-hero.jpg" alt="Golden retriever mojado sentado sobre la hamaca negra acolchada en el asiento trasero de un carro con tapicería beige" width="785" height="785"></figure>
+<section class="hero"><div class="wrap">
+  <div class="gal"><div class="frame"><img src="alv-hamaca-hero.jpg" alt="Golden retriever mojado sentado sobre la hamaca negra acolchada en el asiento trasero de un carro con tapicería beige" class="on"  width="785" height="981"><img src="mb-hamaca-1.jpg" alt="La hamaca extendida sobre fondo blanco" class="" loading="lazy" width="785" height="981"></div><div class="dots" role="group" aria-label="Fotos"><button aria-label="Foto 1 de 2" aria-current="true"></button><button aria-label="Foto 2 de 2" aria-current="false"></button></div></div>
   <div>
-    
-    <ul class="strike" aria-label="Lo que ya no llega al asiento: pelo, barro, babas y uñas"><li>Pelo</li><li>Barro</li><li>Babas</li><li>Uñas</li></ul>
-    <h1>Nada de eso llega a tu asiento.</h1>
+    <p class="eyebrow">Para el carro · Perros</p>
+    <h1>La Hamaca</h1>
+    <p class="tagline">Nada de eso llega a tu asiento.</p>
     <p class="lede">Hamaca impermeable para el asiento trasero. Tu perro va cómodo atrás y la tapicería sigue como el día que compraste el carro.</p>
-    <div class="price"><b>$169.900</b><span>IVA incluido · envío a toda Colombia</span></div>
-    <a class="btn" href="#pedido">Pedir ahora, pagar al recibir</a>
+    <div class="buy-row"><div class="price">$169.900<small>IVA incluido · envío a toda Colombia</small></div><a class="btn" href="#pedido">Pedir · pagas al recibir</a></div><p class="micro">Confirmamos disponibilidad y fecha de entrega por WhatsApp antes del despacho.</p>
     <ul class="assure"><li>Pagas cuando te llega</li><li>Te confirmamos el pedido por WhatsApp antes de enviarlo</li><li>Se instala sin herramientas</li></ul>
   </div>
-</section>
-<section class="wrap problem">
-  <h2>El paseo termina en el carro.</h2>
+</div></section>
+<section class="ed problem" id="producto"><div class="wrap">
+  <div><ul class="strike" aria-label="Lo que ya no llega al asiento: pelo, barro, babas y uñas"><li>Pelo</li><li>Barro</li><li>Babas</li><li>Uñas</li></ul><h2>El paseo termina en el carro.</h2></div>
   <div><p>Parque, playa, veterinario. Tu perro se sube mojado, con arena entre las patas, y todo queda en la tela: pelo incrustado, manchas de barro y ese olor que no sale ni con aspiradora.</p><p>Las fundas baratas se corren, se rompen por las costuras y dejan el cinturón tapado. Esta cubre todo el asiento trasero, se agarra a los cabezales y tiene una base que no se resbala.</p></div>
-</section>
-<section class="layers" aria-labelledby="capas">
-  <div class="wrap">
-    <h2 id="capas">Cuatro capas entre tu perro y la tapicería.</h2>
-    <p class="intro">Toca cada parte para ver qué hace.</p>
-    <div class="stack">
-      <div class="sec" aria-hidden="true"><button class="ly" data-i="0" tabindex="-1" aria-pressed="true" style="top:30px;--c:repeating-linear-gradient(45deg,#2c2f2b 0 14px,#262925 14px 28px)"></button><button class="ly" data-i="1" tabindex="-1" aria-pressed="false" style="top:116px;--c:#e9ebe6"></button><button class="ly" data-i="2" tabindex="-1" aria-pressed="false" style="top:202px;--c:repeating-linear-gradient(45deg,#2c2f2b 0 14px,#262925 14px 28px)"></button><button class="ly" data-i="3" tabindex="-1" aria-pressed="false" style="top:288px;--c:repeating-radial-gradient(circle at 10px 10px,#4a4f49 0 3px,#3a3e39 3px 9px)"></button></div>
-      <ul class="legend"><li><button data-i="0" aria-pressed="true"><span class="n">1</span><span><b>Oxford 600D con PVC</b><span class="d">La cara que toca tu perro. Impermeable y acolchada en rombos; el pelo se sacude.</span></span></button></li><li><button data-i="1" aria-pressed="false"><span class="n">2</span><span><b>Relleno de poliéster</b><span class="d">Amortigua y le da cuerpo, para que no se arrugue con el movimiento.</span></span></button></li><li><button data-i="2" aria-pressed="false"><span class="n">3</span><span><b>Oxford 600D con PVC</b><span class="d">Una segunda barrera: si algo traspasa la primera capa, aquí se queda.</span></span></button></li><li><button data-i="3" aria-pressed="false"><span class="n">4</span><span><b>Base de caucho antideslizante</b><span class="d">Se agarra al asiento para que la hamaca no se corra en las curvas.</span></span></button></li></ul>
-    </div>
-  </div>
-</section>
-<section class="wrap uses">
+</div></section>
+<section class="layers" id="materiales" aria-labelledby="capas"><div class="wrap">
+  <h2 id="capas">Cuatro capas entre tu perro y la tapicería.</h2>
+  <p class="intro">Toca cada parte para ver qué hace.</p>
+  <div class="stack"><div class="sec" aria-hidden="true"><button class="ly" data-i="0" tabindex="-1" aria-pressed="true" style="top:30px;--c:repeating-linear-gradient(45deg,#2c2f2b 0 14px,#262925 14px 28px)"></button><button class="ly" data-i="1" tabindex="-1" aria-pressed="false" style="top:116px;--c:#e9ebe6"></button><button class="ly" data-i="2" tabindex="-1" aria-pressed="false" style="top:202px;--c:repeating-linear-gradient(45deg,#2c2f2b 0 14px,#262925 14px 28px)"></button><button class="ly" data-i="3" tabindex="-1" aria-pressed="false" style="top:288px;--c:repeating-radial-gradient(circle at 10px 10px,#4a4f49 0 3px,#3a3e39 3px 9px)"></button></div><div><ul class="legend"><li><button data-i="0" aria-pressed="true"><span class="sw"></span><span><b>Oxford 600D con PVC</b><span class="d">La cara que toca tu perro. Impermeable y acolchada en rombos; el pelo se sacude.</span></span></button></li><li><button data-i="1" aria-pressed="false"><span class="sw"></span><span><b>Relleno de poliéster</b><span class="d">Amortigua y le da cuerpo, para que no se arrugue con el movimiento.</span></span></button></li><li><button data-i="2" aria-pressed="false"><span class="sw"></span><span><b>Oxford 600D con PVC</b><span class="d">Una segunda barrera: si algo traspasa la primera capa, aquí se queda.</span></span></button></li><li><button data-i="3" aria-pressed="false"><span class="sw"></span><span><b>Base de caucho antideslizante</b><span class="d">Se agarra al asiento para que la hamaca no se corra en las curvas.</span></span></button></li></ul><p class="pnote">Capas según la ficha del proveedor; se confirman con sus fotos de detalle.</p></div></div>
+</div></section>
+<section class="ed uses"><div class="wrap">
   <h2>Una pieza, tres formas de usarla.</h2>
-  <div class="usegrid"><div class="use"><img src="mb-hamaca-1.jpg" alt="La hamaca extendida sobre fondo blanco, con correas para los cabezales" loading="lazy" width="390" height="390"><h3>Hamaca</h3><p>Cerrada con la cremallera, forma una cuna entre los asientos y tu perro no cae al piso al frenar.</p></div><div class="use"><img src="mb-hamaca-2.jpg" alt="Dos perros pequeños en el asiento trasero cubierto con la hamaca" loading="lazy" width="390" height="390"><h3>Funda de asiento</h3><p>Abierta, cubre el asiento completo y deja pasar a tus acompañantes por el lado.</p></div><div class="use"><img src="mb-hamaca-3.jpg" alt="Dos perros grandes acostados en el baúl de una camioneta cubierto con la hamaca" loading="lazy" width="390" height="390"><h3>Baúl</h3><p>En camioneta o SUV, protege el baúl de uñas y arena cuando viajas con perros grandes.</p></div></div>
-</section>
-<section class="wrap specs">
-  <div>
-    <h2>Lo que recibes</h2><p style="color:var(--muted);margin:0">Contenido exacto por confirmar con las fotos del proveedor.</p>
-    <ul class="inbox"><li>Hamaca para asiento trasero</li><li>Correas ajustables para los cabezales</li><li>Ventana de malla y bolsillo lateral</li></ul>
-  </div>
+  <div class="usegrid"><div class="use"><img src="mb-hamaca-1.jpg" alt="La hamaca extendida sobre fondo blanco, con correas para los cabezales" loading="lazy" width="390" height="488"><h3>Hamaca</h3><p>Cerrada con la cremallera, cubre el espacio entre los asientos delanteros y traseros. No sustituye un arnés de seguridad.</p></div><div class="use"><img src="mb-hamaca-2.jpg" alt="Dos perros pequeños en el asiento trasero cubierto con la hamaca" loading="lazy" width="390" height="488"><h3>Funda de asiento</h3><p>Abierta, cubre el asiento completo y deja pasar a tus acompañantes por el lado.</p></div><div class="use"><img src="mb-hamaca-3.jpg" alt="Dos perros grandes acostados en el baúl de una camioneta cubierto con la hamaca" loading="lazy" width="390" height="488"><h3>Baúl</h3><p>En camioneta o SUV, protege el baúl de uñas y arena cuando viajas con perros grandes.</p></div></div>
+</div></section>
+<section class="specs"><div class="wrap">
+  <div><h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.2vw,58px);line-height:1.05;margin:0 0 22px">Lo que recibes</h2><p class="note">Contenido exacto por confirmar con las fotos del proveedor.</p><ul class="inbox"><li>Hamaca para asiento trasero</li><li>Correas ajustables para los cabezales</li><li>Ventana de malla y bolsillo lateral</li></ul></div>
   <dl><dt>Exterior</dt><dd>Oxford 600D con recubrimiento de PVC</dd><dt>Interior</dt><dd>Relleno de poliéster</dd><dt>Base</dt><dd>Caucho antideslizante</dd><dt>Color</dt><dd>Negro con detalles naranja</dd><dt>Extras</dt><dd>Ventana de malla con cremallera y bolsillo lateral</dd><dt>Limpieza</dt><dd>Se sacude y se limpia con un paño húmedo</dd><dt>Medidas</dt><dd>Para asiento trasero de sedán, SUV o camioneta (medidas exactas por confirmar con el proveedor)</dd></dl>
-</section>
-<section class="wrap faq" aria-labelledby="faqh">
+</div></section>
+<section class="trust"><div class="wrap">
+  <div><b>Pagas al recibir</b><span>En efectivo, a la transportadora, cuando el paquete está en tus manos.</span></div>
+  <div><b>Confirmación por WhatsApp</b><span>Antes de enviar confirmamos disponibilidad, dirección y fecha estimada.</span></div>
+  <div><b>Cambios y garantía</b><span>Política por definir antes del lanzamiento.</span></div>
+</div></section>
+<section class="faq" id="preguntas" aria-labelledby="faqh"><div class="wrap">
   <h2 id="faqh">Preguntas</h2>
-  <details><summary>¿Cómo funciona el pago contraentrega?</summary><p>Haces el pedido aquí, te escribimos por WhatsApp para confirmar los datos y pagas en efectivo a la transportadora cuando recibes el paquete.</p></details><details><summary>¿Le sirve a mi carro?</summary><p>Está hecha para el asiento trasero de sedanes, SUV y camionetas. Si tienes dudas, escríbenos el modelo de tu carro antes de pedir.</p></details><details><summary>¿Cuánto tarda en llegar?</summary><p>Te damos la fecha exacta al confirmar el pedido por WhatsApp, según tu ciudad.</p></details><details><summary>¿Se puede usar con personas atrás?</summary><p>Sí. Abre la cremallera del lado que necesites y usa el asiento con su cinturón normal.</p></details><details><summary>¿Cómo se limpia?</summary><p>Sácala del carro, sacúdela y pasa un paño húmedo. El recubrimiento no deja que el agua ni el barro lleguen al relleno.</p></details>
-</section>
-<section class="order" id="pedido" aria-labelledby="pedh">
-  <div class="wrap ordergrid">
-    <div><h2 id="pedh">Pide ahora. Pagas al recibir.</h2><p>Llena tus datos y te escribimos por WhatsApp para confirmar antes de enviar. Sin tarjeta y sin pagos por adelantado.</p></div>
-    <form id="f" novalidate>
-      <label>Nombre y apellido<input name="n" autocomplete="name" required></label>
-      <div class="row"><label>WhatsApp<input name="t" type="tel" inputmode="tel" autocomplete="tel" placeholder="300 000 0000" required></label>
-      <label>Ciudad<input name="c" autocomplete="address-level2" required></label></div>
+  <div><details><summary>¿Cómo funciona el pago contraentrega?</summary><p>Haces el pedido aquí, te escribimos por WhatsApp para confirmar los datos y pagas en efectivo a la transportadora cuando recibes el paquete.</p></details><details><summary>¿Le sirve a mi carro?</summary><p>Está hecha para el asiento trasero de sedanes, SUV y camionetas. Si tienes dudas, escríbenos el modelo de tu carro antes de pedir.</p></details><details><summary>¿Cuánto tarda en llegar?</summary><p>Te damos la fecha exacta al confirmar el pedido por WhatsApp, según tu ciudad.</p></details><details><summary>¿Se puede usar con personas atrás?</summary><p>Sí. Abre la cremallera del lado que necesites y usa el asiento con su cinturón normal.</p></details><details><summary>¿Cómo se limpia?</summary><p>Sácala del carro, sacúdela y pasa un paño húmedo. El recubrimiento no deja que el agua ni el barro lleguen al relleno.</p></details></div>
+</div></section>
+<section class="order" id="pedido" aria-labelledby="pedh"><div class="wrap ordergrid">
+  <div><h2 id="pedh">Pide ahora. Pagas al recibir.</h2><p>Llena tus datos y te escribimos por WhatsApp para confirmar disponibilidad y fecha antes de enviar. Sin tarjeta y sin pagos por adelantado.</p></div>
+  <form id="f" novalidate>
+    <label>Nombre y apellido<input name="n" autocomplete="name" required></label>
+      <div class="row"><label>WhatsApp<input name="t" type="tel" inputmode="tel" autocomplete="tel" placeholder="300 000 0000" required></label><label>Ciudad<input name="c" autocomplete="address-level2" required></label></div>
       <label>Dirección<input name="d" autocomplete="street-address" required></label>
       <label>Cantidad<select name="q" id="q"><option value="1">1 hamaca</option><option value="2">2 hamacas</option></select></label>
       <div class="total"><span>Total a pagar al recibir</span><b id="tot">$169.900</b></div>
-      <p class="err" id="err" aria-live="polite"></p>
-      <button class="btn" type="submit">Confirmar pedido</button>
-      <div class="msg" id="msg" role="status">Pedido de prueba registrado. En la tienda real, aquí te escribiríamos por WhatsApp para confirmar.</div>
-    </form>
-  </div>
-</section>
-<section class="wrap more-p" aria-labelledby="otros">
-  <h2 id="otros">Más de ALVOREN</h2>
-  <ul><li><a href="alvoren-fuente.html"><small>Disponible</small>Fuente de acero para gatos</a></li><li><a href="alvoren-casa-sin-pelo.html"><small>Disponible</small>Kit casa sin pelo</a></li><li><a href="alvoren-hamaca-medida.html"><small>En desarrollo</small>Hamaca a medida</a></li><li><a href="alvoren-rope-lock.html"><small>En desarrollo</small>Correa Rope-Lock</a></li><li><a href="alvoren-fuente-sin-rincones.html"><small>En desarrollo</small>Fuente sin rincones</a></li></ul>
-</section>
+    <p class="err" id="err" aria-live="polite"></p>
+    <div><button class="btn" type="submit">Confirmar pedido</button></div>
+    <div class="msg" id="msg" role="status">Pedido de prueba registrado. En la tienda real, aquí te escribiríamos por WhatsApp para confirmar.</div>
+  </form>
+</div></section>
+<section class="more-p" id="otros" aria-labelledby="otrosh"><div class="wrap">
+  <h2 id="otrosh">La colección</h2>
+  <ul><li><a href="alvoren-fuente.html"><img src="alv-fuente-hero.jpg" alt="" loading="lazy"><small>En validación</small><span>La Fuente</span></a></li><li><a href="alvoren-casa-sin-pelo.html"><img src="alv-rodillo-hero.jpg" alt="" loading="lazy"><small>En validación</small><span>Casa sin pelo</span></a></li><li><a href="alvoren-hamaca-medida.html"><img src="mb-hamacapro-1.jpg" alt="" loading="lazy"><small>En desarrollo</small><span>Hamaca a medida</span></a></li><li><a href="alvoren-rope-lock.html"><img src="mb-cuerda-1.jpg" alt="" loading="lazy"><small>En desarrollo</small><span>Rope-Lock</span></a></li><li><a href="alvoren-fuente-sin-rincones.html"><img src="mb-fuente-1.jpg" alt="" loading="lazy"><small>En desarrollo</small><span>Fuente sin rincones</span></a></li></ul>
+</div></section>
 </main>
-<footer>ALVOREN · Diseñado para permanecer.</footer>
-<div class="sticky"><b>$169.900</b><a class="btn" href="#pedido">Pedir, pagar al recibir</a></div>
+<footer><span class="wm">ALVOREN</span><p>Diseñado para permanecer.</p></footer>
+<div class="sticky"><b>$169.900</b><a class="btn" href="#pedido">Pedir</a></div>
 <script>const PRICE=169900;</script>
 <script>
+const fr=[...document.querySelectorAll('.frame img')],dt=[...document.querySelectorAll('.dots button')];
+function show(i){fr.forEach((im,k)=>im.classList.toggle('on',k===i));dt.forEach((d,k)=>d.setAttribute('aria-current',k===i))}
+dt.forEach((d,i)=>d.addEventListener('click',()=>show(i)));
 const lys=[...document.querySelectorAll('.ly')],lg=[...document.querySelectorAll('.legend button')];
 function sel(i){[...lys,...lg].forEach(b=>b.setAttribute('aria-pressed',b.dataset.i==i))}
 document.addEventListener('click',e=>{const b=e.target.closest('.ly,.legend button');if(b)sel(b.dataset.i)});
@@ -214,7 +221,7 @@ if(q)q.addEventListener('change',()=>{tot.textContent='$'+(PRICE*+q.value).toLoc
 document.getElementById('f').addEventListener('submit',e=>{
   e.preventDefault();const f=e.target,err=document.getElementById('err');
   const miss=[...f.querySelectorAll('[required]')].filter(i=>!i.value.trim());
-  if(miss.length){err.textContent='Falta: '+miss.map(i=>i.parentNode.firstChild.textContent.trim()).join(', ')+'.';miss[0].focus();return}
+  if(miss.length){err.textContent='Falta: '+miss.map(i=>i.parentNode.firstChild.textContent.trim().toLowerCase()).join(', ')+'.';miss[0].focus();return}
   if(f.t.value.replace(/\D/g,'').length<10){err.textContent='Escribe un WhatsApp de 10 dígitos.';f.t.focus();return}
   err.textContent='';document.getElementById('msg').classList.add('on');f.querySelector('button').disabled=true;
 });
