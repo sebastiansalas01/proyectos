@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Correa Rope-Lock · en desarrollo · ALVOREN</title>
+<meta name="description" content="Correa de cuerda con mango que se cambia y reflectante probado. Lista de espera.">
+<meta name="theme-color" content="#1D1F1C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F4F1;--ink:#1D1F1C;--moss:#39443A;--steel:#B8BDB9;--fog:#E4E6E2;--muted:#5d625d;--f:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.demo{background:var(--ink);color:var(--fog);font-size:14px;text-align:center;padding:8px 16px}
+.demo a{color:#fff}
+header.bar{display:flex;justify-content:space-between;align-items:center;max-width:1180px;margin:0 auto;padding:18px 24px}
+.wm{font-weight:400;letter-spacing:.42em;font-size:17px;text-decoration:none}
+.bar .buy{font-size:15px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:24px 0 72px}
+.hero figure{margin:0;border-radius:4px;overflow:hidden;background:var(--fog);aspect-ratio:1/1}
+.hero figure img{width:100%;height:100%;object-fit:cover}
+.strike{list-style:none;margin:0 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:clamp(30px,4.4vw,52px);font-weight:300;line-height:1.1}
+.strike li{position:relative;color:var(--muted)}
+.strike li::after{content:"";position:absolute;left:-2px;right:-2px;top:54%;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;animation:cross .45s ease-out forwards}
+.strike li:nth-child(1)::after{animation-delay:.35s}.strike li:nth-child(2)::after{animation-delay:.7s}.strike li:nth-child(3)::after{animation-delay:1.05s}.strike li:nth-child(4)::after{animation-delay:1.4s}
+@keyframes cross{to{transform:scaleX(1)}}
+h1{font-size:clamp(34px,5vw,60px);font-weight:500;line-height:1.05;margin:0 0 20px;letter-spacing:-.01em}
+.lede{font-size:20px;color:var(--muted);max-width:30em;margin:0 0 28px}
+.price{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+.price b{font-size:34px;font-weight:500}
+.price span{font-size:15px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:var(--paper);border:0;border-radius:2px;padding:17px 30px;font:500 17px var(--f);letter-spacing:.02em;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--moss)}
+.assure{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:15.5px;color:var(--muted)}
+.assure li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--moss);margin-right:10px;vertical-align:middle}
+
+/* Problem */
+.problem{border-top:1px solid var(--steel);padding:72px 0;display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
+h2{font-size:clamp(28px,3.4vw,40px);font-weight:500;line-height:1.12;margin:0 0 14px}
+.problem p{margin:0 0 14px;max-width:34em}
+
+/* Layers: the memorable element */
+.layers{background:var(--ink);color:var(--fog);padding:80px 0}
+.layers h2{color:#fff}
+.layers .intro{color:var(--steel);max-width:34em;margin:0 0 40px}
+.stack{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.sec{position:relative;height:340px;perspective:900px}
+.ly{position:absolute;left:8%;right:8%;height:46px;border-radius:3px;transform:rotateX(58deg) rotateZ(-8deg);transition:transform .45s ease,box-shadow .45s ease;cursor:pointer;border:0;padding:0}
+.ly[data-i="0"]{top:40px;background:repeating-linear-gradient(45deg,#2c2f2b 0 14px,#262925 14px 28px)}
+.ly[data-i="1"]{top:110px;background:#e9ebe6}
+.ly[data-i="2"]{top:180px;background:repeating-linear-gradient(45deg,#2c2f2b 0 14px,#262925 14px 28px)}
+.ly[data-i="3"]{top:250px;background:repeating-radial-gradient(circle at 10px 10px,#4a4f49 0 3px,#3a3e39 3px 9px)}
+.ly[aria-pressed="true"]{transform:rotateX(58deg) rotateZ(-8deg) translateY(-14px);box-shadow:0 0 0 2px var(--steel)}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.legend button{all:unset;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:14px 12px;border-radius:3px;cursor:pointer;width:100%;box-sizing:border-box}
+.legend button:focus-visible{outline:2px solid var(--steel)}
+.legend button[aria-pressed="true"]{background:#2a2d29}
+.legend .n{font-size:14px;color:var(--steel);padding-top:3px}
+.legend b{display:block;font-weight:500;color:#fff}
+.legend span.d{font-size:15.5px;color:var(--steel)}
+
+/* Uses */
+.uses{padding:80px 0}
+.usegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:30px}
+.use img{aspect-ratio:1/1;object-fit:cover;border-radius:3px;background:var(--fog)}
+.use h3{font-weight:500;font-size:20px;margin:14px 0 4px}
+.use p{margin:0;color:var(--muted);font-size:16.5px}
+
+/* Specs */
+.specs{border-top:1px solid var(--steel);padding:72px 0;display:grid;grid-template-columns:1fr 1.3fr;gap:48px}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:0}
+dt,dd{margin:0;padding:13px 0;border-bottom:1px solid var(--fog)}
+dt{color:var(--muted);padding-right:28px}
+.inbox{margin:14px 0 0;padding-left:20px}
+
+/* FAQ */
+.faq{padding:72px 0;border-top:1px solid var(--steel)}
+details{border-bottom:1px solid var(--steel);padding:4px 0}
+summary{cursor:pointer;list-style:none;padding:16px 0;font-size:19px;font-weight:500;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:300;font-size:24px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:0 0 18px;color:var(--muted);max-width:40em}
+
+/* Order */
+.order{background:var(--fog);padding:80px 0}
+.ordergrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+form{background:var(--paper);padding:30px;border-radius:4px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-size:15px;color:var(--muted)}
+input,select{font:400 17px var(--f);color:var(--ink);padding:13px 14px;border:1px solid var(--steel);border-radius:2px;background:#fff}
+input:focus,select:focus{outline:2px solid var(--moss);outline-offset:0;border-color:var(--moss)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.total{display:flex;justify-content:space-between;border-top:1px solid var(--steel);padding-top:14px;font-size:17px}
+.msg{display:none;background:var(--moss);color:#fff;padding:16px;border-radius:3px;font-size:16px}
+.msg.on{display:block}
+.err{color:#8a2b1e;font-size:14px;min-height:1em}
+footer{padding:40px 24px;text-align:center;font-size:14px;color:var(--muted)}
+.sticky{display:none}
+
+@media (max-width:860px){
+  .hero,.problem,.stack,.specs,.ordergrid{grid-template-columns:1fr;gap:28px}
+  .hero{padding-top:4px}
+  .usegrid{grid-template-columns:1fr}
+  .sec{height:300px}
+  .row{grid-template-columns:1fr}
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--steel);padding:10px 16px;justify-content:space-between;align-items:center;z-index:5}
+  .sticky .btn{padding:13px 22px}
+  footer{padding-bottom:96px}
+}
+@media (prefers-reduced-motion:reduce){
+  .strike li::after{animation:none;transform:scaleX(1)}
+  .ly{transition:none}
+  html{scroll-behavior:auto}
+}
+
+.ly{background:var(--c)!important}
+.tag{display:inline-block;font-size:14px;color:var(--moss);border:1px solid var(--moss);border-radius:999px;padding:3px 12px;margin-bottom:18px}
+.txtcard{border:1px solid var(--steel);border-radius:3px;padding:24px}
+.txtcard .big{font-size:40px;font-weight:300;line-height:1}
+.more-p{border-top:1px solid var(--steel);padding:56px 0 24px}
+.more-p ul{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.more-p a{display:block;text-decoration:none;border:1px solid var(--steel);border-radius:3px;padding:16px}
+.more-p a:hover{border-color:var(--ink)}
+.more-p small{display:block;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="demo">Landing de ejemplo del business plan. El formulario no envía nada. <a href="business-plan-ecom.html#p-f2">Volver al plan</a></div>
+<header class="bar">
+  <a class="wm" href="#top" aria-label="ALVOREN, inicio">ALVOREN</a>
+  <a class="buy" href="#pedido">Unirme a la lista</a>
+</header>
+<main id="top">
+<section class="wrap hero">
+  <figure><img src="mb-cuerda-1.jpg" alt="Render de una correa de cuerda color arena con mosquetón negro sobre fondo blanco" width="785" height="785"></figure>
+  <div>
+    <span class="tag">En desarrollo</span>
+    <ul class="strike" aria-label="Lo que corrige: mango gastado, cuerda deshilachada y reflectante que no brilla"><li>Mango gastado</li><li>Cuerda deshilachada</li><li>Reflectante que no brilla</li></ul>
+    <h1>Hecha como equipo de montaña. Pensada para la ciudad.</h1>
+    <p class="lede">Una correa de cuerda en la que el mango se cambia cuando se gasta, los remates no se abren y el reflectante está probado de noche. Únete a la lista.</p>
+    <div class="price"><b>$189.900</b><span>precio previsto · IVA incluido</span></div>
+    <a class="btn" href="#pedido">Unirme a la lista de espera</a>
+    <ul class="assure"><li>Sin pagos ahora</li><li>Te avisamos por WhatsApp cuando salga</li><li>Precio para la lista de espera</li></ul>
+  </div>
+</section>
+<section class="wrap problem">
+  <h2>Las correas de cuerda son bonitas. Hasta que se gastan.</h2>
+  <div><p>Las correas de cuerda más vendidas tienen tres quejas repetidas: el mango acolchado se deshace, la cuerda se deshilacha en los remates y el reflectante brilla menos de lo prometido.</p><p>Cuando se gasta una parte, hay que botar toda la correa. Rope-Lock está hecha por piezas para que cambies solo la que se desgasta.</p></div>
+</section>
+<section class="layers" aria-labelledby="capas">
+  <div class="wrap">
+    <h2 id="capas">Cuatro piezas, cada una con un trabajo.</h2>
+    <p class="intro">Toca cada parte para ver qué hace.</p>
+    <div class="stack">
+      <div class="sec" aria-hidden="true"><button class="ly" data-i="0" tabindex="-1" aria-pressed="true" style="top:30px;--c:repeating-linear-gradient(60deg,#d8cfbf 0 5px,#c5bba9 5px 10px)"></button><button class="ly" data-i="1" tabindex="-1" aria-pressed="false" style="top:116px;--c:#4b5446"></button><button class="ly" data-i="2" tabindex="-1" aria-pressed="false" style="top:202px;--c:#7d7564"></button><button class="ly" data-i="3" tabindex="-1" aria-pressed="false" style="top:288px;--c:linear-gradient(90deg,#1b1b1b,#3b3b3b 50%,#1b1b1b)"></button></div>
+      <ul class="legend"><li><button data-i="0" aria-pressed="true"><span class="n">1</span><span><b>Cuerda de 10 mm con hilo reflectante</b><span class="d">Poliéster trenzado con el reflectante tejido dentro, no pegado encima.</span></span></button></li><li><button data-i="1" aria-pressed="false"><span class="n">2</span><span><b>Mango que se cambia</b><span class="d">Cuero vegano. Cuando se gasta, se reemplaza solo el mango.</span></span></button></li><li><button data-i="2" aria-pressed="false"><span class="n">3</span><span><b>Remates termosellados</b><span class="d">Para que la cuerda no se abra donde se dobla.</span></span></button></li><li><button data-i="3" aria-pressed="false"><span class="n">4</span><span><b>Mosquetón con seguro de rosca</b><span class="d">De aluminio, con carga de trabajo certificada.</span></span></button></li></ul>
+    </div>
+  </div>
+</section>
+<section class="wrap uses">
+  <h2>Cómo se ve.</h2>
+  <div class="usegrid"><div class="use"><img src="mb-cuerda-2.jpg" alt="Render de la correa colgada" loading="lazy" width="390" height="390"><h3>Larga o corta</h3><p>Con un pasador para ajustar el largo.</p></div><div class="use"><img src="mb-cuerda-3.jpg" alt="Render de la correa enrollada con sus remates" loading="lazy" width="390" height="390"><h3>Remates firmes</h3><p>Los puntos de unión van reforzados.</p></div><div class="use"><img src="mb-cuerda-4.jpg" alt="Render del detalle del mosquetón negro" loading="lazy" width="390" height="390"><h3>Mosquetón con seguro</h3><p>Se cierra con rosca para que no se abra solo.</p></div></div>
+</section>
+<section class="wrap specs">
+  <div>
+    <h2>Lo que recibes</h2><p style="color:var(--muted);margin:0">Producto en desarrollo: las imágenes son renders de concepto.</p>
+    <ul class="inbox"><li>Correa Rope-Lock</li><li>Mango de recambio</li></ul>
+  </div>
+  <dl><dt>Cuerda</dt><dd>Poliéster trenzado de 10 mm con hilo reflectante</dd><dt>Mango</dt><dd>Cuero vegano intercambiable</dd><dt>Mosquetón</dt><dd>Aluminio con seguro de rosca</dd><dt>Remates</dt><dd>Termosellados</dd><dt>Color</dt><dd>Arena con herrajes negros</dd></dl>
+</section>
+<section class="wrap faq" aria-labelledby="faqh">
+  <h2 id="faqh">Preguntas</h2>
+  <details><summary>¿Cuándo sale?</summary><p>Cuando terminen las pruebas de resistencia del mosquetón y los remates. La lista lo sabe primero.</p></details><details><summary>¿Tengo que pagar algo ahora?</summary><p>No. Solo dejas tu nombre y tu WhatsApp.</p></details><details><summary>¿Sirve para perros grandes?</summary><p>Está pensada para perros pequeños, medianos y grandes; confirmaremos el peso máximo con las pruebas.</p></details>
+</section>
+<section class="order" id="pedido" aria-labelledby="pedh">
+  <div class="wrap ordergrid">
+    <div><h2 id="pedh">Sé de los primeros.</h2><p>Te escribimos por WhatsApp cuando esté lista, antes que a nadie. No pagas nada ahora.</p></div>
+    <form id="f" novalidate>
+      <label>Nombre<input name="n" autocomplete="name" required></label>
+      <label>WhatsApp<input name="t" type="tel" inputmode="tel" autocomplete="tel" placeholder="300 000 0000" required></label>
+      
+      <p class="err" id="err" aria-live="polite"></p>
+      <button class="btn" type="submit">Unirme a la lista</button>
+      <div class="msg" id="msg" role="status">Registro de prueba. En la tienda real, aquí quedarías en la lista de espera.</div>
+    </form>
+  </div>
+</section>
+<section class="wrap more-p" aria-labelledby="otros">
+  <h2 id="otros">Más de ALVOREN</h2>
+  <ul><li><a href="alvoren-hamaca.html"><small>Disponible</small>Hamaca para carro</a></li><li><a href="alvoren-fuente.html"><small>Disponible</small>Fuente de acero para gatos</a></li><li><a href="alvoren-casa-sin-pelo.html"><small>Disponible</small>Kit casa sin pelo</a></li><li><a href="alvoren-hamaca-medida.html"><small>En desarrollo</small>Hamaca a medida</a></li><li><a href="alvoren-fuente-sin-rincones.html"><small>En desarrollo</small>Fuente sin rincones</a></li></ul>
+</section>
+</main>
+<footer>ALVOREN · Diseñado para permanecer.</footer>
+<div class="sticky"><b>Lista de espera</b><a class="btn" href="#pedido">Unirme</a></div>
+<script>const PRICE=189900;</script>
+<script>
+const lys=[...document.querySelectorAll('.ly')],lg=[...document.querySelectorAll('.legend button')];
+function sel(i){[...lys,...lg].forEach(b=>b.setAttribute('aria-pressed',b.dataset.i==i))}
+document.addEventListener('click',e=>{const b=e.target.closest('.ly,.legend button');if(b)sel(b.dataset.i)});
+const q=document.getElementById('q'),tot=document.getElementById('tot');
+if(q)q.addEventListener('change',()=>{tot.textContent='$'+(PRICE*+q.value).toLocaleString('es-CO')});
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();const f=e.target,err=document.getElementById('err');
+  const miss=[...f.querySelectorAll('[required]')].filter(i=>!i.value.trim());
+  if(miss.length){err.textContent='Falta: '+miss.map(i=>i.parentNode.firstChild.textContent.trim()).join(', ')+'.';miss[0].focus();return}
+  if(f.t.value.replace(/\D/g,'').length<10){err.textContent='Escribe un WhatsApp de 10 dígitos.';f.t.focus();return}
+  err.textContent='';document.getElementById('msg').classList.add('on');f.querySelector('button').disabled=true;
+});
+</script>
+</body>
+</html>
