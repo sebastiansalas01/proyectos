@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ALVOREN 01 · Mood board</title><meta name="theme-color" content="#ECEBE7">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F4F1;--ink:#1D1F1C;--moss:#39443A;--steel:#B8BDB9;--fog:#E4E6E2;--stone:#ECEBE7;--muted:#5f645f;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:300 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit}
+:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+.demo{background:var(--ink);color:var(--fog);font-size:13px;letter-spacing:.02em;text-align:center;padding:7px 16px}.demo a{color:#fff}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+nav.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;max-width:1240px;margin:0 auto;padding:22px 32px;border-bottom:1px solid rgba(29,31,28,.12)}
+nav.top .l,nav.top .r{display:flex;gap:28px;font-size:13.5px;letter-spacing:.06em}
+nav.top .r{justify-content:flex-end;align-items:center}
+nav.top a{text-decoration:none}nav.top .l a:hover,nav.top .r a:hover{text-decoration:underline;text-underline-offset:5px}
+.wm{font-family:var(--serif);font-weight:400;font-size:25px;letter-spacing:.36em;text-decoration:none;padding-left:.36em}
+.bag{display:inline-flex;align-items:center;gap:8px}
+.bag svg{width:17px;height:17px}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--stone),var(--paper))}
+.hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:72px;align-items:center;padding-top:56px;padding-bottom:88px}
+.gal{position:relative}
+.gal .frame{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--fog)}
+.gal .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease}
+.gal .frame img.on{opacity:1}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:20px}
+.dots button{all:unset;cursor:pointer;width:28px;height:14px;display:grid;place-items:center}
+.dots button::before{content:"";width:28px;height:1.5px;background:var(--steel)}
+.dots button[aria-current="true"]::before{background:var(--ink)}
+.dots button:focus-visible{outline:1px solid var(--ink)}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:0 0 22px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);border:1px solid var(--moss);border-radius:999px;padding:4px 14px;margin-bottom:22px}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(56px,7.4vw,108px);line-height:.94;letter-spacing:-.01em;margin:0 0 18px}
+.tagline{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,2.1vw,28px);line-height:1.25;margin:0 0 22px;color:var(--moss)}
+.lede{max-width:30em;margin:0 0 34px;color:var(--muted)}
+.buy-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.price{font-family:var(--serif);font-size:34px;font-weight:400}
+.price small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:16px 34px;font:400 14px var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .3s}
+.btn:hover{background:var(--moss)}
+.micro{font-size:13.5px;color:var(--muted);margin:18px 0 0}
+.assure{list-style:none;margin:30px 0 0;padding:22px 0 0;border-top:1px solid rgba(29,31,28,.12);display:grid;gap:8px;font-size:14.5px;color:var(--muted)}
+/* editorial */
+section.ed{padding:120px 0}
+.ed h2,.order h2,.faq h2,.more-p h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.2vw,58px);line-height:1.05;margin:0 0 22px}
+.problem .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.strike{list-style:none;margin:0 0 30px;padding:0;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(26px,3vw,40px);line-height:1.3;color:var(--muted)}
+.strike li{display:inline;margin-right:.6em;text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:var(--ink)}
+.problem p{margin:0 0 18px;max-width:32em}
+/* parts */
+.layers{background:var(--ink);color:var(--fog);padding:120px 0}
+.layers h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.2vw,58px);line-height:1.05;color:#fff;margin:0 0 14px;max-width:14em}
+.layers .intro{color:var(--steel);margin:0 0 56px;font-size:15px}
+.stack{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
+.sec{position:relative;height:340px;perspective:900px}
+.ly{position:absolute;left:8%;right:8%;height:46px;border-radius:2px;transform:rotateX(58deg) rotateZ(-8deg);transition:transform .5s ease,box-shadow .5s ease;cursor:pointer;border:0;padding:0;background:var(--c)}
+.ly[aria-pressed="true"]{transform:rotateX(58deg) rotateZ(-8deg) translateY(-16px);box-shadow:0 0 0 1px var(--steel)}
+.legend{list-style:none;margin:0;padding:0;display:grid}
+.legend button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:14px 1fr;gap:18px;padding:18px 4px;border-top:1px solid rgba(184,189,185,.22);cursor:pointer}
+.legend li:last-child button{border-bottom:1px solid rgba(184,189,185,.22)}
+.legend .sw{width:10px;height:10px;border-radius:50%;border:1px solid var(--steel);margin-top:9px}
+.legend button[aria-pressed="true"] .sw{background:var(--fog)}
+.legend b{display:block;font-family:var(--serif);font-weight:400;font-size:23px;color:#fff;line-height:1.2}
+.legend .d{font-size:15px;color:var(--steel)}
+.legend button:focus-visible{outline:1px solid var(--steel)}
+.pnote{margin:26px 0 0;font-size:13px;color:var(--steel)}
+/* uses */
+.usegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+.use img{width:100%;aspect-ratio:4/3;object-position:center 35%;object-fit:cover;background:var(--fog)}
+.use .ph{aspect-ratio:4/3;background:var(--stone);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:26px;color:var(--muted);padding:24px;text-align:center}
+.use .big{aspect-ratio:4/3;background:var(--stone);display:grid;place-items:center;font-family:var(--serif);font-weight:300;font-size:120px;color:var(--moss)}
+.use h3{font-family:var(--serif);font-weight:400;font-size:26px;margin:20px 0 6px}
+.use p{margin:0;color:var(--muted);font-size:15.5px}
+/* specs */
+.specs .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;border-top:1px solid rgba(29,31,28,.12);padding-top:96px}
+.specs{padding:0 0 120px}
+.specs .note{color:var(--muted);margin:0 0 14px;font-size:14.5px}
+.inbox{margin:0;padding:0;list-style:none;font-family:var(--serif);font-size:24px;line-height:1.5}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr}
+dt,dd{margin:0;padding:15px 0;border-bottom:1px solid rgba(29,31,28,.12)}
+dt{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-right:36px;padding-top:19px}
+/* trust */
+.trust{background:var(--fog)}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:56px;padding-bottom:56px}
+.trust b{display:block;font-family:var(--serif);font-weight:400;font-size:22px}
+.trust span{font-size:14.5px;color:var(--muted)}
+/* faq */
+.faq{padding:120px 0}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+details{border-bottom:1px solid rgba(29,31,28,.15)}
+details:first-child{border-top:1px solid rgba(29,31,28,.15)}
+summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:23px;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:200;font-size:24px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:0 0 22px;color:var(--muted);max-width:38em}
+/* order */
+.order{background:var(--stone);padding:120px 0}
+.ordergrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.order p{color:var(--muted);max-width:28em}
+form{display:grid;gap:26px}
+label{display:grid;gap:4px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+input,select{font:300 18px var(--sans);letter-spacing:0;text-transform:none;color:var(--ink);padding:10px 0;border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent}
+input:focus,select:focus{outline:none;border-bottom-width:2px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(29,31,28,.15);padding-top:18px}
+.total b{font-family:var(--serif);font-weight:400;font-size:30px}
+.msg{display:none;background:var(--moss);color:#fff;padding:16px 18px;font-size:15px}.msg.on{display:block}
+.err{color:#8a2b1e;font-size:14px;min-height:1em;margin:0}
+/* others + footer */
+.more-p{padding:110px 0}
+.more-p ul{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.more-p a{display:block;text-decoration:none}
+.more-p img{aspect-ratio:4/5;object-fit:cover;width:100%;background:var(--fog);transition:opacity .3s}
+.more-p a:hover img{opacity:.85}
+.more-p small{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.more-p span{font-family:var(--serif);font-size:21px}
+footer{background:var(--ink);color:var(--steel);text-align:center;padding:90px 24px 70px}
+footer .wm{color:#fff;font-size:clamp(36px,6vw,70px);display:block;margin-bottom:12px}
+footer p{font-family:var(--serif);font-style:italic;font-size:20px;margin:0}
+.sticky{display:none}
+@media (max-width:900px){
+  .wrap,nav.top{padding-left:20px;padding-right:20px}
+  nav.top{grid-template-columns:auto 1fr}nav.top .l{display:none}nav.top .r{gap:16px}.wm{font-size:20px}
+  .hero .wrap,.problem .wrap,.stack,.specs .wrap,.faq .wrap,.ordergrid,.trust .wrap{grid-template-columns:1fr;gap:36px}
+  .hero .wrap{padding-top:20px;padding-bottom:64px}
+  section.ed,.layers,.faq,.order,.more-p{padding:80px 0}.specs .wrap{padding-top:64px}.specs{padding-bottom:80px}
+  .usegrid{grid-template-columns:1fr;gap:40px}
+  .more-p ul{grid-template-columns:repeat(2,1fr)}
+  .sec{height:300px}.row{grid-template-columns:1fr}
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid rgba(29,31,28,.15);padding:10px 16px;justify-content:space-between;align-items:center;z-index:5}
+  .sticky b{font-family:var(--serif);font-weight:400;font-size:24px}.sticky .btn{padding:13px 22px}
+  footer{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+.mh{background:linear-gradient(180deg,var(--stone),var(--paper));padding:80px 0 60px}
+.mh h1{font-size:clamp(56px,8vw,118px)}
+.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start;padding:72px 0;border-top:1px solid rgba(29,31,28,.12)}
+.two h2{font-family:var(--serif);font-weight:300;font-size:clamp(32px,3.6vw,50px);line-height:1.05;margin:0 0 16px}
+.two img{width:100%;height:auto;display:block}
+.words{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.words li{border:1px solid rgba(29,31,28,.25);border-radius:999px;padding:6px 14px;font-size:14px}
+.pal{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.pal i{display:block;aspect-ratio:3/4;border:1px solid rgba(29,31,28,.12)}
+.pal b{display:block;font-family:var(--serif);font-weight:400;font-size:18px;margin-top:8px}
+.pal span{font-size:12px;color:var(--muted)}
+.cap{width:100%;border-collapse:collapse;font-size:15.5px}
+.cap td,.cap th{padding:14px 10px 14px 0;border-bottom:1px solid rgba(29,31,28,.12);text-align:left;vertical-align:top}
+.cap th{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.cap td:first-child{font-family:var(--serif);font-size:21px;white-space:nowrap}
+.cap td.n{text-align:right;white-space:nowrap}
+.yn{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.yn h3{font-family:var(--serif);font-weight:400;font-size:24px;margin:0 0 8px}
+.yn ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.tests{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tests div{border:1px solid rgba(29,31,28,.15);padding:22px}
+.tests b{font-family:var(--serif);font-weight:400;font-size:24px;display:block;margin-bottom:6px}
+.tests p{margin:0;color:var(--muted);font-size:15.5px}
+.note{font-size:13.5px;color:var(--muted);margin-top:12px}
+@media (max-width:900px){.two,.yn,.tests{grid-template-columns:1fr;gap:24px}.pal{grid-template-columns:repeat(4,1fr)}}
+</style></head><body>
+<div class="demo">Documento interno del equipo. <a href="business-plan-ecom.html#vision">Volver al plan</a></div>
+<nav class="top" aria-label="Principal"><div class="l"><a href="#referencias">Referencias</a><a href="#capsula">Cápsula</a><a href="#test">Test</a></div><a class="wm" href="#top">ALVOREN</a><div class="r"><a href="alvoren-brandbook.html">Brandbook</a></div></nav>
+<main id="top">
+<section class="mh"><div class="wrap"><p class="eyebrow">Mood board · ALVOREN 01 · a partir del collage de Nico</p><h1>Lujo utilitario para salir a la calle.</h1><p class="tagline">No vendemos accesorios: vendemos ser parte de un círculo.</p><p class="lede">Una marca de accesorios para perros con foco en diseño y utilidad, para jóvenes adultos. El precio es consecuencia, no punto de partida. Topology como concepto de imagen, Zee.Dog como vara de calidad.</p></div></section>
+<div class="wrap">
+<section class="two" id="referencias"><div><h2>Lo que vemos en las referencias</h2><p>Gente joven en la ciudad, perros como parte del outfit y equipo técnico que se usa todos los días, no solo para el paseo.</p><ul class="words"><li>Cuerda de escalada</li><li>Mosquetones</li><li>Nylon técnico</li><li>Acolchado</li><li>Modular</li><li>Calle</li><li>Color como acento</li><li>Hecho para durar</li></ul><p class="note">Collage enviado por Nico al grupo el 15 nov. El tablero de Pinterest de unas 40 fotos no se pudo abrir desde aquí (el link redirige con error); falta compartirlo de nuevo para completar el mood board.</p></div><div><img src="nico-collage.jpg" alt="Collage de referencias: personas jóvenes paseando perros en la ciudad, cuerdas de escalada de colores, mosquetones, bolsos técnicos y correas acolchadas"></div></section>
+<section class="two"><div><h2>Paleta</h2><p>Sacada del collage. La base sigue siendo grafito y papel; el color entra en detalles y en cada colección, nunca a gritos.</p></div><div class="pal"><div><i style="background:#201B1C"></i><b>Grafito</b><span>#201B1C · base</span></div><div><i style="background:#F5F1EA"></i><b>Papel</b><span>#F5F1EA · fondo</span></div><div><i style="background:#3E4947"></i><b>Pino</b><span>#3E4947 · acento profundo</span></div><div><i style="background:#686C5F"></i><b>Oliva</b><span>#686C5F · color de colección</span></div><div><i style="background:#D6C4B6"></i><b>Arena</b><span>#D6C4B6 · neutro cálido</span></div><div><i style="background:#84392C"></i><b>Óxido</b><span>#84392C · acento</span></div><div><i style="background:#D2572B"></i><b>Señal</b><span>#D2572B · detalle mínimo</span></div></div></section>
+<section class="two"><div><h2>Qué tomamos y qué no</h2></div><div class="yn"><div><h3>Sí</h3><ul><li>Cuerda técnica, herrajes de aluminio mate, nylon ripstop.</li><li>Fotos en la calle, con gente real y perros reales.</li><li>Piezas que combinan entre sí por color.</li><li>Tipografía editorial sobria para equilibrar la energía urbana.</li></ul></div><div><h3>No</h3><ul><li>Neones y colores fluorescentes.</li><li>Estética militar o táctica.</li><li>Logos grandes.</li><li>Fotos de catálogo genérico de proveedor.</li></ul></div></div></section>
+<section class="two" id="capsula"><div><h2>Cápsula ALVOREN 01</h2><p>Los básicos que no pueden faltar en una marca así. Se diseña la colección completa para comunicar el universo, pero solo se fabrica lo que gane el test.</p><img src="alv01-capsula.jpg" alt="Render de concepto: correa de cuerda oliva con detalles naranja y mosquetón grafito, collar oliva, pouch de ripstop oliva y mosquetón naranja" style="margin-top:22px"><p class="note">Render de concepto hecho con IA: el producto todavía no existe.</p></div><div><table class="cap"><thead><tr><th>Pieza</th><th>Materiales y concepto</th><th>Precio objetivo</th></tr></thead><tbody><tr><td>Rope-Lock</td><td>Producto principal. Cuerda de escalada de 10 mm, mosquetón de aluminio con bloqueo, uso a mano o cruzada al cuerpo, mango que se cambia.</td><td class="n">$119.900</td></tr><tr><td>Collar Core</td><td>Nylon reforzado, hebilla mate, anilla metálica.</td><td class="n">$49.900</td></tr><tr><td>Harness Form</td><td>Arnés acolchado, malla transpirable, ajuste ergonómico.</td><td class="n">$109.900</td></tr><tr><td>Pouch Modular</td><td>Nylon ripstop, cierre técnico, se engancha a la correa o al bolso.</td><td class="n">$49.900</td></tr><tr><td>Clip Utility</td><td>Mosquetón de accesorios de aluminio anodizado en colores de colección. No sirve para sujetar al perro.</td><td class="n">$29.900</td></tr><tr><td>Kit principal</td><td>Rope-Lock + Collar Core + Pouch Modular.</td><td class="n">$189.900</td></tr></tbody></table><p class="note">Precios orientativos en COP de ChatGPT, sin validar todavía con costes de fabricación ni con demanda.</p></div></section>
+<section class="two" id="test"><div><h2>Test antes de fabricar</h2><p>Tres formas de contar Rope-Lock, con el mismo precio visible y el mismo tráfico. Se mide coste por solicitud de acceso prioritario y qué color y pieza eligen.</p></div><div class="tests"><div><b>Funcional</b><p>Manos libres, mango que se cambia, mosquetón con bloqueo.</p></div><div><b>Moda urbana</b><p>El perro como parte del outfit; la correa se lleva cruzada.</p></div><div><b>Modular</b><p>Correa, collar, pouch y clip que se combinan por color.</p></div></div></section>
+</div></main>
+<footer><span class="wm">ALVOREN</span><p>Diseñado para permanecer.</p></footer>
+</body></html>
