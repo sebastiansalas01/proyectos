@@ -143,10 +143,11 @@ footer p{font-family:var(--serif);font-style:italic;font-size:20px;margin:0}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 
 /* ---- v3: banner + ficha ---- */
+.use img{height:auto}
 .banner{background:linear-gradient(180deg,var(--stone),var(--paper))}
 .banner .bwrap{max-width:1240px;margin:0 auto;padding:64px 32px 80px;display:grid;grid-template-columns:1fr .82fr;gap:72px;align-items:center}
 .banner figure{margin:0;position:relative}
-.banner figure img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--fog)}
+.banner figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--fog)}
 .banner h1{font-size:clamp(48px,5.8vw,90px);max-width:9em;margin:0 0 20px}
 .banner .sub{max-width:31em;color:var(--muted);margin:0 0 24px;font-size:17px}
 .checks{list-style:none;margin:0 0 34px;padding:0;display:grid;gap:9px;font-size:15.5px}
