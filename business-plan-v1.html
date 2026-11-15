@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Plan · ALVOREN</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#111111">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Proyectos">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#111;--grey:#6b6b6b;--soft:#f4f4f2;--line:#e4e4e0;--good:#2f7d4f;--bad:#b4442f;
+--display:"Archivo","Helvetica Neue",Arial,sans-serif;--body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--grey);font-family:var(--body);font-size:16px;line-height:1.55}
+b,strong{color:var(--ink);font-weight:600}
+h1,h2,h3{font-family:var(--display);color:var(--ink);margin:0;text-wrap:balance}
+h1{font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.08}
+h2{font-size:clamp(22px,3.2vw,30px);font-weight:800;line-height:1.15}
+h3{font-size:17px;font-weight:700}
+p{margin:0}
+a{color:var(--ink)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--grey);font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid transparent}
+nav a:hover,nav a:focus-visible{color:var(--ink);border-color:var(--line);outline:none}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+.kicker{font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+.lead{font-size:18px;max-width:68ch;margin-top:12px}
+.small{font-size:14px}
+.top{padding:34px 0 28px}
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:22px}
+.key{border-top:2px solid var(--ink);padding-top:10px;font-size:14.5px}
+.key b{display:block;font-family:var(--display);font-size:17px;margin-bottom:2px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:18px}
+@media (max-width:860px){.cols{grid-template-columns:1fr}}
+.colp>h2{font-size:23px}
+.colp>.small{margin:6px 0 14px}
+.plist{display:grid;gap:10px}
+.pc{all:unset;box-sizing:border-box;display:grid;grid-template-columns:84px 1fr;gap:14px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px;cursor:pointer;background:#fff}
+.pc:hover,.pc:focus-visible{border-color:var(--ink);outline:none}
+.pc img,.pimg-ph{width:84px;height:84px;object-fit:cover;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-size:28px;color:#bbb}
+.pcb{display:grid;gap:2px;min-width:0}
+.pct{font-size:12px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.06em}
+.pcn{font-family:var(--display);font-weight:700;color:var(--ink);font-size:16.5px;line-height:1.2}
+.pcs{font-size:13.5px}
+.pcf{font-size:14px;margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--soft);color:var(--ink)}
+.chip.ok{background:#e6f2ea;color:var(--good)}
+.chip.no{background:#f6e6e2;color:var(--bad)}
+.chip.mid{background:#efefec;color:var(--grey)}
+.idea{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid var(--ink);color:var(--ink)}
+.box{margin-top:18px;background:var(--soft);border-radius:12px;padding:14px 16px;font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:12px}
+th{color:var(--ink);text-align:left;font-weight:600;border-bottom:1px solid var(--ink);padding:8px 6px}
+td{border-bottom:1px solid var(--line);padding:8px 6px;vertical-align:top;font-variant-numeric:tabular-nums}
+td.n{text-align:right;white-space:nowrap}
+.tbl{overflow-x:auto}
+.mbg{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-top:16px}
+.mbi{all:unset;cursor:pointer;display:grid;gap:6px;font-size:13.5px;color:var(--ink);font-weight:500}
+.mbi img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;border:1px solid var(--line);display:block}
+.mbi:hover img,.mbi:focus-visible img{border-color:var(--ink)}
+.mbi:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:12px}
+.weeks{display:grid;gap:12px;margin-top:18px;counter-reset:w}
+.week{border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.week h3{display:flex;gap:10px;align-items:baseline}
+.week h3::before{counter-increment:w;content:"Semana " counter(w);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);font-family:var(--body);font-weight:600}
+.week ul{margin:10px 0 0;padding-left:18px;display:grid;gap:5px;font-size:15px}
+.week .out{margin-top:10px;font-size:14px;color:var(--ink)}
+details.more{max-width:1040px;margin:0 auto;border-top:1px solid var(--line)}
+details.more>summary{cursor:pointer;color:var(--ink);font-weight:700;list-style:none;padding:16px 20px;font-size:17px;font-family:var(--display)}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"+ ";color:var(--grey)}
+details[open].more>summary::before{content:"– "}
+details.more>div{padding:0 20px 28px}
+details.more ul{padding-left:18px;display:grid;gap:6px;margin:10px 0 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+@media (max-width:700px){.two{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px}
+/* Calculadora */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+@media (max-width:820px){.calc{grid-template-columns:1fr}}
+.field{display:grid;gap:4px;margin-bottom:12px}
+.field label{display:flex;justify-content:space-between;font-size:14.5px;color:var(--ink);font-weight:500}
+.field output{font-variant-numeric:tabular-nums;font-weight:600}
+input[type=range]{width:100%;accent-color:var(--ink)}
+.rrow{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:7px 0;font-variant-numeric:tabular-nums;font-size:15px}
+.verdict{border-radius:12px;padding:14px;font-size:15px;margin-top:10px}
+.verdict.good{background:#e6f2ea;color:#1f5535}.verdict.bad{background:#f6e6e2;color:#7a2d1f}.verdict.mid{background:var(--soft);color:var(--ink)}
+/* Popup */
+dialog#pd{border:0;border-radius:16px;padding:0;max-width:760px;width:calc(100% - 20px);max-height:90vh;overflow:auto;color:var(--grey)}
+dialog#pd::backdrop{background:rgba(0,0,0,.5)}
+.pdh{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);z-index:2}
+.pdh h2{font-size:20px}
+.pdh .k{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+#pdX{all:unset;cursor:pointer;font-size:26px;line-height:1;color:var(--ink);padding:4px 10px;border-radius:8px}
+#pdX:focus-visible{outline:2px solid var(--ink)}
+#pdB{padding:16px 18px 26px;display:grid;gap:18px}
+.gal img.main{width:100%;aspect-ratio:1;max-height:56vh;object-fit:contain;background:#fff;border-radius:12px;border:1px solid var(--line);display:block}
+.thumbs{display:flex;gap:8px;margin-top:8px}
+.thumbs button{all:unset;cursor:pointer;width:64px;height:64px;border-radius:8px;overflow:hidden;border:2px solid transparent}
+.thumbs button[aria-pressed=true],.thumbs button:focus-visible{border-color:var(--ink)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.noimg{background:var(--soft);border-radius:12px;padding:30px;text-align:center;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.kpi{background:var(--soft);border-radius:10px;padding:10px 12px}
+.kpi span{display:block;font-size:12.5px}
+.kpi b{font-family:var(--display);font-size:20px}
+#pdB h3{margin-bottom:6px}
+#pdB table{margin-top:4px}
+#pdB tr.tot td{color:var(--ink);font-weight:600;border-top:1px solid var(--ink)}
+footer{padding:28px 0 60px;font-size:13.5px}
+.brand{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+.bcard{border:1px solid var(--line);border-radius:14px;padding:18px}
+.bcard.win{border:2px solid var(--ink)}
+.bname{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:.14em;color:var(--ink);text-transform:uppercase}
+.bline{font-style:italic;margin-top:4px}
+.score{display:flex;justify-content:space-between;font-size:14px;border-bottom:1px solid var(--line);padding:5px 0}
+.lux{background:#f7f6f2;border-radius:16px;padding:28px 22px;text-align:center;margin-top:18px}
+.lux .bname{font-size:44px}
+ul.dots{margin:6px 0 0;padding-left:18px;display:grid;gap:5px}
+.pain li::marker{color:var(--bad)}
+.des li::marker{color:var(--good)}
+.sup{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;gap:3px}
+.sup a{font-weight:600}
+.sup .t{font-size:12.5px;text-transform:uppercase;letter-spacing:.05em}
+.sups{display:grid;gap:8px}
+.ok-v{color:var(--good);font-size:12.5px;font-weight:600}
+.ev{display:grid;gap:6px;margin-top:6px}
+.ev div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:6px 0;font-size:14.5px}
+.ev div b{text-align:right;font-weight:600}
+.inote{font-size:13px;color:var(--muted,#666);margin-top:6px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.steps li{counter-increment:s;border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:700}
+.steps li b{display:block}
+.adsg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:14px}
+.adsg figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.adsg img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+.adsg figcaption{padding:8px 10px;font-size:13.5px}
+.cta-l{display:inline-block;margin-top:10px;padding:10px 16px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600}
+.pcw{display:grid;gap:8px}
+.lbtn{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:999px;background:#1D1F1C;color:#F5F4F1;text-decoration:none;font-weight:600;font-size:14.5px}
+.lbtn:hover{background:#39443A}
+.lbtn:focus-visible{outline:2px solid #39443A;outline-offset:3px}
+</style>
+</head>
+<body>
+<nav aria-label="Secciones"><div class="wrap">
+  <a href="index.html">← Proyectos</a>
+  <a href="#resumen">Resumen</a>
+  <a href="#vision">Visión</a>
+  <a href="#panel">Productos</a>
+  <a href="#prueba">Prueba de venta</a>
+  <a href="#packs">Packs</a>
+  <a href="#moodboard">Mood board</a>
+  <a href="#anuncios-est">Anuncios</a>
+  <a href="#landing">Landings</a>
+  <a href="#pasos">Ruta</a>
+  <a href="#marca">Marca</a>
+  <a href="#mas">Plan completo</a>
+</div></nav>
+
+<header class="top" id="resumen"><div class="wrap">
+  <div class="kicker">Business plan · Claude + ChatGPT · 15 nov 2026</div>
+  <h1>ALVOREN: accesorios para perros y gatos, con estética de lujo silencioso</h1>
+  <p class="lead">Somos tres: <b>Sebastián, Nico y Julieth</b>. Partimos de 3 categorías que ya son ganadoras en EE. UU. y que ya se venden en Colombia, pero no vamos a vender lo mismo que todos: cada producto ALVOREN debe mejorar algo que los compradores se quejan del líder. Validamos interés y disposición a pagar <b>antes de fabricar</b>. Empezamos por la cápsula de paseo <b>ALVOREN 01</b>, con la correa <b>Rope-Lock</b> como producto principal. El dropshipping genérico queda como plan B.</p>
+  <div class="keys">
+    <div class="key"><b>ALVOREN 01</b>Cápsula de paseo con Rope-Lock como producto principal: se diseña completa y se fabrica solo lo que gane el test.</div>
+    <div class="key"><b>Versiones ALVOREN</b>Hamaca a medida, Rope-Lock (Idea de Julieth) y fuente sin rincones: corrigen quejas reales de los líderes.</div>
+    <div class="key"><b>Cómo los elegimos</b>≥ 5 mil unidades al mes en Amazon EE. UU., ventas comprobadas en Mercado Libre Colombia, ticket ≥ 120 mil y proveedor con el artículo exacto.</div>
+    <div class="key"><b>Regla de dinero</b>Mínimo 12 % de margen neto para probar y 20 % para escalar. Cada producto tiene un coste máximo al proveedor.</div>
+  </div>
+</div></header>
+
+<section id="vision"><div class="wrap">
+  <h2>Visión acordada (15 nov): ALVOREN 01, sistema de paseo</h2>
+  <p class="lead">Nico lo dejó claro: no queremos revender. Queremos una marca de accesorios para perros con foco en diseño y utilidad, para jóvenes adultos, donde el precio es consecuencia y no punto de partida. Lo que hoy vende en internet sirve para acotar opciones, no para copiar. Sebastián lo resume así: <b>producto propio, buenos materiales, y probarlo con anuncios y landing antes de invertir</b>. Claude y ChatGPT están de acuerdo.</p>
+  <div class="keys">
+    <div class="key"><b>Estética</b>Lujo utilitario urbano (Topology como imagen, Zee.Dog como vara de calidad): cuerda técnica, mosquetones, nylon, color como acento. No es el beige silencioso de antes.</div>
+    <div class="key"><b>Producto principal</b>Rope-Lock, la correa de cuerda con mango que se cambia (idea de Julieth), dentro de una cápsula modular: collar, arnés, pouch y clip.</div>
+    <div class="key"><b>Fuera del núcleo</b>Hamaca, fuente y kit casa sin pelo pasan a ser referencia y plan B: no encajan en la marca de paseo.</div>
+    <div class="key"><b>Antes de fabricar</b>Tres formas de contar Rope-Lock con el mismo precio y el mismo tráfico; se fabrica solo lo que gane.</div>
+  </div>
+  <p style="margin-top:16px"><a class="cta-l" href="alvoren-moodboard-01.html">Abrir el mood board ALVOREN 01</a> <a class="cta-l" href="alvoren-rope-lock.html" style="margin-left:8px">Landing de Rope-Lock</a></p>
+</div></section>
+
+<section id="panel"><div class="wrap">
+  <h2>Los 6 productos</h2>
+  <p class="lead">Toca un producto: ves sus fotos, la prueba de venta en EE. UU. y Colombia, dolores y deseos del cliente, proveedores, materiales y números.</p>
+  <div class="cols">
+    <div class="colp"><h2>Fase 1 · Dropshipping</h2><p class="small">Sin comprar inventario. Las fotos son del proveedor exacto del link.</p><div class="plist"><div class="pcw"><button class="pc" data-id="d1" aria-haspopup="dialog"><img src="alv-hamaca-hero.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#1 · Perro</span><span class="pcn">Hamaca impermeable para carro</span><span class="pcs">Negra acolchada en rombos, ribete naranja, Oxford 600D, con ventana de malla y bolsillo</span><span class="pcf"><b>$169.900</b> · neto <b>19,8 %</b> · bruto 68,5 %</span><span class="chips"><span class="chip ok">Cumple la regla para probar</span><span class="idea">EE. UU. ~9–10 mil u/mes</span></span></span></button><a class="lbtn" href="alvoren-hamaca.html">Abrir su landing</a></div><div class="pcw"><button class="pc" data-id="d2" aria-haspopup="dialog"><img src="alv-fuente-hero.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#2 · Gato</span><span class="pcn">Fuente de acero para gatos + 4 filtros</span><span class="pcs">Acero inoxidable 304 plateado, 2,2 L, ventana de nivel, con 4 filtros (2 meses) y guía de limpieza</span><span class="pcf"><b>$159.900</b> · neto <b>15,3 %</b> · bruto 66,5 %</span><span class="chips"><span class="chip ok">Cumple la regla para probar</span><span class="idea">EE. UU. ~10 mil u/mes</span></span></span></button><a class="lbtn" href="alvoren-fuente.html">Abrir su landing</a></div><div class="pcw"><button class="pc" data-id="d3" aria-haspopup="dialog"><img src="alv-rodillo-hero.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#3 · Gato y perro</span><span class="pcn">Kit casa sin pelo</span><span class="pcs">Rodillo quitapelo reutilizable (blanco y rojo) + cepillo de niebla 3 en 1 blanco, recargable USB-C</span><span class="pcf"><b>$129.900</b> · neto <b>16,2 %</b> · bruto 72,5 %</span><span class="chips"><span class="chip ok">Cumple la regla para probar</span><span class="idea">EE. UU. ~20 mil u/mes</span></span></span></button><a class="lbtn" href="alvoren-casa-sin-pelo.html">Abrir su landing</a></div></div></div>
+    <div class="colp"><h2>Fase 2 · Fabricación propia</h2><p class="small">Solo cuando su versión genérica venda en la fase 1.</p><div class="plist"><div class="pcw"><button class="pc" data-id="f1" aria-haspopup="dialog"><img src="mb-hamacapro-1.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#1 · Perro</span><span class="pcn">Hamaca ALVOREN a medida</span><span class="pcs">3 tallas por tipo de carro, aberturas del cinturón en su sitio, costuras reforzadas, tono grafito</span><span class="pcf"><b>$189.900</b> · neto <b>27,3 %</b> · bruto 71,8 %</span><span class="chips"><span class="chip ok">Cumple la regla para escalar</span></span></span></button><a class="lbtn" href="alvoren-hamaca-medida.html">Abrir su landing</a></div><div class="pcw"><button class="pc" data-id="f2" aria-haspopup="dialog"><img src="mb-cuerda-1.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#2 · Perro</span><span class="pcn">Rope-Lock</span><span class="pcs">Correa de cuerda crossbody con mango que se cambia y reflectante probado</span><span class="pcf"><b>$189.900</b> · neto <b>22,9 %</b> · bruto 69,9 %</span><span class="chips"><span class="chip ok">Cumple la regla para escalar</span><span class="idea">EE. UU. ~8–10 mil u/mes a US$ 8,99</span><span class="idea">Idea de Julieth</span></span></span></button><a class="lbtn" href="alvoren-rope-lock.html">Abrir su landing</a></div><div class="pcw"><button class="pc" data-id="f3" aria-haspopup="dialog"><img src="mb-fuente-1.jpg" alt="" loading="lazy"><span class="pcb"><span class="pct">#3 · Gato</span><span class="pcn">Fuente ALVOREN sin rincones</span><span class="pcs">Acero de una pieza, bomba con encaje magnético, aviso de nivel mínimo y filtros estándar</span><span class="pcf"><b>$189.900</b> · neto <b>18,6 %</b> · bruto 65,5 %</span><span class="chips"><span class="chip ok">Cumple la regla para probar</span><span class="idea">EE. UU. ~40 mil u/mes (dato de ChatGPT)</span></span></span></button><a class="lbtn" href="alvoren-fuente-sin-rincones.html">Abrir su landing</a></div></div></div>
+  </div>
+  <details class="more" style="margin-top:18px;border:1px solid var(--line);border-radius:12px" id="descartes"><summary>Por qué estos 6 y qué descartamos</summary><div>
+    <p>Revisamos 10 categorías ganadoras de Amazon EE. UU. y buscamos cada una en Mercado Libre Colombia y en los anuncios de Meta. Pasaron las que tienen ventas en los dos países y un precio que aguanta la contraentrega.</p>
+    <ul><li><b>Kit de paseo manos libres (Idea de Nico):</b> En EE. UU. vende ~5 mil u/mes (iYoShop, +66,7 %), pero en Colombia no encontramos ventas a ticket alto y solo ~4 anuncios. Hoy es una idea, no un ganador probado. Queda en reserva.</li><li><b>Set arnés antitirones + correa:</b> Vende en EE. UU. (rabbitgoo), pero en Colombia los sets con ventas cuestan 20–35 mil COP; no hay prueba de que paguen 149.900.</li><li><b>Aspiradora de grooming (oneisall):</b> ~9 mil u/mes en EE. UU. a US$ 84,99, pero en Colombia no hay ventas verificadas por encima de 100 unidades y es pesada, eléctrica y con garantía.</li><li><b>Juguete interactivo para gato:</b> Vende mucho en EE. UU. (MeoHui ~30 mil u/mes) pero el ticket es bajo para contraentrega.</li><li><b>Placa con QR o porta AirTag:</b> En Colombia se vende desde 17.990 COP: sin barrera ni ticket.</li><li><b>Rascador, arenero y transportadora:</b> El volumen y el peso se comen el margen.</li><li><b>PVC Color-Swap y NightLoop (plan anterior):</b> Eran ideas sin prueba de venta. Las sustituyen productos que corrigen quejas reales de ganadores.</li><li><b>Temu como proveedor:</b> Sus condiciones en Colombia prohíben el uso comercial, no tiene contraentrega ni marca blanca y entrega en 8–14 días hábiles.</li></ul>
+  </div></details>
+</div></section>
+
+<section id="prueba"><div class="wrap">
+  <h2>Prueba de que son ganadores</h2>
+  <p class="small" style="margin-top:6px">Unidades al mes en EE. UU.: estimaciones de ASINSIGHT a partir del ranking de Amazon. Ventas en Colombia: contador de Mercado Libre (ventas acumuladas), consultado por ChatGPT el 15 nov 2026. Anuncios: Biblioteca de Meta, medida por Claude.</p>
+  <div class="tbl"><table><thead><tr><th>Producto</th><th>EE. UU.</th><th>Colombia</th><th>Coste máximo al proveedor</th></tr></thead><tbody><tr><td><b>Hamaca impermeable para carro</b><br><span class="small">Fase 1</span></td><td>URPOWER, hamaca impermeable (Amazon B0727Y5ZD7): <b>~9–10 mil u/mes · 46 mil reseñas · US$ 27,99</b></td><td>Petpal, protector de asiento (Mercado Libre): <b>+1.000 vendidos a 101.749 COP · #1 del ranking</b><br>Funda protectora de asiento (Mercado Libre): <b>+500 vendidos a 111.540 COP</b><br>Protector tipo silla negra (Mercado Libre): <b>+100 vendidos a 197.714 COP</b><br>Meta Ad Library: &quot;hamaca carro perro&quot;: <b>~8 anuncios de 1 anunciante (desde el 7 nov)</b></td><td class="n">$56.000</td></tr><tr><td><b>Fuente de acero para gatos + 4 filtros</b><br><span class="small">Fase 1</span></td><td>Fuente de acero inoxidable (Amazon B0DDPYHHFX): <b>~10 mil u/mes</b><br>Fuente Tomxcute (Amazon B0FJMF2T4J): <b>~7 mil u/mes</b><br>Filtros de recambio (varias marcas): <b>4–6 mil u/mes</b></td><td>52 BITS, acero 3,4 L (Mercado Libre): <b>+100 vendidos a 133.790 COP</b><br>Fuente de acero 2,5 L, 110 V (Mercado Libre): <b>+100 vendidos a 142.298 COP</b><br>Filtros de recambio x8 (Mercado Libre): <b>+1.000 vendidos a 39.420 COP</b><br>Meta Ad Library: &quot;fuente de agua para gatos&quot;: <b>~91 anuncios de 14 anunciantes</b></td><td class="n">$49.000</td></tr><tr><td><b>Kit casa sin pelo</b><br><span class="small">Fase 1</span></td><td>ChomChom, rodillo reutilizable (Amazon B00BAGTNAQ): <b>~20 mil u/mes · 204,7 mil reseñas</b><br>Cepillo de niebla para gatos (Amazon B0FGPLYLXM): <b>~9 mil u/mes a US$ 19,99</b></td><td>Cepillo de niebla (Mercado Libre): <b>+500 vendidos a 17.524 COP</b><br>Meta Ad Library: &quot;cepillo vapor mascotas&quot;: <b>~42 anuncios de 7 anunciantes, uno desde jun 2025</b><br>Meta Ad Library: &quot;rodillo quita pelo&quot;: <b>~10 anuncios de 4 anunciantes</b></td><td class="n">$34.000</td></tr><tr><td><b>Hamaca ALVOREN a medida</b><br><span class="small">Fase 2</span></td><td>Quejas recurrentes de URPOWER en reseñas: <b>ajuste universal imperfecto, aberturas del cinturón mal situadas, costuras y correas que ceden</b></td><td>Se valida con la fase 1</td><td class="n">$69.000</td></tr><tr><td><b>Rope-Lock</b><br><span class="small">Fase 2</span></td><td>Taglory, correa de cuerda (Amazon): <b>~8–10 mil u/mes a US$ 8,99 · 28.452 reseñas · #3 en correas</b></td><td>Correa de cuerda (Mercado Libre): <b>+500 vendidos a 21.061 COP</b></td><td class="n">$65.000</td></tr><tr><td><b>Fuente ALVOREN sin rincones</b><br><span class="small">Fase 2</span></td><td>Veken, fuente para gatos (Amazon): <b>~40 mil u/mes (dato de ChatGPT)</b><br>Quejas recurrentes de Veken: <b>ruido con poca agua, suciedad en rincones, bomba difícil de limpiar</b></td><td>Se valida con la fase 1</td><td class="n">$65.000</td></tr></tbody></table></div>
+  <div class="box"><b>Lo que dicen los números:</b> la hamaca es la más sólida (ventas en los dos países y casi nadie la anuncia en Meta). La fuente es la más justa: solo funciona si el coste puesto en Colombia es de 49.000 COP o menos; traerla en lote por mar cuesta ~56.500, así que depende de encontrarla en Dropi a buen precio.</div>
+</div></section>
+
+<section id="packs"><div class="wrap">
+  <h2>Packs: la palanca del margen</h2>
+  <p class="small" style="margin-top:6px">Con contraentrega cada pedido carga unos 65.000 COP fijos (flete, empaque, rechazos y publicidad). Si el cliente lleva 2 unidades en un mismo pedido, ese coste se reparte y la ganancia por pedido se multiplica. Descuentos acordados con ChatGPT: 12 % en la hamaca x2 y 10 % en la fuente y el kit x2. Sin estrellas, reseñas ni precios tachados inventados: el único ahorro que mostramos es el real del pack.</p>
+  <div class="tbl"><table><thead><tr><th>Pack</th><th>Precio</th><th>Queda por pedido</th><th>Margen neto proyectado</th></tr></thead><tbody>
+    <tr><td>Hamaca x1</td><td class="n">$169.900</td><td class="n">$28.213</td><td class="n">19,8 %</td></tr>
+    <tr><td><b>Hamaca x2 (recomendado)</b></td><td class="n">$299.000</td><td class="n">$82.664</td><td class="n">32,9 %</td></tr>
+    <tr><td>Hamaca x3</td><td class="n">$418.000</td><td class="n">$129.334</td><td class="n">36,8 %</td></tr>
+    <tr><td>Fuente + 4 filtros</td><td class="n">$159.900</td><td class="n">$20.510</td><td class="n">15,3 %</td></tr>
+    <tr><td><b>Fuente + 8 filtros (recomendado)</b></td><td class="n">$189.900</td><td class="n">$35.620</td><td class="n">22,3 %</td></tr>
+    <tr><td>2 fuentes + 8 filtros</td><td class="n">$287.800</td><td class="n">$66.036</td><td class="n">27,3 %</td></tr>
+    <tr><td>Kit casa sin pelo x1</td><td class="n">$129.900</td><td class="n">$17.733</td><td class="n">16,2 %</td></tr>
+    <tr><td><b>Kit x2 (recomendado)</b></td><td class="n">$233.800</td><td class="n">$67.771</td><td class="n">34,5 %</td></tr>
+  </tbody></table></div>
+  <div class="box"><b>Lo que hay que medir en el test:</b> qué porcentaje de pedidos elige un pack. Si uno de cada cuatro pedidos (25 %) lleva el pack recomendado, el margen medio sube a 24,6 % en la hamaca y 23,1 % en el kit. La fuente necesita que lo elija al menos el 65 % para llegar al 20 %, así que su pack con 8 filtros va marcado por defecto como recomendado.</div>
+</div></section>
+
+<section id="moodboard"><div class="wrap">
+  <h2>Mood board</h2>
+  <p class="small" style="margin-top:6px">Fase 1: fotos reales del proveedor del link, mismo artículo y color. Fase 2: renders de concepto (son productos que todavía no existen). Toca uno para abrirlo.</p>
+  <div class="mbg"><button class="mbi" data-id="d1" aria-label="Ver Hamaca impermeable para carro"><img src="mb-hamaca-1.jpg" alt="Hamaca impermeable para carro" loading="lazy"><span>Hamaca impermeable para carro</span></button><button class="mbi" data-id="d2" aria-label="Ver Fuente de acero para gatos + 4 filtros"><img src="mb-kivo-1.jpg" alt="Fuente de acero para gatos + 4 filtros" loading="lazy"><span>Fuente de acero para gatos + 4 filtros</span></button><button class="mbi" data-id="d3" aria-label="Ver Kit casa sin pelo"><img src="mb-rodillo-1.jpg" alt="Kit casa sin pelo" loading="lazy"><span>Kit casa sin pelo</span></button><button class="mbi" data-id="f1" aria-label="Ver Hamaca ALVOREN a medida"><img src="mb-hamacapro-1.jpg" alt="Hamaca ALVOREN a medida" loading="lazy"><span>Hamaca ALVOREN a medida</span></button><button class="mbi" data-id="f2" aria-label="Ver Rope-Lock"><img src="mb-cuerda-1.jpg" alt="Rope-Lock" loading="lazy"><span>Rope-Lock</span></button><button class="mbi" data-id="f3" aria-label="Ver Fuente ALVOREN sin rincones"><img src="mb-fuente-1.jpg" alt="Fuente ALVOREN sin rincones" loading="lazy"><span>Fuente ALVOREN sin rincones</span></button></div>
+</div></section>
+
+<section id="anuncios-est"><div class="wrap">
+  <h2>Anuncios estáticos para el test</h2>
+  <p class="small" style="margin-top:6px">Hechos con IA a partir de las fotos reales del proveedor, sin cambiar el producto. Así se prueba la demanda antes de comprar nada.</p>
+  <div class="adsg"><figure><img src="ad-hamaca-1.jpg" alt="Anuncio: Hamaca · funcional" loading="lazy"><figcaption>Hamaca · funcional</figcaption></figure><figure><img src="ad-hamaca-2.jpg" alt="Anuncio: Hamaca · estilo de vida" loading="lazy"><figcaption>Hamaca · estilo de vida</figcaption></figure><figure><img src="ad-fuente-1.jpg" alt="Anuncio: Fuente · funcional" loading="lazy"><figcaption>Fuente · funcional</figcaption></figure><figure><img src="ad-fuente-2.jpg" alt="Anuncio: Fuente · estilo de vida" loading="lazy"><figcaption>Fuente · estilo de vida</figcaption></figure><figure><img src="ad-rodillo-1.jpg" alt="Anuncio: Kit casa sin pelo · funcional" loading="lazy"><figcaption>Kit casa sin pelo · funcional</figcaption></figure><figure><img src="ad-rodillo-2.jpg" alt="Anuncio: Kit casa sin pelo · estilo de vida" loading="lazy"><figcaption>Kit casa sin pelo · estilo de vida</figcaption></figure></div>
+</div></section>
+
+<section id="landing"><div class="wrap">
+  <h2>Landings</h2>
+  <p>Una página de venta por producto, con la misma estética. Las de la fase 1 tienen pedido contraentrega; las de la fase 2 son lista de espera, para medir interés antes de fabricar.</p>
+  <div class="tbl"><table><thead><tr><th>Producto</th><th>Tipo</th><th></th></tr></thead><tbody><tr><td>Hamaca para carro</td><td>Pedido contraentrega</td><td><a href="alvoren-hamaca.html">Abrir</a></td></tr><tr><td>Fuente de acero para gatos</td><td>Pedido contraentrega</td><td><a href="alvoren-fuente.html">Abrir</a></td></tr><tr><td>Kit casa sin pelo</td><td>Pedido contraentrega</td><td><a href="alvoren-casa-sin-pelo.html">Abrir</a></td></tr><tr><td>Hamaca a medida</td><td>Lista de espera</td><td><a href="alvoren-hamaca-medida.html">Abrir</a></td></tr><tr><td>Correa Rope-Lock</td><td>Lista de espera</td><td><a href="alvoren-rope-lock.html">Abrir</a></td></tr><tr><td>Fuente sin rincones</td><td>Lista de espera</td><td><a href="alvoren-fuente-sin-rincones.html">Abrir</a></td></tr></tbody></table></div>
+</div></section>
+
+<section id="regla"><div class="wrap">
+  <h2>Regla de margen</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Condición</th><th>Para probar</th><th>Para escalar</th></tr></thead>
+    <tbody>
+      <tr><td>Margen neto con el CPA previsto</td><td><b>≥ 12 %</b></td><td><b>≥ 20 %</b></td></tr>
+      <tr><td>Margen neto si la publicidad sale un 40 % más cara</td><td>≥ 0 %</td><td>≥ 10 %</td></tr>
+      <tr><td>CPA máximo que aguanta ÷ CPA previsto</td><td>≥ 1,5 veces</td><td>≥ 1,7 veces</td></tr>
+      <tr><td>Precio ÷ coste del producto</td><td>orientativo ≥ 2,5</td><td>con datos reales</td></tr>
+    </tbody></table></div>
+  <div class="box"><b>El dato clave:</b> con contraentrega cada pedido entregado carga unos <b>$65.000 fijos</b> (flete, empaque, rechazos y publicidad). Por eso no vendemos piezas de $40.000: vendemos productos o kits de <b>$130.000 a $190.000</b>, y a cada proveedor le llevamos un <b>coste máximo</b> que no podemos pasar.</div>
+</div></section>
+
+<section id="pasos"><div class="wrap">
+  <h2>Ruta ALVOREN: marca propia validada antes de fabricar</h2>
+  <p class="small" style="margin-top:6px">Nace de la propuesta de Nico (15 nov): usar los más vendidos solo como orientación y ganar con identidad propia. ChatGPT y Claude la analizaron y quedó así: la inversión en producto es consecuencia de la validación, nunca el punto de partida. El dropshipping genérico pasa a ser plan B. Foco (acordado el 15 nov): la cápsula de paseo ALVOREN 01 con Rope-Lock como producto principal. Hamaca, fuente y kit quedan como referencia y plan B.</p>
+  <ol class="steps">
+    <li><b>Categorías probadas</b>Hamaca para carro (ventas en EE. UU. y Colombia, casi sin anuncios en Meta) y correa de cuerda (Taglory ~8–10 mil u/mes en EE. UU.; demanda universal, más competencia y ticket bajo, por eso se vende como set Rope-Lock de 189.900). <i>Corte:</i> ventas en los dos mercados y precio viable con contraentrega. Hecho.</li>
+    <li><b>Qué mejora ALVOREN</b>Convertir las quejas de los compradores en una ficha de diseño. Hamaca: ajuste por tipo de carro, puntos de tensión reforzados, cinturón accesible. Correa: mango que se cambia, remates reforzados, reflectante ensayado. <i>Corte:</i> al menos una mejora funcional que se pueda demostrar; color y logo solos no bastan.</li>
+    <li><b>Brandbook y landing conceptual</b>Brandbook que norma a la IA (ver abajo) y landing de la hamaca a medida con precio visible. <i>Corte:</i> ninguna imagen atribuye al producto algo que no tiene.</li>
+    <li><b>Validar interés y disposición a pagar</b>Tres formas de contar Rope-Lock (funcional, moda urbana y modular) con el mismo precio visible y el mismo tráfico frío, con «Solicitar acceso prioritario», sin cobro. Se muestra como concepto en desarrollo. Después, depósito reembolsable solo cuando haya condiciones y plazo confirmables. <i>Corte de aprendizaje:</i> mínimo 300 visitas cualificadas por producto, ~10 % de clic en reservar y ~10 % de solicitudes que pasan a depósito. <i>Gana</i> el enfoque con mayor contribución potencial por cada 100 visitantes, no solo el de más clics; además se mide qué color y qué pieza eligen. Si ninguno muestra intención suficiente, no se fabrica.</li>
+    <li><b>Cotizar y aprobar prototipo</b>Tres cotizaciones comparables (MOQ por color, personalización, coste puesto, flete, impuestos, plazos) y muestra física. <i>Corte:</i> muestra aprobada y margen proyectado ≥ 12 %, positivo con CPA +40 % y CPA de equilibrio ≥ 1,5 veces el objetivo.</li>
+    <li><b>Lote mínimo</b>Solo con caja para inventario, transporte, impuestos y contingencias, sin depender de cobrar todos los pedidos pendientes. Plazos de referencia: muestras 10–15 días hábiles; producción ~15 días para hasta 200 unidades; más envío y aduana.</li>
+    <li><b>Vender, medir y escalar</b>Con producto en Colombia se activa la contraentrega. Se mide pedido generado, confirmado, entregado y rechazado. <i>Corte para escalar:</i> ≥ 20 % de contribución neta real.</li>
+  </ol>
+  <div class="box"><b>Lo que cambia:</b> la pregunta de Nico «¿por qué nos escogería el cliente?» no tenía respuesta para la hamaca genérica: en Mercado Libre se vende desde 29 mil y una con más de 1.000 ventas cuesta 101.749. Una foto más bonita no justifica 169.900. La respuesta tiene que ser una mejora real del producto. <b>Caja de referencia del primer lote de 100 hamacas:</b> 5,8–9 M COP (estimación de ChatGPT, no cotización).</div>
+  <p style="margin-top:14px"><a class="cta-l" href="alvoren-brandbook.html">Abrir el brandbook</a></p>
+</div></section>
+
+<section id="marca"><div class="wrap">
+  <h2>La marca</h2>
+  <p class="lead">Un solo nombre propio, elegante, que suene a casa de diseño y no a tienda de mascotas. Claude y ChatGPT propusieron 10 nombres cada uno, se criticaron entre sí y dejaron 3 finalistas. Después un panel de tráfico frío votó.</p>
+  <div class="lux"><div class="kicker">Nombre recomendado</div><div class="bname">ALVOREN</div><p class="bline">Diseñado para permanecer.</p></div>
+  <div class="brand"><div class="bcard win"><div class="bname" style="font-size:24px">ALVOREN</div><p class="bline">«Diseñado para permanecer.»</p><p class="small" style="margin-top:8px">Sonido de casa de diseño, sobrio y unisex. Funciona igual en una placa metálica, una caja o una etiqueta de lino. No encontramos ninguna marca comercial con ese nombre.</p><p class="small" style="margin-top:6px"><b>Dominio:</b> alvoren.co y alboren.co disponibles · alvoren.com ocupado</p></div><div class="bcard"><div class="bname" style="font-size:24px">VANREL</div><p class="bline">«Forma. Función. Permanencia.»</p><p class="small" style="margin-top:8px">Corto, fácil de decir y el más recordado bien escrito. Pero suena frío y técnico: en el panel muchos pensaron en tecnología o autos.</p><p class="small" style="margin-top:6px"><b>Dominio:</b> vanrel.co disponible · vanrel.com ocupado</p></div><div class="bcard"><div class="bname" style="font-size:24px">ISELLE</div><p class="bline">«La belleza de lo cotidiano.»</p><p class="small" style="margin-top:8px">El más delicado y el que más lujo transmite, pero ya existe una marca de belleza Iselle y casi la mitad duda al pronunciarlo.</p><p class="small" style="margin-top:6px"><b>Dominio:</b> iselle.com ocupado</p></div></div>
+  <h3 style="margin-top:22px">Panel de tráfico frío (simulación)</h3>
+<p class="small" style="margin-top:4px">Un agente de IA simuló a 30 personas de Bogotá, Medellín, Cali, Barranquilla y Bucaramanga (22–50 años, dueños de perro o gato) que nunca habían visto la marca. Cada una vio los 3 nombres 3 segundos, sin logo, y 5 minutos después tuvo que recordarlos. <b>Es una simulación, no personas reales</b>: la semana 2 se repite con 20–30 personas reales (test de 5 segundos).</p>
+<div class="tbl"><table><thead><tr><th>Métrica</th><th>ALVOREN</th><th>VANREL</th><th>ISELLE</th></tr></thead><tbody>
+<tr><td>Recuerdan el nombre bien escrito</td><td class="n">30 %</td><td class="n"><b>40 %</b></td><td class="n">20 %</td></tr>
+<tr><td>Recuerdan el nombre (aunque mal escrito)</td><td class="n">50 %</td><td class="n">57 %</td><td class="n"><b>60 %</b></td></tr>
+<tr><td>Dudan al pronunciarlo</td><td class="n">17 %</td><td class="n"><b>10 %</b></td><td class="n">47 %</td></tr>
+<tr><td>Sensación de lujo (1–10)</td><td class="n">6,8</td><td class="n">5,4</td><td class="n"><b>7,3</b></td></tr>
+<tr><td>Confianza para pagar 170.000 (1–10)</td><td class="n"><b>6,1</b></td><td class="n">5,6</td><td class="n">6,0</td></tr>
+<tr><td>Lo asocian a cosmética</td><td class="n">20 %</td><td class="n">7 %</td><td class="n">50 %</td></tr>
+<tr><td>Lo asocian a tecnología, finanzas o autos</td><td class="n">—</td><td class="n">54 %</td><td class="n">—</td></tr>
+<tr><td><b>Lo prefieren</b></td><td class="n"><b>40 %</b></td><td class="n">23 %</td><td class="n">37 %</td></tr>
+</tbody></table></div>
+<p class="small" style="margin-top:12px"><b>Ejemplos de respuestas generadas en la simulación de IA; no son personas reales.</b></p><ul class="dots" style="margin-top:6px">
+<li>"Alvoren es el más sobrio. Suena a madera, a lino, a algo que no grita." — perfil simulado</li>
+<li>"Vanrel parece una app de inversiones o una marca de llantas." — perfil simulado</li>
+<li>"Iselle es lujo, pero lujo de perfumería, no silencioso." — perfil simulado</li>
+<li>"Lo escribí 'Alboren' con b." — perfil simulado</li>
+</ul>
+<div class="box"><b>Dictamen:</b> gana <b>ALVOREN</b>. Es el que más gente prefiere, el que más confianza da para pagar y el que mejor transmite lujo silencioso sin sonar a cosmética. Riesgos: la confusión b/v (por eso también reservamos alboren.co) y que nadie lo asocia a mascotas, así que el anuncio debe mostrar el producto desde el primer segundo. <b>Reservar ya:</b> alvoren.co y alboren.co (disponibles hoy, US$ 24 cada uno; alvoren.com está ocupado). Antes de invertir en logo: búsqueda en la SIC, clases 18, 21 y 35.</div>
+<details class="more" style="margin-top:14px;border:1px solid var(--line);border-radius:12px"><summary>Cómo llegamos aquí: 20 nombres y la crítica cruzada</summary><div>
+<ul>
+<li><b>Ronda 1 (descartada por Sebastián):</b> nombres con significado (Oliva, Sendero, Canterra) e inventados (Nolua, Tavua, Caluma). Sebastián pidió un solo nombre propio, elegante, de lujo silencioso.</li>
+<li><b>Claude propuso:</b> Auren, Solene, Odile, Liora, Varenne, Maelle, Iselle, Alden, Maren, Veluma.</li>
+<li><b>ChatGPT los tumbó con datos:</b> Auren ya es ropa en Colombia; Solene, Maelle, Liora, Iselle y Veluma ya existen en belleza o cosmética; Varenne y Odile, en moda y lifestyle; Alden es una marca de zapatos de 1884; Maren, ropa minimalista.</li>
+<li><b>ChatGPT propuso:</b> Alvoren, Vanrel, Orelan, Vanelor, Selren, Melvor, Neraven, Navelor, Lavren, Velren.</li>
+<li><b>Claude los criticó:</b> Lavren (perfume) y Velren (ropa) ya existen; Navelor empieza por "navel" (ombligo) en inglés; Orelan ya se usa en software y su .com está ocupado; Melvor y Selren suenan industriales.</li>
+<li><b>Finalistas cruzados:</b> Alvoren y Vanrel (ChatGPT) e Iselle (Claude, condicionado por la marca de belleza).</li>
+</ul></div></details>
+</div></section>
+<div id="mas" style="padding-top:20px"></div>
+<details class="more" id="operacion"><summary>Modelo de operación: de dropshipping a marca propia</summary><div>
+  <div class="tbl"><table><thead><tr><th>Etapa</th><th>Cómo</th><th>Cuándo</th></tr></thead><tbody>
+    <tr><td><b>1. Test</b></td><td>Anuncios hechos con fotos del proveedor. Si el mismo artículo está en Dropi (stock en Colombia, contraentrega, 2–5 días), se vende normal; si no, en preventa. Nuestra marca va en la tienda, los anuncios y la tarjeta del pedido.</td><td>Semanas 1–4</td></tr>
+    <tr><td><b>2. Lote propio</b></td><td>Si un producto pasa la regla, pedimos 100–300 unidades a la fábrica de Alibaba con nuestro empaque, por mar, y lo despacha un operador logístico de Dropi. Ahí ya es <b>ALVOREN</b> de verdad.</td><td>Con 2–3 meses de ventas</td></tr>
+    <tr><td><b>3. Fabricación</b></td><td>Prototipo, prueba de resistencia y revisión de diseños registrados de la hamaca a medida, Rope-Lock o la fuente sin rincones.</td><td>Con caja de la etapa 2</td></tr>
+  </tbody></table></div>
+  <p class="small" style="margin-top:8px">¿Por qué no enviar desde China pedido a pedido? AliExpress tarda 8–17 días, CJ hay que cotizarlo y no hay contraentrega; una fuente de 830 g pagaría US$ 17,5 de envío solo a EE. UU. Rompe la regla de 7–10 días hábiles.</p>
+</div></details>
+
+<details class="more" id="anuncios"><summary>Mercado: anuncios activos en Colombia</summary><div>
+  <p>Medido por Claude el 15 nov 2026 en la Biblioteca de anuncios de Meta (Colombia, anuncios activos). Muchos anuncios prueban <b>actividad</b>, no ventas rentables.</p>
+  <div class="tbl"><table><thead><tr><th>Búsqueda</th><th>Anuncios</th><th>Anunciantes</th><th>Más antiguo</th><th>Lectura</th></tr></thead><tbody><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=rascador%20gato&search_type=keyword_unordered" target="_blank" rel="noopener">rascador gato</a></td><td class="n">~160</td><td class="n">13</td><td>abr 2026</td><td>Mucha competencia; voluminoso</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=gps%20mascotas&search_type=keyword_unordered" target="_blank" rel="noopener">gps mascotas</a></td><td class="n">~94</td><td class="n">20</td><td>mar 2026</td><td>Casi todo GPS genérico</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=fuente%20de%20agua%20para%20gatos&search_type=keyword_unordered" target="_blank" rel="noopener">fuente de agua para gatos</a></td><td class="n">~91</td><td class="n">14</td><td>may 2026</td><td>Demanda probada → elegido</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=arnes%20perro&search_type=keyword_unordered" target="_blank" rel="noopener">arnes perro</a></td><td class="n">~83</td><td class="n">16</td><td>ene 2026</td><td>Muy competido → descartado</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=aspiradora%20mascotas&search_type=keyword_unordered" target="_blank" rel="noopener">aspiradora mascotas</a></td><td class="n">~66</td><td class="n">9</td><td>—</td><td>Hay anunciantes grandes (Kärcher)</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=cepillo%20vapor%20mascotas&search_type=keyword_unordered" target="_blank" rel="noopener">cepillo vapor mascotas</a></td><td class="n">~42</td><td class="n">7</td><td>jun 2025</td><td>Más de 1 año anunciando → en el kit</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=pelota%20interactiva%20gato&search_type=keyword_unordered" target="_blank" rel="noopener">pelota interactiva gato</a></td><td class="n">~15</td><td class="n">5</td><td>—</td><td>Ticket bajo</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=rodillo%20quita%20pelo&search_type=keyword_unordered" target="_blank" rel="noopener">rodillo quita pelo</a></td><td class="n">~10</td><td class="n">4</td><td>—</td><td>Poca competencia → en el kit</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=hamaca%20carro%20perro&search_type=keyword_unordered" target="_blank" rel="noopener">hamaca carro perro</a></td><td class="n">~8</td><td class="n">1</td><td>7 nov 2026</td><td>Casi vacío y con ventas en Mercado Libre → elegido #1</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=arnes%20antitirones&search_type=keyword_unordered" target="_blank" rel="noopener">arnes antitirones</a></td><td class="n">~8</td><td class="n">4</td><td>—</td><td>Sets baratos en Colombia</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=correa%20manos%20libres%20perro&search_type=keyword_unordered" target="_blank" rel="noopener">correa manos libres perro</a></td><td class="n">~4</td><td class="n">2</td><td>jun 2026</td><td>Sin prueba de venta → reserva</td></tr><tr><td><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q=forro%20silla%20carro%20perro&search_type=keyword_unordered" target="_blank" rel="noopener">forro silla carro perro</a></td><td class="n">~3</td><td class="n">—</td><td>—</td><td>Confirma el hueco de la hamaca</td></tr></tbody></table></div>
+</div></details>
+
+<details class="more" id="marketing"><summary>Marketing: ángulos, prueba A/B y presupuesto</summary><div>
+  <div class="two">
+    <div class="card"><h3>Ángulo funcional</h3><p class="small" style="margin-top:6px">Problema → demostración → resultado. Para tráfico frío.</p></div>
+    <div class="card"><h3>Ángulo lifestyle</h3><p class="small" style="margin-top:6px">Vínculo, estética, momentos cotidianos. Alternativo del mismo producto.</p></div>
+  </div>
+  <ul>
+    <li>Mismo producto, precio y público; solo cambia el ángulo. Gana el de menor coste por compra entregada.</li>
+    <li>Presupuesto máximo: 450.000–600.000 COP por producto.</li>
+    <li>Tono de marca: pocas palabras, fotos limpias, colores tierra, sin gritos ni "¡OFERTA!".</li>
+    <li>No prometemos lo que no está probado: ni "evita tirones" ni beneficios médicos.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="identidad"><summary>Identidad de marca ALVOREN</summary><div>
+  <div class="two">
+    <div class="card"><h3>Tono</h3><ul class="small"><li>Pocas palabras. Frases cortas y tranquilas.</li><li>Sin signos de exclamación, sin "¡OFERTA!", sin emojis.</li><li>Hablamos de materiales, de calma y de vida diaria, no de descuentos.</li></ul></div>
+    <div class="card"><h3>Línea de marca</h3><p style="margin-top:6px"><i>Diseñado para permanecer.</i></p><p class="small" style="margin-top:6px">Objetos para vivir con perros y gatos, hechos para durar y verse bien en casa.</p></div>
+  </div>
+  <div class="two">
+    <div class="card"><h3>Paleta</h3><div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+      <span style="width:54px;height:54px;border-radius:10px;background:#5c5e3b" title="Oliva #5C5E3B"></span>
+      <span style="width:54px;height:54px;border-radius:10px;background:#ece5d6;border:1px solid var(--line)" title="Crema #ECE5D6"></span>
+      <span style="width:54px;height:54px;border-radius:10px;background:#b0643a" title="Terracota #B0643A"></span>
+      <span style="width:54px;height:54px;border-radius:10px;background:#a9a39a" title="Piedra #A9A39A"></span>
+      <span style="width:54px;height:54px;border-radius:10px;background:#111" title="Negro #111111"></span></div>
+      <p class="small" style="margin-top:6px">Oliva, crema, terracota, piedra y negro. Herrajes en metal mate.</p></div>
+    <div class="card"><h3>Tipografía y empaque</h3><ul class="small"><li>Logo: ALVOREN en mayúsculas espaciadas, serif fina.</li><li>Textos: sans limpia.</li><li>Empaque: caja crema sin plástico, sello en relieve y tarjeta con el nombre de la mascota escrito a mano en los primeros pedidos.</li></ul></div>
+  </div>
+</div></details>
+
+<details class="more" id="copys"><summary>Anuncios listos para probar (2 por producto)</summary><div>
+  <div class="tbl"><table><thead><tr><th>Producto</th><th>Funcional (tráfico frío)</th><th>Lifestyle</th></tr></thead><tbody>
+    <tr><td><b>Hamaca para carro</b></td><td><b>¿Tu perro deja el carro lleno de pelo y barro?</b><br>La hamaca ALVOREN cubre todo el asiento trasero: impermeable, acolchada y antideslizante. Se quita y se sacude en un minuto. Pago contraentrega.</td><td><b>Todos los planes, con él.</b><br>Viajes, parque y veterinario sin pensar en la tapicería.</td></tr>
+    <tr><td><b>Fuente de acero</b></td><td><b>Si limpiar la fuente de tu gato es una tortura, esta se lava en un minuto.</b><br>Acero inoxidable 304, ventana de nivel y 4 filtros incluidos para 2 meses.</td><td><b>Agua que se mueve. Una casa en calma.</b><br>Una fuente que se ve bien en tu cocina y que tu gato quiere usar.</td></tr>
+    <tr><td><b>Kit casa sin pelo</b></td><td><b>¿Pelo en el sofá, en la ropa y en la cama?</b><br>Rodillo reutilizable que no necesita repuestos y cepillo de niebla que saca el pelo suelto antes de que caiga.</td><td><b>Tu casa, como antes del pelo.</b><br>Recibe visitas sin pedir perdón por el sofá.</td></tr>
+  </tbody></table></div>
+  <p class="small" style="margin-top:8px">Vídeo de 15–20 s: los 2 primeros segundos muestran el producto en uso. Sin promesas que no hayamos probado.</p>
+</div></details>
+
+<details class="more" id="numeros"><summary>Calculadora de margen</summary><div>
+  <div class="calc">
+    <div>
+      <div class="field"><label for="cp">Precio al cliente (IVA incluido) <output id="cpo"></output></label><input type="range" id="cp" min="59900" max="259900" step="5000" value="169900"></div>
+      <div class="field"><label for="cc">Coste del producto <output id="cco"></output></label><input type="range" id="cc" min="5000" max="120000" step="1000" value="40000"></div>
+      <div class="field"><label for="cf">Flete nacional <output id="cfo"></output></label><input type="range" id="cf" min="0" max="30000" step="1000" value="15000"></div>
+      <div class="field"><label for="cd">Pedidos que no se entregan <output id="cdo"></output></label><input type="range" id="cd" min="0" max="40" step="1" value="25"></div>
+      <div class="field"><label for="ca">Publicidad por pedido generado (CPA) <output id="cao"></output></label><input type="range" id="ca" min="5000" max="60000" step="1000" value="20000"></div>
+      <p class="small">Fijos: comisiones 7 % · empaque y confirmación 3.000 · cada pedido no entregado cuesta 31.000.</p>
+    </div>
+    <div aria-live="polite">
+      <div class="rrow"><span>Precio sin IVA</span><b id="k1"></b></div>
+      <div class="rrow"><span>− Producto</span><span id="k2"></span></div>
+      <div class="rrow"><span>− Flete, comisiones y empaque</span><span id="k3"></span></div>
+      <div class="rrow"><span>− Pedidos no entregados</span><span id="k4"></span></div>
+      <div class="rrow"><span>− Publicidad por pedido entregado</span><span id="k5"></span></div>
+      <div class="rrow"><span><b>Queda por pedido entregado</b></span><b id="k6"></b></div>
+      <div class="rrow"><span>Margen bruto · neto</span><b id="k7"></b></div>
+      <div class="rrow"><span>Precio mínimo para no perder</span><b id="k8"></b></div>
+      <div class="verdict" id="kv"></div>
+    </div>
+  </div>
+</div></details>
+
+<details class="more" id="finanzas"><summary>Finanzas: cuánto hay que poner y cuánto deja</summary><div>
+  <h3>Inversión para el test (fase 1)</h3>
+  <div class="tbl"><table><thead><tr><th>Concepto</th><th>COP</th></tr></thead><tbody>
+    <tr><td>Publicidad de prueba (3 productos × 600.000 máximo)</td><td class="n">1.800.000</td></tr>
+    <tr><td>Muestras (plan B, solo si hacen falta)</td><td class="n">0–250.000</td></tr>
+    <tr><td>Tienda Shopify Basic (1 mes, ~US$ 39)</td><td class="n">~130.000</td></tr>
+    <tr><td>Dominios alvoren.co + alboren.co (US$ 48)</td><td class="n">~160.000</td></tr>
+    <tr><td>Cuenta de Dropi e IA para anuncios</td><td class="n">0–90.000</td></tr>
+    <tr class="tot"><td><b>Total máximo</b></td><td class="n"><b>~2.300.000</b></td></tr>
+  </tbody></table></div>
+  <p class="small" style="margin-top:8px"><b>Caja aparte (estimada):</b> 1–1,5 M COP para pagar producto y fletes de pedidos que ya se entregaron pero cuyo recaudo contraentrega todavía no llega, y para devoluciones.</p>
+  <h3 style="margin-top:16px">Lo que deja cada pedido entregado (contribución proyectada con costes estimados)</h3>
+  <div class="tbl"><table><thead><tr><th>Producto</th><th>Precio</th><th>Queda por pedido</th><th>Pedidos al mes para 5 M COP de beneficio</th></tr></thead><tbody><tr><td>Hamaca impermeable para carro</td><td class="n">$169.900</td><td class="n">$28.213</td><td class="n">178</td></tr><tr><td>Fuente de acero para gatos + 4 filtros</td><td class="n">$159.900</td><td class="n">$20.510</td><td class="n">244</td></tr><tr><td>Kit casa sin pelo</td><td class="n">$129.900</td><td class="n">$17.733</td><td class="n">282</td></tr></tbody></table></div>
+  <h3 style="margin-top:16px">Siguientes inversiones (solo si el test sale bien)</h3>
+  <ul>
+    <li><b>Lote propio con marca (etapa 2):</b> 100 hamacas ≈ 4,8 M COP por mar; 100 fuentes ≈ 5,7 M COP; 100 kits ≈ 3,9 M COP.</li>
+    <li><b>Fabricación (etapa 3):</b> muestras de US$ 5–50 y pedido mínimo de 300–500 unidades por diseño nuevo ≈ 9–24 M COP. Se paga con la caja de la etapa 2.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="riesgos"><summary>Riesgos y cómo los cubrimos</summary><div>
+  <ul>
+    <li><b>Costes estimados:</b> ningún margen está confirmado hasta tener el precio de Dropi. Cada producto tiene un coste máximo; si el proveedor lo pasa, se descarta.</li><li><b>Preventa:</b> si un artículo no está en Dropi, la preventa debe decir la fecha real de entrega.</li>
+    <li><b>Rechazos en contraentrega:</b> calculamos 25 %. Confirmar cada pedido por WhatsApp antes de despachar.</li>
+    <li><b>Calidad del cepillo y la fuente:</b> hay reseñas de mala calidad. Si las fotos y vídeos no convencen, muestra (plan B).</li><li><b>Fuente:</b> el título del proveedor dice batería y las fotos, enchufe. Confirmarlo antes de anunciar.</li>
+    <li><b>Voltaje:</b> en Colombia se usa 110 V. Fuente USB o 110 V, nunca 220 V.</li>
+    <li><b>Copias de diseño:</b> revisar diseños registrados antes de fabricar y registrar la marca en la SIC.</li>
+    <li><b>Dependencia de un producto viral:</b> la marca es el activo; los productos rotan.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="debate"><summary>Claude vs ChatGPT: en qué no estábamos de acuerdo</summary><div>
+  <ul>
+    <li><b>Margen:</b> ChatGPT quería 18 % para todo. Quedó 12 % para probar y 20 % para escalar, con prueba de estrés de publicidad.</li>
+    <li><b>Orden de los productos:</b> Claude puso primero la fuente; ChatGPT subió la hamaca al número 1 por tener ventas a más de 100.000 COP en Colombia. Aceptado.</li>
+    <li><b>Arnés + correa:</b> Claude lo proponía; ChatGPT mostró que en Colombia los sets con ventas cuestan 20–35 mil COP. Descartado.</li>
+    <li><b>Fuente propia:</b> Claude proponía la bomba inalámbrica como novedad; ChatGPT mostró que Petlibro ya la vende. Ahora la diferencia es el sistema completo de limpieza.</li>
+    <li><b>Precio de la fuente:</b> ChatGPT proponía 149.900; Claude lo subió a 159.900 porque con 149.900 solo cumple si el proveedor cuesta menos de 42.000.</li>
+    <li><b>Kit manos libres (Idea de Nico):</b> los dos coincidimos en que hoy no tiene prueba de venta en Colombia. Queda en reserva.</li>
+    <li><b>Marca:</b> Sebastián pidió un nombre propio elegante, de lujo silencioso, y cambiamos los dos de propuesta.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="grupo"><summary>Ideas del equipo</summary><div>
+  <ul>
+    <li><b>Idea de Nico:</b> kit de paseo manos libres (en reserva: vende en EE. UU., falta prueba en Colombia) y chaleco con cremallera lateral (en I+D).</li>
+    <li><b>Idea de Julieth:</b> los pines de correas de cuerda cruzada inspiraron <b>Rope-Lock</b>, que además está respaldada por las ventas de Taglory en EE. UU.</li>
+  </ul>
+</div></details>
+
+<details class="more" id="fuentes"><summary>Fuentes</summary><div>
+  <ul class="small"><li><a href="https://www.amazon.com/Best-Sellers-Pet-Supplies-Dog-Collars-Harnesses-Leashes/zgbs/pet-supplies/2975312011" target="_blank" rel="noopener">Amazon Best Sellers EE. UU.: collares, arneses y correas para perro</a></li><li><a href="https://asinsight.com/" target="_blank" rel="noopener">ASINSIGHT: estimaciones de unidades al mes en Amazon</a></li><li><a href="https://www.amazon.com/dp/B0727Y5ZD7" target="_blank" rel="noopener">Amazon: URPOWER, hamaca para carro (B0727Y5ZD7)</a></li><li><a href="https://www.amazon.com/dp/B00BAGTNAQ" target="_blank" rel="noopener">Amazon: ChomChom, rodillo quitapelo (B00BAGTNAQ)</a></li><li><a href="https://www.amazon.com/dp/B0DDPYHHFX" target="_blank" rel="noopener">Amazon: fuente de acero para gatos (B0DDPYHHFX)</a></li><li><a href="https://www.amazon.com/dp/B0FGPLYLXM" target="_blank" rel="noopener">Amazon: cepillo de niebla para gatos (B0FGPLYLXM)</a></li><li><a href="https://listado.mercadolibre.com.co/protector-asiento-perro-carro" target="_blank" rel="noopener">Mercado Libre Colombia: protectores de asiento para mascotas</a></li><li><a href="https://listado.mercadolibre.com.co/fuente-agua-gato-acero" target="_blank" rel="noopener">Mercado Libre Colombia: fuentes de acero para gatos</a></li><li><a href="https://www.facebook.com/ads/library/" target="_blank" rel="noopener">Biblioteca de anuncios de Meta (Colombia)</a></li><li><a href="https://petlibro.com/" target="_blank" rel="noopener">Petlibro Dockstream: bomba inalámbrica ya existe</a></li><li><a href="https://dropi.co/" target="_blank" rel="noopener">Dropi Colombia</a></li><li><a href="https://www.alibaba.com/" target="_blank" rel="noopener">Alibaba</a></li><li><a href="https://www.aliexpress.com/" target="_blank" rel="noopener">AliExpress</a></li><li><a href="https://www.comstock-interactivedata.com/best-pet-water-fountains-for-cats/" target="_blank" rel="noopener">Quejas de fuentes: ruido con poca agua</a></li><li><a href="https://www.desertcart.co.za/products/655425661-cat-steam-brush-cat-brushes-for-indoor-cats-4-in" target="_blank" rel="noopener">Reseñas de cepillos de niebla: &quot;no funciona&quot;, &quot;niebla, no vapor&quot;</a></li><li><a href="https://www.dolar-colombia.com/2026-11-11" target="_blank" rel="noopener">TRM ~3.297 COP/USD (11 nov 2026)</a></li><li><a href="https://kurs.com.ua/en/novost/1488023-kurs-valjut-nbu-na-12-listopada" target="_blank" rel="noopener">Tipo de cambio UAH/USD (BNU, nov 2026)</a></li><li>Ventas de Mercado Libre, quejas de reseñas (URPOWER, Veken, Taglory) y análisis de Temu: ChatGPT, con sus fuentes en la conversación del 15 nov 2026.</li></ul>
+</div></details>
+
+<footer><div class="wrap">Business plan del equipo · Sebastián, Nico y Julieth · 15 nov 2026. Márgenes = simulaciones con costes estimados. Cada link de proveedor fue abierto por Claude el 15 nov 2026 y muestra el artículo y color descritos.</div></footer>
+
+<dialog id="pd" aria-labelledby="pdT">
+  <div class="pdh"><div><div class="k" id="pdK"></div><h2 id="pdT"></h2></div><button id="pdX" aria-label="Cerrar">×</button></div>
+  <div id="pdB"></div>
+</dialog>
+<script>
+const PD=[{"id": "d1", "col": "drop", "rank": 1, "slug": "hamaca", "name": "Hamaca impermeable para carro", "idea": null, "pet": "Perro", "sub": "Negra acolchada en rombos, ribete naranja, Oxford 600D, con ventana de malla y bolsillo", "P": 169900, "C": 45000, "cpa": 22000, "why": "Es el producto con la prueba de venta más fuerte de los 10 que revisamos, en los dos mercados y a ticket alto: en EE. UU. la hamaca URPOWER vende ~9–10 mil unidades al mes con 46 mil reseñas, y en Colombia una hamaca de Petpal lleva más de 1.000 ventas a 101.749 COP y otra más de 100 a 197.714 COP. Y en Meta casi nadie la anuncia (unos 8 anuncios de 1 anunciante): la demanda existe en marketplace pero la publicidad está vacía.", "ev": {"us": [["URPOWER, hamaca impermeable (Amazon B0727Y5ZD7)", "~9–10 mil u/mes · 46 mil reseñas · US$ 27,99", "https://www.amazon.com/dp/B0727Y5ZD7"]], "co": [["Petpal, protector de asiento (Mercado Libre)", "+1.000 vendidos a 101.749 COP · #1 del ranking", "https://listado.mercadolibre.com.co/protector-asiento-perro-carro"], ["Funda protectora de asiento (Mercado Libre)", "+500 vendidos a 111.540 COP", "https://listado.mercadolibre.com.co/protector-asiento-perro-carro"], ["Protector tipo silla negra (Mercado Libre)", "+100 vendidos a 197.714 COP", "https://listado.mercadolibre.com.co/protector-asiento-perro-carro"], ["Meta Ad Library: \"hamaca carro perro\"", "~8 anuncios de 1 anunciante (desde el 7 nov)", null]]}, "pains": ["Pelo, barro y babas en la tapicería después de cada paseo o visita al veterinario.", "El perro se resbala o intenta pasarse al asiento delantero.", "Fundas \"universales\" que no ajustan: las aberturas del cinturón quedan mal y se mueven (queja frecuente en URPOWER).", "Costuras y correas que se rompen a los pocos meses."], "desires": ["Llevar al perro a todas partes sin pensar en el carro.", "Un carro que siga oliendo y viéndose limpio.", "Que el perro vaya tranquilo y seguro atrás."], "angle": "\"Tu carro, impecable. Tu perro, contigo.\" Antes y después: perro mojado y con barro, asiento limpio al quitar la hamaca.", "design": "Mismo SKU del proveedor: negra acolchada, ribete naranja, malla central. Pedir medidas exactas y fotos del revés antideslizante.", "ads": ["hamaca carro perro", "~8", "1", "7 nov 2026"], "market": ["Precios en Mercado Libre: de 28.952 (genéricas) a 197.714 COP. Vamos a 169.900 con fotos de marca, garantía y contraentrega.", "https://listado.mercadolibre.com.co/protector-asiento-perro-carro", "Mercado Libre"], "risk": "Producto voluminoso (1,3 kg): el flete nacional puede subir. Talla única: avisar medidas claras para evitar devoluciones.", "mat": ["Tela Oxford 600D con recubrimiento de PVC (impermeable)", "Relleno acolchado de poliéster", "Base de caucho antideslizante", "Correas de nylon con hebillas de plástico"], "imgs": ["alv-hamaca-hero.jpg", "mb-hamaca-1.jpg", "mb-hamaca-2.jpg", "mb-hamaca-3.jpg", "mb-hamaca-4.jpg"], "imgnote": "La primera es un anuncio hecho con IA a partir de las fotos reales del proveedor; las otras 4 son las fotos del proveedor.", "sup": [{"n": "Ningbo J.E Import & Export (marca Shine-E) · Alibaba", "u": "https://www.alibaba.com/product-detail/URPOWER-100-Waterproof-Dog-Car-Seat_1601462195072.html", "t": "Fábrica · MOQ 100 · este es el SKU de las fotos", "d": "Hamaca negra acolchada con ribete naranja, Oxford 600D + PVC, 504 vendidos. 359–375 UAH (US$ 7,9–8,3) por unidad. Sirve para pedir fotos y el lote con marca.", "v": "Comprobado"}, {"n": "Dropi · mismo artículo con stock en Colombia", "u": "https://dropi.co/", "t": "Local · contraentrega · 2–5 días", "d": "Para vender sin stock hay que encontrar este mismo modelo en Dropi (el catálogo se ve con cuenta). Si no está igual, no se usa: se pasa a preventa con el lote de Alibaba.", "v": "Pendiente de cuenta"}], "lot": {"what": "Hamaca Shine-E + empaque de marca", "fob": 8.1, "kg": 1.3, "air": 76155, "sea": 47841}, "e": {"P": 169900, "net": 142773, "C": 45000, "F": 15000, "emp": 3000, "comm": 11893, "dev": 10333, "ads": 29333, "cpa": 22000, "prof": 28213, "gross": 68.5, "mp": 19.8, "mp40": 11.5, "be": 133275, "be_cpa": 43160, "be_x": 1.96, "mult": 3.8}, "v": ["ok", "Cumple la regla para probar"], "maxc": 56000, "maxc_s": 44000, "land": "alvoren-hamaca.html"}, {"id": "d2", "col": "drop", "rank": 2, "slug": "kivo", "name": "Fuente de acero para gatos + 4 filtros", "idea": null, "pet": "Gato", "sub": "Acero inoxidable 304 plateado, 2,2 L, ventana de nivel, con 4 filtros (2 meses) y guía de limpieza", "P": 159900, "C": 45000, "cpa": 22000, "why": "Es la categoría de gato con más ventas comprobadas: en EE. UU. las fuentes de acero venden ~10 mil unidades al mes y los filtros 4–6 mil (recompra). En Colombia hay dos fuentes de acero con más de 100 ventas a 133–142 mil COP y filtros sueltos con más de 1.000 ventas. No hay hueco vacío, así que la ventaja es el kit: 4 filtros incluidos y limpieza en 1 minuto.", "ev": {"us": [["Fuente de acero inoxidable (Amazon B0DDPYHHFX)", "~10 mil u/mes", "https://www.amazon.com/dp/B0DDPYHHFX"], ["Fuente Tomxcute (Amazon B0FJMF2T4J)", "~7 mil u/mes", "https://www.amazon.com/dp/B0FJMF2T4J"], ["Filtros de recambio (varias marcas)", "4–6 mil u/mes", null]], "co": [["52 BITS, acero 3,4 L (Mercado Libre)", "+100 vendidos a 133.790 COP", "https://listado.mercadolibre.com.co/fuente-agua-gato-acero"], ["Fuente de acero 2,5 L, 110 V (Mercado Libre)", "+100 vendidos a 142.298 COP", "https://listado.mercadolibre.com.co/fuente-agua-gato-acero"], ["Filtros de recambio x8 (Mercado Libre)", "+1.000 vendidos a 39.420 COP", "https://listado.mercadolibre.com.co/filtros-fuente-gato"], ["Meta Ad Library: \"fuente de agua para gatos\"", "~91 anuncios de 14 anunciantes", null]]}, "pains": ["Limpiar la bomba y los rincones es una tortura (queja #1 de Veken).", "Ruido o vibración cuando baja el agua.", "Baba y sarro en las juntas; filtros caros que solo sirven para una marca.", "Plástico que se raya y guarda bacterias."], "desires": ["Que el gato tome más agua y esté sano, sin trabajo extra.", "Un objeto que se vea bien en la cocina.", "Sentir que lo cuida bien sin complicarse cada semana."], "angle": "\"Agua en movimiento. Se lava en un minuto.\" Mostrar el desmontaje y el gato bebiendo del chorro.", "design": "Mismo SKU de las fotos: plateado, 2,2 L, ventana azul de nivel. Confirmar con el proveedor que es enchufable USB/5 V (el título dice batería y las fotos, enchufe) y que los filtros son compatibles.", "ads": ["fuente de agua para gatos", "~91", "14", "may 2026"], "market": ["Fuentes de plástico: desde 35.290 COP (Xalta, +10.000 vendidas). De acero: 133.790–142.298 COP. Vamos a 159.900 porque incluimos 4 filtros (valen ~20.000) y la guía.", "https://listado.mercadolibre.com.co/fuente-agua-gato-acero", "Mercado Libre"], "risk": "El más justo de margen: solo pasa la regla si el coste puesto en Colombia es ≤ 49.000 COP. Si Dropi lo da más caro, se descarta o se trae lote por mar.", "mat": ["Bandeja de acero inoxidable 304", "Cuerpo de PC (policarbonato) sin BPA", "Bomba sumergible de bajo ruido, 5 V USB", "Filtros de carbón activado y resina de intercambio iónico"], "imgs": ["alv-fuente-hero.jpg", "mb-kivo-1.jpg", "mb-kivo-2.jpg", "mb-kivo-3.jpg", "mb-kivo-4.jpg"], "imgnote": "La primera es un anuncio hecho con IA a partir de las fotos reales del proveedor; las otras 4 son las fotos del proveedor.", "sup": [{"n": "Shenzhen Kivo Technology · Alibaba", "u": "https://www.alibaba.com/product-detail/Wholesale-OEM-304SS-Wireless-Charging-Pet_1601968471564.html", "t": "Fábrica · MOQ 10 · este es el SKU de las fotos", "d": "Fuente plateada de acero 304 + PC, 2,2 L, 0,55 kg. 450–500 UAH (US$ 9,9–11,0). MOQ de solo 10: permite un mini lote para la preventa.", "v": "Comprobado"}, {"n": "Dropi · mismo artículo con stock en Colombia", "u": "https://dropi.co/", "t": "Local · contraentrega · 2–5 días", "d": "Buscar este mismo modelo (acero, ventana de nivel). Coste máximo para que cumpla la regla: 49.000 COP.", "v": "Pendiente de cuenta"}], "lot": {"what": "Fuente Kivo (US$ 9,9–11,0) + 4 filtros", "fob": 11.5, "kg": 0.8, "air": 73977, "sea": 56553}, "e": {"P": 159900, "net": 134370, "C": 45000, "F": 15000, "emp": 3000, "comm": 11193, "dev": 10333, "ads": 29333, "cpa": 22000, "prof": 20510, "gross": 66.5, "mp": 15.3, "mp40": 6.5, "be": 133275, "be_cpa": 37383, "be_x": 1.7, "mult": 3.6}, "v": ["ok", "Cumple la regla para probar"], "maxc": 49000, "maxc_s": 38000, "land": "alvoren-fuente.html"}, {"id": "d3", "col": "drop", "rank": 3, "slug": "rodillo", "name": "Kit casa sin pelo", "idea": null, "pet": "Gato y perro", "sub": "Rodillo quitapelo reutilizable (blanco y rojo) + cepillo de niebla 3 en 1 blanco, recargable USB-C", "P": 129900, "C": 30000, "cpa": 18000, "why": "Junta los dos productos de pelo con más ventas: en EE. UU. el rodillo reutilizable ChomChom vende ~20 mil unidades al mes con 204 mil reseñas y el cepillo de niebla ~9 mil. Uno quita el pelo de la casa y el otro lo saca antes de que caiga. El cepillo solo es barato (17.524 COP en Colombia), por eso solo lo vendemos en kit.", "ev": {"us": [["ChomChom, rodillo reutilizable (Amazon B00BAGTNAQ)", "~20 mil u/mes · 204,7 mil reseñas", "https://www.amazon.com/dp/B00BAGTNAQ"], ["Cepillo de niebla para gatos (Amazon B0FGPLYLXM)", "~9 mil u/mes a US$ 19,99", "https://www.amazon.com/dp/B0FGPLYLXM"]], "co": [["Cepillo de niebla (Mercado Libre)", "+500 vendidos a 17.524 COP", "https://listado.mercadolibre.com.co/cepillo-vapor-gato"], ["Meta Ad Library: \"cepillo vapor mascotas\"", "~42 anuncios de 7 anunciantes, uno desde jun 2025", null], ["Meta Ad Library: \"rodillo quita pelo\"", "~10 anuncios de 4 anunciantes", null]]}, "pains": ["Pelos en el sofá, la ropa y la cama aunque se limpie todos los días.", "Rodillos de papel adhesivo que se acaban y hay que volver a comprar.", "Gatos que se enojan cuando los cepillan; pelo que vuela al cepillar.", "Cepillos de niebla que \"no funcionan como en el vídeo\" o que gotean."], "desires": ["Una casa limpia sin pasar la aspiradora cada día.", "\"Por fin mi gato se deja cepillar.\"", "Poder recibir visitas sin pedir perdón por el pelo."], "angle": "\"Menos pelo en casa. Sin repuestos.\" Una pasada del rodillo sobre el sofá y la franja limpia.", "design": "Rodillo: el mismo SKU de las fotos (blanco con cepillo rojo, depósito que se abre con botón). Cepillo: blanco, USB-C, llamarlo niebla fría (no es vapor caliente).", "ads": ["cepillo vapor mascotas", "~42", "7", "jun 2025"], "market": ["Rodillo y cepillo sueltos se consiguen baratos. El kit a 129.900 se justifica por ser 2 en 1 y sin repuestos; hay que probar que el cliente lo paga.", "https://listado.mercadolibre.com.co/rodillo-quita-pelo-mascotas", "Mercado Libre"], "risk": "El más expuesto a comparación de precio. Coste máximo para que cumpla: 34.000 COP los dos productos. Pedir fotos del cepillo al proveedor antes de anunciar (todavía no las tenemos).", "mat": ["Rodillo: carcasa de ABS, cepillo de tela antiestática", "Cepillo de niebla: plástico ABS, cerdas de silicona, depósito de agua, batería recargable USB-C", "Estuche de cartón kraft con marca"], "imgs": ["alv-rodillo-hero.jpg", "mb-rodillo-1.jpg", "mb-rodillo-2.jpg", "mb-rodillo-3.jpg", "mb-rodillo-4.jpg"], "imgnote": "La primera es un anuncio hecho con IA a partir de las fotos reales del rodillo; las otras son fotos del proveedor. Las del cepillo de niebla se piden al proveedor (paso 1).", "sup": [{"n": "TIZE · rodillo quitapelo reutilizable · Alibaba", "u": "https://www.alibaba.com/product-detail/Two-way-Reusable-Pet-Hair-Remover_1601961363822.html", "t": "Fábrica · MOQ 100 · este es el SKU de las fotos", "d": "Rodillo blanco con cepillo rojo, ABS, certificado CE, 251 vendidos, 4,7/5. 62,48–82,47 UAH (US$ 1,4–1,8).", "v": "Comprobado"}, {"n": "AliExpress · cepillo de niebla 3 en 1, color White", "u": "https://www.aliexpress.com/item/1005007587245726.html", "t": "Muestras y fotos · 4.000+ vendidos", "d": "US$ 6,03 (US$ 4,85 desde 10 unidades). 673 reseñas, 4,7/5. Carga USB-C, 110–240 V. Entrega a Colombia 24 nov – 3 dic: solo para muestras y fotos, no para clientes.", "v": "Comprobado"}, {"n": "Dropi · los dos artículos con stock en Colombia", "u": "https://dropi.co/", "t": "Local · contraentrega · 2–5 días", "d": "Buscar los mismos dos modelos. Si no están iguales, se vende en preventa con lote propio.", "v": "Pendiente de cuenta"}], "lot": {"what": "Rodillo TIZE + cepillo de niebla + estuche", "fob": 7.3, "kg": 0.45, "air": 48567, "sea": 38766}, "e": {"P": 129900, "net": 109160, "C": 30000, "F": 15000, "emp": 3000, "comm": 9093, "dev": 10333, "ads": 24000, "cpa": 18000, "prof": 17733, "gross": 72.5, "mp": 16.2, "mp40": 7.5, "be": 106880, "be_cpa": 31300, "be_x": 1.74, "mult": 4.3}, "v": ["ok", "Cumple la regla para probar"], "maxc": 34000, "maxc_s": 25000, "land": "alvoren-casa-sin-pelo.html"}, {"id": "f1", "col": "fab", "rank": 1, "slug": "hamacapro", "name": "Hamaca ALVOREN a medida", "idea": null, "pet": "Perro", "sub": "3 tallas por tipo de carro, aberturas del cinturón en su sitio, costuras reforzadas, tono grafito", "P": 189900, "C": 45000, "cpa": 22000, "why": "Si la hamaca genérica vende en la fase 1, la versión propia corrige las dos quejas más repetidas de la líder URPOWER: que no ajusta a todos los carros y que las costuras y correas se rompen. Es una mejora de función que se puede medir, no solo de color.", "ev": {"us": [["Quejas recurrentes de URPOWER en reseñas", "ajuste universal imperfecto, aberturas del cinturón mal situadas, costuras y correas que ceden", null]], "co": []}, "pains": ["\"No le queda a mi carro\": la talla única deja huecos o arrastra.", "Hay que levantar la funda para abrochar el cinturón.", "Se rompe por las costuras a los pocos meses."], "desires": ["Algo hecho para su carro, que se vea de fábrica.", "Comprar una vez y olvidarse."], "angle": "\"Hecha a la medida de tu carro.\"", "design": "3 tallas (sedán, SUV, camioneta), aberturas del cinturón con velcro en la posición real, puntos de tensión con costura doble y barra, tela grafito mate.", "ads": null, "market": null, "risk": "Comprobar que el diseño no esté registrado. Necesita una tabla de tallas clara para no tener devoluciones.", "mat": ["Oxford 900D con recubrimiento TPU (más resistente que el 600D)", "Costura doble con hilo de poliéster de alta tenacidad", "Base de silicona antideslizante", "Hebillas de nylon reforzado"], "imgs": ["mb-hamacapro-1.jpg"], "imgnote": "Render de concepto hecho con IA (producto propio, todavía no existe): tela grafito, acolchado en canales y costura doble.", "sup": [{"n": "Ningbo J.E Import & Export · Alibaba (fábrica base)", "u": "https://www.alibaba.com/product-detail/URPOWER-100-Waterproof-Dog-Car-Seat_1601462195072.html", "t": "Fábrica · MOQ 100", "d": "La misma fábrica de la fase 1 hace OEM. Pedirle cotización de 3 tallas y tela 900D.", "v": "Comprobado"}], "e": {"P": 189900, "net": 159580, "C": 45000, "F": 15000, "emp": 3000, "comm": 13293, "dev": 10333, "ads": 29333, "cpa": 22000, "prof": 43620, "gross": 71.8, "mp": 27.3, "mp40": 20.0, "be": 133275, "be_cpa": 54715, "be_x": 2.49, "mult": 4.2}, "v": ["ok", "Cumple la regla para escalar"], "maxc": 69000, "maxc_s": 56000, "land": "alvoren-hamaca-medida.html"}, {"id": "f2", "col": "fab", "rank": 2, "slug": "cuerda", "name": "Rope-Lock", "idea": "Julieth", "pet": "Perro", "sub": "Correa de cuerda crossbody con mango que se cambia y reflectante probado", "P": 189900, "C": 48000, "cpa": 25000, "why": "La correa de cuerda es un ganador probado: Taglory vende ~8–10 mil unidades al mes en EE. UU. y está #3 en ventas de correas. Sus quejas repetidas son el mango que se gasta, la cuerda que se deshilacha y un reflectante que brilla menos de lo prometido. Rope-Lock corrige las tres. La estética nace de los pines que mandó Julieth.", "ev": {"us": [["Taglory, correa de cuerda (Amazon)", "~8–10 mil u/mes a US$ 8,99 · 28.452 reseñas · #3 en correas", null]], "co": [["Correa de cuerda (Mercado Libre)", "+500 vendidos a 21.061 COP", "https://listado.mercadolibre.com.co/correa-cuerda-perro"]]}, "pains": ["El mango acolchado se deshace y hay que botar toda la correa.", "Cuerda que se deshilacha en los remates.", "Mosquetones que se abren o se rompen."], "desires": ["Un equipo en el que se pueda confiar.", "Verse bien paseando."], "angle": "\"Hecha como equipo de montaña. Pensada para la ciudad.\"", "design": "Mango sustituible con rosca, remates reforzados, reflectante tejido ensayado y mosquetón con seguro con carga de trabajo certificada.", "ads": null, "market": null, "risk": "Comprobar originalidad frente a marcas de escalada. Pruebas de resistencia obligatorias.", "mat": ["Cuerda de poliéster trenzado de 10 mm con hilo reflectante", "Mosquetón de aleación de aluminio con seguro de rosca", "Mango de cuero vegano intercambiable", "Remates termosellados"], "imgs": ["mb-cuerda-1.jpg", "mb-cuerda-2.jpg", "mb-cuerda-3.jpg", "mb-cuerda-4.jpg"], "imgnote": "Renders de concepto hechos con IA (producto propio, todavía no existe).", "sup": [{"n": "Sanming Tryme Handicrafts · Alibaba", "u": "https://www.alibaba.com/product-detail/10mm-Hands-Free-Crossbody-Loop-Climbing_1601246754948.html", "t": "Fábrica · MOQ 50", "d": "Correa crossbody de cuerda de escalada de 10 mm con mosquetón, 346–449 UAH. Es la base; el mango sustituible lo diseñamos nosotros.", "v": "Comprobado"}], "e": {"P": 189900, "net": 159580, "C": 48000, "F": 15000, "emp": 3000, "comm": 13293, "dev": 10333, "ads": 33333, "cpa": 25000, "prof": 36620, "gross": 69.9, "mp": 22.9, "mp40": 14.6, "be": 142362, "be_cpa": 52465, "be_x": 2.1, "mult": 4.0}, "v": ["ok", "Cumple la regla para escalar"], "maxc": 65000, "maxc_s": 52000, "land": "alvoren-rope-lock.html"}, {"id": "f3", "col": "fab", "rank": 3, "slug": "fuente", "name": "Fuente ALVOREN sin rincones", "idea": null, "pet": "Gato", "sub": "Acero de una pieza, bomba con encaje magnético, aviso de nivel mínimo y filtros estándar", "P": 189900, "C": 55000, "cpa": 25000, "why": "Las fuentes líderes (Veken ~40 mil u/mes) tienen las mismas quejas: ruido cuando baja el agua, suciedad en rincones y una bomba difícil de limpiar. La bomba magnética sola ya existe (Petlibro), así que lo nuestro es el sistema completo de limpieza: sin rincones, aviso de nivel y filtros baratos.", "ev": {"us": [["Veken, fuente para gatos (Amazon)", "~40 mil u/mes (dato de ChatGPT)", null], ["Quejas recurrentes de Veken", "ruido con poca agua, suciedad en rincones, bomba difícil de limpiar", null]], "co": []}, "pains": ["Limpiar la fuente cada semana es una tortura.", "Ruido de noche cuando baja el agua.", "Filtros caros de una sola marca."], "desires": ["Cero mantenimiento difícil.", "Un objeto bonito en casa."], "angle": "\"Se lava como un plato.\"", "design": "Cuenco de acero de una pieza sin juntas, bomba que se sujeta con imán, LED de nivel mínimo y filtros de medida estándar.", "ads": null, "market": null, "risk": "Producto eléctrico: requiere certificaciones y garantía. Solo después de que la fuente de la fase 1 venda.", "mat": ["Acero inoxidable 304 embutido de una pieza", "Base de PC sin BPA", "Bomba de 5 V USB con encaje magnético", "Filtros de carbón de medida estándar"], "imgs": ["mb-fuente-1.jpg", "mb-fuente-2.jpg", "mb-fuente-3.jpg", "mb-fuente-4.jpg"], "imgnote": "Renders de concepto hechos con IA (producto propio, todavía no existe).", "sup": [{"n": "Shenzhen Kivo Technology · Alibaba (fábrica base)", "u": "https://www.alibaba.com/product-detail/Wholesale-OEM-304SS-Wireless-Charging-Pet_1601968471564.html", "t": "Fábrica · MOQ 10 · acepta OEM", "d": "Fabrica fuentes de acero 304. Pedirle cotización del cuenco de una pieza y la bomba magnética.", "v": "Comprobado"}], "e": {"P": 189900, "net": 159580, "C": 55000, "F": 15000, "emp": 3000, "comm": 13293, "dev": 10333, "ads": 33333, "cpa": 25000, "prof": 29620, "gross": 65.5, "mp": 18.6, "mp40": 10.2, "be": 151449, "be_cpa": 47215, "be_x": 1.89, "mult": 3.5}, "v": ["ok", "Cumple la regla para probar"], "maxc": 65000, "maxc_s": 52000, "land": "alvoren-fuente-sin-rincones.html"}];
+const $=s=>document.querySelector(s);
+const cop=n=>'$'+Math.round(n).toLocaleString('es-CO');
+const pc=x=>x.toFixed(1).replace('.',',')+' %';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function lk(u,t){return u?`<a href="${u}" target="_blank" rel="noopener">${esc(t)}</a>`:esc(t)}
+function adlib(q){return 'https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CO&q='+encodeURIComponent(q)+'&search_type=keyword_unordered'}
+function margin(P,C,cpa){const net=P/1.19,comm=.07*P,dev=31000/3,fixed=C+15000+3000+dev+cpa/.75;return (net-comm-fixed)/net*100}
+function openP(id){
+  const p=PD.find(x=>x.id===id); if(!p) return; const e=p.e;
+  $('#pdK').textContent=(p.col==='drop'?'Fase 1 · Dropshipping':'Fase 2 · Fabricación propia')+' · #'+p.rank+' · '+p.pet+(p.idea?' · Idea de '+p.idea:'');
+  $('#pdT').textContent=p.name;
+  let h = p.imgs.length
+    ? `<div class="gal"><img class="main" id="gm" src="${p.imgs[0]}" alt="${esc(p.name)}, vista 1"><div class="thumbs">${p.imgs.map((s,i)=>`<button aria-pressed="${i===0}" data-src="${s}" aria-label="Vista ${i+1}"><img src="${s}" alt=""></button>`).join('')}</div></div>`
+    : '<div class="noimg">Concepto visual pendiente.</div>';
+  if(p.imgnote) h+=`<p class="inote">${esc(p.imgnote)}</p>`;
+  if(p.land) h+=`<p><a class="cta-l" href="${p.land}">Ver su landing</a></p>`;
+  h+=`<div><h3>Por qué lo elegimos</h3><p>${esc(p.why)}</p></div>`;
+  const evr=r=>`<div><span>${r[2]?lk(r[2],r[0]):esc(r[0])}</span><b>${esc(r[1])}</b></div>`;
+  if(p.ev&&(p.ev.us.length||p.ev.co.length)){h+=`<div><h3>Prueba de venta</h3>${p.ev.us.length?`<p class="small" style="margin-top:4px"><b>EE. UU.</b></p><div class="ev">${p.ev.us.map(evr).join('')}</div>`:''}${p.ev.co.length?`<p class="small" style="margin-top:8px"><b>Colombia</b></p><div class="ev">${p.ev.co.map(evr).join('')}</div>`:''}</div>`;}
+  h+=`<div class="two" style="margin-top:0"><div><h3>Dolores y situaciones</h3><ul class="dots pain">${p.pains.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div><div><h3>Deseos profundos</h3><ul class="dots des">${p.desires.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div></div>`;
+  h+=`<div><h3>Ángulo de anuncio</h3><p>${esc(p.angle)}</p><p style="margin-top:6px"><b>Lo que debe tener el producto:</b> ${esc(p.design)}</p></div>`;
+  h+=`<div class="kpis">
+    <div class="kpi"><span>Precio (IVA incl.)</span><b>${cop(p.P)}</b></div>
+    <div class="kpi"><span>Margen neto proyectado</span><b>${pc(e.mp)}</b></div>
+    <div class="kpi"><span>Margen bruto</span><b>${pc(e.gross)}</b></div>
+    <div class="kpi"><span>Queda por pedido</span><b>${cop(e.prof)}</b></div>
+    <div class="kpi"><span>Si la publicidad sube 40 %</span><b>${pc(e.mp40)}</b></div>
+    <div class="kpi"><span>Precio mínimo para no perder</span><b>${cop(e.be)}</b></div>
+  </div><p class="small"><span class="chip ${p.v[0]}">${esc(p.v[1])}</span> con costes estimados · CPA previsto ${cop(e.cpa)}, aguanta hasta ${cop(e.be_cpa)} (${String(e.be_x).replace('.',',')} veces).</p><p class="small"><b>Coste máximo al proveedor:</b> ${cop(p.maxc)} para probar · ${cop(p.maxc_s)} para escalar.</p>`;
+  if(p.lot){const ms=margin(p.P,p.lot.sea,p.cpa),ma=margin(p.P,p.lot.air,p.cpa);
+    h+=`<div><h3>Si traemos un lote propio con marca (100 unidades)</h3><table>
+      <tr><td>${esc(p.lot.what)} · FOB ~US$ ${String(p.lot.fob).replace('.',',')} · ${String(p.lot.kg).replace('.',',')} kg</td><td class="n"></td></tr>
+      <tr><td>Puesto en Colombia por mar</td><td class="n">${cop(p.lot.sea)} · neto ${pc(ms)}</td></tr>
+      <tr><td>Puesto en Colombia por avión</td><td class="n">${cop(p.lot.air)} · neto ${pc(ma)}</td></tr></table>
+      <p class="small">Incluye flete internacional, arancel 10 %, nacionalización (500.000 por lote) y bodega. El IVA de importación se recupera.</p></div>`;}
+  if(p.market) h+=`<div><h3>Precio en el mercado colombiano</h3><p>${esc(p.market[0])} ${p.market[1]?lk(p.market[1],'Ver en '+p.market[2]):''}</p></div>`;
+  if(p.ads) h+=`<div><h3>Anuncios activos en Colombia</h3><p>"${esc(p.ads[0])}": <b>${p.ads[1]}</b> anuncios de ${p.ads[2]} anunciantes; el más antiguo desde ${esc(p.ads[3])}. ${lk(adlib(p.ads[0]),'Ver los anuncios')}</p></div>`;
+  h+=`<div><h3>Proveedores (link al artículo exacto)</h3><div class="sups">${p.sup.map(s=>`<div class="sup"><span class="t">${esc(s.t)}</span>${lk(s.u,s.n)}<span class="small">${esc(s.d)}</span><span class="${s.v==='Comprobado'?'ok-v':'small'}">${s.v==='Comprobado'?'✓ Comprobado el 15 nov 2026':esc(s.v)}</span></div>`).join('')}</div></div>`;
+  if(p.mat) h+=`<div><h3>Materiales</h3><ul class="dots">${p.mat.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`;
+  h+=`<div><h3>Riesgo</h3><p>${esc(p.risk)}</p></div>`;
+  const rows=[['Precio sin IVA',e.net],['Producto',-e.C],['Flete nacional',-e.F],['Comisiones',-e.comm],['Empaque y confirmación',-e.emp],['Pedidos no entregados (provisión)',-e.dev],['Publicidad por pedido entregado',-e.ads]];
+  h+=`<div><h3>Costes por pedido entregado</h3><table>${rows.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]<0?'− '+cop(-r[1]):cop(r[1])}</td></tr>`).join('')}<tr class="tot"><td>Queda</td><td class="n">${cop(e.prof)}</td></tr></table></div>`;
+  $('#pdB').innerHTML=h;
+  const d=$('#pd'); if(!d.open) d.showModal(); d.scrollTop=0;
+  history.replaceState(null,'','#p-'+id);
+}
+document.addEventListener('click',ev=>{
+  const b=ev.target.closest('[data-id]'); if(b){openP(b.dataset.id);return}
+  const t=ev.target.closest('.thumbs button'); if(t){$('#gm').src=t.dataset.src;t.parentNode.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===t))}
+});
+$('#pdX').addEventListener('click',()=>$('#pd').close());
+$('#pd').addEventListener('click',ev=>{if(ev.target.id==='pd')$('#pd').close()});
+$('#pd').addEventListener('close',()=>history.replaceState(null,'',location.pathname+location.search));
+function openHash(){const h=location.hash.slice(1);if(h.startsWith('p-'))return openP(h.slice(2));const d=document.getElementById(h);if(d&&d.tagName==='DETAILS'){d.open=true;d.scrollIntoView()}}
+window.addEventListener('hashchange',openHash);openHash();
+function calc(){
+  const v=k=>+$('#'+k).value; const P=v('cp'),C=v('cc'),F=v('cf'),d=v('cd')/100,cpa=v('ca');
+  $('#cpo').textContent=cop(P);$('#cco').textContent=cop(C);$('#cfo').textContent=cop(F);$('#cdo').textContent=Math.round(d*100)+' %';$('#cao').textContent=cop(cpa);
+  const net=P/1.19,comm=.07*P,ok=1-d,dev=d/ok*31000,ads=cpa/ok,fees=F+comm+3000,prof=net-C-fees-dev-ads,k=1/1.19-.07,be=(C+F+3000+dev+ads)/k;
+  $('#k1').textContent=cop(net);$('#k2').textContent='− '+cop(C);$('#k3').textContent='− '+cop(fees);$('#k4').textContent='− '+cop(dev);$('#k5').textContent='− '+cop(ads);
+  $('#k6').textContent=cop(prof);$('#k7').textContent=pc((net-C)/net*100)+' · '+pc(prof/net*100);$('#k8').textContent=cop(be);
+  const m=prof/net*100,kv=$('#kv');
+  if(m>=20){kv.className='verdict good';kv.textContent='Cumple para escalar (≥ 20 % neto).'}
+  else if(m>=12){kv.className='verdict mid';kv.textContent='Cumple para probar (≥ 12 % neto), todavía no para escalar.'}
+  else{kv.className='verdict bad';kv.textContent='No cumple: sube el precio con un kit, baja el coste o el CPA.'}
+}
+document.querySelectorAll('.calc input').forEach(i=>i.addEventListener('input',calc));calc();
+</script>
+<script src="voice.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}</script>
+</body>
+</html>
