@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALVOREN 01 · Ficha técnica</title><meta name="theme-color" content="#ECEBE7">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F4F1;--ink:#1D1F1C;--moss:#39443A;--steel:#B8BDB9;--fog:#E4E6E2;--stone:#ECEBE7;--muted:#5f645f;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:300 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit}
+:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+.demo{background:var(--ink);color:var(--fog);font-size:13px;letter-spacing:.02em;text-align:center;padding:7px 16px}.demo a{color:#fff}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+nav.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;max-width:1240px;margin:0 auto;padding:22px 32px;border-bottom:1px solid rgba(29,31,28,.12)}
+nav.top .l,nav.top .r{display:flex;gap:28px;font-size:13.5px;letter-spacing:.06em}
+nav.top .r{justify-content:flex-end;align-items:center}
+nav.top a{text-decoration:none}nav.top .l a:hover,nav.top .r a:hover{text-decoration:underline;text-underline-offset:5px}
+.wm{font-family:var(--serif);font-weight:400;font-size:25px;letter-spacing:.36em;text-decoration:none;padding-left:.36em}
+.bag{display:inline-flex;align-items:center;gap:8px}
+.bag svg{width:17px;height:17px}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--stone),var(--paper))}
+.hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:72px;align-items:center;padding-top:56px;padding-bottom:88px}
+.gal{position:relative}
+.gal .frame{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--fog)}
+.gal .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease}
+.gal .frame img.on{opacity:1}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:20px}
+.dots button{all:unset;cursor:pointer;width:28px;height:14px;display:grid;place-items:center}
+.dots button::before{content:"";width:28px;height:1.5px;background:var(--steel)}
+.dots button[aria-current="true"]::before{background:var(--ink)}
+.dots button:focus-visible{outline:1px solid var(--ink)}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:0 0 22px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);border:1px solid var(--moss);border-radius:999px;padding:4px 14px;margin-bottom:22px}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(56px,7.4vw,108px);line-height:.94;letter-spacing:-.01em;margin:0 0 18px}
+.tagline{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,2.1vw,28px);line-height:1.25;margin:0 0 22px;color:var(--moss)}
+.lede{max-width:30em;margin:0 0 34px;color:var(--muted)}
+.buy-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.price{font-family:var(--serif);font-size:34px;font-weight:400}
+.price small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:16px 34px;font:400 14px var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .3s}
+.btn:hover{background:var(--moss)}
+.micro{font-size:13.5px;color:var(--muted);margin:18px 0 0}
+.assure{list-style:none;margin:30px 0 0;padding:22px 0 0;border-top:1px solid rgba(29,31,28,.12);display:grid;gap:8px;font-size:14.5px;color:var(--muted)}
+/* editorial */
+section.ed{padding:120px 0}
+.ed h2,.order h2,.faq h2,.more-p h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.2vw,58px);line-height:1.05;margin:0 0 22px}
+.problem .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.strike{list-style:none;margin:0 0 30px;padding:0;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(26px,3vw,40px);line-height:1.3;color:var(--muted)}
+.strike li{display:inline;margin-right:.6em;text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:var(--ink)}
+.problem p{margin:0 0 18px;max-width:32em}
+/* parts */
+.layers{background:var(--ink);color:var(--fog);padding:120px 0}
+.layers h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.2vw,58px);line-height:1.05;color:#fff;margin:0 0 14px;max-width:14em}
+.layers .intro{color:var(--steel);margin:0 0 56px;font-size:15px}
+.stack{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
+.sec{position:relative;height:340px;perspective:900px}
+.ly{position:absolute;left:8%;right:8%;height:46px;border-radius:2px;transform:rotateX(58deg) rotateZ(-8deg);transition:transform .5s ease,box-shadow .5s ease;cursor:pointer;border:0;padding:0;background:var(--c)}
+.ly[aria-pressed="true"]{transform:rotateX(58deg) rotateZ(-8deg) translateY(-16px);box-shadow:0 0 0 1px var(--steel)}
+.legend{list-style:none;margin:0;padding:0;display:grid}
+.legend button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:14px 1fr;gap:18px;padding:18px 4px;border-top:1px solid rgba(184,189,185,.22);cursor:pointer}
+.legend li:last-child button{border-bottom:1px solid rgba(184,189,185,.22)}
+.legend .sw{width:10px;height:10px;border-radius:50%;border:1px solid var(--steel);margin-top:9px}
+.legend button[aria-pressed="true"] .sw{background:var(--fog)}
+.legend b{display:block;font-family:var(--serif);font-weight:400;font-size:23px;color:#fff;line-height:1.2}
+.legend .d{font-size:15px;color:var(--steel)}
+.legend button:focus-visible{outline:1px solid var(--steel)}
+.pnote{margin:26px 0 0;font-size:13px;color:var(--steel)}
+/* uses */
+.usegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+.use img{width:100%;aspect-ratio:4/3;object-position:center 35%;object-fit:cover;background:var(--fog)}
+.use .ph{aspect-ratio:4/3;background:var(--stone);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:26px;color:var(--muted);padding:24px;text-align:center}
+.use .big{aspect-ratio:4/3;background:var(--stone);display:grid;place-items:center;font-family:var(--serif);font-weight:300;font-size:120px;color:var(--moss)}
+.use h3{font-family:var(--serif);font-weight:400;font-size:26px;margin:20px 0 6px}
+.use p{margin:0;color:var(--muted);font-size:15.5px}
+/* specs */
+.specs .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;border-top:1px solid rgba(29,31,28,.12);padding-top:96px}
+.specs{padding:0 0 120px}
+.specs .note{color:var(--muted);margin:0 0 14px;font-size:14.5px}
+.inbox{margin:0;padding:0;list-style:none;font-family:var(--serif);font-size:24px;line-height:1.5}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr}
+dt,dd{margin:0;padding:15px 0;border-bottom:1px solid rgba(29,31,28,.12)}
+dt{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-right:36px;padding-top:19px}
+/* trust */
+.trust{background:var(--fog)}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:56px;padding-bottom:56px}
+.trust b{display:block;font-family:var(--serif);font-weight:400;font-size:22px}
+.trust span{font-size:14.5px;color:var(--muted)}
+/* faq */
+.faq{padding:120px 0}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+details{border-bottom:1px solid rgba(29,31,28,.15)}
+details:first-child{border-top:1px solid rgba(29,31,28,.15)}
+summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:23px;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:200;font-size:24px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:0 0 22px;color:var(--muted);max-width:38em}
+/* order */
+.order{background:var(--stone);padding:120px 0}
+.ordergrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.order p{color:var(--muted);max-width:28em}
+form{display:grid;gap:26px}
+label{display:grid;gap:4px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+input,select{font:300 18px var(--sans);letter-spacing:0;text-transform:none;color:var(--ink);padding:10px 0;border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent}
+input:focus,select:focus{outline:none;border-bottom-width:2px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(29,31,28,.15);padding-top:18px}
+.total b{font-family:var(--serif);font-weight:400;font-size:30px}
+.msg{display:none;background:var(--moss);color:#fff;padding:16px 18px;font-size:15px}.msg.on{display:block}
+.err{color:#8a2b1e;font-size:14px;min-height:1em;margin:0}
+/* others + footer */
+.more-p{padding:110px 0}
+.more-p ul{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.more-p a{display:block;text-decoration:none}
+.more-p img{aspect-ratio:4/5;object-fit:cover;width:100%;background:var(--fog);transition:opacity .3s}
+.more-p a:hover img{opacity:.85}
+.more-p small{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.more-p span{font-family:var(--serif);font-size:21px}
+footer{background:var(--ink);color:var(--steel);text-align:center;padding:90px 24px 70px}
+footer .wm{color:#fff;font-size:clamp(36px,6vw,70px);display:block;margin-bottom:12px}
+footer p{font-family:var(--serif);font-style:italic;font-size:20px;margin:0}
+.sticky{display:none}
+@media (max-width:900px){
+  .wrap,nav.top{padding-left:20px;padding-right:20px}
+  nav.top{grid-template-columns:auto 1fr}nav.top .l{display:none}nav.top .r{gap:16px}.wm{font-size:20px}
+  .hero .wrap,.problem .wrap,.stack,.specs .wrap,.faq .wrap,.ordergrid,.trust .wrap{grid-template-columns:1fr;gap:36px}
+  .hero .wrap{padding-top:20px;padding-bottom:64px}
+  section.ed,.layers,.faq,.order,.more-p{padding:80px 0}.specs .wrap{padding-top:64px}.specs{padding-bottom:80px}
+  .usegrid{grid-template-columns:1fr;gap:40px}
+  .more-p ul{grid-template-columns:repeat(2,1fr)}
+  .sec{height:300px}.row{grid-template-columns:1fr}
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid rgba(29,31,28,.15);padding:10px 16px;justify-content:space-between;align-items:center;z-index:5}
+  .sticky b{font-family:var(--serif);font-weight:400;font-size:24px}.sticky .btn{padding:13px 22px}
+  footer{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+:root{--olive:#5C6B3A;--rust:#C2582B;--ink2:#2A2C29}
+.th{background:linear-gradient(180deg,var(--stone),var(--paper));padding:80px 0 56px}
+.th h1{font-size:clamp(52px,7vw,104px)}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}
+.meta li{border:1px solid rgba(29,31,28,.25);border-radius:999px;padding:5px 13px;font-size:13.5px}
+.toc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.toc a{display:block;text-decoration:none;border:1px solid rgba(29,31,28,.15);padding:18px;background:#fff}
+.toc b{font-family:var(--serif);font-weight:400;font-size:26px;display:block}
+.toc small{color:var(--muted)}
+.prod{padding:96px 0;border-top:1px solid rgba(29,31,28,.12)}
+.prod h2{font-family:var(--serif);font-weight:300;font-size:clamp(40px,5vw,68px);line-height:1;margin:0 0 8px}
+.code{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.lead2{max-width:46em;color:var(--muted);margin:14px 0 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:start}
+.blk h3{font-family:var(--serif);font-weight:400;font-size:28px;margin:0 0 14px}
+.blk p{margin:0 0 10px}
+.pains{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.pains li{display:grid;grid-template-columns:1fr 1fr;gap:16px;border-bottom:1px solid rgba(29,31,28,.12);padding:10px 0;font-size:15px}
+.pains li span:first-child{color:var(--muted)}
+.drw{background:#FBFAF7;border:1px solid rgba(29,31,28,.15);padding:18px;margin-top:40px}
+.drw figcaption{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.drw svg{width:100%;height:auto;display:block}
+table.t{width:100%;border-collapse:collapse;font-size:14.5px}
+table.t th,table.t td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid rgba(29,31,28,.12);vertical-align:top}
+table.t th{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:400}
+table.t td.n{text-align:right;white-space:nowrap}
+.sw2{display:flex;gap:12px;flex-wrap:wrap}
+.sw2 div{width:120px;font-size:13px}
+.sw2 i{display:block;height:64px;border:1px solid rgba(29,31,28,.12);margin-bottom:6px}
+.warn{border-left:3px solid var(--rust);background:#fff;padding:14px 18px;margin-top:22px;font-size:15px}
+.cost{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.cost div{background:#fff;border:1px solid rgba(29,31,28,.12);padding:16px}
+.cost b{display:block;font-family:var(--serif);font-weight:400;font-size:28px}
+.cost span{font-size:13px;color:var(--muted)}
+.rfq ol{margin:0;padding-left:20px;display:grid;gap:8px}
+@media (max-width:900px){.grid2,.toc,.cost{grid-template-columns:1fr}.pains li{grid-template-columns:1fr}}
+@media print{nav.top,.demo,footer{display:none}.prod{page-break-before:always}}
+</style></head><body>
+<div class="demo">Documento para cotizar y pedir muestras. <a href="business-plan-ecom.html">Volver al plan</a> · <a href="alvoren-01.html">Ver la landing</a></div>
+<nav class="top" aria-label="Principal"><div class="l"><a href="#rl">Rope-Lock</a><a href="#cc">Collar</a><a href="#cp">Pouch</a></div><a class="wm" href="#top">ALVOREN</a><div class="r"><a href="#rfq">Pedido de cotización</a></div></nav>
+<main id="top">
+<section class="th"><div class="wrap">
+  <p class="eyebrow">Ficha técnica · ALVOREN 01 · Kit de paseo</p>
+  <h1>Todo lo que un taller necesita para cotizar y hacer la muestra.</h1>
+  <p class="tagline">Tres piezas fabricadas por nosotros, pensadas como un sistema.</p>
+  <ul class="meta"><li>Estado: para cotización y muestra</li><li>No es orden de producción</li><li>Medidas en mm y cm</li><li>Colores a confirmar con carta física</li></ul>
+  <div class="toc"><a href="#rl"><small>RL-01</small><b>Rope-Lock</b><small>Correa de cuerda · 149.900</small></a><a href="#cc"><small>CC-01</small><b>Collar Core</b><small>Collar · 79.900</small></a><a href="#cp"><small>CP-01</small><b>Clip Pouch</b><small>Porta bolsas · 59.900</small></a></div>
+</div></section>
+<section class="prod" style="padding-top:64px"><div class="wrap"><div class="grid2" style="margin-top:0">
+  <div class="blk"><h3>Colores de la colección 01</h3><div class="sw2"><div><i style="background:#5C6B3A"></i><b>Oliva</b><br><span>#5C6B3A · cuerda, cinta, ripstop</span></div><div><i style="background:#2A2C29"></i><b>Grafito</b><br><span>#2A2C29 · herrajes, fundas, etiquetas</span></div><div><i style="background:#C2582B"></i><b>Naranja quemado</b><br><span>#C2582B · trazador, pasadores, tiradores</span></div><div><i style="background:#C9CCC8"></i><b>Hilo reflectante</b><br><span>#C9CCC8 · dentro de la funda de la cuerda</span></div></div><p style="margin-top:14px;color:var(--muted);font-size:14.5px">Valores de pantalla. El proveedor debe enviar tiras de color en físico para aprobar antes de la muestra.</p></div>
+  <div class="blk"><h3>Reglas para todas las piezas</h3><ul style="margin:0;padding-left:18px;display:grid;gap:8px"><li>Herrajes en acabado mate grafito, sin brillos.</li><li>Ningún herraje de colgar (mini mosquetón, clip) puede venderse como apto para sujetar al perro.</li><li>Bordes de cinta sellados al calor; sin hilos sueltos.</li><li>Logo solo en etiquetas pequeñas, nunca grande.</li><li>Empaque: caja de cartón kraft sin plástico, tarjeta de cuidados y sello ALVOREN.</li></ul></div>
+</div></div></section>
+<section class="prod" id="rl"><div class="wrap">
+  <p class="code">RL-01 · Correa de cuerda · Producto principal · fabricación · versión 1 · 15 nov 2026</p>
+  <h2>Rope-Lock</h2>
+  <p class="lead2">Correa de cuerda de escalada de 10 mm, con uniones cosidas y probadas a tracción, mosquetón de aluminio con cierre automático operable con una mano y giratorio para que no se enrede.</p>
+  <figure class="drw"><svg viewBox="0 0 1100 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plano general de la correa Rope-Lock con cotas"><style>
+.o{fill:none;stroke:#1D1F1C;stroke-width:2}.o2{fill:none;stroke:#1D1F1C;stroke-width:1.2}
+.rope{fill:none;stroke:#5C6B3A;stroke-width:12;stroke-linecap:round}.rope2{fill:none;stroke:#2A2C29;stroke-width:1.2;stroke-dasharray:6 5}
+.sl{fill:#2A2C29}.ac{fill:#C2582B}.hw{fill:none;stroke:#1D1F1C;stroke-width:5}.hwf{fill:#5f645f}
+.d line,.d path{stroke:#39443A;stroke-width:1;fill:none}.d text{font:13px Jost,sans-serif;fill:#39443A}
+.e{stroke:#39443A;stroke-width:.8;stroke-dasharray:3 3}
+.c line{stroke:#1D1F1C;stroke-width:.8}.c circle{fill:#F5F4F1;stroke:#1D1F1C;stroke-width:1}.c text{font:12px Jost,sans-serif;fill:#1D1F1C}
+.lbl{font:12px Jost,sans-serif;fill:#5f645f;letter-spacing:.12em}
+.web{fill:#5C6B3A}.webl{fill:none;stroke:#2A2C29;stroke-width:1}
+.bt{stroke:#F5F4F1;stroke-width:1.4}
+.fab{fill:#5C6B3A}.fabl{fill:none;stroke:#2A2C29;stroke-width:1.2}
+</style><path class="rope" d="M210,150 C150,150 70,104 70,150 C70,196 150,150 210,150"/><path class="rope" d="M210,150 L860,150"/><rect class="sl" x="200" y="138" width="70" height="24" rx="4"/><rect class="ac" x="270" y="139" width="12" height="22"/><rect class="sl" x="800" y="138" width="70" height="24" rx="4"/><rect class="ac" x="788" y="139" width="12" height="22"/><path class="hw" d="M236,136 q0,-26 18,-26 q18,0 18,26"/><circle class="o" cx="882" cy="150" r="9"/><path class="hw" d="M890,150 L905,150 L905,158 Q905,180 935,180 L978,180 Q1006,180 1006,150 Q1006,118 975,118 L935,118 Q905,118 905,142 Z"/><path class="o" d="M925,168 L985,168"/><rect class="hwf" x="940" y="162" width="28" height="12" rx="3"/><line class="e" x1="70" y1="210" x2="70" y2="260"/><line class="e" x1="1005" y1="190" x2="1005" y2="260"/><g class="d"><line x1="70" y1="250" x2="1005" y2="250"/><path d="M78,246 L70,250 L78,254 M997,246 L1005,250 L997,254"/><text x="537.5" y="242" text-anchor="middle">A · 150 cm ± 1 cm (largo total)</text></g><line class="e" x1="70" y1="90" x2="70" y2="40"/><line class="e" x1="210" y1="130" x2="210" y2="40"/><g class="d"><line x1="70" y1="50" x2="210" y2="50"/><path d="M78,46 L70,50 L78,54 M202,46 L210,50 L202,54"/><text x="140.0" y="42" text-anchor="middle">B · lazo 22 cm int.</text></g><line class="e" x1="200" y1="130" x2="200" y2="90"/><line class="e" x1="282" y1="130" x2="282" y2="90"/><g class="d"><line x1="200" y1="98" x2="282" y2="98"/><path d="M208,94 L200,98 L208,102 M274,94 L282,98 L274,102"/><text x="241.0" y="90" text-anchor="middle">C · 9 cm</text></g><line class="e" x1="905" y1="110" x2="905" y2="70"/><line class="e" x1="1005" y1="110" x2="1005" y2="70"/><g class="d"><line x1="905" y1="78" x2="1005" y2="78"/><path d="M913,74 L905,78 L913,82 M997,74 L1005,78 L997,82"/><text x="955.0" y="70" text-anchor="middle">D · 85 mm</text></g><text class="lbl" x="560" y="126" text-anchor="middle">CUERDA Ø 10 MM · KERNMANTLE · HILO REFLECTANTE</text><g class="c"><line x1="100" y1="172" x2="40" y2="260"/><circle cx="40" cy="260" r="11"/><text x="40" y="264" text-anchor="middle">1</text></g><g class="c"><line x1="240" y1="164" x2="300" y2="260"/><circle cx="300" cy="260" r="11"/><text x="300" y="264" text-anchor="middle">2</text></g><g class="c"><line x1="254" y1="112" x2="330" y2="40"/><circle cx="330" cy="40" r="11"/><text x="330" y="44" text-anchor="middle">3</text></g><g class="c"><line x1="600" y1="156" x2="600" y2="260"/><circle cx="600" cy="260" r="11"/><text x="600" y="264" text-anchor="middle">4</text></g><g class="c"><line x1="834" y1="164" x2="760" y2="260"/><circle cx="760" cy="260" r="11"/><text x="760" y="264" text-anchor="middle">5</text></g><g class="c"><line x1="955" y1="120" x2="955" y2="40"/><circle cx="955" cy="40" r="11"/><text x="955" y="44" text-anchor="middle">6</text></g><g class="c"><line x1="949" y1="174" x2="1040" y2="260"/><circle cx="1040" cy="260" r="11"/><text x="1040" y="264" text-anchor="middle">7</text></g></svg><figcaption>Plano general · escala aprox. 1:7 · cotas en cm salvo indicación · los números remiten a la lista de materiales</figcaption></figure>
+  <figure class="drw"><svg viewBox="0 0 1100 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corte de la unión cosida de la correa"><style>
+.o{fill:none;stroke:#1D1F1C;stroke-width:2}.o2{fill:none;stroke:#1D1F1C;stroke-width:1.2}
+.rope{fill:none;stroke:#5C6B3A;stroke-width:12;stroke-linecap:round}.rope2{fill:none;stroke:#2A2C29;stroke-width:1.2;stroke-dasharray:6 5}
+.sl{fill:#2A2C29}.ac{fill:#C2582B}.hw{fill:none;stroke:#1D1F1C;stroke-width:5}.hwf{fill:#5f645f}
+.d line,.d path{stroke:#39443A;stroke-width:1;fill:none}.d text{font:13px Jost,sans-serif;fill:#39443A}
+.e{stroke:#39443A;stroke-width:.8;stroke-dasharray:3 3}
+.c line{stroke:#1D1F1C;stroke-width:.8}.c circle{fill:#F5F4F1;stroke:#1D1F1C;stroke-width:1}.c text{font:12px Jost,sans-serif;fill:#1D1F1C}
+.lbl{font:12px Jost,sans-serif;fill:#5f645f;letter-spacing:.12em}
+.web{fill:#5C6B3A}.webl{fill:none;stroke:#2A2C29;stroke-width:1}
+.bt{stroke:#F5F4F1;stroke-width:1.4}
+.fab{fill:#5C6B3A}.fabl{fill:none;stroke:#2A2C29;stroke-width:1.2}
+</style><path class="rope" d="M60,130 L820,130"/><path class="rope" d="M300,146 L820,146 C880,146 880,100 820,100 L790,100" style="stroke:#7a8754"/><circle class="o" cx="900" cy="123" r="34"/><rect x="360" y="118" width="70" height="40" fill="none" stroke="#C2582B" stroke-width="1.6"/><path d="M360,118 L430,158 M430,118 L360,158" stroke="#C2582B" stroke-width="1.6"/><rect x="470" y="118" width="70" height="40" fill="none" stroke="#C2582B" stroke-width="1.6"/><path d="M470,118 L540,158 M540,118 L470,158" stroke="#C2582B" stroke-width="1.6"/><rect x="580" y="118" width="70" height="40" fill="none" stroke="#C2582B" stroke-width="1.6"/><path d="M580,118 L650,158 M650,118 L580,158" stroke="#C2582B" stroke-width="1.6"/><rect x="300" y="108" width="420" height="60" fill="none" stroke="#1D1F1C" stroke-width="1.2" stroke-dasharray="8 4"/><rect x="280" y="96" width="460" height="84" fill="none" stroke="#2A2C29" stroke-width="2.4"/><g class="d"><line x1="300" y1="222" x2="720" y2="222"/><path d="M308,218 L300,222 L308,226 M712,218 L720,222 L712,226"/><text x="510.0" y="214" text-anchor="middle">Solape cosido 80 mm ± 3 mm</text></g><line class="e" x1="300" y1="170" x2="300" y2="230"/><line class="e" x1="720" y1="170" x2="720" y2="230"/><g class="d"><line x1="280" y1="68" x2="740" y2="68"/><path d="M288,64 L280,68 L288,72 M732,64 L740,68 L732,72"/><text x="510.0" y="60" text-anchor="middle">Funda exterior 90 mm</text></g><line class="e" x1="280" y1="96" x2="280" y2="60"/><line class="e" x1="740" y1="96" x2="740" y2="60"/><g class="c"><line x1="120" y1="130" x2="120" y2="280"/><circle cx="120" cy="280" r="11"/><text x="120" y="284" text-anchor="middle">1</text></g><g class="c"><line x1="395" y1="138" x2="395" y2="280"/><circle cx="395" cy="280" r="11"/><text x="395" y="284" text-anchor="middle">2</text></g><g class="c"><line x1="520" y1="108" x2="560" y2="30"/><circle cx="560" cy="30" r="11"/><text x="560" y="34" text-anchor="middle">3</text></g><g class="c"><line x1="300" y1="96" x2="230" y2="30"/><circle cx="230" cy="30" r="11"/><text x="230" y="34" text-anchor="middle">4</text></g><g class="c"><line x1="820" y1="146" x2="820" y2="280"/><circle cx="820" cy="280" r="11"/><text x="820" y="284" text-anchor="middle">5</text></g><g class="c"><line x1="900" y1="89" x2="1000" y2="40"/><circle cx="1000" cy="40" r="11"/><text x="1000" y="44" text-anchor="middle">6</text></g><text class="lbl" x="560" y="318" text-anchor="middle">LA CARGA PASA POR EL SOLAPE COSIDO (2). LA FUNDA Y EL TERMORRETRÁCTIL SOLO PROTEGEN.</text></svg><figcaption>Detalle de la unión · corte longitudinal · no a escala</figcaption></figure>
+  <div class="grid2">
+    <div class="blk"><h3>Lista de materiales</h3><table class="t"><thead><tr><th>#</th><th>Pieza</th><th>Especificación</th><th>Cant.</th></tr></thead><tbody><tr><td>1</td><td><b>Cuerda</b></td><td>Kernmantle (alma y funda) de poliamida o poliéster, Ø 10 mm, funda oliva con trazador naranja y 2 hilos reflectantes; resistencia mínima de la cuerda ≥ 15 kN</td><td class="n">1,90 m</td></tr><tr><td>2</td><td><b>Unión cosida</b></td><td>Solape de 80 mm cosido con hilo de poliéster de alta tenacidad (Tex 135 / V138), 3 refuerzos en X de 20 puntadas</td><td class="n">2 uniones</td></tr><tr><td>3</td><td><b>Anilla D para accesorios</b></td><td>Aluminio 6061 anodizado grafito, 25 mm, cosida dentro de la unión del mango</td><td class="n">1</td></tr><tr><td>4</td><td><b>Termorretráctil</b></td><td>Tubo 3:1 con adhesivo interior, Ø 25 mm recuperado, negro</td><td class="n">2 × 80 mm</td></tr><tr><td>5</td><td><b>Funda exterior</b></td><td>Microfibra PU (cuero vegano) 1,2 mm grafito, cosida a mano o en máquina, con banda naranja de 12 mm</td><td class="n">2 × 90 mm</td></tr><tr><td>6</td><td><b>Mosquetón</b></td><td>Aluminio 6061-T6 anodizado grafito mate, cierre automático de doble acción, ojo giratorio, resistencia en eje mayor ≥ 7 kN (certificado del proveedor)</td><td class="n">1</td></tr><tr><td>7</td><td><b>Funda del mango</b></td><td>Neopreno 3 mm forrado en nylon, cierre con broche metálico, desmontable (no soporta carga)</td><td class="n">1</td></tr><tr><td>8</td><td><b>Etiquetas</b></td><td>Etiqueta tejida ALVOREN 10 × 30 mm en la funda del mango; etiqueta de composición y cuidados</td><td class="n">1 + 1</td></tr></tbody></table></div>
+    <div class="blk"><h3>Dolor → solución</h3><ul class="pains"><li><span>El mango se suelta de la cuerda o la unión tiene costuras pobres</span><span>Solape cosido de 80 mm con 3 refuerzos en X; la carga pasa por la costura, no por la funda</span></li><li><span>El mosquetón de rosca necesita dos manos</span><span>Mosquetón de cierre automático de doble acción, operable con una mano</span></li><li><span>La correa se enreda y se gira</span><span>Ojo giratorio en el mosquetón</span></li><li><span>No se ve de noche</span><span>Hilo reflectante tejido en la funda de la cuerda en toda su longitud</span></li><li><span>Quema la mano al agarrar la cuerda</span><span>Funda acolchada para el lazo, que se puede cambiar</span></li></ul>
+      <h3 style="margin-top:34px">Medidas y tolerancias</h3><table class="t"><tbody><tr><td>Largo total (A)</td><td>150 cm ± 1 cm</td></tr><tr><td>Lazo del mango (B)</td><td>22 cm interior ± 1 cm</td></tr><tr><td>Fundas de unión (C)</td><td>90 mm ± 3 mm</td></tr><tr><td>Mosquetón (D)</td><td>85 mm</td></tr><tr><td>Peso objetivo</td><td>≤ 260 g</td></tr><tr><td>Perros</td><td>Hasta 45 kg; versión de 8 mm para perros pequeños en la colección 02</td></tr></tbody></table></div>
+  </div>
+  <div class="grid2">
+    <div class="blk"><h3>Pruebas para aprobar la muestra</h3><table class="t"><tbody><tr><td>Tracción estática del conjunto</td><td>≥ 3 kN durante 60 s sin rotura ni deslizamiento de la unión (3 muestras)</td></tr><tr><td>Fatiga</td><td>500 ciclos de 300 N sin deformación de la unión</td></tr><tr><td>Apertura del mosquetón</td><td>Cierre automático en 100 % de 50 aperturas; no abre por presión lateral</td></tr><tr><td>Color</td><td>Solidez al frote y a la luz; sin transferencia a manos claras en 10 frotes húmedos</td></tr><tr><td>Reflectante</td><td>Visible a 30 m con luz de linterna</td></tr></tbody></table></div>
+    <div class="blk"><h3>Costo y precio</h3><div class="cost" style="grid-template-columns:1fr 1fr"><div><b>≤ 45.000 COP</b><span>Costo objetivo al proveedor, terminado y empacado</span></div><div><b>149.900 COP</b><span>Precio de venta suelto, IVA incluido</span></div></div></div>
+  </div>
+</div></section><section class="prod" id="cc"><div class="wrap">
+  <p class="code">CC-01 · Collar · Complemento · fabricación · versión 1 · 15 nov 2026</p>
+  <h2>Collar Core</h2>
+  <p class="lead2">Collar de cinta de nylon de 25 mm con hebilla de apertura rápida de aluminio, regulador que no se afloja y anilla D independiente para la correa.</p>
+  <figure class="drw"><svg viewBox="0 0 1130 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plano del collar extendido con cotas"><style>
+.o{fill:none;stroke:#1D1F1C;stroke-width:2}.o2{fill:none;stroke:#1D1F1C;stroke-width:1.2}
+.rope{fill:none;stroke:#5C6B3A;stroke-width:12;stroke-linecap:round}.rope2{fill:none;stroke:#2A2C29;stroke-width:1.2;stroke-dasharray:6 5}
+.sl{fill:#2A2C29}.ac{fill:#C2582B}.hw{fill:none;stroke:#1D1F1C;stroke-width:5}.hwf{fill:#5f645f}
+.d line,.d path{stroke:#39443A;stroke-width:1;fill:none}.d text{font:13px Jost,sans-serif;fill:#39443A}
+.e{stroke:#39443A;stroke-width:.8;stroke-dasharray:3 3}
+.c line{stroke:#1D1F1C;stroke-width:.8}.c circle{fill:#F5F4F1;stroke:#1D1F1C;stroke-width:1}.c text{font:12px Jost,sans-serif;fill:#1D1F1C}
+.lbl{font:12px Jost,sans-serif;fill:#5f645f;letter-spacing:.12em}
+.web{fill:#5C6B3A}.webl{fill:none;stroke:#2A2C29;stroke-width:1}
+.bt{stroke:#F5F4F1;stroke-width:1.4}
+.fab{fill:#5C6B3A}.fabl{fill:none;stroke:#2A2C29;stroke-width:1.2}
+</style><rect class="web" x="80" y="100" width="900" height="40"/><line class="webl" x1="80" y1="104" x2="980" y2="104" stroke-dasharray="4 3"/><line class="webl" x1="80" y1="136" x2="980" y2="136" stroke-dasharray="4 3"/><rect x="40" y="94" width="60" height="52" rx="6" fill="#5f645f"/><rect x="960" y="94" width="70" height="52" rx="6" fill="#5f645f"/><rect x="200" y="92" width="26" height="56" rx="4" fill="none" stroke="#1D1F1C" stroke-width="4"/><path class="hw" d="M880,100 L880,62 Q912,62 912,82 L912,100"/><rect class="ac" x="300" y="98" width="18" height="44"/><rect class="sl" x="700" y="106" width="60" height="28" rx="3"/><rect x="840" y="106" width="22" height="28" fill="none" stroke="#C2582B" stroke-width="1.4"/><path d="M840,106 L862,134 M862,106 L840,134" stroke="#C2582B" stroke-width="1.4"/><rect x="930" y="106" width="22" height="28" fill="none" stroke="#C2582B" stroke-width="1.4"/><path d="M930,106 L952,134 M952,106 L930,134" stroke="#C2582B" stroke-width="1.4"/><line class="e" x1="40" y1="150" x2="40" y2="210"/><line class="e" x1="1030" y1="150" x2="1030" y2="210"/><g class="d"><line x1="40" y1="200" x2="1030" y2="200"/><path d="M48,196 L40,200 L48,204 M1022,196 L1030,200 L1022,204"/><text x="535.0" y="192" text-anchor="middle">Talla M: perímetro ajustable 35–50 cm (S 28–40 · L 45–65)</text></g><line class="e" x1="1060" y1="100" x2="1060" y2="100"/><g class="d"><line x1="1065" y1="100" x2="1065" y2="140"/><path d="M1061,108 L1065,100 L1069,108 M1061,132 L1065,140 L1069,132"/><text x="1057" y="120.0" text-anchor="end" dominant-baseline="middle"></text></g><text class="lbl" x="1078" y="124">25 mm</text><g class="c"><line x1="70" y1="94" x2="70" y2="30"/><circle cx="70" cy="30" r="11"/><text x="70" y="34" text-anchor="middle">1</text></g><g class="c"><line x1="213" y1="92" x2="213" y2="30"/><circle cx="213" cy="30" r="11"/><text x="213" y="34" text-anchor="middle">2</text></g><g class="c"><line x1="309" y1="98" x2="309" y2="30"/><circle cx="309" cy="30" r="11"/><text x="309" y="34" text-anchor="middle">3</text></g><g class="c"><line x1="730" y1="106" x2="730" y2="30"/><circle cx="730" cy="30" r="11"/><text x="730" y="34" text-anchor="middle">4</text></g><g class="c"><line x1="851" y1="134" x2="851" y2="240"/><circle cx="851" cy="240" r="11"/><text x="851" y="244" text-anchor="middle">5</text></g><g class="c"><line x1="896" y1="62" x2="896" y2="30"/><circle cx="896" cy="30" r="11"/><text x="896" y="34" text-anchor="middle">6</text></g><g class="c"><line x1="995" y1="94" x2="995" y2="30"/><circle cx="995" cy="30" r="11"/><text x="995" y="34" text-anchor="middle">7</text></g></svg><figcaption>Plano del collar extendido · talla M · cotas en cm/mm · los números remiten a la lista de materiales</figcaption></figure>
+  
+  <div class="grid2">
+    <div class="blk"><h3>Lista de materiales</h3><table class="t"><thead><tr><th>#</th><th>Pieza</th><th>Especificación</th><th>Cant.</th></tr></thead><tbody><tr><td>1</td><td><b>Hebilla macho</b></td><td>Aluminio anodizado grafito, apertura lateral, 25 mm</td><td class="n">1</td></tr><tr><td>2</td><td><b>Regulador</b></td><td>Aluminio de doble barra con dentado, 25 mm</td><td class="n">1</td></tr><tr><td>3</td><td><b>Pasador</b></td><td>Cinta de 25 mm naranja (#C2582B aprox.) para recoger el sobrante</td><td class="n">1</td></tr><tr><td>4</td><td><b>Etiqueta</b></td><td>Microfibra PU grafito 60 × 28 mm con grabado en bajo relieve</td><td class="n">1</td></tr><tr><td>5</td><td><b>Refuerzos</b></td><td>Costura en X con hilo de poliéster Tex 70, 4 puntadas por cm</td><td class="n">2</td></tr><tr><td>6</td><td><b>Anilla D</b></td><td>Acero inoxidable 304 forjado y soldado, 4 mm, acabado grafito</td><td class="n">1 + anilla de placa 15 mm</td></tr><tr><td>7</td><td><b>Hebilla hembra</b></td><td>Aluminio anodizado grafito, 25 mm</td><td class="n">1</td></tr><tr><td>—</td><td><b>Cinta</b></td><td>Nylon 6.6 tubular o plana de 25 mm × 1,8 mm, oliva, tacto suave</td><td class="n">0,75 m (M)</td></tr></tbody></table></div>
+    <div class="blk"><h3>Dolor → solución</h3><ul class="pains"><li><span>El regulador se afloja con el uso</span><span>Regulador de aluminio de doble barra con dentado interior</span></li><li><span>Hebillas de plástico que se rompen</span><span>Hebilla de aluminio anodizado de apertura rápida</span></li><li><span>La placa y la correa se enganchan en la misma anilla</span><span>Anilla D para la correa y anilla pequeña separada para la placa</span></li><li><span>Costuras que ceden en la anilla</span><span>Refuerzos en X en la anilla y en la hebilla</span></li></ul>
+      <h3 style="margin-top:34px">Medidas y tolerancias</h3><table class="t"><tbody><tr><td>Ancho</td><td>25 mm (S: 20 mm)</td></tr><tr><td>Tallas</td><td>S 28–40 · M 35–50 · L 45–65 cm</td></tr><tr><td>Peso objetivo</td><td>≤ 70 g (M)</td></tr><tr><td>Tolerancia de largo</td><td>± 5 mm</td></tr></tbody></table></div>
+  </div>
+  <div class="grid2">
+    <div class="blk"><h3>Pruebas para aprobar la muestra</h3><table class="t"><tbody><tr><td>Tracción en la anilla D</td><td>≥ 1,5 kN durante 60 s sin rotura (3 muestras)</td></tr><tr><td>Regulador</td><td>No desliza más de 5 mm tras 200 ciclos de 150 N</td></tr><tr><td>Hebilla</td><td>1.000 aperturas sin pérdida de cierre</td></tr><tr><td>Bordes</td><td>Cinta sellada al calor, sin hilos sueltos</td></tr></tbody></table></div>
+    <div class="blk"><h3>Costo y precio</h3><div class="cost" style="grid-template-columns:1fr 1fr"><div><b>≤ 25.000 COP</b><span>Costo objetivo al proveedor, terminado y empacado</span></div><div><b>79.900 COP</b><span>Precio de venta suelto, IVA incluido</span></div></div></div>
+  </div>
+</div></section><section class="prod" id="cp"><div class="wrap">
+  <p class="code">CP-01 · Porta bolsas · Complemento · fabricación · versión 1 · 15 nov 2026</p>
+  <h2>Clip Pouch</h2>
+  <p class="lead2">Porta bolsas de ripstop resistente al agua que se engancha a la anilla de la correa o al cinturón: saca una sola bolsa y lleva la usada afuera.</p>
+  <figure class="drw"><svg viewBox="0 0 1100 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vistas frontal, lateral y posterior del porta bolsas"><style>
+.o{fill:none;stroke:#1D1F1C;stroke-width:2}.o2{fill:none;stroke:#1D1F1C;stroke-width:1.2}
+.rope{fill:none;stroke:#5C6B3A;stroke-width:12;stroke-linecap:round}.rope2{fill:none;stroke:#2A2C29;stroke-width:1.2;stroke-dasharray:6 5}
+.sl{fill:#2A2C29}.ac{fill:#C2582B}.hw{fill:none;stroke:#1D1F1C;stroke-width:5}.hwf{fill:#5f645f}
+.d line,.d path{stroke:#39443A;stroke-width:1;fill:none}.d text{font:13px Jost,sans-serif;fill:#39443A}
+.e{stroke:#39443A;stroke-width:.8;stroke-dasharray:3 3}
+.c line{stroke:#1D1F1C;stroke-width:.8}.c circle{fill:#F5F4F1;stroke:#1D1F1C;stroke-width:1}.c text{font:12px Jost,sans-serif;fill:#1D1F1C}
+.lbl{font:12px Jost,sans-serif;fill:#5f645f;letter-spacing:.12em}
+.web{fill:#5C6B3A}.webl{fill:none;stroke:#2A2C29;stroke-width:1}
+.bt{stroke:#F5F4F1;stroke-width:1.4}
+.fab{fill:#5C6B3A}.fabl{fill:none;stroke:#2A2C29;stroke-width:1.2}
+</style><text class="lbl" x="200" y="40" text-anchor="middle">FRONTAL</text><rect class="fab" x="90" y="80" width="220" height="140" rx="14"/><path class="fabl" d="M100,104 L300,104" stroke-dasharray="5 4"/><line x1="110" y1="96" x2="290" y2="96" stroke="#1D1F1C" stroke-width="3"/><path d="M110,96 L104,120" stroke="#C2582B" stroke-width="3"/><path d="M120,150 L280,190 M120,190 L280,150" stroke="#2A2C29" stroke-width="2.4" fill="none"/><rect x="190" y="160" width="20" height="20" rx="3" fill="#2A2C29"/><g class="d"><line x1="90" y1="250" x2="310" y2="250"/><path d="M98,246 L90,250 L98,254 M302,246 L310,250 L302,254"/><text x="200.0" y="242" text-anchor="middle">110 mm</text></g><line class="e" x1="90" y1="220" x2="90" y2="258"/><line class="e" x1="310" y1="220" x2="310" y2="258"/><g class="d"><line x1="60" y1="80" x2="60" y2="220"/><path d="M56,88 L60,80 L64,88 M56,212 L60,220 L64,212"/><text x="52" y="150.0" text-anchor="end" dominant-baseline="middle">70 mm</text></g><line class="e" x1="60" y1="80" x2="60" y2="80"/><text class="lbl" x="520" y="40" text-anchor="middle">LATERAL</text><rect class="fab" x="480" y="80" width="80" height="140" rx="12"/><rect x="560" y="96" width="12" height="70" fill="#2A2C29"/><g class="d"><line x1="480" y1="262" x2="560" y2="262"/><path d="M488,258 L480,262 L488,266 M552,258 L560,262 L552,266"/><text x="520.0" y="254" text-anchor="middle">40 mm</text></g><line class="e" x1="480" y1="232" x2="480" y2="270"/><line class="e" x1="560" y1="232" x2="560" y2="270"/><ellipse cx="520" cy="226" rx="16" ry="5" fill="#1D1F1C"/><text class="lbl" x="750" y="40">POSTERIOR</text><rect class="fab" x="750" y="80" width="220" height="140" rx="14"/><rect x="835" y="80" width="50" height="120" fill="#2A2C29"/><circle cx="860" cy="180" r="9" fill="#9aa09d"/><path class="hw" d="M840,70 q0,-30 20,-30 q20,0 20,30"/><rect x="840" y="90" width="40" height="14" fill="none" stroke="#C2582B" stroke-width="1.4"/><rect x="840" y="190" width="40" height="14" fill="none" stroke="#C2582B" stroke-width="1.4"/><g class="c"><line x1="150" y1="96" x2="40" y2="40"/><circle cx="40" cy="40" r="11"/><text x="40" y="44" text-anchor="middle">1</text></g><g class="c"><line x1="200" y1="170" x2="360" y2="310"/><circle cx="360" cy="310" r="11"/><text x="360" y="314" text-anchor="middle">2</text></g><g class="c"><line x1="520" y1="226" x2="620" y2="300"/><circle cx="620" cy="300" r="11"/><text x="620" y="304" text-anchor="middle">3</text></g><g class="c"><line x1="860" y1="140" x2="820" y2="310"/><circle cx="820" cy="310" r="11"/><text x="820" y="314" text-anchor="middle">4</text></g><g class="c"><line x1="860" y1="180" x2="900" y2="310"/><circle cx="900" cy="310" r="11"/><text x="900" y="314" text-anchor="middle">5</text></g><g class="c"><line x1="878" y1="52" x2="1000" y2="60"/><circle cx="1000" cy="60" r="11"/><text x="1000" y="64" text-anchor="middle">6</text></g></svg><figcaption>Vistas frontal, lateral y posterior · cotas en mm · los números remiten a la lista de materiales</figcaption></figure>
+  
+  <div class="grid2">
+    <div class="blk"><h3>Lista de materiales</h3><table class="t"><thead><tr><th>#</th><th>Pieza</th><th>Especificación</th><th>Cant.</th></tr></thead><tbody><tr><td>1</td><td><b>Cremallera</b></td><td>Espiral #3 resistente al agua, con tirador de paracord naranja</td><td class="n">1</td></tr><tr><td>2</td><td><b>Cordón elástico</b></td><td>3 mm grafito con tope de cordón</td><td class="n">0,45 m</td></tr><tr><td>3</td><td><b>Salida de bolsas</b></td><td>Ojal de silicona con corte en cruz, Ø 22 mm</td><td class="n">1</td></tr><tr><td>4</td><td><b>Presilla trasera</b></td><td>Cinta de nylon de 25 mm cosida con refuerzos en X</td><td class="n">1</td></tr><tr><td>5</td><td><b>Broche</b></td><td>Broche metálico de presión grafito para cerrar la presilla</td><td class="n">1</td></tr><tr><td>6</td><td><b>Mini mosquetón</b></td><td>Aluminio anodizado (solo para colgar el pouch, no para sujetar al perro)</td><td class="n">1</td></tr><tr><td>—</td><td><b>Tela exterior</b></td><td>Ripstop de nylon 210D con laminado TPU, oliva</td><td class="n">0,06 m²</td></tr><tr><td>—</td><td><b>Forro</b></td><td>Poliéster 150D gris</td><td class="n">0,05 m²</td></tr></tbody></table></div>
+    <div class="blk"><h3>Dolor → solución</h3><ul class="pains"><li><span>Sale todo el rollo o no sale ninguna bolsa</span><span>Salida inferior con ojal de silicona con corte en cruz que deja pasar una bolsa</span></li><li><span>La unión del dispensador se descose</span><span>Presilla trasera de cinta con refuerzos en X y broche metálico</span></li><li><span>No hay dónde llevar la bolsa usada</span><span>Cordón elástico exterior con tope para sujetarla por fuera</span></li><li><span>Bolsillos donde no cabe nada</span><span>Bolsillo con cremallera para llaves y tarjeta, separado del rollo</span></li></ul>
+      <h3 style="margin-top:34px">Medidas y tolerancias</h3><table class="t"><tbody><tr><td>Medidas</td><td>110 × 70 × 40 mm</td></tr><tr><td>Capacidad</td><td>1 rollo estándar de bolsas + llaves y tarjeta</td></tr><tr><td>Peso objetivo</td><td>≤ 60 g</td></tr><tr><td>Tolerancia</td><td>± 3 mm</td></tr></tbody></table></div>
+  </div>
+  <div class="grid2">
+    <div class="blk"><h3>Pruebas para aprobar la muestra</h3><table class="t"><tbody><tr><td>Presilla</td><td>Soporta 150 N sin descoserse</td></tr><tr><td>Dispensador</td><td>Sale una sola bolsa en 9 de 10 intentos</td></tr><tr><td>Agua</td><td>Sin filtración tras 2 minutos de lluvia simulada</td></tr><tr><td>Cremallera</td><td>500 ciclos sin fallo</td></tr></tbody></table></div>
+    <div class="blk"><h3>Costo y precio</h3><div class="cost" style="grid-template-columns:1fr 1fr"><div><b>≤ 25.000 COP</b><span>Costo objetivo al proveedor, terminado y empacado</span></div><div><b>59.900 COP</b><span>Precio de venta suelto, IVA incluido</span></div></div></div>
+  </div>
+</div></section>
+<section class="prod" id="kit"><div class="wrap">
+  <p class="code">KIT-01 · Correa + collar + porta bolsas, mismo color</p><h2>El kit es el negocio</h2>
+  <p class="lead2">Con contraentrega cada pedido carga unos 65.000 COP fijos (flete, rechazos y publicidad). La correa sola apenas deja margen; el kit sí, si el costo de fabricación se mantiene en el objetivo.</p>
+  <div class="cost"><div><b>249.900</b><span>Precio del kit (ahorro real de 39.800 frente a las piezas sueltas)</span></div><div><b>≤ 95.000</b><span>Costo objetivo del kit terminado</span></div><div><b>22 %</b><span>Contribución proyectada con prepago y CPA de 40.000</span></div><div><b>17 %</b><span>Con contraentrega y CPA de 25.000</span></div></div>
+  <div class="warn"><b>Si el kit sale a 110.000</b> la contribución baja a 15 % con prepago y 10 % con contraentrega; a 125.000 deja de ser viable. A 199.900 pierde dinero con cualquier costo realista. Por eso el precio es 249.900 y se negocia el costo, no al revés.</div>
+</div></section>
+<section class="prod rfq" id="rfq"><div class="wrap"><div class="grid2" style="margin-top:0">
+  <div class="blk"><h3>Qué pedirle al taller o proveedor</h3><ol>
+    <li>Cotización por pieza para 30, 50 y 100 unidades, con y sin empaque.</li>
+    <li>Precio y plazo de la muestra de cada pieza en oliva.</li>
+    <li>Fichas y certificados del mosquetón (resistencia y apertura) y de la cuerda.</li>
+    <li>Tiras de color físicas de cuerda, cinta, ripstop y microfibra.</li>
+    <li>Fotos y vídeo de la muestra terminada antes de enviarla.</li>
+    <li>Plazo de producción y forma de pago.</li></ol></div>
+  <div class="blk"><h3>A quién</h3><ul style="margin:0;padding-left:18px;display:grid;gap:8px"><li>Talleres de confección y marroquinería en Colombia (Medellín, Bogotá, Bucaramanga) para costura, fundas y pouch; ChatGPT verificó que hay maquila para marcas, como Sara Pinilla, y fabricantes de correas por encargo, como Chaló Chaló.</li><li>Cuerda kernmantle y mosquetones: distribuidores de escalada o importación (fábricas en China con lotes mínimos de 50 a 500 unidades).</li><li>Comparar al menos 3 cotizaciones antes de elegir.</li></ul></div>
+</div></div></section>
+</main>
+<footer><span class="wm">ALVOREN</span><p>Diseñado para permanecer.</p></footer>
+</body></html>
