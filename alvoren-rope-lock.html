@@ -253,7 +253,7 @@ th,td{text-align:left;padding:12px 10px 12px 0;border-bottom:1px solid var(--lin
  const b=document.querySelector('.build');
  if(b){const fr=[...b.querySelectorAll('.fr')],lis=[...b.querySelectorAll('.steps li')],n=fr.length;
   const f=()=>{const r=b.getBoundingClientRect(),p=cl(-r.top/(r.height-innerHeight)),pos=p*(n-1)*1.15;
-   fr.forEach((im,i)=>{const o=i===0?1:ease(cl(pos-(i-1)));im.style.opacity=o.toFixed(3);im.style.transform=`scale(${(1.04-.04*o).toFixed(3)})`});
+   const fin=fr.map((_,i)=>i===0?1:ease(cl(pos-(i-1))));fr.forEach((im,i)=>{const o=fin[i]*(i<n-1?1-fin[i+1]:1);im.style.opacity=o.toFixed(3);im.style.transform=`scale(${(1.04-.04*fin[i]).toFixed(3)})`});
    const cur=Math.min(n-1,Math.round(pos));lis.forEach((li,i)=>{li.classList.toggle('on',i<cur);li.classList.toggle('cur',i===cur)})};
   if(reduce){fr.forEach(im=>im.style.opacity=1)}else{addEventListener('scroll',()=>requestAnimationFrame(f),{passive:true});f()}}
  const t=document.querySelector('.tour');
