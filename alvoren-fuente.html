@@ -143,22 +143,16 @@ footer p{font-family:var(--serif);font-style:italic;font-size:20px;margin:0}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 
 /* ---- v3: banner + ficha ---- */
-.banner.split{display:block;min-height:auto}
-.banner.split::after{display:none}
-.banner.split>img{position:relative;inset:auto;float:right;width:44%;height:auto;aspect-ratio:4/5;margin:56px max(32px,calc((100vw - 1240px)/2 + 32px)) 56px 0;object-position:center}
-.banner.split .wrap{padding-top:96px}
-.banner.split .seal{top:auto;bottom:80px;right:auto;left:calc(56% - 66px)}
-@media (max-width:900px){.banner.split>img{float:none;width:calc(100% - 40px);margin:20px}.banner.split .wrap{padding-top:10px;padding-bottom:40px}.banner.split .seal{left:auto;right:30px;top:40px;bottom:auto}}
-.banner{position:relative;min-height:min(92vh,880px);display:flex;align-items:flex-start;overflow:hidden;background:var(--stone)}
-.banner>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 70%}
-.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,244,241,.94) 0%,rgba(245,244,241,.78) 34%,rgba(245,244,241,0) 62%)}
-.banner .wrap{position:relative;z-index:1;width:100%;padding-top:72px;padding-bottom:72px}
-.banner h1{font-size:clamp(48px,6.6vw,96px);max-width:9.5em;margin:0 0 18px}
-.banner .sub{max-width:31em;color:var(--muted);margin:0 0 22px;font-size:17px}
-.checks{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:8px;font-size:15.5px}
+.banner{background:linear-gradient(180deg,var(--stone),var(--paper))}
+.banner .bwrap{max-width:1240px;margin:0 auto;padding:64px 32px 80px;display:grid;grid-template-columns:1fr .82fr;gap:72px;align-items:center}
+.banner figure{margin:0;position:relative}
+.banner figure img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--fog)}
+.banner h1{font-size:clamp(48px,5.8vw,90px);max-width:9em;margin:0 0 20px}
+.banner .sub{max-width:31em;color:var(--muted);margin:0 0 24px;font-size:17px}
+.checks{list-style:none;margin:0 0 34px;padding:0;display:grid;gap:9px;font-size:15.5px}
 .checks li{display:flex;gap:12px;align-items:baseline}
 .checks li::before{content:"";flex:0 0 13px;height:7px;border-left:1.3px solid var(--moss);border-bottom:1.3px solid var(--moss);transform:rotate(-45deg) translateY(-3px)}
-.seal{position:absolute;z-index:2;right:max(32px,calc((100vw - 1240px)/2 + 32px));top:64px;width:132px;height:132px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;text-align:center;font-family:var(--serif);font-size:16px;line-height:1.2;padding:18px;background:rgba(245,244,241,.7)}
+.seal{position:absolute;left:-58px;bottom:44px;width:120px;height:120px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;text-align:center;font-family:var(--serif);font-size:15.5px;line-height:1.2;padding:16px;background:var(--paper)}
 .bens{border-bottom:1px solid rgba(29,31,28,.12)}
 .bens ul{list-style:none;margin:0 auto;padding:30px 32px;max-width:1240px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
 .bens svg{width:28px;height:28px;margin:0 auto 10px;display:block;color:var(--moss)}
@@ -196,10 +190,9 @@ footer p{font-family:var(--serif);font-style:italic;font-size:20px;margin:0}
 .acc .inbox{font-size:19px}
 .acc dl{margin-bottom:18px}
 @media (max-width:900px){
-  .banner{min-height:auto}.banner .wrap{padding-top:36px;padding-bottom:58vw}
-  .banner>img{object-position:center bottom}
-  .banner::after{background:linear-gradient(180deg,rgba(245,244,241,.96) 0%,rgba(245,244,241,.85) 46%,rgba(245,244,241,0) 70%)}
-  .seal{width:96px;height:96px;font-size:13px;padding:12px;top:auto;bottom:24px;right:20px}
+  .banner .bwrap{grid-template-columns:1fr;gap:28px;padding:28px 20px 56px}
+  .banner figure{order:-1}
+  .seal{width:92px;height:92px;font-size:12.5px;padding:10px;left:auto;right:14px;bottom:14px}
   .bens ul{grid-template-columns:repeat(2,1fr);padding:26px 20px;gap:22px}
   .pdp .wrap{grid-template-columns:1fr;gap:32px;padding-top:36px;padding-bottom:80px}
   .pdp .gal{position:static}
@@ -214,17 +207,16 @@ footer p{font-family:var(--serif);font-style:italic;font-size:20px;margin:0}
   <div class="r"><a href="#otros">Colección</a><a class="bag" href="#producto">Pedir</a></div>
 </nav>
 <main id="top">
-<section class="banner" aria-labelledby="bh">
-  <img src="alv-fuente-banner.jpg" alt="Gato gris bebiendo del chorro de una fuente plateada de acero sobre una encimera de piedra clara" width="1254" height="1568">
-  <div class="seal" aria-hidden="true">Acero inoxidable 304</div>
-  <div class="wrap">
+<section class="banner" aria-labelledby="bh"><div class="bwrap">
+  <div>
     <p class="eyebrow">Para la cocina · Gatos</p>
     <h1 id="bh">Agua fresca que se mueve.</h1>
     <p class="sub">Fuente de acero inoxidable 304 con 2,2 litros. El agua circula y pasa por un filtro, para que tu gato quiera beber más.</p>
     <ul class="checks"><li>Cuenco de acero, no de plástico</li><li>El agua circula y se filtra</li><li>4 filtros compatibles incluidos</li><li>Ventana para ver el nivel</li></ul>
     <a class="btn" href="#producto">Elegir mi pack</a>
   </div>
-</section>
+  <figure><img src="alv-fuente-banner.jpg" alt="Gato gris bebiendo del chorro de una fuente plateada de acero sobre una encimera de piedra clara" width="1122" height="1402"><div class="seal" aria-hidden="true">Acero inoxidable 304</div></figure>
+</div></section>
 <section class="bens" aria-label="Beneficios"><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8 12a4 4 0 0 1 8 0"/></svg><span>Acero 304</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16l-6 7v6l-4 2v-8L4 5Z"/></svg><span>Filtro incluido</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4v5a6 6 0 0 0 12 0"/><path d="M18 9v11"/></svg><span>3 salidas</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><span>Ventana de nivel</span></li></ul></section>
 <section class="pdp" id="producto" aria-labelledby="pn"><div class="wrap">
   <div class="gal"><div class="frame"><img src="alv-fuente-hero.jpg" alt="Gato gris bebiendo del chorro de una fuente plateada de acero sobre una encimera de piedra clara" class="on"  width="785" height="981"><img src="alv-fuente-banner.jpg" alt="Fuente de acero sobre una encimera de piedra junto a 4 filtros y un gato gris" class="" loading="lazy" width="785" height="981"><img src="clean-kivo-1.jpg" alt="La fuente plateada de acero junto a un gato" class="" loading="lazy" width="785" height="981"><img src="clean-kivo-4.jpg" alt="La fuente con agua en movimiento sobre un piso de madera" class="" loading="lazy" width="785" height="981"></div><div class="thumbs" role="group" aria-label="Fotos"><button aria-label="Ver foto 1" aria-current="true"><img src="alv-fuente-hero.jpg" alt="" loading="lazy"></button><button aria-label="Ver foto 2" aria-current="false"><img src="alv-fuente-banner.jpg" alt="" loading="lazy"></button><button aria-label="Ver foto 3" aria-current="false"><img src="clean-kivo-1.jpg" alt="" loading="lazy"></button><button aria-label="Ver foto 4" aria-current="false"><img src="clean-kivo-4.jpg" alt="" loading="lazy"></button></div></div>
