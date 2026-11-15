@@ -260,7 +260,7 @@ th,td{text-align:left;padding:12px 10px 12px 0;border-bottom:1px solid var(--lin
  if(t){const keys=JSON.parse(t.dataset.keys),img=t.querySelector('img'),caps=[...t.querySelectorAll('.tcap')],n=keys.length;
   const f=()=>{const r=t.getBoundingClientRect(),p=cl(-r.top/(r.height-innerHeight))*(n-1),i=Math.min(n-2,Math.floor(p)),k=ease(cl(p-i)),a=keys[i],c=keys[i+1]||a;
    const x=a.x+(c.x-a.x)*k,y=a.y+(c.y-a.y)*k,s=a.s+(c.s-a.s)*k;
-   img.style.transform=`translate(-50%,-50%) scale(${s.toFixed(3)}) translate(${(50-x).toFixed(2)}%,${(50-y).toFixed(2)}%)`;
+   const lim=(1-1/s)*50,tx=Math.max(-lim,Math.min(lim,50-x)),ty=Math.max(-lim,Math.min(lim,50-y));img.style.transform=`translate(-50%,-50%) scale(${s.toFixed(3)}) translate(${tx.toFixed(2)}%,${ty.toFixed(2)}%)`;
    const cur=Math.round(p);caps.forEach((cp,j)=>cp.classList.toggle('on',j===cur))};
   if(reduce){caps[0]&&caps[0].classList.add('on')}else{addEventListener('scroll',()=>requestAnimationFrame(f),{passive:true});f()}}
 })();
